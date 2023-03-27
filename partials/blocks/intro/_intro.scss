@@ -1,4 +1,4 @@
-.intro {
+section.intro {
 	$self: &;
 	padding: 96px 0 48px 0;
 
@@ -6,7 +6,7 @@
 		@include max-width;
 	}
 
-	&__title {
+	.intro__title {
 
 		h1 {
 			text-align: center;
@@ -83,7 +83,7 @@
 		}
 	}
 
-	&__text {
+	.intro__text {
 		text-align: center;
 		font-weight: var(--fw-medium);
 
@@ -91,7 +91,7 @@
 			font-size: var(--fs-medium);
 		}
 
-		#{$self}__button-container {
+		.intro__button-container {
 	
 			a {
 				margin: 0 24px 24px 24px;

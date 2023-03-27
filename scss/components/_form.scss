@@ -1,4 +1,38 @@
 .gform_wrapper {
+	input,
+	input[type='text'],
+	input[type='password'],
+	input[type='datetime'],
+	input[type='datetime-local'],
+	input[type='date'],
+	input[type='month'],
+	input[type='time'],
+	input[type='week'],
+	input[type='number'],
+	input[type='email'],
+	input[type='url'],
+	input[type='search'],
+	input[type='tel'],
+	input[type='color'],
+	label,
+	select,
+	textarea {
+		display: block;
+		width: 100%;
+		padding: 16px;
+		font-family: var(--ff-secondary);
+		font-size: var(--fs-small);
+		font-weight: var(--fw-regular);
+		line-height: var(--lh-large);
+		color: var(--cl-black);
+		letter-spacing: var(--ls-medium);
+		position: relative;
+		z-index: 1;
+		border: none;
+		-webkit-appearance: none;
+		-webkit-appearance: button;
+		@include rectangle;
+	}
 
 	::placeholder {
 		color: var(--cl-grey-dark);
@@ -17,9 +51,7 @@
 	}
 
 	textarea {
-
 		&.textarea {
-		
 			&.small {
 				height: 128px;
 			}
@@ -34,12 +66,11 @@
 		}
 	}
 
-	.gform_required_legend{
+	.gform_required_legend {
 		display: none;
 	}
 
 	.gform_validation_errors {
-
 		h2 {
 			padding: 16px 0 16px 32px;
 			border-left: 2px solid var(--cl-error);
@@ -67,7 +98,6 @@
 				margin-bottom: 24px;
 
 				@include desktop {
-	
 					&--width-half {
 						width: calc(50% - 24px);
 					}
@@ -94,7 +124,7 @@
 		.button {
 			margin: 0;
 		}
-		
+
 		.gform_ajax_spinner {
 			position: absolute;
 			top: calc(50% - 32px);
@@ -104,5 +134,5 @@
 			padding: 24px;
 			z-index: 1;
 		}
-	}	
+	}
 }

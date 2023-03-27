@@ -1,4 +1,4 @@
-.form {
+section.form {
 	$self: &;
 	padding-top: 96px;
 	padding-bottom: 96px;
@@ -9,7 +9,7 @@
 
 	// background
 
-		&--white {
+		.form--white {
 
 			.gform_wrapper {
 
@@ -44,15 +44,15 @@
 			}
 		}
 
-		&--grey {
+		.form--grey {
 			background: var(--cl-grey);
 		}
 
-		&--black {
+		.form--black {
 			background: var(--cl-black);
 		}
 
-		&--primary {
+		.form--primary {
 			background: var(--cl-primary);
 
 			.gform_wrapper {
@@ -83,7 +83,7 @@
 			}
 		}
 
-		&--secondary {
+		.form--secondary {
 			background: var(--cl-secondary);
 
 			.gform_wrapper {

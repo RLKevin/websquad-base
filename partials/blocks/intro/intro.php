@@ -12,7 +12,7 @@ $id = get_field('id');
 
 ?>
 
-<div id="<?php echo $id; ?>" class="intro">
+<section id="<?php echo $id; ?>" class="intro">
 
 	<?php if ($title): ?>
 
@@ -62,4 +62,4 @@ $id = get_field('id');
 
 	<?php endif; ?>
 
-</div>
+</section>

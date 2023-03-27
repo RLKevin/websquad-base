@@ -167,48 +167,6 @@ h3 {
 	}
 }
 
-// content - form
-
-input,
-input[type='text'],
-input[type='password'],
-input[type='datetime'],
-input[type='datetime-local'],
-input[type='date'],
-input[type='month'],
-input[type='time'],
-input[type='week'],
-input[type='number'],
-input[type='email'],
-input[type='url'],
-input[type='search'],
-input[type='tel'],
-input[type='color'],
-label,
-select,
-textarea {
-	display: block;
-	width: 100%;
-	padding: 16px;
-	font-family: var(--ff-secondary);
-	font-size: var(--fs-small);
-	font-weight: var(--fw-regular);
-	line-height: var(--lh-large);
-	color: var(--cl-black);
-	letter-spacing: var(--ls-medium);
-	position: relative;
-	z-index: 1;
-	border: none;
-	-webkit-appearance: none;
-	-webkit-appearance: button;
-	@include rectangle;
-}
-
-::placeholder {
-	color: var(--cl-grey-dark);
-	opacity: 1;
-}
-
 // content - link
 
 a {

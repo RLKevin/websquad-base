@@ -11,7 +11,7 @@ $style = get_field('style');
 
 ?>
 
-<div id="<?= $id; ?>" class="card card--<?= $align; ?> card--<?= $background; ?> card--<?= $color; ?> card--<?= $image; ?> card--<?= $style; ?>">
+<section id="<?= $id; ?>" class="card card--<?= $align; ?> card--<?= $background; ?> card--<?= $color; ?> card--<?= $image; ?> card--<?= $style; ?>">
 
 <?php
 
@@ -342,4 +342,4 @@ endif;
 
 ?>
 
-</div>
+</section>
