@@ -7,7 +7,7 @@ $id = get_field('id');
 
 ?>
 
-<div id="<?php echo $id; ?>" class="usp usp--<?php echo $align; ?> usp--<?php echo $background; ?>">
+<section id="<?php echo $id; ?>" class="usp usp--<?php echo $align; ?> usp--<?php echo $background; ?>">
 
 	<?php
 
@@ -51,4 +51,4 @@ $id = get_field('id');
 	
 	?>
 
-</div>
+</section>

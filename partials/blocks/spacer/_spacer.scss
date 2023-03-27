@@ -1,34 +1,34 @@
-.spacer {
+section.spacer {
 
 	// background
 
-	&--white {
+	.spacer--white {
 		background: var(--cl-white);
 	}
 
-	&--grey {
+	.spacer--grey {
 		background: var(--cl-grey);
 	}
 
-	&--black {
+	.spacer--black {
 		background: var(--cl-black);
 	}
 
-	&--primary {
+	.spacer--primary {
 		background: var(--cl-secondary);
 	}
 
-	&--secondary {
+	.spacer--secondary {
 		background: var(--cl-primary);
 	}
 
 	// margin
 	
-	&--positive {
+	.spacer--positive {
 		height: 96px;
 	}
 
-	&--negative {
+	.spacer--negative {
 		margin-top: -96px;
 	}
 }

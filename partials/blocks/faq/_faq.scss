@@ -1,4 +1,4 @@
-.faq {
+section.faq {
 	$self: &;
 	padding: 96px 0 48px 0;
 
@@ -6,14 +6,14 @@
 		@include max-width;
 	}
 
-	&__container {
+	.faq__container {
 		margin: 0 0 2px 0;
 
 		&:last-of-type {
 			margin: 0 0 48px 0;
 		}
 
-		#{$self}__question {
+		.faq__question {
 			position: relative;
 			background: var(--cl-primary);
 			color: var(--cl-white);
@@ -68,7 +68,7 @@
 			}
 		}
 	
-		#{$self}__answer {
+		.faq__answer {
 			display: none;
 			position: relative;
 			padding: 48px 0 0 16px;
@@ -87,15 +87,15 @@
 
 	// background
 
-	&--white {
+	.faq--white {
 
 	}
 
-	&--grey {
+	.faq--grey {
 		background: var(--cl-grey);
 	}
 
-	&--black {
+	.faq--black {
 		background: var(--cl-black);
 
 		h2, h3, p, li, em {
@@ -103,10 +103,10 @@
 		}
 	}
 
-	&--secondary {
+	.faq--secondary {
 		background: var(--cl-primary);
 
-		#{$self}__question {
+		.faq__question {
 			background: var(--cl-secondary);
 
 			p {
@@ -117,7 +117,7 @@
 			}
 		}
 
-		#{$self}__answer {
+		.faq__answer {
 			border-left: 2px solid var(--cl-secondary);
 		}
 
@@ -156,7 +156,7 @@
 		}
 	}
 
-	&--primary {
+	.faq--primary {
 		background: var(--cl-secondary);
 
 		h2, h3, p, li, em {

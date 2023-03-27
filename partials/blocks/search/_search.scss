@@ -1,4 +1,4 @@
-.search {
+section.search {
 	$self: &;
 	padding: 96px 0 48px;
 
@@ -64,10 +64,10 @@
 
 	// background
 
-	&--white {
+	.search--white {
 		background: var(--cl-white);
 
-		#{$self}__result {
+		.search__result {
 			line-height: 56px;
 			border: 2px solid var(--cl-grey);
 
@@ -86,7 +86,7 @@
 		}
 	}
 
-	&--grey {
+	.search--grey {
 		background: var(--cl-grey);
 
 		&:before,
@@ -95,7 +95,7 @@
 		}
 	}
 
-	&--black {
+	.search--black {
 		background: var(--cl-black);
 
 		h2, p {
@@ -103,7 +103,7 @@
 		}
 	}
 
-	&--primary {
+	.search--primary {
 		background: var(--cl-secondary);
 
 		h2, p {
@@ -111,7 +111,7 @@
 		}
 	}
 
-	&--secondary {
+	.search--secondary {
 		background: var(--cl-primary);
 
 		h2, p {
@@ -133,11 +133,11 @@
 
 	// align
 
-	&--left {
+	.search--left {
 		text-align: left;
 	}
 
-	&--center {
+	.search--center {
 		text-align: center;
 	}
 }

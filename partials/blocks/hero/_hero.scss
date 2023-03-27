@@ -1,10 +1,10 @@
-.hero {
+section.hero {
 	$self: &;
 	position: relative;
 
-	&__slider {
+	.hero__slider {
 
-		#{$self}__container {
+		.hero__container {
 			height: calc(100vh - 128px);
 			min-height: 640px;
 			max-height: 960px;
@@ -14,7 +14,7 @@
 			}
 		}
 	
-		#{$self}__image {
+		.hero__image {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -40,7 +40,7 @@
 			}
 		}
 	
-		#{$self}__text {
+		.hero__text {
 			width: 100%;
 			height: 100%;
 			display: flex;
@@ -60,7 +60,7 @@
 				margin-top: -40px;
 			}
 		
-			#{$self}__button-container {
+			.hero__button-container {
 	
 				a {
 					margin: 0 24px 24px 24px;
@@ -93,7 +93,7 @@
 		}
 	}
 
-	&__scroll-button {
+	.hero__scroll-button {
 		position: absolute;
 		bottom: 0;
 		right: 16px;

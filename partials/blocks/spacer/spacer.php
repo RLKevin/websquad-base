@@ -8,7 +8,7 @@ $id = get_field('id');
 
 ?>
 
-<div id="<?php echo $id; ?>" class="spacer spacer--<?php echo $background; ?> spacer--<?php echo $margin; ?>"></div>
+<section id="<?php echo $id; ?>" class="spacer spacer--<?php echo $background; ?> spacer--<?php echo $margin; ?>"></section>
 
 <?php
 

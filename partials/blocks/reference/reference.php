@@ -8,7 +8,7 @@ $id = get_field('id');
 
 ?>
 
-<div id="<?php echo $id; ?>" class="reference reference--<?php echo $align; ?> reference--<?php echo $background; ?>">
+<section id="<?php echo $id; ?>" class="reference reference--<?php echo $align; ?> reference--<?php echo $background; ?>">
 
 	<div class="wrapper">
 
@@ -150,4 +150,4 @@ $id = get_field('id');
 		?>
 
 	</div>
-</div>
+</section>

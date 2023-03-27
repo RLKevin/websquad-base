@@ -1,9 +1,9 @@
-.map {
+section.map {
 	$self: &;
 	position: relative;
 	overflow: hidden;
 
-	&__map {
+	.map__map {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -14,7 +14,7 @@
 		}
 	}
 
-	&__content {
+	.map__content {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

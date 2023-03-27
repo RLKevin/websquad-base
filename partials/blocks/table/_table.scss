@@ -1,4 +1,4 @@
-.table {
+section.table {
 	$self: &;
 	padding: 96px 0 48px 0;
 
@@ -6,7 +6,7 @@
 		@include max-width;
 	}
 
-	&__row {
+	.table__row {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 0 2px 0;
@@ -17,7 +17,7 @@
 			margin: 0 0 48px 0 !important;
 		}
 		
-		#{$self}__col {
+		.table__col {
 			background: var(--cl-grey);
 			padding: 16px;
 			
@@ -62,7 +62,7 @@
 
 		&--normal {
 
-			#{$self}__col {
+			.table__col {
 				background: var(--cl-grey);
 	
 				&--left {
@@ -95,7 +95,7 @@
 
 		&--note {
 
-			#{$self}__col {
+			.table__col {
 				
 				&--left {
 					width: 100%;
@@ -113,21 +113,21 @@
 
 	// background
 
-	&--white {
+	.table--white {
 	}
 
-	&--grey {
+	.table--grey {
 		background: var(--cl-grey);
 
-		#{$self}__row {
+		.table__row {
 			
-			#{$self}__col {
+			.table__col {
 				background: var(--cl-white);
 			}
 			
 			&--title {
 	
-				#{$self}__col {
+				.table__col {
 					
 					&--left {
 						background: var(--cl-primary);
@@ -137,25 +137,25 @@
 	
 			&--normal {
 	
-				#{$self}__col {
+				.table__col {
 					background: var(--cl-white);
 				}
 			}
 		}
 	}
 
-	&--black {
+	.table--black {
 		background: var(--cl-black);
 
-		#{$self}__row {
+		.table__row {
 			
-			#{$self}__col {
+			.table__col {
 				background: var(--cl-white);
 			}
 			
 			&--title {
 	
-				#{$self}__col {
+				.table__col {
 					
 					&--left {
 						background: var(--cl-primary);
@@ -165,25 +165,25 @@
 	
 			&--normal {
 	
-				#{$self}__col {
+				.table__col {
 					background: var(--cl-white);
 				}
 			}
 		}
 	}
 
-	&--primary {
+	.table--primary {
 		background: var(--cl-secondary);
 
-		#{$self}__row {
+		.table__row {
 			
-			#{$self}__col {
+			.table__col {
 				background: var(--cl-white);
 			}
 			
 			&--title {
 	
-				#{$self}__col {
+				.table__col {
 					
 					&--left {
 						background: var(--cl-primary);
@@ -193,25 +193,25 @@
 	
 			&--normal {
 	
-				#{$self}__col {
+				.table__col {
 					background: var(--cl-white);
 				}
 			}
 		}
 	}
 
-	&--secondary {
+	.table--secondary {
 		background: var(--cl-primary);
 
-		#{$self}__row {
+		.table__row {
 			
-			#{$self}__col {
+			.table__col {
 				background: var(--cl-white);
 			}
 			
 			&--title {
 	
-				#{$self}__col {
+				.table__col {
 					
 					&--left {
 						background: var(--cl-secondary);
@@ -221,7 +221,7 @@
 	
 			&--normal {
 	
-				#{$self}__col {
+				.table__col {
 					background: var(--cl-white);
 				}
 			}

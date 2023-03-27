@@ -8,7 +8,7 @@ $align = get_field('options_header_style', 'option');
 
 ?>
 
-<div id="<?php echo $id; ?>" class="hero">
+<section id="<?php echo $id; ?>" class="hero">
 
 	<div class="hero__slider slider">
 
@@ -105,4 +105,4 @@ $align = get_field('options_header_style', 'option');
 
 ?>
 
-</div>
+</section>

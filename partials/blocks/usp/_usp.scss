@@ -1,7 +1,7 @@
-.usp {
+section.usp {
 	$self: &;
 
-    &__slider {
+    .usp__slider {
 
         .owl-stage {
             display: flex;
@@ -26,7 +26,7 @@
         }
     }
 
-    &__slide {
+    .usp__slide {
         padding: 0 16px;
         display: flex;
         justify-content: center;
@@ -64,11 +64,11 @@
 
     // background
 
-    &--grey {
+    .usp--grey {
         background: var(--cl-grey);
     }
 
-    &--black {
+    .usp--black {
         background: var(--cl-black);
         color: var(--cl-white);
 
@@ -81,7 +81,7 @@
         }
     }
 
-    &--primary {
+    .usp--primary {
         background: var(--cl-secondary);
         color: var(--cl-white);
 
@@ -94,7 +94,7 @@
         }
     }
 
-    &--secondary {
+    .usp--secondary {
         background: var(--cl-primary);
         color: var(--cl-white);
     }

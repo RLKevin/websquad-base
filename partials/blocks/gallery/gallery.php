@@ -5,7 +5,7 @@ $id = get_field('id');
 
 ?>
 
-<div id="<?php echo $id; ?>" class="gallery">
+<section id="<?php echo $id; ?>" class="gallery">
 
 	<?php
 	
@@ -41,4 +41,4 @@ $id = get_field('id');
 
 	?>
 
-</div>
+</section>

@@ -7,7 +7,7 @@ $id = get_field('id');
 
 ?>
 
-<div id="<?php echo $id; ?>" class="open open--<?php echo $align; ?> open--<?php echo $background; ?>">
+<section id="<?php echo $id; ?>" class="open open--<?php echo $align; ?> open--<?php echo $background; ?>">
 
 	<div class="wrapper">
 
@@ -62,4 +62,4 @@ $id = get_field('id');
 		?>
 
 	</div>
-</div>
+</section>

@@ -15,7 +15,7 @@ $city = get_field('options_contact_city', 'option');
 
 ?>
 
-<div id="<?php echo $id; ?>" class="map">
+<section id="<?php echo $id; ?>" class="map">
 		
 	<div class="map__map">
 
@@ -79,4 +79,4 @@ $city = get_field('options_contact_city', 'option');
 
 	</div>
 
-</div>
+</section>

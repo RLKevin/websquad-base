@@ -1,4 +1,4 @@
-.reference {
+section.reference {
 	$self: &;
 	padding: 96px 0 96px 0;
 
@@ -6,7 +6,7 @@
 		@include max-width;
 	}
 
-	&__slider {
+	.reference__slider {
 
 		.owl-nav {
 			position: relative;
@@ -51,7 +51,7 @@
 		}
 	}
 
-	&__rating {
+	.reference__rating {
 		padding: 0 0 48px 0;
 
 		ul {
@@ -183,7 +183,7 @@
 		}
 	}	
 
-	&__person {
+	.reference__person {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -194,7 +194,7 @@
 			justify-content: flex-start;
 		}
 
-		#{$self}__image {
+		.reference__image {
 			margin: 0 0 48px 0;
 
 			@include desktop {
@@ -210,7 +210,7 @@
 			}
 		}
 
-		#{$self}__info {
+		.reference__info {
 			text-align: center;
 
 			@include desktop {
@@ -311,9 +311,9 @@
 
 	// align
 
-	&--left {
+	.reference--left {
 
-		#{$self}__slider {
+		.reference__slider {
 
 			.owl-nav {
 	
@@ -327,7 +327,7 @@
 			}
 		}
 
-		#{$self}__rating {
+		.reference__rating {
 
 			ul {
 				justify-content: flex-start;
@@ -335,9 +335,9 @@
 		}
 	}
 
-	&--center {
+	.reference--center {
 
-		#{$self}__slider {
+		.reference__slider {
 
 			.owl-nav {
 				position: relative;
@@ -357,7 +357,7 @@
 			}
 		}
 
-		#{$self}__text {
+		.reference__text {
 			text-align: center;
 	
 			ul {
@@ -372,13 +372,13 @@
 			}
 		}
 
-		#{$self}__person {
+		.reference__person {
 	
 			@include desktop {
 				justify-content: center;
 			}
 	
-			#{$self}__image {
+			.reference__image {
 	
 				@include desktop {
 					width: calc(50% - 48px);
@@ -387,7 +387,7 @@
 				}
 			}
 	
-			#{$self}__info {
+			.reference__info {
 	
 				@include desktop {
 					width: calc(50% - 48px);
@@ -398,10 +398,10 @@
 
 	// background
 
-	&--grey {
+	.reference--grey {
 		background: var(--cl-grey);
 
-		#{$self}__rating {
+		.reference__rating {
 	
 			ul {
 	
@@ -501,10 +501,10 @@
 		}
 	}
 
-	&--black {
+	.reference--black {
 		background: var(--cl-black);
 
-		#{$self}__slider {
+		.reference__slider {
 
 			.owl-nav {
 	
@@ -544,7 +544,7 @@
 			}
 		}
 
-		#{$self}__rating {
+		.reference__rating {
 	
 			ul {
 	
@@ -643,9 +643,9 @@
 			}
 		}
 
-		#{$self}__person {
+		.reference__person {
 	
-			#{$self}__info {
+			.reference__info {
 	
 				ul {
 
@@ -716,10 +716,10 @@
 		}
 	}
 
-	&--primary {
+	.reference--primary {
 		background: var(--cl-secondary);
 
-		#{$self}__slider {
+		.reference__slider {
 
 			.owl-nav {
 	
@@ -759,7 +759,7 @@
 			}
 		}
 
-		#{$self}__rating {
+		.reference__rating {
 	
 			ul {
 	
@@ -858,9 +858,9 @@
 			}
 		}
 
-		#{$self}__person {
+		.reference__person {
 	
-			#{$self}__info {
+			.reference__info {
 
 				h3 {
 					color: var(--cl-primary);
@@ -934,10 +934,10 @@
 		}
 	}
 
-	&--secondary {
+	.reference--secondary {
 		background: var(--cl-primary);
 
-		#{$self}__slider {
+		.reference__slider {
 
 			.owl-nav {
 	
@@ -977,7 +977,7 @@
 			}
 		}
 
-		#{$self}__rating {
+		.reference__rating {
 	
 			ul {
 	
@@ -1076,9 +1076,9 @@
 			}
 		}
 
-		#{$self}__person {
+		.reference__person {
 	
-			#{$self}__info {
+			.reference__info {
 
 				h3 {
 					color: var(--cl-secondary);
@@ -1180,7 +1180,7 @@
 			}
 		}
 
-		#{$self}__file {
+		.reference__file {
 
 			a {
 				background: var(--cl-secondary);

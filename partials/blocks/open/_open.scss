@@ -1,4 +1,4 @@
-.open {
+section.open {
 	$self: &;
 	padding: 96px 0 96px 0;
 
@@ -57,7 +57,7 @@
 
 	// background
 
-	&--grey {
+	.open--grey {
 		background: var(--cl-grey);
 
 		ul {
@@ -68,7 +68,7 @@
 		}
 	}
 
-	&--black {
+	.open--black {
 		background: var(--cl-black);
 
 		ul {
@@ -79,7 +79,7 @@
 		}
 	}
 
-	&--primary {
+	.open--primary {
 		background: var(--cl-secondary);
 
 		ul {
@@ -90,7 +90,7 @@
 		}
 	}
 
-	&--secondary {
+	.open--secondary {
 		background: var(--cl-primary);
 
 		ul {
