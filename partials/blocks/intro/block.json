@@ -1,0 +1,25 @@
+{
+	"name": "switch/intro",
+	"title": "Intro",
+	"description": "All intro block",
+	"category": "switch-blocks",
+	"icon": "editor-aligncenter",
+	"apiVersion": 2,
+	"keywords": [
+		"intro",
+		"switch"
+	],
+	"acf": {
+		"mode": "preview",
+		"postTypes": ["post", "page"],
+		"renderTemplate": "intro.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {
+	}
+}

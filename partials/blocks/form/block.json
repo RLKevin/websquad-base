@@ -1,0 +1,25 @@
+{
+	"name": "switch/form",
+	"title": "Form",
+	"description": "All form block",
+	"category": "switch-blocks",
+	"icon": "forms",
+	"apiVersion": 2,
+	"keywords": [
+		"form",
+		"switch"
+	],
+	"acf": {
+		"mode": "preview",
+		"postTypes": ["post", "page"],
+		"renderTemplate": "form.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {
+	}
+}

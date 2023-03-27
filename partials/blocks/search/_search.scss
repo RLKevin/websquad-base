@@ -1,0 +1,143 @@
+.search {
+	$self: &;
+	padding: 96px 0 48px;
+
+	.wrapper {
+		@include max-width;
+	}
+
+	h2 {
+
+		span {
+			color: var(--cl-secondary);
+		}
+	}
+
+	h3 {
+		margin-top: -40px;
+	}
+
+	a {
+		display: block;
+		margin: 0 0 2px 0;
+		background: var(--cl-primary);
+		position: relative;
+		color: var(--cl-white);
+		font-weight: var(--fw-medium);
+		transition: 0.25s all ease-in-out;
+		padding: 16px 88px 16px 16px;
+		z-index: 1;
+		background: linear-gradient( to right, var(--cl-primary) 0%, var(--cl-secondary) 100% );
+		background-position: center left;
+		background-size: 200%;
+		text-align: left;
+		@include rectangle;
+		
+		@include tablet {
+			padding: 16px 88px 16px 24px;
+		}
+		
+		&:last-of-type {
+			margin: 0 0 48px 0;
+		}
+
+		svg {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 64px;
+			height: 64px;
+			pointer-events: none;
+			padding: 22px;
+			transition: 0.25s all ease-in-out;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-position: center right;
+
+			svg {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	// background
+
+	&--white {
+		background: var(--cl-white);
+
+		#{$self}__result {
+			line-height: 56px;
+			border: 2px solid var(--cl-grey);
+
+			&::before {
+				top: -2px;
+				right: -2px;
+				width: 60px;
+				border: 2px solid var(--cl-grey);
+			}
+
+			&::after {
+				top: -2px;
+				right: -2px;
+				width: 60px;
+			}
+		}
+	}
+
+	&--grey {
+		background: var(--cl-grey);
+
+		&:before,
+		&:after {
+			background: var(--cl-grey);
+		}
+	}
+
+	&--black {
+		background: var(--cl-black);
+
+		h2, p {
+			color: var(--cl-white);
+		}
+	}
+
+	&--primary {
+		background: var(--cl-secondary);
+
+		h2, p {
+			color: var(--cl-white);
+		}
+	}
+
+	&--secondary {
+		background: var(--cl-primary);
+
+		h2, p {
+			color: var(--cl-white);
+		}
+
+		strong {
+			color: var(--cl-secondary);
+		}
+
+		a {
+			background: var(--cl-secondary);
+	
+			&:hover {
+				background: var(--cl-secondary-dark);
+			}
+		}
+	}
+
+	// align
+
+	&--left {
+		text-align: left;
+	}
+
+	&--center {
+		text-align: center;
+	}
+}

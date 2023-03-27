@@ -1,0 +1,25 @@
+{
+	"name": "switch/table",
+	"title": "Table",
+	"description": "All table block",
+	"category": "switch-blocks",
+	"icon": "editor-table",
+	"apiVersion": 2,
+	"keywords": [
+		"table",
+		"switch"
+	],
+	"acf": {
+		"mode": "preview",
+		"postTypes": ["post", "page"],
+		"renderTemplate": "table.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {
+	}
+}

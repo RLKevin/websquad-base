@@ -1,0 +1,25 @@
+{
+	"name": "switch/search",
+	"title": "Search",
+	"description": "All search block",
+	"category": "switch-blocks",
+	"icon": "search",
+	"apiVersion": 2,
+	"keywords": [
+		"search",
+		"switch"
+	],
+	"acf": {
+		"mode": "preview",
+		"postTypes": ["post", "page"],
+		"renderTemplate": "search.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {
+	}
+}

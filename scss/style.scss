@@ -60,19 +60,19 @@
 // mixin - border radius
 
 @mixin square {
-	border-radius: $br-square-top-left $br-square-top-right
-		$br-square-bottom-right $br-square-bottom-left;
+	border-radius: var(--br-square-top-left) var(--br-square-top-right)
+		var(--br-square-bottom-right) var(--br-square-bottom-left);
 }
 
 @mixin rectangle {
-	border-radius: $br-rectangle-top-left $br-rectangle-top-right
-		$br-rectangle-bottom-right $br-rectangle-bottom-left;
+	border-radius: var(--br-rectangle-top-left) var(--br-rectangle-top-right)
+		var(--br-rectangle-bottom-right) var(--br-rectangle-bottom-left);
 }
 
 // mixin - shadow
 
 @mixin shadow {
-	box-shadow: 0px 0px 16px 0px rgba($cl-black, 0.16);
+	box-shadow: 0px 0px 16px 0px rgba(var(--cl-black), 0.16);
 }
 
 // mixin - transition
@@ -107,7 +107,7 @@
 // body
 
 html {
-	background: $cl-secondary;
+	background: var(--cl-secondary);
 }
 
 html,
@@ -117,13 +117,13 @@ body {
 }
 
 body {
-	font-family: $ff-secondary;
-	font-size: $fs-small;
-	line-height: $lh-large;
-	font-weight: $fw-regular;
-	color: $cl-black;
-	letter-spacing: $ls_medium;
-	background: $cl-white;
+	font-family: var(--ff-secondary);
+	font-size: var(--fs-small);
+	line-height: var(--lh-large);
+	font-weight: var(--fw-regular);
+	color: var(--cl-black);
+	letter-spacing: var(--ls_medium);
+	background: var(--cl-white);
 }
 
 // wrapper
@@ -140,30 +140,30 @@ body {
 
 h1,
 h2 {
-	color: $cl-black;
-	font-size: $fs-large;
-	line-height: $lh-small;
-	font-family: $ff-primary;
-	font-weight: $fw-bold;
+	color: var(--cl-black);
+	font-size: var(--fs-large);
+	line-height: var(--lh-small);
+	font-family: var(--ff-primary);
+	font-weight: var(--fw-bold);
 	padding: 0 0 48px 0;
 
 	@include tablet {
-		font-size: $fs-huge;
+		font-size: var(--fs-huge);
 	}
 }
 
 h3 {
-	color: $cl-primary;
-	font-size: $fs-medium;
-	line-height: $lh-medium;
-	font-family: $ff-primary;
-	font-weight: $fw-medium;
+	color: var(--cl-primary);
+	font-size: var(--fs-medium);
+	line-height: var(--lh-medium);
+	font-family: var(--ff-primary);
+	font-weight: var(--fw-medium);
 	padding: 0 0 48px 0;
 	position: relative;
 	z-index: 1;
 
 	@include tablet {
-		font-size: $fs-large;
+		font-size: var(--fs-large);
 	}
 }
 
@@ -190,12 +190,12 @@ textarea {
 	display: block;
 	width: 100%;
 	padding: 16px;
-	font-family: $ff-secondary;
-	font-size: $fs-small;
-	font-weight: $fw-regular;
-	line-height: $lh-large;
-	color: $cl-black;
-	letter-spacing: $ls-medium;
+	font-family: var(--ff-secondary);
+	font-size: var(--fs-small);
+	font-weight: var(--fw-regular);
+	line-height: var(--lh-large);
+	color: var(--cl-black);
+	letter-spacing: var(--ls-medium);
 	position: relative;
 	z-index: 1;
 	border: none;
@@ -205,7 +205,7 @@ textarea {
 }
 
 ::placeholder {
-	color: darken($cl-grey, 20%);
+	color: var(--cl-grey-dark);
 	opacity: 1;
 }
 
@@ -216,12 +216,12 @@ a {
 	&:visited,
 	&:active,
 	&:focus {
-		color: $cl-secondary;
+		color: var(--cl-secondary);
 		transition: all 0.25s ease-in-out;
 	}
 
 	&:hover {
-		color: darken($cl-secondary, 8%);
+		color: var(--cl-secondary);
 	}
 }
 
@@ -244,9 +244,9 @@ p {
 
 blockquote {
 	position: relative;
-	color: $cl-primary;
+	color: var(--cl-primary);
 	font-style: italic;
-	border-left: 2px solid $cl-primary;
+	border-left: 2px solid var(--cl-primary);
 	margin: 0 0 48px 0;
 	padding: 48px 0 0 16px;
 
@@ -288,14 +288,14 @@ img {
 // content - strong
 
 strong {
-	font-weight: $fw-bold;
-	color: $cl-secondary;
+	font-weight: var(--fw-bold);
+	color: var(--cl-secondary);
 }
 
 // content - italic
 
 em {
-	color: darken($cl-grey, 50%);
+	color: var(--cl-grey-dark);
 }
 
 // content - wysiwyg
@@ -316,8 +316,8 @@ em {
 				content: '\25E6';
 				position: absolute;
 				left: 0;
-				font-weight: $fw-bold;
-				color: $cl-secondary;
+				font-weight: var(--fw-bold);
+				color: var(--cl-secondary);
 			}
 		}
 	}
@@ -337,7 +337,7 @@ em {
 // selection
 
 ::selection {
-	background: darken($cl-grey, 8%);
+	background: var(--cl-grey-dark);
 	text-shadow: none;
 }
 
@@ -359,18 +359,17 @@ input:-webkit-autofill:active {
 
 // imports - blocks
 
-// @import 'blocks/card';
-// @import 'blocks/content';
-// @import 'blocks/faq';
-// @import 'blocks/form';
-// @import 'blocks/gallery';
-// @import 'blocks/hero';
-// @import 'blocks/intro';
-// @import 'blocks/map';
-// @import 'blocks/open';
-// @import 'blocks/reference';
-// @import 'blocks/search';
-// @import 'blocks/spacer';
-// @import 'blocks/table';
-// @import 'blocks/usp';
+@import '../partials/blocks/card/card';
+@import '../partials/blocks/content/content';
+@import '../partials/blocks/faq/faq';
+@import '../partials/blocks/form/form';
+@import '../partials/blocks/gallery/gallery';
 @import '../partials/blocks/hero/hero';
+@import '../partials/blocks/intro/intro';
+@import '../partials/blocks/map/map';
+@import '../partials/blocks/open/open';
+@import '../partials/blocks/reference/reference';
+@import '../partials/blocks/search/search';
+@import '../partials/blocks/spacer/spacer';
+@import '../partials/blocks/table/table';
+@import '../partials/blocks/usp/usp';

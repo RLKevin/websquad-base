@@ -1,0 +1,25 @@
+{
+	"name": "switch/reference",
+	"title": "Reference",
+	"description": "All reference block",
+	"category": "switch-blocks",
+	"icon": "editor-quote",
+	"apiVersion": 2,
+	"keywords": [
+		"reference",
+		"switch"
+	],
+	"acf": {
+		"mode": "preview",
+		"postTypes": ["post", "page"],
+		"renderTemplate": "reference.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {
+	}
+}

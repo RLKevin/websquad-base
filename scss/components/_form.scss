@@ -1,16 +1,16 @@
 .gform_wrapper {
 
 	::placeholder {
-		color: darken($cl-grey, 16%);
+		color: var(--cl-grey-dark);
 		opacity: 1;
 	}
 
 	label {
 		display: block;
 		width: 100%;
-		font-size: $fs-tiny;
-		font-weight: $fw-medium;
-		color: $cl-secondary;
+		font-size: var(--fs-tiny);
+		font-weight: var(--fw-medium);
+		color: var(--cl-secondary);
 		margin-bottom: 12px;
 		padding: 0;
 		-webkit-appearance: none;
@@ -42,14 +42,14 @@
 
 		h2 {
 			padding: 16px 0 16px 32px;
-			border-left: 2px solid $cl-error;
-			// background: lighten($cl-error, 40%);
+			border-left: 2px solid var(--cl-error);
+			// background: lighten(var(--cl-error), 40%);
 			margin-bottom: 48px;
-			color: $cl-error;
-			font-family: $ff-secondary;
-			font-size: $fs-small;
-			line-height: $lh-large;
-			font-weight: $fw-regular;
+			color: var(--cl-error);
+			font-family: var(--ff-secondary);
+			font-size: var(--fs-small);
+			line-height: var(--lh-large);
+			font-weight: var(--fw-regular);
 			// @include rectangle;
 		}
 	}
@@ -78,9 +78,9 @@
 				}
 
 				.validation_message {
-					font-size: $fs-tiny;
-					font-weight: $fw-medium;
-					color: $cl-error;
+					font-size: var(--fs-tiny);
+					font-weight: var(--fw-medium);
+					color: var(--cl-error);
 					padding: 4px 0 0 0;
 				}
 			}

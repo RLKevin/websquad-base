@@ -45,7 +45,7 @@
 
   	</head>
   
-  	<body>
+  	<body <?= body_class(); ?>>
 
 		<?php 
 

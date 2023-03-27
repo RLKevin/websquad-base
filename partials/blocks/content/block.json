@@ -1,0 +1,25 @@
+{
+	"name": "switch/content",
+	"title": "Content",
+	"description": "All content block",
+	"category": "switch-blocks",
+	"icon": "text",
+	"apiVersion": 2,
+	"keywords": [
+		"content",
+		"switch"
+	],
+	"acf": {
+		"mode": "preview",
+		"postTypes": ["post", "page"],
+		"renderTemplate": "content.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {
+	}
+}

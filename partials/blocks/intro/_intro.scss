@@ -1,0 +1,105 @@
+.intro {
+	$self: &;
+	padding: 96px 0 48px 0;
+
+	.wrapper {
+		@include max-width;
+	}
+
+	&__title {
+
+		h1 {
+			text-align: center;
+			width: 100%;
+			position: relative;
+		}
+
+		&--grey {
+			padding: 96px 0 48px 0;
+			margin: -96px 0 96px 0;
+			background: var(--cl-grey);
+
+			h1 {
+				color: var(--cl-white);
+			}
+		}
+
+		&--black {
+			padding: 96px 0 48px 0;
+			margin: -96px 0 96px 0;
+			background: var(--cl-black);
+
+			h1 {
+				color: var(--cl-white);
+			}
+		}
+
+		&--primary {
+			padding: 96px 0 48px 0;
+			margin: -96px 0 96px 0;
+			background: var(--cl-primary);
+
+			h1 {
+				color: var(--cl-white);
+			}
+		}
+
+		&--secondary {
+			padding: 96px 0 48px 0;
+			margin: -96px 0 96px 0;
+			background: var(--cl-secondary);
+
+			h1 {
+				color: var(--cl-white);
+			}
+		}
+
+		&--image {
+			padding: 96px 0 48px 0;
+			margin: -96px 0 96px 0;
+			position: relative;
+			background-position: center center;
+			background-size: cover;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background:
+					linear-gradient(
+						to bottom right, 
+						rgba(var(--cl-black), 0.25) 0%,
+						rgba(var(--cl-black), 0.5) 40%, 
+						rgba(var(--cl-black), 0.25) 100%,
+					);
+			}
+
+			h1 {
+				color: var(--cl-white);
+			}
+		}
+	}
+
+	&__text {
+		text-align: center;
+		font-weight: var(--fw-medium);
+
+		@include desktop {
+			font-size: var(--fs-medium);
+		}
+
+		#{$self}__button-container {
+	
+			a {
+				margin: 0 24px 24px 24px;
+
+				&:last-of-type {
+					margin: 0 24px 48px 24px;
+				}
+			}
+		}
+	}
+}

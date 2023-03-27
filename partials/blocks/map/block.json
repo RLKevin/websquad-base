@@ -1,0 +1,25 @@
+{
+	"name": "switch/map",
+	"title": "Map",
+	"description": "All map block",
+	"category": "switch-blocks",
+	"icon": "location",
+	"apiVersion": 2,
+	"keywords": [
+		"map",
+		"switch"
+	],
+	"acf": {
+		"mode": "preview",
+		"postTypes": ["post", "page"],
+		"renderTemplate": "map.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {
+	}
+}

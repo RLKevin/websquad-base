@@ -3,7 +3,7 @@
 	"title": "Hero",
 	"description": "All hero block",
 	"category": "switch-blocks",
-	"icon": "store",
+	"icon": "images-alt",
 	"apiVersion": 2,
 	"keywords": [
 		"hero",

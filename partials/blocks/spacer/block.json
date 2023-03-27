@@ -1,0 +1,25 @@
+{
+	"name": "switch/spacer",
+	"title": "Spacer",
+	"description": "All spacer block",
+	"category": "switch-blocks",
+	"icon": "minus",
+	"apiVersion": 2,
+	"keywords": [
+		"spacer",
+		"switch"
+	],
+	"acf": {
+		"mode": "preview",
+		"postTypes": ["post", "page"],
+		"renderTemplate": "spacer.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"name": "switch/faq",
+	"title": "FAQ",
+	"description": "All faq block",
+	"category": "switch-blocks",
+	"icon": "store",
+	"apiVersion": 2,
+	"keywords": [
+		"faq",
+		"switch"
+	],
+	"acf": {
+		"mode": "preview",
+		"postTypes": ["post", "page"],
+		"renderTemplate": "faq.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {
+	}
+}

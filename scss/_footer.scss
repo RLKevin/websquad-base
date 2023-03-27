@@ -2,7 +2,7 @@
 	$self: &;
 
 	#{$self}__topmenu {
-		background: $cl-black;
+		background: var(--cl-black);
 
 		.wrapper {
 			display: flex;
@@ -68,7 +68,7 @@
 						padding: 0 0 0 40px;
 						transition: 0.25s all ease-in-out;
 						line-height: 40px;
-						color: $cl-black;
+						color: var(--cl-black);
 						white-space: nowrap;
 
 						svg {
@@ -78,7 +78,7 @@
 							position: absolute;
 							top: 0;
 							left: 0;
-							color: $cl-white;
+							color: var(--cl-white);
 							transition: 0.25s all ease-in-out;
 						}
 	
@@ -89,7 +89,7 @@
 							left: 0;
 							width: 40px;
 							height: 40px;
-							border: 2px solid $cl-white;
+							border: 2px solid var(--cl-white);
 							transition: 0.25s all ease-in-out;
 							@include square;
 						}
@@ -98,11 +98,11 @@
 							cursor: pointer;
 
 							&::before {
-								border: 2px solid $cl-primary;
+								border: 2px solid var(--cl-primary);
 							}
 							
 							svg {
-								color: $cl-primary;
+								color: var(--cl-primary);
 							}
 						}
 					}
@@ -123,7 +123,7 @@
 	}
 
 	#{$self}__mainmenu {
-		background: $cl-primary;
+		background: var(--cl-primary);
 
 		.wrapper {
 			display: flex;
@@ -161,7 +161,7 @@
 						padding: 0 0 0 40px;
 						transition: 0.25s all ease-in-out;
 						line-height: 40px;
-						color: $cl-black;
+						color: var(--cl-black);
 						white-space: nowrap;
 	
 						&:before {
@@ -171,7 +171,7 @@
 							left: 0;
 							width: 40px;
 							height: 40px;
-							border: 2px solid $cl-white;
+							border: 2px solid var(--cl-white);
 							background-size: 16px 16px;
 							background-repeat: no-repeat;
 							background-position: center;
@@ -217,7 +217,7 @@
 						&:hover {
 	
 							&:before {
-								border: 2px solid $cl-secondary;
+								border: 2px solid var(--cl-secondary);
 								cursor: pointer;
 							}
 	
@@ -307,7 +307,7 @@
 							transform: translateY(-50%);
 							width: 8px;
 							height: 8px;
-							border: 2px solid $cl-white;
+							border: 2px solid var(--cl-white);
 							@include square;
 						}
 					}
@@ -315,7 +315,7 @@
 
 				li {
 					text-align: center;
-					color: $cl-white;
+					color: var(--cl-white);
 					
 					@include tablet {
 
@@ -332,14 +332,14 @@
 								transform: translateY(-50%);
 								width: 8px;
 								height: 8px;
-								border: 2px solid $cl-white;
+								border: 2px solid var(--cl-white);
 								@include square;
 							}
 						}
 					}
 
 					a {
-						color: $cl-white;
+						color: var(--cl-white);
 					}
 				}
 

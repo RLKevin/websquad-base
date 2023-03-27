@@ -1,0 +1,25 @@
+{
+	"name": "switch/usp",
+	"title": "USP",
+	"description": "All usp block",
+	"category": "switch-blocks",
+	"icon": "yes",
+	"apiVersion": 2,
+	"keywords": [
+		"usp",
+		"switch"
+	],
+	"acf": {
+		"mode": "preview",
+		"postTypes": ["post", "page"],
+		"renderTemplate": "usp.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {
+	}
+}

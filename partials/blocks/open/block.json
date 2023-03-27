@@ -1,0 +1,25 @@
+{
+	"name": "switch/open",
+	"title": "Open",
+	"description": "All open block",
+	"category": "switch-blocks",
+	"icon": "clock",
+	"apiVersion": 2,
+	"keywords": [
+		"open",
+		"switch"
+	],
+	"acf": {
+		"mode": "preview",
+		"postTypes": ["post", "page"],
+		"renderTemplate": "open.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {
+	}
+}

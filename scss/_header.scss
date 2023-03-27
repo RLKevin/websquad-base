@@ -4,7 +4,7 @@
 	z-index: 999;
 
 	&__topmenu {
-		background: $cl-black;
+		background: var(--cl-black);
 
 		#{$self}__submenu {
 	
@@ -33,7 +33,7 @@
 						padding: 0 0 0 40px;
 						transition: 0.25s all ease-in-out;
 						line-height: 40px;
-						color: $cl-white;
+						color: var(--cl-white);
 						white-space: nowrap;
 
 						svg {
@@ -43,7 +43,7 @@
 							position: absolute;
 							top: 0;
 							left: 0;
-							color: $cl-white;
+							color: var(--cl-white);
 							transition: 0.25s all ease-in-out;
 						}
 	
@@ -54,7 +54,7 @@
 							left: 0;
 							width: 40px;
 							height: 40px;
-							border: 2px solid $cl-white;
+							border: 2px solid var(--cl-white);
 							transition: 0.25s all ease-in-out;
 							@include square;
 						}
@@ -63,11 +63,11 @@
 							cursor: pointer;
 
 							&::before {
-								border: 2px solid $cl-primary;
+								border: 2px solid var(--cl-primary);
 							}
 							
 							svg {
-								color: $cl-primary;
+								color: var(--cl-primary);
 							}
 						}
 	
@@ -141,7 +141,7 @@
 					}
 
 					a {
-						color: rgba($cl-black, 0.5);
+						color: rgba(var(--cl-black), 0.5);
 						transition: 0.25s all ease-in-out;
 						white-space: nowrap;
 					}
@@ -152,7 +152,7 @@
 					&:hover {
 
 						a {
-							color: $cl-black;
+							color: var(--cl-black);
 						}
 						
 					}
@@ -170,20 +170,20 @@
 							padding: 16px;
 							text-align: center;
 							transition: all 0.25s ease-in-out;
-							font-family: $ff-secondary;
-							font-size: $fs-small;
-							font-weight: $fw-medium;
-							line-height: $lh-large;
+							font-family: var(--ff-secondary);
+							font-size: var(--fs-small);
+							font-weight: var(--fw-medium);
+							line-height: var(--lh-large);
 							z-index: 1;
 							text-align: center;
-							color: $cl-white;
-							background: $cl-error;
+							color: var(--cl-white);
+							background: var(--cl-error);
 							@include rectangle;
 
 							&:active,
 							&:visited,
 							&:hover {
-								color: $cl-white;
+								color: var(--cl-white);
 							}
 
 							@include tablet {
@@ -192,7 +192,7 @@
 
 							&:hover {
 								cursor: pointer;
-								background: darken($cl-error, 8%);
+								background: var(--cl-error);
 							}
 						}
 					}
@@ -231,7 +231,7 @@
 						padding: 0 0 0 40px;
 						transition: 0.25s all ease-in-out;
 						line-height: 40px;
-						color: $cl-black;
+						color: var(--cl-black);
 						white-space: nowrap;
 
 						svg {
@@ -241,7 +241,7 @@
 							position: absolute;
 							top: 0;
 							left: 0;
-							color: $cl-secondary;
+							color: var(--cl-secondary);
 							transition: 0.25s all ease-in-out;
 						}
 	
@@ -252,7 +252,7 @@
 							left: 0;
 							width: 40px;
 							height: 40px;
-							border: 2px solid $cl-secondary;
+							border: 2px solid var(--cl-secondary);
 							transition: 0.25s all ease-in-out;
 							@include square;
 						}
@@ -261,11 +261,11 @@
 							cursor: pointer;
 
 							&::before {
-								border: 2px solid $cl-primary;
+								border: 2px solid var(--cl-primary);
 							}
 							
 							svg {
-								color: $cl-primary;
+								color: var(--cl-primary);
 							}
 						}
 	
@@ -300,7 +300,7 @@
 			right: 16px;
 			width: 48px;
 			height: 48px;
-			background: $cl-primary;
+			background: var(--cl-primary);
 			z-index: 999;
 			display: none;
 			overflow: hidden;
@@ -324,7 +324,7 @@
 				left: calc(50% - 10px);
 				width: 20px;
 				height: 20px;
-				color: $cl-white;
+				color: var(--cl-white);
 				transition: 0.25s all ease-in-out;
 
 				&:last-of-type {
@@ -339,7 +339,7 @@
 
 			&:hover {
 				cursor: pointer;
-				background: darken($cl-primary, 8%);
+				background: var(--cl-primary-dark);
 
 				svg {
 					transform: scale(1.1);
@@ -387,7 +387,7 @@
 		right: -100%;
 		width: 100%;
 		height: 100vh;
-		background: $cl-black;
+		background: var(--cl-black);
 		padding: 40px 16px 0 16px;
 		overflow: auto;
 		transition: 0.5s right ease-in-out;
@@ -441,7 +441,7 @@
 						padding: 0 0 0 40px;
 						transition: 0.25s all ease-in-out;
 						line-height: 40px;
-						color: $cl-white;
+						color: var(--cl-white);
 						white-space: nowrap;
 
 						svg {
@@ -451,7 +451,7 @@
 							position: absolute;
 							top: 0;
 							left: 0;
-							color: $cl-white;
+							color: var(--cl-white);
 							transition: 0.25s all ease-in-out;
 						}
 	
@@ -462,7 +462,7 @@
 							left: 0;
 							width: 40px;
 							height: 40px;
-							border: 2px solid $cl-white;
+							border: 2px solid var(--cl-white);
 							transition: 0.25s all ease-in-out;
 							@include square;
 						}
@@ -471,11 +471,11 @@
 							cursor: pointer;
 
 							&::before {
-								border: 2px solid $cl-primary;
+								border: 2px solid var(--cl-primary);
 							}
 							
 							svg {
-								color: $cl-primary;
+								color: var(--cl-primary);
 							}
 						}
 	
@@ -525,18 +525,18 @@
 							left: 0;
 							width: 100%;
 							height: 2px;
-							background: $cl-primary;
+							background: var(--cl-primary);
 						}
 					}
 
 					a {
-						color: $cl-white;
-						font-family: $ff-secondary;
+						color: var(--cl-white);
+						font-family: var(--ff-secondary);
 						transition: 0.25s all ease-in-out;
 						white-space: nowrap;
 
 						@include tablet {
-							font-size: $fs-medium;
+							font-size: var(--fs-medium);
 						}
 					}
 
@@ -546,7 +546,7 @@
 					&:hover {
 
 						a {
-							color: $cl-primary;
+							color: var(--cl-primary);
 						}
 						
 					}
@@ -565,7 +565,7 @@
 		right: -100%;
 		width: 100%;
 		height: 100vh;
-		background: $cl-grey;
+		background: var(--cl-grey);
 		overflow: auto;
 		transition: 0.50s right ease-in-out;
 		display: flex;
@@ -602,7 +602,7 @@
 				width: 64px;
 
 				input {
-					background: $cl-secondary;
+					background: var(--cl-secondary);
 					@include transition;
 				}
 
@@ -612,7 +612,7 @@
 					position: absolute;
 					top: calc(50% - 8px);
 					left: calc(50% - 8px);
-					color: $cl-white;
+					color: var(--cl-white);
 					transition: 0.5s all ease-in-out;
 					z-index: 1;
 					pointer-events: none;
@@ -626,7 +626,7 @@
 					}
 
 					input {
-						background: darken($cl-secondary, 8%);
+						background: var(--cl-secondary-dark);
 						cursor: pointer;
 					}
 				}

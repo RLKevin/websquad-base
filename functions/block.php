@@ -1,8 +1,20 @@
 <?php
 
 $blocks = array(
+    'card',
+    'content',
+    'faq',
+    'form',
+    'gallery',
     'hero',
-    // 'intro',
+    'intro',
+    'map',
+    'open',
+    'reference',
+    'search',
+    'spacer',
+    'table',
+    'usp'
 );
 
 add_action('init', 'register_acf_blocks', 5);

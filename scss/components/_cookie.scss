@@ -7,8 +7,8 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: $cl-black;
-	color: $cl-white;
+	background-color: var(--cl-black);
+	color: var(--cl-white);
     transition: all 0.25s ease-in-out;
 	z-index: 9999;
 	@include padding;
@@ -29,11 +29,11 @@
 	}
 
 	// a {
-	// 	background: $cl-tertiary;
+	// 	background: var(--cl-tertiary);
 	// 	padding: 16px 48px;
 
 	// 	&:hover {
-	// 		background: darken($cl-tertiary, 8%);
+	// 		background: var(--cl-tertiary-dark);
 	// 		padding: 16px 48px;
 	// 	}
 	// }
