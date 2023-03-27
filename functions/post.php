@@ -38,6 +38,11 @@ function teamswitch_custom_post_types() {
 		// 	'switch/blockname',
 		// ),
 	));
+	create_post_type('References', 'reference', array(
+		// array(
+		// 	'switch/blockname',
+		// ),
+	));
 
 }
 
