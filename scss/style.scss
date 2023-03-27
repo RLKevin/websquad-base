@@ -359,17 +359,18 @@ input:-webkit-autofill:active {
 
 // imports - blocks
 
-@import 'blocks/card';
-@import 'blocks/content';
-@import 'blocks/faq';
-@import 'blocks/form';
-@import 'blocks/gallery';
-@import 'blocks/hero';
-@import 'blocks/intro';
-@import 'blocks/map';
-@import 'blocks/open';
-@import 'blocks/reference';
-@import 'blocks/search';
-@import 'blocks/spacer';
-@import 'blocks/table';
-@import 'blocks/usp';
+// @import 'blocks/card';
+// @import 'blocks/content';
+// @import 'blocks/faq';
+// @import 'blocks/form';
+// @import 'blocks/gallery';
+// @import 'blocks/hero';
+// @import 'blocks/intro';
+// @import 'blocks/map';
+// @import 'blocks/open';
+// @import 'blocks/reference';
+// @import 'blocks/search';
+// @import 'blocks/spacer';
+// @import 'blocks/table';
+// @import 'blocks/usp';
+@import '../partials/blocks/hero/hero';
