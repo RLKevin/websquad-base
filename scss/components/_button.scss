@@ -1,52 +1,57 @@
-.button:not(.acf-button) {
-	display: inline-flex;
-	justify-content: center;
-	width: 100%;
-	max-width: 256px;
-	padding: 16px;
-	border: none;
-	font-family: var(--ff-primary);
-	font-size: var(--fs-small);
-	font-weight: var(--fw-medium);
-	line-height: var(--lh-large);
-	letter-spacing: var(--ls-medium);
-	// text-transform: uppercase;
-	text-align: center;
-	color: var(--cl-white);
-	background: var(--cl-secondary);
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-	margin: 0 0 48px 0;
-	@include transition;
-	@include rectangle;
+header,
+footer,
+section{
 
-	// svg {
-	// 	width: auto;
-	// 	height: 100%;
-	// 	display: inline-block;
-	// 	position: absolute;
-	// 	top: 0;
-	// 	right: 0;
-	// 	color: var(--cl-white);
-	// 	opacity: 0.16;
-	// 	transition: all 0.25s ease-in-out;
-	// 	z-index: -1;
-	// }
-
-	&:active,
-	&:visited,
-	&:focus,
-	&:hover {
+	.button:not(.acf-button) {
+		display: inline-flex;
+		justify-content: center;
+		width: 100%;
+		max-width: 256px;
+		padding: 16px;
+		border: none;
+		font-family: var(--ff-primary);
+		font-size: var(--fs-small);
+		font-weight: var(--fw-medium);
+		line-height: var(--lh-large);
+		letter-spacing: var(--ls-medium);
+		// text-transform: uppercase;
+		text-align: center;
 		color: var(--cl-white);
-	}
-	
-	&:hover {
-		cursor: pointer;
-		background: var(--cl-secondary-dark);
+		background: var(--cl-secondary);
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		margin: 0 0 48px 0;
+		@include transition;
+		@include rectangle;
 
 		// svg {
-		// 	transform: scale(1.6);
+		// 	width: auto;
+		// 	height: 100%;
+		// 	display: inline-block;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: 0;
+		// 	color: var(--cl-white);
+		// 	opacity: 0.16;
+		// 	transition: all 0.25s ease-in-out;
+		// 	z-index: -1;
 		// }
+
+		&:active,
+		&:visited,
+		&:focus,
+		&:hover {
+			color: var(--cl-white);
+		}
+		
+		&:hover {
+			cursor: pointer;
+			background: var(--cl-secondary-dark);
+
+			// svg {
+			// 	transform: scale(1.6);
+			// }
+		}
 	}
 }
