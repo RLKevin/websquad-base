@@ -33,11 +33,11 @@ function teamswitch_custom_post_types() {
 			)
 		);
 	}
-	// create_post_type('Blog', 'e', array(
-	// 	array(
-	// 		'switch/blockname',
-	// 	),
-	// ));
+	create_post_type('Blog', 'blog', array(
+		// array(
+		// 	'switch/blockname',
+		// ),
+	));
 
 }
 

@@ -23,14 +23,12 @@ section.card {
 	}
 
 	.card__image {
-
 		&--video {
-
 			a {
 				position: relative;
 
 				&:after {
-					content: "";
+					content: '';
 					position: absolute;
 					left: 50%;
 					top: 50%;
@@ -80,7 +78,6 @@ section.card {
 		justify-content: center;
 
 		.button {
-
 			&--disabled {
 				background: var(--cl-black);
 
@@ -115,13 +112,11 @@ section.card {
 		background: var(--cl-black);
 
 		.card__load-more {
-
 			.button {
-
 				&--disabled {
 					background: var(--cl-white);
 					color: var(--cl-black);
-	
+
 					&:hover {
 						background: var(--cl-white-dark);
 					}
@@ -138,12 +133,10 @@ section.card {
 		background: var(--cl-secondary);
 
 		.card__load-more {
-
 			.button {
-
 				&--filled-secondary {
 					background: var(--cl-primary);
-	
+
 					&:hover {
 						background: var(--cl-primary-dark);
 					}
@@ -151,7 +144,7 @@ section.card {
 
 				&--disabled {
 					background: var(--cl-black);
-	
+
 					&:hover {
 						background: var(--cl-black-dark);
 					}
@@ -170,12 +163,12 @@ section.card {
 			margin: 0 0 96px 0;
 			@include rectangle;
 			overflow: hidden;
-	
+
 			@include desktop {
 				margin: 0 0 96px 96px;
 				width: calc(50% - 48px);
 
-				&:nth-of-type(2n+1) {
+				&:nth-of-type(2n + 1) {
 					margin: 0 0 96px 0;
 				}
 			}
@@ -183,11 +176,11 @@ section.card {
 			@include custom(1920px) {
 				width: calc(25% - 72px);
 
-				&:nth-of-type(2n+1) {
+				&:nth-of-type(2n + 1) {
 					margin: 0 0 96px 96px;
 				}
 
-				&:nth-of-type(4n+1) {
+				&:nth-of-type(4n + 1) {
 					margin: 0 0 96px 0;
 				}
 			}
@@ -221,7 +214,6 @@ section.card {
 		}
 
 		.card--white {
-
 			.card__item {
 				background: var(--cl-grey);
 			}
@@ -229,8 +221,11 @@ section.card {
 	}
 
 	.card--mixed {
-
-		h2, h3, p, li, em {
+		h2,
+		h3,
+		p,
+		li,
+		em {
 			color: var(--cl-white);
 		}
 
@@ -238,7 +233,8 @@ section.card {
 			color: var(--cl-white);
 		}
 
-		p a, li a {
+		p a,
+		li a {
 			color: var(--cl-white);
 
 			&:hover {
@@ -247,9 +243,7 @@ section.card {
 		}
 
 		ul {
-			
 			li {
-
 				&:before {
 					color: var(--cl-primary);
 				}
@@ -262,54 +256,51 @@ section.card {
 			&:before {
 				background-image: url(../img/icons/quote-right-solid-primary.svg);
 			}
-		}		
+		}
 
 		.card__item {
 			padding: 0 0 48px 0;
 
-			&:nth-child(6n+1) {
-				background: var(--cl-primary); 
+			&:nth-child(6n + 1) {
+				background: var(--cl-primary);
 			}
 
-			&:nth-child(6n+2) { 
+			&:nth-child(6n + 2) {
 				// TODO: NEW COLOR
 				// background: mix(var(--cl-primary), var(--cl-grey), 80%);
 			}
 
-			&:nth-child(6n+3) { 
-				background: var(--cl-secondary); 
+			&:nth-child(6n + 3) {
+				background: var(--cl-secondary);
 			}
 
-			&:nth-child(6n+4) { 
+			&:nth-child(6n + 4) {
 				// TODO: NEW COLOR
 				// background: mix(var(--cl-secondary), var(--cl-grey), 80%);
 			}
 
-			&:nth-child(6n+5) { 
-				background: var(--cl-black); 
+			&:nth-child(6n + 5) {
+				background: var(--cl-black);
 			}
 
-			&:nth-child(6n+6) { 
+			&:nth-child(6n + 6) {
 				// TODO: NEW COLOR
 				// background: mix(var(--cl-black), var(--cl-grey), 80%);
 			}
 		}
 
 		.card__text {
-
 			@include desktop {
 				padding: 96px 96px 0 96px;
 			}
 		}
 
 		.card__button {
-
 			.button {
-
 				&--filled-secondary {
 					background: var(--cl-white);
 					color: var(--cl-black);
-	
+
 					&:hover {
 						background: var(--cl-grey);
 					}
@@ -329,7 +320,6 @@ section.card {
 	// image
 
 	.card--icon {
-
 		.card__image {
 			padding: 96px 0 0 0;
 			display: flex;
@@ -354,9 +344,7 @@ section.card {
 	}
 
 	.card--full {
-
 		.card__image {
-
 			a {
 				display: block;
 				position: relative;
@@ -374,7 +362,6 @@ section.card {
 				}
 
 				&:hover {
-
 					img {
 						// transform: scale(1.6) translateY(-31.25%);
 					}
@@ -384,7 +371,6 @@ section.card {
 	}
 
 	.card--round {
-
 		.card__image {
 			padding: 96px 0 0 0;
 			display: flex;
@@ -409,7 +395,6 @@ section.card {
 				}
 
 				&:hover {
-					
 					img {
 						// transform: scale(1.6);
 					}
@@ -421,25 +406,22 @@ section.card {
 	// style
 
 	.card--three {
-
 		&.card--basic {
-			
 			.card__item {
-	
 				@include desktop {
 					margin: 0 0 96px 48px;
 					width: calc(33.333333333333333% - 32px);
-	
-					&:nth-of-type(3n+1) {
+
+					&:nth-of-type(3n + 1) {
 						margin: 0 0 96px 0px;
 					}
 				}
-	
+
 				@include custom(1920px) {
 					margin: 0 0 96px 96px;
 					width: calc(33.333333333333333% - 64px);
-	
-					&:nth-of-type(3n+1) {
+
+					&:nth-of-type(3n + 1) {
 						margin: 0 0 96px 0px;
 					}
 				}
@@ -447,41 +429,38 @@ section.card {
 		}
 
 		&.card--mixed {
-			
 			.card__item {
-	
 				@include desktop {
 					width: 33.333333333333333%;
 				}
-		
+
 				@include custom(1920px) {
 					width: 33.333333333333333%;
 				}
 			}
-	
+
 			.card__text {
 				padding: 96px 16px 0 16px;
-				
+
 				h2 {
 					font-size: var(--fs-small);
-	
+
 					@include tablet {
 						font-size: var(--fs-medium);
 					}
 				}
-		
+
 				@include tablet {
 					padding: 96px 48px 0 48px;
 				}
-	
+
 				@include desktop {
 					padding: 96px 48px 0 48px;
 				}
 			}
-		}	
+		}
 	}
 
 	.card--four {
-
 	}
 }

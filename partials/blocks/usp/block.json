@@ -8,7 +8,7 @@
 	"keywords": ["usp", "switch"],
 	"acf": {
 		"mode": "auto",
-		"postTypes": ["post", "page"],
+		"postTypes": ["post", "page", "blog"],
 		"renderTemplate": "usp.php"
 	},
 	"render_callback": "my_block_render_callback",

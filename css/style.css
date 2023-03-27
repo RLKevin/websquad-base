@@ -4386,6 +4386,10 @@ body {
   background: var(--cl-white);
 }
 
+.section {
+  width: 100%;
+}
+
 .wrapper {
   width: 100%;
   margin: 0 auto;
@@ -5680,7 +5684,7 @@ section.card .card--basic .card__item {
     margin: 0 0 96px 96px;
     width: calc(50% - 48px);
   }
-  section.card .card--basic .card__item:nth-of-type(2n+1) {
+  section.card .card--basic .card__item:nth-of-type(2n + 1) {
     margin: 0 0 96px 0;
   }
 }
@@ -5688,10 +5692,10 @@ section.card .card--basic .card__item {
   section.card .card--basic .card__item {
     width: calc(25% - 72px);
   }
-  section.card .card--basic .card__item:nth-of-type(2n+1) {
+  section.card .card--basic .card__item:nth-of-type(2n + 1) {
     margin: 0 0 96px 96px;
   }
-  section.card .card--basic .card__item:nth-of-type(4n+1) {
+  section.card .card--basic .card__item:nth-of-type(4n + 1) {
     margin: 0 0 96px 0;
   }
 }
@@ -5727,16 +5731,22 @@ section.card .card--basic .card__load-more {
 section.card .card--basic .card--white .card__item {
   background: var(--cl-grey);
 }
-section.card .card--mixed h2, section.card .card--mixed h3, section.card .card--mixed p, section.card .card--mixed li, section.card .card--mixed em {
+section.card .card--mixed h2,
+section.card .card--mixed h3,
+section.card .card--mixed p,
+section.card .card--mixed li,
+section.card .card--mixed em {
   color: var(--cl-white);
 }
 section.card .card--mixed strong {
   color: var(--cl-white);
 }
-section.card .card--mixed p a, section.card .card--mixed li a {
+section.card .card--mixed p a,
+section.card .card--mixed li a {
   color: var(--cl-white);
 }
-section.card .card--mixed p a:hover, section.card .card--mixed li a:hover {
+section.card .card--mixed p a:hover,
+section.card .card--mixed li a:hover {
   color: var(--cl-black-dark);
 }
 section.card .card--mixed ul li:before {
@@ -5860,7 +5870,7 @@ section.card .card--round .card__image a img {
     margin: 0 0 96px 48px;
     width: calc(33.3333333333% - 32px);
   }
-  section.card .card--three.card--basic .card__item:nth-of-type(3n+1) {
+  section.card .card--three.card--basic .card__item:nth-of-type(3n + 1) {
     margin: 0 0 96px 0px;
   }
 }
@@ -5869,7 +5879,7 @@ section.card .card--round .card__image a img {
     margin: 0 0 96px 96px;
     width: calc(33.3333333333% - 64px);
   }
-  section.card .card--three.card--basic .card__item:nth-of-type(3n+1) {
+  section.card .card--three.card--basic .card__item:nth-of-type(3n + 1) {
     margin: 0 0 96px 0px;
   }
 }
