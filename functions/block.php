@@ -1,7 +1,7 @@
 <?php
 
 $blocks = array(
-    'card',
+    'cards',
     'content',
     'faq',
     'form',

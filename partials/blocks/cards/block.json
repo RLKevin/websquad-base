@@ -1,0 +1,21 @@
+{
+	"name": "switch/cards",
+	"title": "Cards",
+	"description": "All cards block",
+	"category": "switch-blocks",
+	"icon": "megaphone",
+	"apiVersion": 2,
+	"keywords": ["cards", "switch"],
+	"acf": {
+		"mode": "auto",
+		"postTypes": ["post", "page", "blog"],
+		"renderTemplate": "cards.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {}
+}

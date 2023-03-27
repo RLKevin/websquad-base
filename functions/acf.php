@@ -70,7 +70,7 @@ function teamswitch_acf_init($google_maps_key) {
 			return $field;
 		}
 		
-		add_filter('acf/load_field/name=vacancies_post_type', 'acf_load_post_field_choices');
+		add_filter('acf/load_field/name=card_post_type', 'acf_load_post_field_choices');
 
 		// populate dropdown with custom posts
 
