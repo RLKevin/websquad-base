@@ -5,12 +5,9 @@
 	"category": "switch-blocks",
 	"icon": "editor-table",
 	"apiVersion": 2,
-	"keywords": [
-		"table",
-		"switch"
-	],
+	"keywords": ["table", "switch"],
 	"acf": {
-		"mode": "preview",
+		"mode": "auto",
 		"postTypes": ["post", "page"],
 		"renderTemplate": "table.php"
 	},
@@ -20,6 +17,5 @@
 		"anchor": false,
 		"alignContent": false
 	},
-	"example": {
-	}
+	"example": {}
 }

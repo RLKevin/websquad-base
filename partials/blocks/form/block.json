@@ -5,12 +5,9 @@
 	"category": "switch-blocks",
 	"icon": "forms",
 	"apiVersion": 2,
-	"keywords": [
-		"form",
-		"switch"
-	],
+	"keywords": ["form", "switch"],
 	"acf": {
-		"mode": "preview",
+		"mode": "auto",
 		"postTypes": ["post", "page"],
 		"renderTemplate": "form.php"
 	},
@@ -20,6 +17,5 @@
 		"anchor": false,
 		"alignContent": false
 	},
-	"example": {
-	}
+	"example": {}
 }

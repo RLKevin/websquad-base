@@ -5,12 +5,9 @@
 	"category": "switch-blocks",
 	"icon": "editor-quote",
 	"apiVersion": 2,
-	"keywords": [
-		"reference",
-		"switch"
-	],
+	"keywords": ["reference", "switch"],
 	"acf": {
-		"mode": "preview",
+		"mode": "auto",
 		"postTypes": ["post", "page"],
 		"renderTemplate": "reference.php"
 	},
@@ -20,6 +17,5 @@
 		"anchor": false,
 		"alignContent": false
 	},
-	"example": {
-	}
+	"example": {}
 }

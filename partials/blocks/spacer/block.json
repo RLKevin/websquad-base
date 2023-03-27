@@ -5,12 +5,9 @@
 	"category": "switch-blocks",
 	"icon": "minus",
 	"apiVersion": 2,
-	"keywords": [
-		"spacer",
-		"switch"
-	],
+	"keywords": ["spacer", "switch"],
 	"acf": {
-		"mode": "preview",
+		"mode": "auto",
 		"postTypes": ["post", "page"],
 		"renderTemplate": "spacer.php"
 	},
@@ -20,6 +17,5 @@
 		"anchor": false,
 		"alignContent": false
 	},
-	"example": {
-	}
+	"example": {}
 }

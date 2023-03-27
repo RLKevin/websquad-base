@@ -5,12 +5,9 @@
 	"category": "switch-blocks",
 	"icon": "sos",
 	"apiVersion": 2,
-	"keywords": [
-		"faq",
-		"switch"
-	],
+	"keywords": ["faq", "switch"],
 	"acf": {
-		"mode": "preview",
+		"mode": "auto",
 		"postTypes": ["post", "page"],
 		"renderTemplate": "faq.php"
 	},
@@ -20,6 +17,5 @@
 		"anchor": false,
 		"alignContent": false
 	},
-	"example": {
-	}
+	"example": {}
 }

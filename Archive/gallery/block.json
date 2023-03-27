@@ -5,12 +5,9 @@
 	"category": "switch-blocks",
 	"icon": "store",
 	"apiVersion": 2,
-	"keywords": [
-		"gallery",
-		"switch"
-	],
+	"keywords": ["gallery", "switch"],
 	"acf": {
-		"mode": "preview",
+		"mode": "auto",
 		"postTypes": ["post", "page"],
 		"renderTemplate": "gallery.php"
 	},
@@ -20,6 +17,5 @@
 		"anchor": false,
 		"alignContent": false
 	},
-	"example": {
-	}
+	"example": {}
 }

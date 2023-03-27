@@ -5,12 +5,9 @@
 	"category": "switch-blocks",
 	"icon": "yes",
 	"apiVersion": 2,
-	"keywords": [
-		"usp",
-		"switch"
-	],
+	"keywords": ["usp", "switch"],
 	"acf": {
-		"mode": "preview",
+		"mode": "auto",
 		"postTypes": ["post", "page"],
 		"renderTemplate": "usp.php"
 	},
@@ -20,6 +17,5 @@
 		"anchor": false,
 		"alignContent": false
 	},
-	"example": {
-	}
+	"example": {}
 }

@@ -5,12 +5,9 @@
 	"category": "switch-blocks",
 	"icon": "location",
 	"apiVersion": 2,
-	"keywords": [
-		"map",
-		"switch"
-	],
+	"keywords": ["map", "switch"],
 	"acf": {
-		"mode": "preview",
+		"mode": "auto",
 		"postTypes": ["post", "page"],
 		"renderTemplate": "map.php"
 	},
@@ -20,6 +17,5 @@
 		"anchor": false,
 		"alignContent": false
 	},
-	"example": {
-	}
+	"example": {}
 }

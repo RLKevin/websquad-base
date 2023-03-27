@@ -5,12 +5,9 @@
 	"category": "switch-blocks",
 	"icon": "editor-aligncenter",
 	"apiVersion": 2,
-	"keywords": [
-		"intro",
-		"switch"
-	],
+	"keywords": ["intro", "switch"],
 	"acf": {
-		"mode": "preview",
+		"mode": "auto",
 		"postTypes": ["post", "page"],
 		"renderTemplate": "intro.php"
 	},
@@ -20,6 +17,5 @@
 		"anchor": false,
 		"alignContent": false
 	},
-	"example": {
-	}
+	"example": {}
 }

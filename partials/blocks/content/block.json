@@ -5,12 +5,9 @@
 	"category": "switch-blocks",
 	"icon": "text",
 	"apiVersion": 2,
-	"keywords": [
-		"content",
-		"switch"
-	],
+	"keywords": ["content", "switch"],
 	"acf": {
-		"mode": "preview",
+		"mode": "auto",
 		"postTypes": ["post", "page"],
 		"renderTemplate": "content.php"
 	},
@@ -20,6 +17,5 @@
 		"anchor": false,
 		"alignContent": false
 	},
-	"example": {
-	}
+	"example": {}
 }

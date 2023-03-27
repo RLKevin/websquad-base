@@ -5,12 +5,9 @@
 	"category": "switch-blocks",
 	"icon": "images-alt",
 	"apiVersion": 2,
-	"keywords": [
-		"hero",
-		"switch"
-	],
+	"keywords": ["hero", "switch"],
 	"acf": {
-		"mode": "preview",
+		"mode": "auto",
 		"postTypes": ["post", "page"],
 		"renderTemplate": "hero.php"
 	},
@@ -20,6 +17,5 @@
 		"anchor": false,
 		"alignContent": false
 	},
-	"example": {
-	}
+	"example": {}
 }

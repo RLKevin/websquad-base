@@ -5,12 +5,9 @@
 	"category": "switch-blocks",
 	"icon": "clock",
 	"apiVersion": 2,
-	"keywords": [
-		"open",
-		"switch"
-	],
+	"keywords": ["open", "switch"],
 	"acf": {
-		"mode": "preview",
+		"mode": "auto",
 		"postTypes": ["post", "page"],
 		"renderTemplate": "open.php"
 	},
@@ -20,6 +17,5 @@
 		"anchor": false,
 		"alignContent": false
 	},
-	"example": {
-	}
+	"example": {}
 }
