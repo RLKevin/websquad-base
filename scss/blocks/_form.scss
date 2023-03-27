@@ -1,0 +1,116 @@
+.form {
+	$self: &;
+	padding-top: 96px;
+	padding-bottom: 96px;
+
+	.wrapper {
+		@include max-width;
+	}
+
+	// background
+
+		&--white {
+
+			.gform_wrapper {
+
+				.gform-body {
+			
+					.gform_fields {
+			
+						.gfield {
+			
+							input,
+							// input[type="text"], 
+							// input[type="password"], 
+							// input[type="datetime"], 
+							// input[type="datetime-local"], 
+							// input[type="date"], 
+							// input[type="month"], 
+							// input[type="time"], 
+							// input[type="week"], 
+							// input[type="number"],
+							// input[type="email"], 
+							// input[type="url"], 
+							// input[type="search"], 
+							// input[type="tel"], 
+							// input[type="color"],
+							select, 
+							textarea {
+								background: $cl-grey;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&--grey {
+			background: $cl-grey;
+		}
+
+		&--black {
+			background: $cl-black;
+		}
+
+		&--primary {
+			background: $cl-primary;
+
+			.gform_wrapper {
+			
+				label {
+					color: $cl-primary-text;
+				}
+
+				.gform_validation_errors {
+
+					h2 {
+						color: $cl-primary-text;
+					}
+				}
+
+				.gform-body {
+			
+					.gform_fields {
+			
+						.gfield {
+			
+							.validation_message {
+								color: $cl-primary-text;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&--secondary {
+			background: $cl-secondary;
+
+			.gform_wrapper {
+			
+				label {
+					color: $cl-secondary-text;
+				}
+
+				.gform_validation_errors {
+
+					h2 {
+						color: $cl-secondary-text;
+					}
+				}
+
+				.gform-body {
+			
+					.gform_fields {
+			
+						.gfield {
+			
+							.validation_message {
+								color: $cl-secondary-text;
+							}
+						}
+					}
+				}
+			}
+		}
+}

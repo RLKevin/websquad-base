@@ -1,0 +1,52 @@
+.button {
+	display: inline-flex;
+	justify-content: center;
+	width: 100%;
+	max-width: 256px;
+	padding: 16px;
+	border: none;
+	font-family: $ff-primary;
+	font-size: $fs-small;
+	font-weight: $fw-medium;
+	line-height: $lh-large;
+	letter-spacing: $ls-medium;
+	// text-transform: uppercase;
+	text-align: center;
+	color: $cl-white;
+	background: $cl-secondary;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	margin: 0 0 48px 0;
+	@include transition;
+	@include rectangle;
+
+	// svg {
+	// 	width: auto;
+	// 	height: 100%;
+	// 	display: inline-block;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// 	color: $cl-white;
+	// 	opacity: 0.16;
+	// 	transition: all 0.25s ease-in-out;
+	// 	z-index: -1;
+	// }
+
+	&:active,
+	&:visited,
+	&:focus,
+	&:hover {
+		color: $cl-white;
+	}
+	
+	&:hover {
+		cursor: pointer;
+		background: darken($cl-secondary, 8%);
+
+		// svg {
+		// 	transform: scale(1.6);
+		// }
+	}
+}

@@ -1,0 +1,375 @@
+//  websquad
+//	rendementsweg 2Q
+// 	3641 SK mijdrecht
+//	0297 - 525580
+
+// variables
+
+@import 'assets/variables.scss';
+
+// mixin
+
+// mixin - mediaquerie
+
+@mixin tablet {
+	@media only screen and (min-width: 640px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media only screen and (min-width: 1280px) {
+		@content;
+	}
+}
+
+@mixin custom($size) {
+	@media only screen and (min-width: $size) {
+		@content;
+	}
+}
+
+// mixin - max width
+
+@mixin max-width {
+	// max-width: 960px;
+	max-width: 1280px;
+
+	// @include desktop {
+	// 	max-width: 1280px;
+	// }
+}
+
+// mixin - padding
+
+@mixin padding {
+	padding-left: 16px;
+	padding-right: 16px;
+
+	@include tablet {
+		padding-left: 48px;
+		padding-right: 48px;
+	}
+
+	@include desktop {
+		padding-left: 96px;
+		padding-right: 96px;
+	}
+}
+
+// mixin - border radius
+
+@mixin square {
+	border-radius: $br-square-top-left $br-square-top-right
+		$br-square-bottom-right $br-square-bottom-left;
+}
+
+@mixin rectangle {
+	border-radius: $br-rectangle-top-left $br-rectangle-top-right
+		$br-rectangle-bottom-right $br-rectangle-bottom-left;
+}
+
+// mixin - shadow
+
+@mixin shadow {
+	box-shadow: 0px 0px 16px 0px rgba($cl-black, 0.16);
+}
+
+// mixin - transition
+
+@mixin transition {
+	transition: all 0.24s ease-in-out;
+}
+
+@mixin transition-delay {
+	transition: all 0.24s ease-in-out 0.24s;
+}
+
+@mixin transition-slow {
+	transition: all 0.48s ease-in-out;
+}
+
+// imports
+
+// imports - assets
+
+@import 'assets/reset.scss';
+@import 'assets/owl-carousel';
+@import 'assets/animations';
+
+// imports - elements
+
+@import 'components/button.scss';
+@import 'components/cookie.scss';
+@import 'components/form.scss';
+@import 'components/slider.scss';
+
+// body
+
+html {
+	background: $cl-secondary;
+}
+
+html,
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: $ff-secondary;
+	font-size: $fs-small;
+	line-height: $lh-large;
+	font-weight: $fw-regular;
+	color: $cl-black;
+	letter-spacing: $ls_medium;
+	background: $cl-white;
+}
+
+// wrapper
+
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+	@include padding;
+}
+
+// content
+
+// content - titles
+
+h1,
+h2 {
+	color: $cl-black;
+	font-size: $fs-large;
+	line-height: $lh-small;
+	font-family: $ff-primary;
+	font-weight: $fw-bold;
+	padding: 0 0 48px 0;
+
+	@include tablet {
+		font-size: $fs-huge;
+	}
+}
+
+h3 {
+	color: $cl-primary;
+	font-size: $fs-medium;
+	line-height: $lh-medium;
+	font-family: $ff-primary;
+	font-weight: $fw-medium;
+	padding: 0 0 48px 0;
+	position: relative;
+	z-index: 1;
+
+	@include tablet {
+		font-size: $fs-large;
+	}
+}
+
+// content - form
+
+input,
+input[type='text'],
+input[type='password'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='date'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
+input[type='number'],
+input[type='email'],
+input[type='url'],
+input[type='search'],
+input[type='tel'],
+input[type='color'],
+label,
+select,
+textarea {
+	display: block;
+	width: 100%;
+	padding: 16px;
+	font-family: $ff-secondary;
+	font-size: $fs-small;
+	font-weight: $fw-regular;
+	line-height: $lh-large;
+	color: $cl-black;
+	letter-spacing: $ls-medium;
+	position: relative;
+	z-index: 1;
+	border: none;
+	-webkit-appearance: none;
+	-webkit-appearance: button;
+	@include rectangle;
+}
+
+::placeholder {
+	color: darken($cl-grey, 20%);
+	opacity: 1;
+}
+
+// content - link
+
+a {
+	&,
+	&:visited,
+	&:active,
+	&:focus {
+		color: $cl-secondary;
+		transition: all 0.25s ease-in-out;
+	}
+
+	&:hover {
+		color: darken($cl-secondary, 8%);
+	}
+}
+
+// content - paragraph
+
+p {
+	padding: 0 0 48px 0;
+
+	&.dotdotdot {
+		opacity: 0;
+		transition: all 0.25s ease-in-out;
+
+		&.loaded {
+			opacity: 1;
+		}
+	}
+}
+
+// content - quote
+
+blockquote {
+	position: relative;
+	color: $cl-primary;
+	font-style: italic;
+	border-left: 2px solid $cl-primary;
+	margin: 0 0 48px 0;
+	padding: 48px 0 0 16px;
+
+	p {
+		position: relative;
+	}
+
+	@include tablet {
+		padding: 48px 0 0 48px;
+	}
+
+	@include desktop {
+		padding: 48px 0 0 96px;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 128px;
+		height: 128px;
+		background-image: url(../img/icons/quote-right-solid-secondary.svg);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		pointer-events: none;
+		opacity: 0.16;
+	}
+}
+
+// content - image
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+// content - strong
+
+strong {
+	font-weight: $fw-bold;
+	color: $cl-secondary;
+}
+
+// content - italic
+
+em {
+	color: darken($cl-grey, 50%);
+}
+
+// content - wysiwyg
+
+.wysiwyg {
+	ul {
+		padding: 0 0 48px 0;
+
+		li {
+			padding: 0 0 4px 24px;
+			position: relative;
+
+			&:last-of-type {
+				padding: 0 0 0 24px;
+			}
+
+			&:before {
+				content: '\25E6';
+				position: absolute;
+				left: 0;
+				font-weight: $fw-bold;
+				color: $cl-secondary;
+			}
+		}
+	}
+}
+
+// loading
+
+.loading {
+	opacity: 0;
+	transition: all 0.25s ease-in-out;
+
+	&.page-loaded {
+		opacity: 1;
+	}
+}
+
+// selection
+
+::selection {
+	background: darken($cl-grey, 8%);
+	text-shadow: none;
+}
+
+// autofill
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	transition: background-color 5000s ease-in-out 0s;
+}
+
+// imports
+
+// imports - general
+
+@import 'header';
+@import 'footer';
+
+// imports - blocks
+
+@import 'blocks/card';
+@import 'blocks/content';
+@import 'blocks/faq';
+@import 'blocks/form';
+@import 'blocks/gallery';
+@import 'blocks/hero';
+@import 'blocks/intro';
+@import 'blocks/map';
+@import 'blocks/open';
+@import 'blocks/reference';
+@import 'blocks/search';
+@import 'blocks/spacer';
+@import 'blocks/table';
+@import 'blocks/usp';

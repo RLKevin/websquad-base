@@ -1,0 +1,25 @@
+{
+	"name": "switch/hero",
+	"title": "Hero",
+	"description": "All hero block",
+	"category": "switch-blocks",
+	"icon": "store",
+	"apiVersion": 2,
+	"keywords": [
+		"hero",
+		"switch"
+	],
+	"acf": {
+		"mode": "preview",
+		"postTypes": ["post", "page"],
+		"renderTemplate": "hero.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {
+	}
+}
