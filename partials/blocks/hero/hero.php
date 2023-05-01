@@ -79,21 +79,21 @@ $template = get_template_directory();
 
 				
 				<script>
-					// var slider = tns({
-					// 	container: '.slider',
-					// 	items: 1,
-					// 	slideBy: 1,
-					// 	mouseDrag: true,
-					// 	controls: false,
-					// 	center: true,
-					// 	edgePadding: 0,
-					// 	gutter: 0,
-					// 	lazyload: true,
-					// 	nav: false,
-					// 	navPosition: 'bottom',
-					// 	loop: true,
-					// 	autoHeight: false,
-					// });
+					var slider = tns({
+						container: '.slider',
+						items: 1,
+						slideBy: 1,
+						mouseDrag: true,
+						controls: false,
+						center: true,
+						edgePadding: 0,
+						gutter: 0,
+						lazyload: true,
+						nav: false,
+						navPosition: 'bottom',
+						loop: true,
+						autoHeight: false,
+					});
 
 					// if ($("body").hasClass("wp-admin")) {
 					// 	setInterval(function(){
