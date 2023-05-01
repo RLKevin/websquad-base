@@ -3,11 +3,12 @@
 // vars
 
 $background = get_field('background');
+$order_by = get_field('order_by');
 $id = get_field('id');
 
 ?>
 
-<section id="<?php echo $id; ?>" class="open open--<?php echo $align; ?> open--<?php echo $background; ?>">
+<section id="<?php echo $id; ?>" class="open open--<?php echo $order_by; ?> open--<?php echo $background; ?>">
 
 	<div class="wrapper">
 
@@ -57,7 +58,11 @@ $id = get_field('id');
 
 			<?php
 
-		endif;
+		else:
+
+	?> <p>No open added.</p> <?php
+
+	endif; 
 
 		?>
 

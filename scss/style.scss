@@ -106,8 +106,12 @@
 
 // body
 
-html {
+html.websquad-html {
 	background: var(--cl-secondary);
+}
+
+iframe html{
+	background-color: var(--cl-white)!important;
 }
 
 html,
@@ -292,6 +296,27 @@ em {
 	}
 }
 
+// dotdotdot (creates .dotdotdot--1 ... .dotdotdot--12)
+
+$dotdotdot-lines: 12;
+@for $i from 1 through $dotdotdot-lines {
+	.dotdotdot--#{$i} {
+		display: -webkit-box;
+		-webkit-line-clamp: $i;
+		line-clamp: $i; // for later when it's supported https://caniuse.com/?search=line-clamp
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+}
+
+.dotdotdot {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	line-clamp: 3; // for later when it's supported https://caniuse.com/?search=line-clamp
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
 // selection
 
 ::selection {
@@ -320,6 +345,7 @@ input:-webkit-autofill:active {
 @import '../partials/blocks/cards/cards';
 @import '../partials/blocks/content/content';
 @import '../partials/blocks/faq/faq';
+@import '../partials/blocks/file/file';
 @import '../partials/blocks/form/form';
 @import '../partials/blocks/gallery/gallery';
 @import '../partials/blocks/hero/hero';

@@ -56,8 +56,11 @@ $id = get_field('id');
 			</ul>
 
 			<?php
-	
-		endif;
+		
+		else: ?> 
+		<p>No table added.</p> <?php
+
+		endif; 
 
 		?>
 

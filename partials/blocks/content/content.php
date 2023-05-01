@@ -53,46 +53,6 @@ $id = get_field('id');
 
 			endif;
 
-			if( get_row_layout() == 'file' ):
-
-				?>
-
-				<div class="content__file">
-
-					<div class="wrapper">
-
-						<?php
-
-						if( have_rows('repeater') ): 
-												
-							while ( have_rows('repeater') ) : the_row();
-
-								// vars
-
-								$file = get_sub_field('file');
-
-								?>
-								
-								<a href="<?php echo $file['url']; ?>" download><?php echo $file['title']; ?>
-									<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-to-bottom" class="svg-inline--fa fa-arrow-to-bottom fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M348.5 232.1l-148 148.4c-4.7 4.7-12.3 4.7-17 0l-148-148.4c-4.7-4.7-4.7-12.3 0-17l19.6-19.6c4.8-4.8 12.5-4.7 17.1.2l93.7 97.1V44c0-6.6 5.4-12 12-12h28c6.6 0 12 5.4 12 12v248.8l93.7-97.1c4.7-4.8 12.4-4.9 17.1-.2l19.6 19.6c4.9 4.7 4.9 12.3.2 17zM372 428H12c-6.6 0-12 5.4-12 12v28c0 6.6 5.4 12 12 12h360c6.6 0 12-5.4 12-12v-28c0-6.6-5.4-12-12-12z"></path></svg>
-								</a>
-								
-								<?php
-							
-							endwhile;
-
-						endif;
-
-						?>
-
-					</div>
-
-				</div>
-				
-				<?php
-
-			endif;
-
 			if( get_row_layout() == 'image' ):
 
 				?>
@@ -243,10 +203,12 @@ $id = get_field('id');
 						$button_left = get_sub_field('button_left');
 						$button_right = get_sub_field('button_right');
 						$image = get_sub_field('image');
+						$image_size = get_sub_field('full_image');
+						$turn_around = get_sub_field('turn_around');
 
 						?>
 
-						<div class="content__col content__col--text">
+						<div class="content__col content__col--text <?php if ($turn_around) { ?>turn_around<?php } ?>">
 
 							<?php if ($text): ?>
 
@@ -276,7 +238,7 @@ $id = get_field('id');
 
 						</div>
 								
-						<div class="content__col content__col--image">
+						<div class="content__col content__col--image <?php if ($image_size) { ?>image_size<?php } ?>">
 
 							<img src="<?php echo $image['sizes']['1280-16-9']; ?>" alt="<?php echo $image['title']; ?>">
 
@@ -387,8 +349,12 @@ $id = get_field('id');
 
 		endwhile;
 
-	endif;
+		else:
 
-	?>
+        ?> <p>No content added.</p> <?php
+
+        endif; 
+
+        ?>
 
 </div>

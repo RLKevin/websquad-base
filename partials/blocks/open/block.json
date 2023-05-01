@@ -7,7 +7,7 @@
 	"apiVersion": 2,
 	"keywords": ["open", "switch"],
 	"acf": {
-		"mode": "auto",
+		"mode": "preview",
 		"postTypes": ["post", "page", "blog"],
 		"renderTemplate": "open.php"
 	},

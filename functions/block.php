@@ -5,6 +5,7 @@ $blocks = array(
     'content',
     'faq',
     'form',
+    'file',
     'gallery',
     'hero',
     'intro',

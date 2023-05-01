@@ -634,6 +634,52 @@
 		}
 	}
 
+	.whatsapp-container{
+		position: fixed;
+		top: auto;
+		bottom: 0;
+		margin: 40px 0;
+		left: 16px;
+		// width: 48px;
+		// height: 48px;
+		background: var(--cl-primary);
+		z-index: 999;
+		border: 2px solid var(--cl-white);
+		overflow: hidden;
+		@include square;
+		@include shadow;
+
+		@include tablet {
+			margin: 32px 0;
+			width: 64px;
+			height: 64px;
+			top: 32px;
+			left: 48px;
+		}
+
+		@include desktop {
+			left: 96px;
+		}
+
+		&:hover{
+			a{
+				mask-size: 36px 36px;
+			}
+		}
+
+		a{
+			background-color: var(--cl-white);
+			display: flex;
+			// height: 80px;
+			aspect-ratio: 1 / 1;
+			mask-image: url(../img/icons/whatsapp.svg);
+			mask-size: 24px 24px;
+			mask-repeat: no-repeat;
+			mask-position: center;
+			@include transition;
+		}
+	}
+
 	&--top {
 
 		#{$self}__mainmenu {

@@ -7,7 +7,7 @@
 	"apiVersion": 2,
 	"keywords": ["table", "switch"],
 	"acf": {
-		"mode": "auto",
+		"mode": "preview",
 		"postTypes": ["post", "page", "blog"],
 		"renderTemplate": "table.php"
 	},

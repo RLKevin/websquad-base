@@ -3,8 +3,8 @@
 // vars
 
 $id = get_field('id');
-$background = get_field('background');
 $scroll = get_field('scroll');
+$align = get_field('options_header_style', 'option');
 $type = get_field('hero_type');
 
 $title_half = get_field('hero_title') ?: get_the_title();
@@ -21,7 +21,7 @@ $template = get_template_directory();
 
 ?>
 
-<section id="<?php echo $id; ?>" class="hero hero--<?= $background ?>">
+<section id="<?php echo $id; ?>" class="hero">
 
 	<?php if ($type == 'half_half_hero') { ?>
 		
@@ -66,43 +66,20 @@ $template = get_template_directory();
 				</div>
 				
 				<?php if ( have_rows('repeater_half') ) : ?>
-					<div class="slider">
+					<!-- <div class="hero--half__slider slider" style="background-image: url('<?= $first_image_half ?>')"> -->
+					<div class="hero--half__slider slider">
 						<?php while( have_rows('repeater_half') ) : the_row(); 
 							$image_half = get_sub_field('image');
 							?>
-							<div class="slide">
-								<img class="tns-lazy-img" data-src="<?= $image_half['sizes']['1280-4-3'] ?>">
+
+							<div class="hero__image">
+								<!-- <img class="owl-lazy" data-src="<?= $image_half['sizes']['1280-4-3']; ?>" alt="<?= $image_half['alt']; ?>"> -->
+								<img src="<?= $image_half['sizes']['1280-4-3']; ?>" alt="<?= $image_half['alt']; ?>">
 							</div>
+
 						<?php endwhile; ?>
 					</div>
 				<?php endif; ?>
-
-				
-				<script>
-					// var slider = tns({
-					// 	container: '.slider',
-					// 	items: 1,
-					// 	slideBy: 1,
-					// 	mouseDrag: true,
-					// 	controls: false,
-					// 	center: true,
-					// 	edgePadding: 0,
-					// 	gutter: 0,
-					// 	lazyload: true,
-					// 	nav: false,
-					// 	navPosition: 'bottom',
-					// 	loop: true,
-					// 	autoHeight: false,
-					// });
-
-					// if ($("body").hasClass("wp-admin")) {
-					// 	setInterval(function(){
-					// 		slider.destroy();
-					// 		console.log('slider destroyed');
-					// 		slider.rebuild();
-					// 	}, 1000);
-					// };
-				</script>
 			</div>
 		</div>
 		

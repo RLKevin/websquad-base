@@ -1,12 +1,12 @@
-section.reference {
+.reference {
 	$self: &;
-	padding: 96px 0 96px 0;
+	padding: 96px 0 48px 0;
 
 	.wrapper {
 		@include max-width;
 	}
 
-	.reference__slider {
+	&__slider {
 
 		.owl-nav {
 			position: relative;
@@ -51,7 +51,69 @@ section.reference {
 		}
 	}
 
-	.reference__rating {
+	#{$self}__container {
+
+		#{$self}__text {
+			font-style: italic;
+			text-align: center;
+			padding-top: 96px;
+			position: relative;
+
+			@include custom(960px) {
+				h3 {
+					text-align: right;
+				}
+			}
+
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: calc(50% - 32px);
+				width: 64px;
+				height: 64px;
+				background: var(--cl-secondary);
+				mask-image: url('../img/icons/quote-right-solid-primary.svg');
+				mask-size: 100% 100%;
+				mask-repeat: no-repeat;
+			}
+		}
+
+		@include custom(960px) {
+			display: flex;
+			gap: 64px;
+
+			#{$self}__text {
+				order: 1;
+				width: 60%;
+
+				&::after {
+					left: auto;
+					right: 0;
+				}
+			}
+			
+			#{$self}__person {
+				order: 0;
+				width: 256px;
+				display: flex;
+				flex-direction: column;
+
+				#{$self}__image {
+					margin: 0;
+					margin-bottom: 32px;
+
+					img {
+						width: 100%;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+	}
+		
+	&__rating {
 		padding: 0 0 48px 0;
 
 		ul {
@@ -183,7 +245,7 @@ section.reference {
 		}
 	}	
 
-	.reference__person {
+	&__person {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -194,7 +256,7 @@ section.reference {
 			justify-content: flex-start;
 		}
 
-		.reference__image {
+		#{$self}__image {
 			margin: 0 0 48px 0;
 
 			@include desktop {
@@ -206,11 +268,12 @@ section.reference {
 			
 			img {
 				width: 240px;
+				aspect-ratio: 1 / 1;
 				@include square;
 			}
 		}
 
-		.reference__info {
+		#{$self}__info {
 			text-align: center;
 
 			@include desktop {
@@ -311,9 +374,9 @@ section.reference {
 
 	// align
 
-	.reference--left {
+	&--left {
 
-		.reference__slider {
+		#{$self}__slider {
 
 			.owl-nav {
 	
@@ -327,7 +390,7 @@ section.reference {
 			}
 		}
 
-		.reference__rating {
+		#{$self}__rating {
 
 			ul {
 				justify-content: flex-start;
@@ -335,9 +398,9 @@ section.reference {
 		}
 	}
 
-	.reference--center {
+	&--center {
 
-		.reference__slider {
+		#{$self}__slider {
 
 			.owl-nav {
 				position: relative;
@@ -357,7 +420,7 @@ section.reference {
 			}
 		}
 
-		.reference__text {
+		#{$self}__text {
 			text-align: center;
 	
 			ul {
@@ -372,13 +435,13 @@ section.reference {
 			}
 		}
 
-		.reference__person {
+		#{$self}__person {
 	
 			@include desktop {
 				justify-content: center;
 			}
 	
-			.reference__image {
+			#{$self}__image {
 	
 				@include desktop {
 					width: calc(50% - 48px);
@@ -387,7 +450,7 @@ section.reference {
 				}
 			}
 	
-			.reference__info {
+			#{$self}__info {
 	
 				@include desktop {
 					width: calc(50% - 48px);
@@ -398,17 +461,17 @@ section.reference {
 
 	// background
 
-	.reference--grey {
+	&--grey {
 		background: var(--cl-grey);
 
-		.reference__rating {
+		#{$self}__rating {
 	
 			ul {
 	
 				li {
 	
 					&:before {
-						border: 2px solid var(--cl-grey-dark);
+						border: 2px solid var(--cl-grey);
 						background-image: url(../img/icons/star-regular-grey-dark.svg);
 					}
 				}
@@ -501,10 +564,10 @@ section.reference {
 		}
 	}
 
-	.reference--black {
+	&--black {
 		background: var(--cl-black);
 
-		.reference__slider {
+		#{$self}__slider {
 
 			.owl-nav {
 	
@@ -544,7 +607,7 @@ section.reference {
 			}
 		}
 
-		.reference__rating {
+		#{$self}__rating {
 	
 			ul {
 	
@@ -643,9 +706,9 @@ section.reference {
 			}
 		}
 
-		.reference__person {
+		#{$self}__person {
 	
-			.reference__info {
+			#{$self}__info {
 	
 				ul {
 
@@ -710,16 +773,16 @@ section.reference {
 				background: var(--cl-white);
 
 				&:hover {
-					background: var(--cl-grey);
+					background: var(--cl-secondary);
 				}
 			}
 		}
 	}
 
-	.reference--primary {
-		background: var(--cl-secondary);
+	&--primary {
+		background: var(--cl-primary);
 
-		.reference__slider {
+		#{$self}__slider {
 
 			.owl-nav {
 	
@@ -736,7 +799,7 @@ section.reference {
 						background: transparent;
 	
 						&:before {
-							border: 2px solid var(--cl-primary);
+							border: 2px solid var(--cl-grey);
 							background-image: url(../img/icons/arrow-left-regular-secondary.svg);
 						}
 					}
@@ -759,225 +822,7 @@ section.reference {
 			}
 		}
 
-		.reference__rating {
-	
-			ul {
-	
-				li {
-	
-					&:before {
-						border: 2px solid var(--cl-white);
-						background-image: url(../img/icons/star-regular-white.svg);
-					}
-				}
-			}
-			
-			&--1 {
-	
-				ul {
-	
-					li {
-	
-						&:nth-of-type(-n+1) {
-	
-							&:before {
-								border: 2px solid var(--cl-primary);
-								background-image: url(../img/icons/star-regular-secondary.svg);
-							}
-						}
-					}
-				}
-			}
-	
-			&--2 {
-				
-				ul {
-	
-					li {
-	
-						&:nth-of-type(-n+2) {
-	
-							&:before {
-								border: 2px solid var(--cl-primary);
-								background-image: url(../img/icons/star-regular-secondary.svg);
-							}
-						}
-					}
-				}
-			}
-	
-			&--3 {
-	
-				ul {
-	
-					li {
-	
-						&:nth-of-type(-n+3) {
-	
-							&:before {
-								border: 2px solid var(--cl-primary);
-								background-image: url(../img/icons/star-regular-secondary.svg);
-							}
-						}
-					}
-				}
-			}
-
-			&--4 {
-	
-				ul {
-	
-					li {
-	
-						&:nth-of-type(-n+4) {
-	
-							&:before {
-								border: 2px solid var(--cl-primary);
-								background-image: url(../img/icons/star-regular-secondary.svg);
-							}
-						}
-					}
-				}
-			}
-	
-			&--5 {
-	
-				ul {
-	
-					li {
-	
-						&:nth-of-type(-n+5) {
-	
-							&:before {
-								border: 2px solid var(--cl-primary);
-								background-image: url(../img/icons/star-regular-secondary.svg);
-							}
-						}
-					}
-				}
-			}
-		}
-
-		.reference__person {
-	
-			.reference__info {
-
-				h3 {
-					color: var(--cl-primary);
-				}
-	
-				ul {
-
-					li {
-	
-						a {
-							color: var(--cl-white);
-							color: var(--cl-white);
-	
-							&:before {
-								border: 2px solid var(--cl-white);
-							}
-	
-							&.phone {
-	
-								&:before {
-									background-image: url(../img/icons/mobile-android-regular-white.svg);
-								}
-							}
-	
-							&.mail {
-	
-								&:before {
-									background-image: url(../img/icons/envelope-open-regular-white.svg);
-								}
-							}
-	
-							&:hover {
-	
-								&:before {
-									border: 2px solid var(--cl-primary);
-								}
-	
-								&.phone {
-	
-									&:before {
-										background-image: url(../img/icons/mobile-android-regular-secondary.svg);
-									}
-								}
-			
-								&.mail {
-	
-									&:before {
-										background-image: url(../img/icons/envelope-open-regular-secondary.svg);
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-
-		h2, h3, p, li, em {
-			color: var(--cl-white);
-		}
-
-		.button {
-
-			&--filled-primary {
-				background: var(--cl-primary);
-
-				&:hover {
-					background: var(--cl-primary-dark);
-				}
-			}
-		}
-	}
-
-	.reference--secondary {
-		background: var(--cl-primary);
-
-		.reference__slider {
-
-			.owl-nav {
-	
-				.owl-prev,
-				.owl-next {
-					background: transparent;
-	
-					&:before {
-						border: 2px solid var(--cl-white);
-						background-image: url(../img/icons/arrow-left-regular-white.svg);
-					}
-	
-					&:hover {
-						background: transparent;
-	
-						&:before {
-							border: 2px solid var(--cl-secondary);
-							background-image: url(../img/icons/arrow-left-regular-primary.svg);
-						}
-					}
-				}
-	
-				.owl-next {
-					margin: 0 0 0 8px;
-	
-					&:before {
-						background-image: url(../img/icons/arrow-right-regular-white.svg);
-					}
-	
-					&:hover {
-	
-						&:before {
-							background-image: url(../img/icons/arrow-right-regular-primary.svg);
-						}
-					}
-				}
-			}
-		}
-
-		.reference__rating {
+		#{$self}__rating {
 	
 			ul {
 	
@@ -1000,7 +845,7 @@ section.reference {
 	
 							&:before {
 								border: 2px solid var(--cl-secondary);
-								background-image: url(../img/icons/star-regular-primary.svg);
+								background-image: url(../img/icons/star-regular-secondary.svg);
 							}
 						}
 					}
@@ -1017,7 +862,7 @@ section.reference {
 	
 							&:before {
 								border: 2px solid var(--cl-secondary);
-								background-image: url(../img/icons/star-regular-primary.svg);
+								background-image: url(../img/icons/star-regular-secondary.svg);
 							}
 						}
 					}
@@ -1034,7 +879,7 @@ section.reference {
 	
 							&:before {
 								border: 2px solid var(--cl-secondary);
-								background-image: url(../img/icons/star-regular-primary.svg);
+								background-image: url(../img/icons/star-regular-secondary.svg);
 							}
 						}
 					}
@@ -1051,7 +896,7 @@ section.reference {
 	
 							&:before {
 								border: 2px solid var(--cl-secondary);
-								background-image: url(../img/icons/star-regular-primary.svg);
+								background-image: url(../img/icons/star-regular-secondary.svg);
 							}
 						}
 					}
@@ -1068,7 +913,7 @@ section.reference {
 	
 							&:before {
 								border: 2px solid var(--cl-secondary);
-								background-image: url(../img/icons/star-regular-primary.svg);
+								background-image: url(../img/icons/star-regular-secondary.svg);
 							}
 						}
 					}
@@ -1076,9 +921,9 @@ section.reference {
 			}
 		}
 
-		.reference__person {
+		#{$self}__person {
 	
-			.reference__info {
+			#{$self}__info {
 
 				h3 {
 					color: var(--cl-secondary);
@@ -1089,6 +934,7 @@ section.reference {
 					li {
 	
 						a {
+							color: var(--cl-white);
 							color: var(--cl-white);
 	
 							&:before {
@@ -1118,6 +964,233 @@ section.reference {
 								&.phone {
 	
 									&:before {
+										background-image: url(../img/icons/mobile-android-regular-secondary.svg);
+									}
+								}
+			
+								&.mail {
+	
+									&:before {
+										background-image: url(../img/icons/envelope-open-regular-secondary.svg);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		h2, h3, p, li, em {
+			color: var(--cl-white);
+		}
+
+		.button {
+
+			&--filled-primary {
+				background: var(--cl-secondary);
+
+				&:hover {
+					background: var(--cl-secondary);
+				}
+			}
+		}
+	}
+
+	&--secondary {
+		background: var(--cl-secondary);
+
+		#{$self}__slider {
+
+			.owl-nav {
+	
+				.owl-prev,
+				.owl-next {
+					background: transparent;
+	
+					&:before {
+						border: 2px solid var(--cl-white);
+						background-image: url(../img/icons/arrow-left-regular-white.svg);
+					}
+	
+					&:hover {
+						background: transparent;
+	
+						&:before {
+							border: 2px solid var(--cl-primary);
+							background-image: url(../img/icons/arrow-left-regular-primary.svg);
+						}
+					}
+				}
+	
+				.owl-next {
+					margin: 0 0 0 8px;
+	
+					&:before {
+						background-image: url(../img/icons/arrow-right-regular-white.svg);
+					}
+	
+					&:hover {
+	
+						&:before {
+							background-image: url(../img/icons/arrow-right-regular-primary.svg);
+						}
+					}
+				}
+			}
+		}
+
+		#{$self}__container {
+
+			#{$self}__text {
+	
+				&::after {
+					background-color: var(--cl-primary);
+				}
+			}
+		}
+
+		#{$self}__rating {
+	
+			ul {
+	
+				li {
+	
+					&:before {
+						border: 2px solid var(--cl-white);
+						background-image: url(../img/icons/star-regular-white.svg);
+					}
+				}
+			}
+			
+			&--1 {
+	
+				ul {
+	
+					li {
+	
+						&:nth-of-type(-n+1) {
+	
+							&:before {
+								border: 2px solid var(--cl-primary);
+								background-image: url(../img/icons/star-regular-primary.svg);
+							}
+						}
+					}
+				}
+			}
+	
+			&--2 {
+				
+				ul {
+	
+					li {
+	
+						&:nth-of-type(-n+2) {
+	
+							&:before {
+								border: 2px solid var(--cl-primary);
+								background-image: url(../img/icons/star-regular-primary.svg);
+							}
+						}
+					}
+				}
+			}
+	
+			&--3 {
+	
+				ul {
+	
+					li {
+	
+						&:nth-of-type(-n+3) {
+	
+							&:before {
+								border: 2px solid var(--cl-primary);
+								background-image: url(../img/icons/star-regular-primary.svg);
+							}
+						}
+					}
+				}
+			}
+
+			&--4 {
+	
+				ul {
+	
+					li {
+	
+						&:nth-of-type(-n+4) {
+	
+							&:before {
+								border: 2px solid var(--cl-primary);
+								background-image: url(../img/icons/star-regular-primary.svg);
+							}
+						}
+					}
+				}
+			}
+	
+			&--5 {
+	
+				ul {
+	
+					li {
+	
+						&:nth-of-type(-n+5) {
+	
+							&:before {
+								border: 2px solid var(--cl-primary);
+								background-image: url(../img/icons/star-regular-primary.svg);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#{$self}__person {
+	
+			#{$self}__info {
+
+				h3 {
+					color: var(--cl-primary);
+				}
+	
+				ul {
+
+					li {
+	
+						a {
+							color: var(--cl-white);
+	
+							&:before {
+								border: 2px solid var(--cl-white);
+							}
+	
+							&.phone {
+	
+								&:before {
+									background-image: url(../img/icons/mobile-android-regular-white.svg);
+								}
+							}
+	
+							&.mail {
+	
+								&:before {
+									background-image: url(../img/icons/envelope-open-regular-white.svg);
+								}
+							}
+	
+							&:hover {
+	
+								&:before {
+									border: 2px solid var(--cl-primary);
+								}
+	
+								&.phone {
+	
+									&:before {
 										background-image: url(../img/icons/mobile-android-regular-primary.svg);
 									}
 								}
@@ -1140,14 +1213,14 @@ section.reference {
 		}
 
 		strong {
-			color: var(--cl-secondary);
+			color: var(--cl-primary);
 		}
 
 		p a, li a {
-			color: var(--cl-secondary);
+			color: var(--cl-primary);
 
 			&:hover {
-				color: var(--cl-secondary-dark);
+				color: var(--cl-primary);
 			}
 		}
 
@@ -1156,13 +1229,13 @@ section.reference {
 			li {
 
 				&:before {
-					color: var(--cl-secondary);
+					color: var(--cl-primary);
 				}
 			}
 		}
 
 		blockquote {
-			border-left: 2px solid var(--cl-secondary);
+			border-left: 2px solid var(--cl-primary);
 
 			&:before {
 				background-image: url(../img/icons/quote-right-solid-primary.svg);
@@ -1172,21 +1245,21 @@ section.reference {
 		.button {
 
 			&--filled-secondary {
-				background: var(--cl-secondary);
+				background: var(--cl-primary);
 
 				&:hover {
-					background: var(--cl-secondary-dark);
+					background: var(--cl-primary);
 				}
 			}
 		}
 
-		.reference__file {
+		#{$self}__file {
 
 			a {
-				background: var(--cl-secondary);
+				background: var(--cl-primary);
 
 				&:hover {
-					background: var(--cl-secondary-dark);
+					background: var(--cl-primary);
 				}
 			}
 		}

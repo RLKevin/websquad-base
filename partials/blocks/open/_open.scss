@@ -4,11 +4,13 @@ section.open {
 
 	.wrapper {
 		@include max-width;
+		@include padding;
 	}
 
 	ul {
 		display: flex;
 		flex-wrap: wrap;
+		gap: 2px 96px;
 
 		li {
 			position: relative;
@@ -16,20 +18,8 @@ section.open {
 			background: var(--cl-grey);
 			@include rectangle;
 
-			&:not(:last-of-type) {
-				margin: 0 0 2px 0;
-			}
-
 			@include desktop {
 				width: calc(50% - 48px);
-				
-				&:not(:last-of-type) {
-					margin: 0 96px 2px 0;
-
-					&:nth-of-type(2n+2) {
-						margin: 0 0 2px 0;
-					}
-				}
 			}
 
 			p {
@@ -57,7 +47,7 @@ section.open {
 
 	// background
 
-	.open--grey {
+	&.open--grey {
 		background: var(--cl-grey);
 
 		ul {
@@ -68,7 +58,7 @@ section.open {
 		}
 	}
 
-	.open--black {
+	&.open--black {
 		background: var(--cl-black);
 
 		ul {
@@ -79,8 +69,8 @@ section.open {
 		}
 	}
 
-	.open--primary {
-		background: var(--cl-secondary);
+	&.open--primary {
+		background: var(--cl-primary);
 
 		ul {
 	
@@ -90,8 +80,8 @@ section.open {
 		}
 	}
 
-	.open--secondary {
-		background: var(--cl-primary);
+	&.open--secondary {
+		background: var(--cl-secondary);
 
 		ul {
 	
@@ -99,9 +89,10 @@ section.open {
 				background: var(--cl-white);
 
 				span {
-					background: var(--cl-secondary);
+					background: var(--cl-primary);
 				}
 			}
 		}
 	}
+
 }

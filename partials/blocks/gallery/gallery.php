@@ -37,6 +37,10 @@ $id = get_field('id');
 
 		<?php 
 
+	else:
+
+		?> <p>No content added.</p> <?php
+		
 	endif;
 
 	?>

@@ -1,0 +1,112 @@
+.wp-block section.files{
+	pointer-events: none;
+}
+
+section.files {
+	$self: &;
+	padding: 48px 0 48px 0;
+
+	.wrapper {
+		@include max-width;
+	}
+
+	.file{
+		background: linear-gradient(to right, var(--cl-primary), var(--cl-secondary));
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-block: 24px;
+		margin-bottom: 24px;
+		@include rectangle;
+		@include padding;
+		padding-left: 0!important;
+		cursor: pointer;
+
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+
+		p{
+			padding: 0;
+			margin: 0;
+			color: var(--cl-white);
+		}
+
+		.name{
+			position: relative;
+			font-weight: var(--fw-bold);
+			@include padding;
+			padding-left: 96px!important;
+
+			&::before{
+				content: '';
+				height: 48px;
+				aspect-ratio: 1 / 1;
+				position: absolute;
+				left: 24px;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: var(--cl-white);
+				mask-image: url(../img/icons/file.svg);
+				mask-size: 24px;
+				mask-repeat: no-repeat;
+				mask-position: center;
+				@include transition;
+			}
+		}
+
+		.info{
+			display: flex;
+			justify-content: row;
+			gap: 24px;
+		}
+
+		&:hover{
+			.name{
+				&::before{
+					scale: 1.1;
+				}
+			}
+		}
+	}
+
+	// background
+
+	&.files--white {
+
+	}
+
+	&.files--grey {
+		background: var(--cl-grey);
+	}
+
+	&.files--black {
+		background: var(--cl-black);
+	}
+
+	&.files--secondary {
+		background: var(--cl-secondary);
+
+		.file{
+			background: linear-gradient(to right, var(--cl-primary), var(--cl-primary));
+		}
+	}
+
+	&.files--primary {
+		background: var(--cl-primary);
+
+		.file{
+			background: linear-gradient(to right, var(--cl-secondary), var(--cl-secondary));
+		}
+	}
+
+	// download
+
+	.download.file{
+		.name{
+			&::before{
+				mask-image: url(../img/icons/download.svg)!important;
+			}
+		}
+	}
+}

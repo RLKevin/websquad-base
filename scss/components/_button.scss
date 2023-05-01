@@ -39,19 +39,29 @@ section{
 		// }
 
 		&:active,
-		&:visited,
-		&:focus,
-		&:hover {
+		// &:visited,
+		&:focus{
 			color: var(--cl-white);
 		}
 		
 		&:hover {
 			cursor: pointer;
-			background: var(--cl-secondary-dark);
+			// background: var(--cl-secondary-dark);
+			transform: scale(1.1);
 
 			// svg {
-			// 	transform: scale(1.6);
 			// }
 		}
+	}
+
+	.button.button--filled-white{
+		background: var(--cl-white);
+		color: var(--cl-secondary);
+	}
+
+
+	.button.button--filled-primary{
+		background: var(--cl-primary);
+		color: var(--cl-white);
 	}
 }

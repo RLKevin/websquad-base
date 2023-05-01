@@ -1,15 +1,15 @@
 {
-	"name": "switch/card",
-	"title": "Card",
-	"description": "All card block",
+	"name": "switch/file",
+	"title": "File",
+	"description": "All file block",
 	"category": "switch-blocks",
-	"icon": "megaphone",
+	"icon": "sos",
 	"apiVersion": 2,
-	"keywords": ["card", "switch"],
+	"keywords": ["file", "switch"],
 	"acf": {
-		"mode": "auto",
+		"mode": "preview",
 		"postTypes": ["post", "page", "blog"],
-		"renderTemplate": "card.php"
+		"renderTemplate": "file.php"
 	},
 	"render_callback": "my_block_render_callback",
 	"supports": {

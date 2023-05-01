@@ -7,7 +7,7 @@
 	"apiVersion": 2,
 	"keywords": ["gallery", "switch"],
 	"acf": {
-		"mode": "auto",
+		"mode": "preview",
 		"postTypes": ["post", "page", "blog"],
 		"renderTemplate": "gallery.php"
 	},

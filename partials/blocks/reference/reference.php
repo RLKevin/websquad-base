@@ -2,19 +2,18 @@
 
 // vars
 
-$align = get_field('align');
 $background = get_field('background');
 $id = get_field('id');
 
 ?>
 
-<section id="<?php echo $id; ?>" class="reference reference--<?php echo $align; ?> reference--<?php echo $background; ?>">
+<section id="<?php echo $id; ?>" class="reference reference--<?php echo $background; ?>">
 
 	<div class="wrapper">
 
-		<?php
+	<?php
 
-		if( have_rows('repeater') ): 
+		if( have_rows('repeater', 'options') ): 
 
 			?>
 
@@ -22,7 +21,7 @@ $id = get_field('id');
 
 				<?php 
 				
-				while ( have_rows('repeater') ) : the_row();
+				while ( have_rows('repeater', 'options') ) : the_row();
 
 					// vars
 
@@ -31,9 +30,9 @@ $id = get_field('id');
 					$image = get_sub_field('image');
 					$name = get_sub_field('name');
 					$function = get_sub_field('function');
-					$phone = get_sub_field('phone', 'option');
-					$phone_stripped = str_replace([' ', '-'], '', $phone);
-					$email = get_sub_field('email', 'option');
+					// $phone = get_sub_field('phone', 'option');
+					// $phone_stripped = str_replace([' ', '-'], '', $phone);
+					// $email = get_sub_field('email', 'option');
 
 					?>
 							
@@ -74,6 +73,8 @@ $id = get_field('id');
 							<div class="reference__text wysiwyg">
 								
 								<?php echo $reference; ?>
+
+								<h3><?php echo $name; ?></h3>
 							
 							</div>
 
@@ -89,46 +90,6 @@ $id = get_field('id');
 
 								<img src="<?php echo $image['sizes']['640-1-1']; ?>" alt="<?php echo $image['title']; ?>">
 
-							</div>
-
-							<div class="reference__info">
-
-								<h3><?php echo $name; ?></h3>
-
-								<?php if ($function): ?>
-							
-									<p><?php echo $function; ?></p>
-
-								<?php endif ?>
-
-								<?php if ($phone || $email): ?>
-
-									<ul>
-						
-										<?php if ($phone): ?>
-
-											<li>
-
-												<a class="phone" href="tel:<?php echo $phone_stripped; ?>"><?php echo $phone; ?></a>
-
-											</li>
-
-										<?php endif ?>
-
-										<?php if ($email): ?>
-
-											<li>
-
-												<a class="mail" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
-
-											</li>
-
-										<?php endif ?>
-
-									</ul>
-
-								<?php endif; ?>
-						
 							</div>
 
 						</div>

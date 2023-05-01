@@ -87,15 +87,15 @@ section.faq {
 
 	// background
 
-	.faq--white {
+	&.faq--white {
 
 	}
 
-	.faq--grey {
+	&.faq--grey {
 		background: var(--cl-grey);
 	}
 
-	.faq--black {
+	&.faq--black {
 		background: var(--cl-black);
 
 		h2, h3, p, li, em {
@@ -103,22 +103,22 @@ section.faq {
 		}
 	}
 
-	.faq--secondary {
-		background: var(--cl-primary);
+	&.faq--secondary {
+		background: var(--cl-secondary);
 
 		.faq__question {
-			background: var(--cl-secondary);
+			background: var(--cl-primary);
 
 			p {
 
 				&:hover {
-					background: var(--cl-secondary-dark);
+					background: var(--cl-primary-dark);
 				}
 			}
 		}
 
 		.faq__answer {
-			border-left: 2px solid var(--cl-secondary);
+			border-left: 2px solid var(--cl-primary);
 		}
 
 		h2, h3, p, li, em {
@@ -126,14 +126,14 @@ section.faq {
 		}
 
 		strong {
-			color: var(--cl-secondary);
+			color: var(--cl-primary);
 		}
 
 		p a, li a {
-			color: var(--cl-secondary);
+			color: var(--cl-primary);
 
 			&:hover {
-				color: var(--cl-secondary-dark);
+				color: var(--cl-primary-dark);
 			}
 		}
 
@@ -142,13 +142,13 @@ section.faq {
 			li {
 
 				&:before {
-					color: var(--cl-secondary);
+					color: var(--cl-primary);
 				}
 			}
 		}
 
 		blockquote {
-			border-left: 2px solid var(--cl-secondary);
+			border-left: 2px solid var(--cl-primary);
 
 			&:before {
 				background-image: url(../img/icons/quote-right-solid-primary.svg);
@@ -156,8 +156,8 @@ section.faq {
 		}
 	}
 
-	.faq--primary {
-		background: var(--cl-secondary);
+	&.faq--primary {
+		background: var(--cl-primary);
 
 		h2, h3, p, li, em {
 			color: var(--cl-white);
