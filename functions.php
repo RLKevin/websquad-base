@@ -39,18 +39,4 @@
 		if (!wp_next_scheduled('update_products_cron_hook')) {
 			wp_schedule_event(strtotime('03:00:00'), 'daily', 'update_products_cron_hook');
 		}
-
-	// custom css for wp admin
-
-		add_action('admin_head', 'switch_admin_styles');
-
-		function switch_admin_styles() {
-		echo '<style>
-			@media (min-width: 782px) {
-				.interface-complementary-area {
-					width: max(250px, 25vw);
-				}
-			}
-		</style>';
-		}
 ?>
