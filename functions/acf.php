@@ -1,7 +1,7 @@
 <?php 
 
 add_action('acf/init', 'teamswitch_acf_init');
-function teamswitch_acf_init($google_maps_key) {
+function teamswitch_acf_init() {
 
 	// disable gutenberg
 
@@ -21,7 +21,7 @@ function teamswitch_acf_init($google_maps_key) {
 	}
 	
 	// google maps			
-
+	global $google_maps_key;
 	acf_update_setting('google_api_key', $google_maps_key);
 
 	// options page
