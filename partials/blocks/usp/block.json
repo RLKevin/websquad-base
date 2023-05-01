@@ -7,7 +7,7 @@
 	"apiVersion": 2,
 	"keywords": ["usp", "switch"],
 	"acf": {
-		"mode": "auto",
+		"mode": "preview",
 		"postTypes": ["post", "page", "blog"],
 		"renderTemplate": "usp.php"
 	},

@@ -40,6 +40,10 @@ $id = get_field('id');
 
 			endwhile;
 
+		else:
+
+			?> <p>No content added.</p> <?php
+			
 		endif;
 
 		?>

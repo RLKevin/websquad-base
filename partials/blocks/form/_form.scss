@@ -7,9 +7,17 @@ section.form {
 		@include max-width;
 	}
 
+	// .gfields{
+	// 	display: grid;
+	// }
+
+	// .gfield--type-textarea{
+
+	// }
+
 	// background
 
-		.form--white {
+		&.form--white {
 
 			.gform_wrapper {
 
@@ -44,15 +52,15 @@ section.form {
 			}
 		}
 
-		.form--grey {
+		&.form--grey {
 			background: var(--cl-grey);
 		}
 
-		.form--black {
+		&.form--black {
 			background: var(--cl-black);
 		}
 
-		.form--primary {
+		&.form--primary {
 			background: var(--cl-primary);
 
 			.gform_wrapper {
@@ -83,7 +91,7 @@ section.form {
 			}
 		}
 
-		.form--secondary {
+		&.form--secondary {
 			background: var(--cl-secondary);
 
 			.gform_wrapper {

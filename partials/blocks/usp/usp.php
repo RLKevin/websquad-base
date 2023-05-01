@@ -3,11 +3,13 @@
 // vars
 
 $background = get_field('background');
+$type = get_field('usp_type');
+$title = get_field('title');
 $id = get_field('id');
 
 ?>
 
-<section id="<?php echo $id; ?>" class="usp usp--<?php echo $align; ?> usp--<?php echo $background; ?>">
+<section id="<?php echo $id; ?>" class="usp usp--<?php echo $background; ?>">
 
 	<?php
 
@@ -15,7 +17,21 @@ $id = get_field('id');
 
 		?>
 			
-		<div class="usp__slider slider">
+		<div class="usp__slider--<?= $type ?> slider">
+
+			<?php if ($type == 'steps') { ?>
+				
+				<div class="usp__slide usp__slide--first">
+					
+					<p>
+
+						<?php echo $title; ?>
+						
+					</p>
+					
+				</div>
+
+			<?php } ?>
 
 			<?php 
 			
@@ -28,7 +44,9 @@ $id = get_field('id');
 				?>
 
 				<div class="usp__slide">
-
+					<?php if ($type == 'steps') { ?>
+						<h3></h3>
+					<?php } ?>
 					<p>
 
 						<?php echo $text; ?>
@@ -46,9 +64,14 @@ $id = get_field('id');
 		</div>
 
 		<?php 
+	else:
+
+		?> <p>No content added.</p> <?php
 
 	endif;
 	
 	?>
+
+				
 
 </section>

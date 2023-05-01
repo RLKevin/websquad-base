@@ -7,7 +7,7 @@
 	"apiVersion": 2,
 	"keywords": ["search", "switch"],
 	"acf": {
-		"mode": "auto",
+		"mode": "preview",
 		"postTypes": ["post", "page", "blog"],
 		"renderTemplate": "search.php"
 	},

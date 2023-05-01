@@ -113,10 +113,10 @@ section.table {
 
 	// background
 
-	.table--white {
+	&.table--white {
 	}
 
-	.table--grey {
+	&.table--grey {
 		background: var(--cl-grey);
 
 		.table__row {
@@ -144,7 +144,7 @@ section.table {
 		}
 	}
 
-	.table--black {
+	&.table--black {
 		background: var(--cl-black);
 
 		.table__row {
@@ -172,35 +172,7 @@ section.table {
 		}
 	}
 
-	.table--primary {
-		background: var(--cl-secondary);
-
-		.table__row {
-			
-			.table__col {
-				background: var(--cl-white);
-			}
-			
-			&--title {
-	
-				.table__col {
-					
-					&--left {
-						background: var(--cl-primary);
-					}
-				}
-			}
-	
-			&--normal {
-	
-				.table__col {
-					background: var(--cl-white);
-				}
-			}
-		}
-	}
-
-	.table--secondary {
+	&.table--primary {
 		background: var(--cl-primary);
 
 		.table__row {
@@ -225,9 +197,37 @@ section.table {
 					background: var(--cl-white);
 				}
 			}
+		}
+	}
+
+	&.table--secondary {
+		background: var(--cl-secondary);
+
+		.table__row {
+			
+			.table__col {
+				background: var(--cl-white);
+			}
+			
+			&--title {
+	
+				.table__col {
+					
+					&--left {
+						background: var(--cl-primary);
+					}
+				}
+			}
+	
+			&--normal {
+	
+				.table__col {
+					background: var(--cl-white);
+				}
+			}
 
 			&--note {
-				border-left: 2px solid var(--cl-secondary);
+				border-left: 2px solid var(--cl-primary);
 			}
 		}
 	}

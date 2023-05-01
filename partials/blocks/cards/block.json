@@ -7,7 +7,7 @@
 	"apiVersion": 2,
 	"keywords": ["cards", "switch"],
 	"acf": {
-		"mode": "auto",
+		"mode": "preview",
 		"postTypes": ["post", "page", "blog"],
 		"renderTemplate": "cards.php"
 	},
