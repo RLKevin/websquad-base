@@ -66,7 +66,7 @@ $template = get_template_directory();
 				</div>
 				
 				<?php if ( have_rows('repeater_half') ) : ?>
-					<div class="slider">
+					<div class="slider slider__hero--half">
 						<?php while( have_rows('repeater_half') ) : the_row(); 
 							$image_half = get_sub_field('image');
 							?>
@@ -76,11 +76,10 @@ $template = get_template_directory();
 						<?php endwhile; ?>
 					</div>
 				<?php endif; ?>
-
 				
 				<script>
 					var slider = tns({
-						container: '.slider',
+						container: '.slider__hero--half',
 						items: 1,
 						slideBy: 1,
 						mouseDrag: true,
@@ -94,14 +93,6 @@ $template = get_template_directory();
 						loop: true,
 						autoHeight: false,
 					});
-
-					// if ($("body").hasClass("wp-admin")) {
-					// 	setInterval(function(){
-					// 		slider.destroy();
-					// 		console.log('slider destroyed');
-					// 		slider.rebuild();
-					// 	}, 1000);
-					// };
 				</script>
 			</div>
 		</div>
@@ -124,7 +115,7 @@ $template = get_template_directory();
 					if (!$image) {
 						// $image_bg = $template . '/img/bg.jpg';
 						// console_log($image_bg);
-						$image_bg = 'http://localhost/websquad2-0/wp-content/uploads/2023/04/pexels-anni-roenkae-3109807-scaled-1.jpg';
+						$image_bg = get_template_directory() . '/screenshot.png';
 					}
 
 					$title = get_sub_field('title') ?: get_the_title();
@@ -138,9 +129,9 @@ $template = get_template_directory();
 						
 						<div class="hero__image">
 							<?php if ($image_bg) { ?>
-								<img src="<?= $image_bg ?>" alt="bg image">
+								<img class="tns-lazy-img" data-src="<?= $image_bg ?>" alt="bg image">
 							<?php }else{ ?>
-								<img src="<?= $image['sizes']['1920-16-9']; ?>" alt="<?= $image['alt']; ?>">
+								<img class="tns-lazy-img" data-src="<?= $image['sizes']['1920-16-9']; ?>" alt="<?= $image['alt']; ?>">
 							<?php } ?>
 						</div>
 						
@@ -186,6 +177,24 @@ $template = get_template_directory();
 		
 			?>		
 		</div>
+
+		<script>
+			var slider = tns({
+				container: '.hero__slider',
+				items: 1,
+				slideBy: 1,
+				mouseDrag: true,
+				controls: true,
+				controlsText: '',
+				center: true,
+				edgePadding: 0,
+				gutter: 0,
+				lazyload: true,
+				nav: true,
+				loop: true,
+				autoHeight: false,
+			});
+		</script>
 	<?php }
 	
 	if ($scroll): ?>
@@ -203,3 +212,4 @@ $template = get_template_directory();
 ?>
 
 </section>
+

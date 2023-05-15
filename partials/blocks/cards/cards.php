@@ -23,10 +23,8 @@ $style = get_field('style');
 			<?php
 
 				while ( have_rows('flexible_content') ) : the_row();
-					console_log('hallo');
 
 					if( get_row_layout() == 'highlight' ):
-						console_log('in the highlight');
 
 						if( have_rows('repeater') ):
 

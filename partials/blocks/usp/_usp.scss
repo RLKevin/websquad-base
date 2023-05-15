@@ -2,21 +2,7 @@ section.usp {
 	$self: &;
     padding-block: 48px;
 
-    .usp__slider {
-
-        .owl-stage {
-            display: flex;
-            align-items: center;
-            display: none;
-
-            @include desktop {
-                // display: inline-block;
-            }
-        }
-
-        &--steps{
-            counter-reset: section;
-            padding-inline: 16px 0;
+    padding-inline: 16px 0;
 
             @include tablet{
                 padding-inline: 48px 0;
@@ -26,116 +12,144 @@ section.usp {
                 padding-inline: 96px 0;
             }
 
-            .owl-stage {
-                display: flex;
-                margin-inline: auto;
-            }
-    
-            .owl-item {
-                display: flex;
-                // background: var(--cl-white);
+    &--steps{
+        .tns-outer{
 
-                // &:last-of-type{
-                //     opacity: 0;
-                //     background-color: none;
-                // }
-            }
-    
-            .owl-nav {
+            .tns-controls {
                 justify-content: flex-end;
                 gap: 8px;
                 top: auto;
                 bottom: 16px;
 
+                @include tablet{
+                    padding-right: 48px;
+                }
+                
                 button{
                     background-color: var(--cl-primary);
-
-                    &.disabled{
+                    
+                    &:disabled{
                         pointer-events: none;
                         opacity: .24;
                     }
                 }
             }
+        }
+    }
 
-            .usp__slide{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-                background-color: var(--cl-secondary-rgba);
-                padding-block: 96px;
-                padding-inline: 16px;
-                @include rectangle;
+    .usp__slider {
 
-                @include tablet {
-                    padding-inline: 32px;
-                    padding-block: 128px;
-                }
- 
+        // .tns-inner{
+        //     display: flex;
+        //     align-items: center;
 
-                p {
-                    color: var(--cl-black);
-                    font-size: var(--fs-medium);
-                    line-height: var(--lh-medium);
-                    font-weight: var(--fw-medium);
-                    padding: 0 0 48px 0;
+        //     @include desktop {
+        //         // display: inline-block;
+        //     }
+        // }
+
+        &--steps{
+            display: flex;
+            margin-inline: auto;
+            counter-reset: section;
+            
+    
+            // .owl-item {
+            //     display: flex;
+            //     // background: var(--cl-white);
+
+            //     // &:last-of-type{
+            //     //     opacity: 0;
+            //     //     background-color: none;
+            //     // }
+            // }
+    
+            
+            .tns-item{
+                // min-height: 100%;
+                height: auto;
+
+                .usp__slide{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                     position: relative;
-                    z-index: 1;
-                    text-align: center;
+                    width: 100%;
+                    background-color: var(--cl-secondary-rgba);
+                    padding-block: 96px;
+                    padding-inline: 16px;
+                    height: 100%;
+                    @include rectangle;
 
                     @include tablet {
-                        font-size: var(--fs-large);
+                        padding-inline: 32px;
+                        padding-block: 128px;
                     }
-                }
-
-                &--first {
-                    background: var(--cl-primary);
-                    
+    
                     p {
-                        color: var(--cl-white);
-                        font-size: var(--fs-large);
-                        font-family: var(--ff-primary);
-                        text-transform: uppercase;
+                        color: var(--cl-black);
+                        font-size: var(--fs-medium);
+                        line-height: var(--lh-medium);
+                        font-weight: var(--fw-medium);
+                        padding: 0 0 48px 0;
+                        position: relative;
+                        z-index: 1;
+                        text-align: center;
 
                         @include tablet {
-                            font-size: var(--fs-huge);
+                            font-size: var(--fs-large);
+                        }
+                    }
+
+                    &--first {
+                        background: var(--cl-primary);
+                        
+                        p {
+                            color: var(--cl-white);
+                            font-size: var(--fs-large);
+                            font-family: var(--ff-primary);
+                            text-transform: uppercase;
+
+                            @include tablet {
+                                font-size: var(--fs-huge);
+                            }
+                        }
+
+                        * {
+                            color: var(--cl-white);
                         }
                     }
 
                     * {
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+                    }
+
+                    h3 {
+                        position: absolute;
+                        top: 16px;
+                        left: 16px;
+                        width: 64px;
+                        height: 64px;
+                        line-height: 64px;
+                        text-align: center;
+                        border-radius: 50%;
+                        background: var(--cl-primary);
                         color: var(--cl-white);
+
+                        @include tablet {
+                            top: 32px;
+                            left: 32px;
+                        }
+
+                        &::before{
+                            counter-increment: section; /* Increment the value of section counter by 1 */
+                            content: counter(section);
+                        }
                     }
                 }
-
-                * {
-                    &:last-child {
-                        padding-bottom: 0;
-                    }
-                }
-
-                h3 {
-                    position: absolute;
-                    top: 16px;
-                    left: 16px;
-                    width: 64px;
-                    height: 64px;
-                    line-height: 64px;
-                    text-align: center;
-                    border-radius: 50%;
-                    background: var(--cl-primary);
-                    color: var(--cl-white);
-
-                    @include tablet {
-                        top: 32px;
-                        left: 32px;
-                    }
-
-                    &::before{
-                        counter-increment: section; /* Increment the value of section counter by 1 */
-                        content: counter(section);
-                    }
-                }
-			}
+            }
         }
 
         &--points{

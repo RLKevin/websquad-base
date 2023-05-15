@@ -139,26 +139,6 @@ jQuery(function( $ ) {
 		function set_slider() {
 			console.log('set slider');
 
-			// var slider = tns({
-			// 	container: '.slider',
-			// 	items: 1,
-			// 	slideBy: 1,
-			// 	mouseDrag: true,
-			// 	controls: false,
-			// 	center: true,
-			// 	edgePadding: 0,
-			// 	gutter: 0,
-			// 	lazyload: true,
-			// 	nav: false,
-			// 	navPosition: 'bottom',
-			// 	loop: true,
-			// 	autoHeight: false,
-			// });
-
-			// slider.destroy();
-			// console.log('slider destroyed');
-			// slider.rebuild();
-
 			$('.content__slider').owlCarousel({
 				smartSpeed: 500,
 				items: 1,
@@ -208,37 +188,37 @@ jQuery(function( $ ) {
 				],
 			});
 
-			$('.hero__slider').owlCarousel({
-				smartSpeed: 500,
-				items: 1,
-				loop: true,
-				autoplay: true,
-				autoplayTimeout: 5000,
-				nav: true,
-				dots: true,
-				autoHeight: true,
-				mouseDrag: false,
-				touchDrag: false,
-				pullDrag: false,
-				navText: [
-					'',
-					''
-				],
-			});
+			// $('.hero__slider').owlCarousel({
+			// 	smartSpeed: 500,
+			// 	items: 1,
+			// 	loop: true,
+			// 	autoplay: true,
+			// 	autoplayTimeout: 5000,
+			// 	nav: true,
+			// 	dots: true,
+			// 	autoHeight: true,
+			// 	mouseDrag: false,
+			// 	touchDrag: false,
+			// 	pullDrag: false,
+			// 	navText: [
+			// 		'',
+			// 		''
+			// 	],
+			// });
 
-			$('.hero--half__slider').owlCarousel({
-				smartSpeed: 500,
-				items: 1,
-				loop: true,
-				autoplay: true,
-				autoplayTimeout: 5000,
-				nav: false,
-				dots: false,
-				autoHeight: true,
-				mouseDrag: false,
-				touchDrag: false,
-				pullDrag: false,
-			});
+			// $('.hero--half__slider').owlCarousel({
+			// 	smartSpeed: 500,
+			// 	items: 1,
+			// 	loop: true,
+			// 	autoplay: true,
+			// 	autoplayTimeout: 5000,
+			// 	nav: false,
+			// 	dots: false,
+			// 	autoHeight: true,
+			// 	mouseDrag: false,
+			// 	touchDrag: false,
+			// 	pullDrag: false,
+			// });
 
 			$('.reference__slider').owlCarousel({
 				smartSpeed: 500,
@@ -313,33 +293,33 @@ jQuery(function( $ ) {
 				},
 			});
 
-			$('.usp__slider--steps').owlCarousel({
-				responsive: {
-					0: {
-						items: 1.5,
-						margin: 32,
-					},
-					640: {
-						items: 2.5,
-						margin: 32,
-					},
-					1280: {
-						items: 3.5,
-						margin: 64,
-					},
-					2650: {
-						items: 5.5,
-						margin: 64,
-					},
-				},
-				smartSpeed: 150,
-				loop: false,
-				merge: true,
-				nav: true,
-				dots: false,
-				autoHeight: true,
-				lazyLoad: true,
-			});
+			// $('.usp__slider--steps').owlCarousel({
+			// 	responsive: {
+			// 		0: {
+			// 			items: 1.5,
+			// 			margin: 32,
+			// 		},
+			// 		640: {
+			// 			items: 2.5,
+			// 			margin: 32,
+			// 		},
+			// 		1280: {
+			// 			items: 3.5,
+			// 			margin: 64,
+			// 		},
+			// 		2650: {
+			// 			items: 5.5,
+			// 			margin: 64,
+			// 		},
+			// 	},
+			// 	smartSpeed: 150,
+			// 	loop: false,
+			// 	merge: true,
+			// 	nav: true,
+			// 	dots: false,
+			// 	autoHeight: true,
+			// 	lazyLoad: true,
+			// });
 		}
 
 	// execute
@@ -671,10 +651,10 @@ jQuery(function( $ ) {
 
 	// execute in gutenberg every 5 sec
 
-	if ($("body").hasClass("wp-admin")) {
-		setInterval(function(){
-			set_slider();
-		  }, 1000);
-	};
+	// if ($("body").hasClass("wp-admin")) {
+	// 	setInterval(function(){
+	// 		set_slider();
+	// 	  }, 1000);
+	// };
 		
 });
