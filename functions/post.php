@@ -44,6 +44,12 @@ function teamswitch_custom_post_types() {
 		// ),
 	));
 
+	create_post_type('Rooms', 'rooms', array(
+		// array(
+		// 	'switch/blockname',
+		// ),
+	));
+
 }
 
 // remove default post type
