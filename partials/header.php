@@ -83,6 +83,11 @@ $whatsapp = get_field('options_whatsapp_number', 'option');
 
 						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
 
+					<?php else : ?>
+
+						<h1><?php bloginfo('name'); ?></h1>
+						<span class="subtitle"><?= get_bloginfo('description', 'display') ?></span>
+
 					<?php endif; ?>
 
 				</a>

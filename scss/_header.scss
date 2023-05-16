@@ -7,19 +7,18 @@
 		background: var(--cl-black);
 
 		#{$self}__submenu {
-	
 			ul {
 				display: flex;
 				justify-content: flex-end;
 				padding: 16px 0;
-	
+
 				li {
 					margin: 0 8px 0 0;
-	
+
 					@include tablet {
 						margin: 0 24px 0 0;
 					}
-	
+
 					&:last-of-type {
 						margin: 0;
 					}
@@ -46,7 +45,7 @@
 							color: var(--cl-white);
 							transition: 0.25s all ease-in-out;
 						}
-	
+
 						&:before {
 							content: '';
 							position: absolute;
@@ -65,14 +64,13 @@
 							&::before {
 								border: 2px solid var(--cl-primary);
 							}
-							
+
 							svg {
 								color: var(--cl-primary);
 							}
 						}
-	
+
 						&.phone {
-	
 							@include tablet {
 								padding: 0 0 0 64px;
 								width: auto;
@@ -83,7 +81,6 @@
 			}
 
 			&.menu-button {
-
 				ul {
 					padding: 0 96px 0 0;
 
@@ -96,7 +93,6 @@
 	}
 
 	&__mainmenu {
-			
 		.wrapper {
 			display: flex;
 			align-items: center;
@@ -110,17 +106,20 @@
 			margin-right: auto;
 
 			a {
-
 				img {
 					height: auto;
 					max-height: 80px;
 					width: auto;
 					max-width: 200px;
 					position: relative;
-		
+
 					@include tablet {
 						max-width: 280px;
 					}
+				}
+
+				h1 {
+					padding-bottom: 0 !important;
 				}
 			}
 		}
@@ -150,11 +149,9 @@
 					&.current-menu-parent,
 					&.current-menu-ancestor,
 					&:hover {
-
 						a {
 							color: var(--cl-black);
 						}
-						
 					}
 
 					.sub-menu {
@@ -162,7 +159,6 @@
 					}
 
 					&.highlight {
-						
 						a {
 							display: inline-block;
 							position: relative;
@@ -206,22 +202,22 @@
 			@include custom(800px) {
 				display: block;
 			}
-	
+
 			ul {
 				display: flex;
 				margin: 0 0 0 48px;
-	
+
 				li {
 					margin: 0 8px 0 0;
-	
+
 					@include tablet {
 						margin: 0 24px 0 0;
 					}
-	
+
 					&:last-of-type {
 						margin: 0;
 					}
-	
+
 					a {
 						display: block;
 						position: relative;
@@ -244,7 +240,7 @@
 							color: var(--cl-secondary);
 							transition: 0.25s all ease-in-out;
 						}
-	
+
 						&:before {
 							content: '';
 							position: absolute;
@@ -263,14 +259,13 @@
 							&::before {
 								border: 2px solid var(--cl-primary);
 							}
-							
+
 							svg {
 								color: var(--cl-primary);
 							}
 						}
-	
+
 						&.phone {
-	
 							@include custom(1600px) {
 								padding: 0 0 0 64px;
 								width: auto;
@@ -281,7 +276,6 @@
 			}
 
 			&.menu-button {
-
 				ul {
 					padding: 0 96px 0 0;
 
@@ -348,7 +342,6 @@
 
 			&.active,
 			&.show {
-				
 				svg {
 					top: -48px;
 					opacity: 0;
@@ -356,7 +349,7 @@
 					@include tablet {
 						top: -64px;
 					}
-					
+
 					&:last-of-type {
 						top: calc(50% - 8px);
 						opacity: 1;
@@ -411,7 +404,7 @@
 
 		#{$self}__submenu {
 			margin: 0 0 48px 0;
-	
+
 			ul {
 				display: flex;
 				align-items: center;
@@ -420,14 +413,14 @@
 				@include tablet {
 					height: 64px;
 				}
-	
+
 				li {
 					margin: 0 8px 0 0;
-	
+
 					@include tablet {
 						margin: 0 24px 0 0;
 					}
-	
+
 					&:last-of-type {
 						margin: 0;
 					}
@@ -454,7 +447,7 @@
 							color: var(--cl-white);
 							transition: 0.25s all ease-in-out;
 						}
-	
+
 						&:before {
 							content: '';
 							position: absolute;
@@ -473,14 +466,13 @@
 							&::before {
 								border: 2px solid var(--cl-primary);
 							}
-							
+
 							svg {
 								color: var(--cl-primary);
 							}
 						}
-	
+
 						&.phone {
-	
 							@include tablet {
 								padding: 0 0 0 64px;
 								width: auto;
@@ -491,7 +483,6 @@
 			}
 
 			&.menu-button {
-
 				ul {
 					padding: 0 96px 0 0;
 
@@ -503,9 +494,7 @@
 		}
 
 		#{$self}__menu {
-
 			ul {
-
 				li {
 					padding: 16px 0 18px;
 					position: relative;
@@ -544,11 +533,9 @@
 					&.current-menu-parent,
 					&.current-menu-ancestor,
 					&:hover {
-
 						a {
 							color: var(--cl-primary);
 						}
-						
 					}
 
 					.sub-menu {
@@ -567,7 +554,7 @@
 		height: 100vh;
 		background: var(--cl-grey);
 		overflow: auto;
-		transition: 0.50s right ease-in-out;
+		transition: 0.5s right ease-in-out;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -589,7 +576,6 @@
 			position: relative;
 
 			&__input {
-				
 				input {
 					padding-right: 80px;
 				}
@@ -620,7 +606,7 @@
 
 				&:hover {
 					cursor: pointer;
-					
+
 					svg {
 						transform: scale(1.2);
 					}
@@ -634,7 +620,7 @@
 		}
 	}
 
-	.whatsapp-container{
+	.whatsapp-container {
 		position: fixed;
 		top: initial;
 		bottom: 0;
@@ -661,13 +647,13 @@
 			left: 96px;
 		}
 
-		&:hover{
-			a{
+		&:hover {
+			a {
 				mask-size: 36px 36px;
 			}
 		}
 
-		a{
+		a {
 			background-color: var(--cl-white);
 			display: flex;
 			// height: 80px;
@@ -681,9 +667,7 @@
 	}
 
 	&--top {
-
 		#{$self}__mainmenu {
-
 			#{$self}__menu-button,
 			#{$self}__search-button,
 			#{$self}__scroll-button {
@@ -711,11 +695,8 @@
 	}
 
 	&--button {
-
 		#{$self}__mainmenu {
-
 			#{$self}__submenu {
-		
 				ul {
 					padding: 0 96px 0 0;
 
@@ -724,11 +705,8 @@
 					}
 
 					li {
-		
 						a {
-		
 							&.phone {
-		
 								@include desktop {
 									padding: 0 0 0 64px;
 									width: auto;
