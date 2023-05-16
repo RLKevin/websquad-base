@@ -61,7 +61,7 @@ function teamswitch_acf_init() {
 			// reset choices
 			$field['choices'] = array();
 			
-			$blacklist = array('post', 'page', 'revision', 'attachment', 'nav_menu_item', 'acf-field-group', 'acf-field', 'custom_css', 'customize_changeset', 'oembed_cache', 'user_request', 'wp_block', 'wp_template', 'wp_template_part', 'wp_global_styles', 'wp_navigation');
+			$blacklist = array('post', 'page', 'revision', 'attachment', 'nav_menu_item', 'acf-field-group', 'acf-field', 'acf-post-type', 'acf-taxonomy', 'custom_css', 'customize_changeset', 'oembed_cache', 'user_request', 'wp_block', 'wp_template', 'wp_template_part', 'wp_global_styles', 'wp_navigation');
 			foreach ( get_post_types( '', 'names' ) as $post_type ) {
 				if ( ! in_array( $post_type, $blacklist ) ) {
 					$field['choices'][ $post_type ] = ucfirst($post_type);
