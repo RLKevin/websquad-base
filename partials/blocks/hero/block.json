@@ -7,7 +7,7 @@
 	"apiVersion": 2,
 	"keywords": ["hero", "switch"],
 	"acf": {
-		"mode": "preview",
+		"mode": "edit",
 		"postTypes": [],
 		"renderTemplate": "hero.php"
 	},
