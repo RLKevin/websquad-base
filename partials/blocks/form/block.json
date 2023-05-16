@@ -8,7 +8,7 @@
 	"keywords": ["form", "switch"],
 	"acf": {
 		"mode": "preview",
-		"postTypes": ["post", "page", "blog"],
+		"postTypes": [],
 		"renderTemplate": "form.php"
 	},
 	"render_callback": "my_block_render_callback",

@@ -8,7 +8,7 @@
 	"keywords": ["search", "switch"],
 	"acf": {
 		"mode": "preview",
-		"postTypes": ["post", "page", "blog"],
+		"postTypes": [],
 		"renderTemplate": "search.php"
 	},
 	"render_callback": "my_block_render_callback",

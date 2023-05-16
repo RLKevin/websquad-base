@@ -8,7 +8,7 @@
 	"keywords": ["file", "switch"],
 	"acf": {
 		"mode": "preview",
-		"postTypes": ["post", "page", "blog"],
+		"postTypes": [],
 		"renderTemplate": "file.php"
 	},
 	"render_callback": "my_block_render_callback",

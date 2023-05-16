@@ -8,7 +8,7 @@
 	"keywords": ["map", "switch"],
 	"acf": {
 		"mode": "preview",
-		"postTypes": ["post", "page", "blog"],
+		"postTypes": [],
 		"renderTemplate": "map.php"
 	},
 	"render_callback": "my_block_render_callback",

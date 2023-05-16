@@ -8,7 +8,7 @@
 	"keywords": ["gallery", "switch"],
 	"acf": {
 		"mode": "preview",
-		"postTypes": ["post", "page", "blog"],
+		"postTypes": [],
 		"renderTemplate": "gallery.php"
 	},
 	"render_callback": "my_block_render_callback",

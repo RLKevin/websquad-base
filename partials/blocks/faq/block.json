@@ -8,7 +8,7 @@
 	"keywords": ["faq", "switch"],
 	"acf": {
 		"mode": "preview",
-		"postTypes": ["post", "page", "blog"],
+		"postTypes": [],
 		"renderTemplate": "faq.php"
 	},
 	"render_callback": "my_block_render_callback",
