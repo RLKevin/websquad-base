@@ -76,3 +76,133 @@ $id = get_field('id');
 
 	</div>
 </section>
+
+<?php
+
+// ACF
+
+if ( function_exists('acf_add_local_field_group') ):
+
+	acf_add_local_field_group(array(
+		'key' => 'group_5c5aba23b5c1b',
+		'title' => 'Block: Search',
+		'fields' => array(
+			array(
+				'key' => 'field_5c5ad56b7fe03',
+				'label' => 'Exclude',
+				'name' => 'exclude',
+				'aria-label' => '',
+				'type' => 'text',
+				'instructions' => 'Comma separated ID\'s',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_5d02040ce64aa',
+				'label' => 'Align',
+				'name' => 'align',
+				'aria-label' => '',
+				'type' => 'select',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'choices' => array(
+					'left' => 'Left',
+					'center' => 'Center',
+				),
+				'default_value' => 'left',
+				'allow_null' => 0,
+				'multiple' => 0,
+				'ui' => 0,
+				'return_format' => 'value',
+				'ajax' => 0,
+				'placeholder' => '',
+			),
+			array(
+				'key' => 'field_5d0203ede64a9',
+				'label' => 'Background',
+				'name' => 'background',
+				'aria-label' => '',
+				'type' => 'select',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'choices' => array(
+					'white' => 'White',
+					'grey' => 'Grey',
+					'black' => 'Black',
+					'primary' => 'Primary',
+					'secondary' => 'Secondary',
+				),
+				'default_value' => 'white',
+				'allow_null' => 0,
+				'multiple' => 0,
+				'ui' => 0,
+				'return_format' => 'value',
+				'ajax' => 0,
+				'placeholder' => '',
+			),
+			array(
+				'key' => 'field_5d4d32519fe28',
+				'label' => 'Id',
+				'name' => 'id',
+				'aria-label' => '',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'block',
+					'operator' => '==',
+					'value' => 'switch/search',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+		'show_in_rest' => 0,
+	));
+	
+endif;
+
+?>

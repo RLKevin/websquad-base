@@ -636,7 +636,7 @@
 
 	.whatsapp-container{
 		position: fixed;
-		top: auto;
+		top: initial;
 		bottom: 0;
 		margin: 40px 0;
 		left: 16px;
@@ -653,7 +653,7 @@
 			margin: 32px 0;
 			width: 64px;
 			height: 64px;
-			top: 32px;
+			// bottom: 32px;
 			left: 48px;
 		}
 

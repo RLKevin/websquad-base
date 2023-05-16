@@ -4412,6 +4412,117 @@ section .button.button--filled-primary {
   background: var(--cl-primary);
 }
 
+.slider .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 16px;
+}
+@media only screen and (min-width: 640px) {
+  .slider .owl-nav {
+    padding: 0 48px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .slider .owl-nav {
+    padding: 0 96px;
+  }
+}
+.slider .owl-nav.disabled {
+  display: none;
+}
+.slider .owl-nav .owl-prev,
+.slider .owl-nav .owl-next {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: var(--cl-black);
+  pointer-events: auto;
+  -webkit-transition: 0.25s all ease-in-out;
+  -o-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+  position: relative;
+  border-radius: var(--br-square-top-left) var(--br-square-top-right) var(--br-square-bottom-right) var(--br-square-bottom-left);
+}
+.slider .owl-nav .owl-prev:before,
+.slider .owl-nav .owl-next:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--cl-white);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/icons/arrow-left-regular-white.svg);
+  -webkit-transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
+  -o-transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
+  transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
+  border-radius: var(--br-square-top-left) var(--br-square-top-right) var(--br-square-bottom-right) var(--br-square-bottom-left);
+}
+.slider .owl-nav .owl-prev:hover,
+.slider .owl-nav .owl-next:hover {
+  background: var(--cl-primary);
+}
+.slider .owl-nav .owl-next:before {
+  background-image: url(../img/icons/arrow-right-regular-white.svg);
+}
+.slider .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  width: 100%;
+}
+@media only screen and (min-width: 640px) {
+  .slider .owl-dots {
+    bottom: 48px;
+  }
+}
+.slider .owl-dots.disabled {
+  display: none;
+}
+.slider .owl-dots .owl-dot {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--cl-white);
+  background: var(--cl-black);
+  margin: 0 8px 0 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  border-radius: var(--br-square-top-left) var(--br-square-top-right) var(--br-square-bottom-right) var(--br-square-bottom-left);
+}
+.slider .owl-dots .owl-dot:last-child {
+  margin: 0;
+}
+.slider .owl-dots .owl-dot.active {
+  background: var(--cl-primary);
+}
+.slider .owl-dots .owl-dot:hover {
+  background: var(--cl-primary);
+}
+
 html.websquad-html {
   background: var(--cl-secondary);
 }
@@ -5351,7 +5462,7 @@ input:-webkit-autofill:active {
 }
 .header .whatsapp-container {
   position: fixed;
-  top: auto;
+  top: initial;
   bottom: 0;
   margin: 40px 0;
   left: 16px;
@@ -5368,7 +5479,6 @@ input:-webkit-autofill:active {
     margin: 32px 0;
     width: 64px;
     height: 64px;
-    top: 32px;
     left: 48px;
   }
 }
@@ -6057,24 +6167,9 @@ section.cards.card--round .card__image a img {
   width: 100%;
   height: 100%;
 }
-@media only screen and (min-width: 1280px) {
-  section.cards.card--three.card--basic .card__item {
-    width: calc(33.3333333333% - 32px);
-  }
-}
 @media only screen and (min-width: 1920px) {
   section.cards.card--three.card--basic .card__item {
     width: calc(33.3333333333% - 64px);
-  }
-}
-@media only screen and (min-width: 1280px) {
-  section.cards.card--three.card--mixed .card__item {
-    width: 33.3333333333%;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  section.cards.card--three.card--mixed .card__item {
-    width: 33.3333333333%;
   }
 }
 section.cards.card--three.card--mixed .card__text {

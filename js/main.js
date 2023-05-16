@@ -116,14 +116,12 @@ jQuery(function( $ ) {
 
 				$('.header__mainmenu .header__scroll-button').fadeOut();
 				$('.header__mainmenu .header__scroll-button').removeClass('show');
-				$('.header__mainmenu .header__scroll-button').css('top', 'auto');
+				$('.header__mainmenu .header__scroll-button').css('top', 'initial');
 				console.log('footer top');
 
 			}
 
 		}
-
-		
 
 		// menu - hide menu
 
