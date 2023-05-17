@@ -26,6 +26,7 @@ section.faq {
 				font-weight: var(--fw-medium);
 				transition: 0.25s all ease-in-out;
 				padding: 16px 88px 16px 16px;
+				// TODO: maybe not use a gradient here?
 				background: linear-gradient( to right, var(--cl-primary) 0%, var(--cl-secondary) 100% );
 				background-size: 100%;
 				background-position: center left;

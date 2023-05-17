@@ -1,67 +1,53 @@
 header,
 footer,
-section{
-
+section {
 	.button:not(.acf-button) {
+		--bg: var(--cl-secondary);
+		--fg: var(--cl-white);
+
+		color: var(--fg);
+		background-color: var(--bg);
+		border: 4px solid var(--bg);
+
+		position: relative;
 		display: inline-flex;
 		justify-content: center;
+		align-items: center;
 		width: 100%;
 		max-width: 256px;
-		padding: 16px;
-		border: none;
+		padding-inline: 16px;
+		height: 64px;
 		font-family: var(--ff-primary);
 		font-size: var(--fs-small);
 		font-weight: var(--fw-medium);
 		line-height: var(--lh-large);
 		letter-spacing: var(--ls-medium);
-		// text-transform: uppercase;
 		text-align: center;
-		color: var(--cl-white);
-		background: var(--cl-secondary);
 		position: relative;
 		z-index: 1;
-		overflow: hidden;
 		margin: 0 0 48px 0;
 		@include transition;
 		@include rectangle;
 
-		// svg {
-		// 	width: auto;
-		// 	height: 100%;
-		// 	display: inline-block;
-		// 	position: absolute;
-		// 	top: 0;
-		// 	right: 0;
-		// 	color: var(--cl-white);
-		// 	opacity: 0.16;
-		// 	transition: all 0.25s ease-in-out;
-		// 	z-index: -1;
-		// }
-
 		&:active,
-		// &:visited,
-		&:focus{
+		&:focus {
 			color: var(--cl-white);
 		}
-		
+
 		&:hover {
 			cursor: pointer;
-			// background: var(--cl-secondary-dark);
-			transform: scale(1.1);
-
-			// svg {
-			// }
+			background-color: var(--fg);
+			color: var(--bg);
 		}
 	}
-
-	.button.button--filled-white{
-		background: var(--cl-white);
-		color: var(--cl-secondary);
+	
+	.button.button--filled-primary {
+		--bg: var(--cl-primary);
+		--fg: var(--cl-primary-text);
 	}
-
-
-	.button.button--filled-primary{
-		background: var(--cl-primary);
-		color: var(--cl-white);
+	
+	.button.button--filled-white {
+		--bg: var(--cl-secondary);
+		--fg: var(--cl-secondary-text);
 	}
 }
