@@ -4064,6 +4064,18 @@ section .button:not(.acf-button):hover {
   background-color: var(--fg);
   color: var(--bg);
 }
+header .button--disabled,
+footer .button--disabled,
+section .button--disabled {
+  opacity: 0.5;
+}
+header .button--disabled:hover,
+footer .button--disabled:hover,
+section .button--disabled:hover {
+  cursor: not-allowed !important;
+  background-color: var(--bg) !important;
+  color: var(--fg) !important;
+}
 header .button.button--filled-primary,
 footer .button.button--filled-primary,
 section .button.button--filled-primary {
@@ -5973,12 +5985,6 @@ section.cards .card__load-more {
       -ms-flex-pack: center;
           justify-content: center;
 }
-section.cards .card__load-more .button--disabled {
-  background: var(--cl-black);
-}
-section.cards .card__load-more .button--disabled:hover {
-  background: var(--cl-black);
-}
 section.cards.card--center {
   text-align: center;
 }
@@ -5999,30 +6005,15 @@ section.cards.card--grey {
 section.cards.card--black {
   background: var(--cl-black);
 }
-section.cards.card--black .card__load-more .button--disabled {
-  background: var(--cl-white);
-  color: var(--cl-black);
-}
-section.cards.card--black .card__load-more .button--disabled:hover {
-  background: var(--cl-white-dark);
-}
 section.cards.card--primary {
   background: var(--cl-primary);
 }
 section.cards.card--secondary {
   background: var(--cl-secondary);
 }
-section.cards.card--secondary .card__load-more .button--filled-secondary {
-  background: var(--cl-primary);
-}
-section.cards.card--secondary .card__load-more .button--filled-secondary:hover {
-  background: var(--cl-primary-dark);
-}
-section.cards.card--secondary .card__load-more .button--disabled {
-  background: var(--cl-black);
-}
-section.cards.card--secondary .card__load-more .button--disabled:hover {
-  background: var(--cl-black-dark);
+section.cards.card--secondary .card__load-more button {
+  --bg: var(--cl-primary);
+  --fg: var(--cl-primary-text);
 }
 section.cards.card--basic .card__item {
   background: var(--cl-white);

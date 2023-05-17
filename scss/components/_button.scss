@@ -40,12 +40,22 @@ section {
 			color: var(--bg);
 		}
 	}
-	
+
+	.button--disabled {
+		opacity: 0.5;
+
+		&:hover {
+			cursor: not-allowed !important;
+			background-color: var(--bg) !important;
+			color: var(--fg) !important;
+		}
+	}
+
 	.button.button--filled-primary {
 		--bg: var(--cl-primary);
 		--fg: var(--cl-primary-text);
 	}
-	
+
 	.button.button--filled-white {
 		--bg: var(--cl-secondary);
 		--fg: var(--cl-secondary-text);
