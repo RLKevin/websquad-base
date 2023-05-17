@@ -74,7 +74,7 @@ $template = get_template_directory();
 
 							<div class="hero__image">
 								<!-- <img class="owl-lazy" data-src="<?= $image_half['sizes']['1280-4-3']; ?>" alt="<?= $image_half['alt']; ?>"> -->
-								<img src="<?= $image_half['sizes']['1280-4-3']; ?>" alt="<?= $image_half['alt']; ?>">
+								<img loading="lazy" src="<?= $image_half['sizes']['1280-4-3']; ?>" alt="<?= $image_half['alt']; ?>">
 							</div>
 
 						<?php endwhile; ?>
@@ -115,9 +115,9 @@ $template = get_template_directory();
 						
 						<div class="hero__image">
 							<?php if ($image_bg) { ?>
-								<img src="<?= $image_bg ?>" alt="bg image">
+								<img loading="lazy" src="<?= $image_bg ?>" alt="bg image">
 							<?php }else{ ?>
-								<img src="<?= $image['sizes']['1920-16-9']; ?>" alt="<?= $image['alt']; ?>">
+								<img loading="lazy" src="<?= $image['sizes']['1920-16-9']; ?>" alt="<?= $image['alt']; ?>">
 							<?php } ?>
 						</div>
 						

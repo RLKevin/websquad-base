@@ -99,7 +99,7 @@ $style = get_field('style');
 
 									<a href="<?= $button; ?>" <?php if ($post_type == 'facebook' || $post_type == 'projects' ): ?>target="_blank"<?php endif; ?>>
 
-										<img src="<?= $image; ?>" alt="<?= $title; ?>">
+										<img loading="lazy" src="<?= $image; ?>" alt="<?= $title; ?>">
 									
 									</a>
 
@@ -202,7 +202,7 @@ $style = get_field('style');
 
 										<a href="<?= $button; ?>">
 
-											<img src="<?= $image; ?>" alt="<?= $text; ?>">
+											<img loading="lazy" src="<?= $image; ?>" alt="<?= $text; ?>">
 										
 										</a>
 
@@ -268,7 +268,7 @@ $style = get_field('style');
 
 									<a <?php if ($button): ?>href="<?= $button['url']; ?>" target="<?= $button['target']; ?>"<?php endif; ?>>
 
-										<img src="<?= $image['sizes']['960-1-1']; ?>" alt="<?= $image['title']; ?>">
+										<img loading="lazy" src="<?= $image['sizes']['960-1-1']; ?>" alt="<?= $image['title']; ?>">
 									
 									</a>
 

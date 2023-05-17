@@ -25,7 +25,7 @@ $id = get_field('id');
 
 				?>
 
-				<img src="<?php echo $image['sizes']['1280-16-9']; ?>" alt="<?php echo $image['title']; ?>">
+				<img loading="lazy" src="<?php echo $image['sizes']['1280-16-9']; ?>" alt="<?php echo $image['title']; ?>">
 
 				<?php 
 			

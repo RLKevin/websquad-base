@@ -132,6 +132,8 @@ section.hero {
 			justify-content: center;
 			text-align: center;
 			z-index: 2;
+			max-width: calc(100% - 156px);
+   			margin-inline: auto;
 		}
 
 		.owl-nav {

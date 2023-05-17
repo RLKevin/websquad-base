@@ -88,7 +88,7 @@ $id = get_field('id');
 
 							<div class="reference__image">
 
-								<img src="<?php echo $image['sizes']['640-1-1']; ?>" alt="<?php echo $image['title']; ?>">
+								<img loading="lazy" src="<?php echo $image['sizes']['640-1-1']; ?>" alt="<?php echo $image['title']; ?>">
 
 							</div>
 

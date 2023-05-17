@@ -516,7 +516,7 @@ jQuery(function( $ ) {
 
 												'<a href="' + button + '" ' + (post_type == 'facebook' || post_type == 'projects' ? 'target="_blank"' : '') + '>' +
 
-													'<img src="' + image + '" alt="' + text + '">' +
+													'<img loading="lazy" src="' + image + '" alt="' + text + '">' +
 												
 												'</a>' +
 
