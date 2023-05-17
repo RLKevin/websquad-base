@@ -333,6 +333,12 @@ input:-webkit-autofill:active {
 	transition: background-color 5000s ease-in-out 0s;
 }
 
+// globals utility classes
+
+.display-none {
+	display: none !important;
+}
+
 // imports
 
 // imports - general

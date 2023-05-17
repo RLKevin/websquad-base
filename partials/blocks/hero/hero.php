@@ -72,7 +72,7 @@ $template = get_template_directory();
 						<?php while( have_rows('repeater_half') ) : the_row(); 
 							$image_half = get_sub_field('image');
 							?>
-							<div class="slide">
+							<div class="slide" style="background-image: url('<?= $image_half ? $image_half['sizes']['1280-4-3'] : ""; ?>')">
 								<img loading="lazy" class="tns-lazy-img" data-src="<?= $image_half['sizes']['1280-4-3'] ?>">
 							</div>
 						<?php endwhile; ?>
@@ -97,11 +97,11 @@ $template = get_template_directory();
 							autoHeight: false,
 						});
 					} else {
-						const slides = document.querySelectorAll('#<?= $slider_id; ?> .slide');
+						const slides = document.querySelectorAll('#<?= $slider_id; ?> > *');
 						// remove all but first slide
 						slides.forEach((slide, index) => {
 							if (index > 0) {
-								slide.remove();
+								slide.classList.add('display-none');
 							}
 						});
 					}
@@ -139,11 +139,11 @@ $template = get_template_directory();
 					
 					<div class="hero__container">	
 						
-						<div class="hero__image">
-							<?php if ($image_bg) { ?>
-								<img loading="lazy" class="tns-lazy-img" data-src="<?= $image_bg ?>" alt="bg image">
-							<?php }else{ ?>
+						<div class="hero__image" style="background-image: url('<?= $image ? $image['sizes']['1920-16-9'] : ""; ?>')">
+							<?php if ($image) { ?>
 								<img loading="lazy" class="tns-lazy-img" data-src="<?= $image['sizes']['1920-16-9']; ?>" alt="<?= $image['alt']; ?>">
+							<?php }else{ ?>
+								<img loading="lazy" class="tns-lazy-img" data-src="<?= $image_bg ?>" alt="bg image">
 							<?php } ?>
 						</div>
 						
@@ -208,11 +208,11 @@ $template = get_template_directory();
 					autoHeight: false,
 				});
 			} else {
-				const slides = document.querySelectorAll('#<?= $slider_id; ?> .slide');
+				const slides = document.querySelectorAll('#<?= $slider_id; ?> > *');
 				// remove all but first slide
 				slides.forEach((slide, index) => {
 					if (index > 0) {
-						slide.remove();
+						slide.classList.add('display-none');
 					}
 				});
 			}
