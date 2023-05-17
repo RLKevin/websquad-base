@@ -7480,6 +7480,13 @@ section.open.open--secondary ul li span {
 
 .reference {
   padding: 96px 0 48px 0;
+  --bg: var(--cl-white);
+  --fg: var(--cl-black);
+  --accent: var(--cl-secondary);
+  --accent2: var(--cl-primary);
+  --light: var(--cl-grey);
+  background-color: var(--bg);
+  color: var(--fg);
 }
 .reference .wrapper {
   max-width: 1280px;
@@ -7496,7 +7503,7 @@ section.open.open--secondary ul li span {
 }
 .reference .tns-controls button {
   background: transparent;
-  border: 2px solid var(--cl-secondary);
+  border: 2px solid var(--accent);
   border-radius: 50%;
 }
 .reference .tns-controls button:before {
@@ -7510,13 +7517,13 @@ section.open.open--secondary ul li span {
           mask-position: center;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-  background-color: var(--cl-secondary);
+  background-color: var(--accent);
 }
 .reference .tns-controls button:hover {
-  background: transparent;
+  background-color: var(--accent);
 }
 .reference .tns-controls button:hover:before {
-  border: 2px solid var(--cl-primary);
+  background-color: var(--bg);
 }
 .reference .tns-controls [data-controls=next] {
   margin: 0 0 0 8px;
@@ -7532,6 +7539,9 @@ section.open.open--secondary ul li span {
   padding-top: 96px;
   position: relative;
 }
+.reference .reference__container .reference__text h3 {
+  color: var(--accent2);
+}
 @media only screen and (min-width: 960px) {
   .reference .reference__container .reference__text h3 {
     text-align: right;
@@ -7544,7 +7554,7 @@ section.open.open--secondary ul li span {
   left: calc(50% - 32px);
   width: 64px;
   height: 64px;
-  background: var(--cl-secondary);
+  background-color: var(--accent);
   -webkit-mask-image: url("../img/icons/quote-right-solid-primary.svg");
           mask-image: url("../img/icons/quote-right-solid-primary.svg");
   -webkit-mask-size: 100% 100%;
@@ -7612,49 +7622,59 @@ section.open.open--secondary ul li span {
   -webkit-transition: 0.25s all ease-in-out;
   transition: 0.25s all ease-in-out;
   line-height: 40px;
-  color: var(--cl-black);
   white-space: nowrap;
-  color: var(--cl-black);
   text-overflow: ellipsis;
+  border: 2px solid var(--light);
+  border-radius: var(--br-square-top-left) var(--br-square-top-right) var(--br-square-bottom-right) var(--br-square-bottom-left);
 }
 .reference__rating ul li:before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 40px;
   height: 40px;
-  border: 2px solid var(--cl-grey);
-  background-image: url(../img/icons/star-regular-grey.svg);
-  background-size: 16px 16px;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
-  transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
-  border-radius: var(--br-square-top-left) var(--br-square-top-right) var(--br-square-bottom-right) var(--br-square-bottom-left);
+  -webkit-mask-image: url(../img/icons/star-regular-grey.svg);
+          mask-image: url(../img/icons/star-regular-grey.svg);
+  -webkit-mask-size: 16px 16px;
+          mask-size: 16px 16px;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  background-color: var(--light);
 }
-.reference__rating ul li:hover:before {
-  cursor: pointer;
+.reference__rating--1 ul li:nth-of-type(-n + 1) {
+  border-color: var(--accent);
 }
 .reference__rating--1 ul li:nth-of-type(-n + 1):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-primary.svg);
+  background-color: var(--accent);
+}
+.reference__rating--2 ul li:nth-of-type(-n + 2) {
+  border-color: var(--accent);
 }
 .reference__rating--2 ul li:nth-of-type(-n + 2):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-primary.svg);
+  background-color: var(--accent);
+}
+.reference__rating--3 ul li:nth-of-type(-n + 3) {
+  border-color: var(--accent);
 }
 .reference__rating--3 ul li:nth-of-type(-n + 3):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-primary.svg);
+  background-color: var(--accent);
+}
+.reference__rating--4 ul li:nth-of-type(-n + 4) {
+  border-color: var(--accent);
 }
 .reference__rating--4 ul li:nth-of-type(-n + 4):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-primary.svg);
+  background-color: var(--accent);
+}
+.reference__rating--5 ul li:nth-of-type(-n + 5) {
+  border-color: var(--accent);
 }
 .reference__rating--5 ul li:nth-of-type(-n + 5):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-primary.svg);
+  background-color: var(--accent);
 }
 .reference__person {
   display: -webkit-box;
@@ -7841,333 +7861,23 @@ section.open.open--secondary ul li span {
   }
 }
 .reference--grey {
-  background: var(--cl-grey);
-}
-.reference--grey .reference__rating ul li:before {
-  border: 2px solid var(--cl-grey);
-  background-image: url(../img/icons/star-regular-grey-dark.svg);
-}
-.reference--grey .reference__rating--1 ul li:nth-of-type(-n + 1):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-primary.svg);
-}
-.reference--grey .reference__rating--2 ul li:nth-of-type(-n + 2):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-primary.svg);
-}
-.reference--grey .reference__rating--3 ul li:nth-of-type(-n + 3):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-primary.svg);
-}
-.reference--grey .reference__rating--4 ul li:nth-of-type(-n + 4):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-primary.svg);
-}
-.reference--grey .reference__rating--5 ul li:nth-of-type(-n + 5):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-primary.svg);
+  --bg: var(--cl-grey);
 }
 .reference--black {
-  background: var(--cl-black);
-}
-.reference--black .reference__slider .owl-nav .owl-prev,
-.reference--black .reference__slider .owl-nav .owl-next {
-  background: transparent;
-}
-.reference--black .reference__slider .owl-nav .owl-prev:before,
-.reference--black .reference__slider .owl-nav .owl-next:before {
-  border: 2px solid var(--cl-white);
-  background-image: url(../img/icons/arrow-left-regular-white.svg);
-}
-.reference--black .reference__slider .owl-nav .owl-prev:hover,
-.reference--black .reference__slider .owl-nav .owl-next:hover {
-  background: transparent;
-}
-.reference--black .reference__slider .owl-nav .owl-prev:hover:before,
-.reference--black .reference__slider .owl-nav .owl-next:hover:before {
-  border: 2px solid var(--cl-primary);
-  background-image: url(../img/icons/arrow-left-regular-secondary.svg);
-}
-.reference--black .reference__slider .owl-nav .owl-next {
-  margin: 0 0 0 8px;
-}
-.reference--black .reference__slider .owl-nav .owl-next:before {
-  background-image: url(../img/icons/arrow-right-regular-white.svg);
-}
-.reference--black .reference__slider .owl-nav .owl-next:hover:before {
-  background-image: url(../img/icons/arrow-right-regular-secondary.svg);
-}
-.reference--black .reference__rating ul li:before {
-  border: 2px solid var(--cl-white);
-  background-image: url(../img/icons/star-regular-white.svg);
-}
-.reference--black .reference__rating--1 ul li:nth-of-type(-n + 1):before {
-  border: 2px solid var(--cl-primary);
-  background-image: url(../img/icons/star-regular-secondary.svg);
-}
-.reference--black .reference__rating--2 ul li:nth-of-type(-n + 2):before {
-  border: 2px solid var(--cl-primary);
-  background-image: url(../img/icons/star-regular-secondary.svg);
-}
-.reference--black .reference__rating--3 ul li:nth-of-type(-n + 3):before {
-  border: 2px solid var(--cl-primary);
-  background-image: url(../img/icons/star-regular-secondary.svg);
-}
-.reference--black .reference__rating--4 ul li:nth-of-type(-n + 4):before {
-  border: 2px solid var(--cl-primary);
-  background-image: url(../img/icons/star-regular-secondary.svg);
-}
-.reference--black .reference__rating--5 ul li:nth-of-type(-n + 5):before {
-  border: 2px solid var(--cl-primary);
-  background-image: url(../img/icons/star-regular-secondary.svg);
-}
-.reference--black .reference__person .reference__info ul li a {
-  color: var(--cl-white);
-  color: var(--cl-white);
-}
-.reference--black .reference__person .reference__info ul li a:before {
-  border: 2px solid var(--cl-white);
-}
-.reference--black .reference__person .reference__info ul li a.phone:before {
-  background-image: url(../img/icons/mobile-android-regular-white.svg);
-}
-.reference--black .reference__person .reference__info ul li a.mail:before {
-  background-image: url(../img/icons/envelope-open-regular-white.svg);
-}
-.reference--black .reference__person .reference__info ul li a:hover:before {
-  border: 2px solid var(--cl-primary);
-}
-.reference--black .reference__person .reference__info ul li a:hover.phone:before {
-  background-image: url(../img/icons/mobile-android-regular-secondary.svg);
-}
-.reference--black .reference__person .reference__info ul li a:hover.mail:before {
-  background-image: url(../img/icons/envelope-open-regular-secondary.svg);
-}
-.reference--black h2,
-.reference--black h3,
-.reference--black p,
-.reference--black li,
-.reference--black em {
-  color: var(--cl-white);
-}
-.reference--black .button--filled-black {
-  color: var(--cl-black);
-  background: var(--cl-white);
-}
-.reference--black .button--filled-black:hover {
-  background: var(--cl-secondary);
+  --bg: var(--cl-black);
+  --fg: var(--cl-white);
 }
 .reference--primary {
-  background: var(--cl-primary);
-}
-.reference--primary .reference__slider .owl-nav .owl-prev,
-.reference--primary .reference__slider .owl-nav .owl-next {
-  background: transparent;
-}
-.reference--primary .reference__slider .owl-nav .owl-prev:before,
-.reference--primary .reference__slider .owl-nav .owl-next:before {
-  border: 2px solid var(--cl-white);
-  background-image: url(../img/icons/arrow-left-regular-white.svg);
-}
-.reference--primary .reference__slider .owl-nav .owl-prev:hover,
-.reference--primary .reference__slider .owl-nav .owl-next:hover {
-  background: transparent;
-}
-.reference--primary .reference__slider .owl-nav .owl-prev:hover:before,
-.reference--primary .reference__slider .owl-nav .owl-next:hover:before {
-  border: 2px solid var(--cl-grey);
-  background-image: url(../img/icons/arrow-left-regular-secondary.svg);
-}
-.reference--primary .reference__slider .owl-nav .owl-next {
-  margin: 0 0 0 8px;
-}
-.reference--primary .reference__slider .owl-nav .owl-next:before {
-  background-image: url(../img/icons/arrow-right-regular-white.svg);
-}
-.reference--primary .reference__slider .owl-nav .owl-next:hover:before {
-  background-image: url(../img/icons/arrow-right-regular-secondary.svg);
-}
-.reference--primary .reference__rating ul li:before {
-  border: 2px solid var(--cl-white);
-  background-image: url(../img/icons/star-regular-white.svg);
-}
-.reference--primary .reference__rating--1 ul li:nth-of-type(-n + 1):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-secondary.svg);
-}
-.reference--primary .reference__rating--2 ul li:nth-of-type(-n + 2):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-secondary.svg);
-}
-.reference--primary .reference__rating--3 ul li:nth-of-type(-n + 3):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-secondary.svg);
-}
-.reference--primary .reference__rating--4 ul li:nth-of-type(-n + 4):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-secondary.svg);
-}
-.reference--primary .reference__rating--5 ul li:nth-of-type(-n + 5):before {
-  border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/star-regular-secondary.svg);
-}
-.reference--primary .reference__person .reference__info h3 {
-  color: var(--cl-secondary);
-}
-.reference--primary .reference__person .reference__info ul li a {
-  color: var(--cl-white);
-  color: var(--cl-white);
-}
-.reference--primary .reference__person .reference__info ul li a:before {
-  border: 2px solid var(--cl-white);
-}
-.reference--primary .reference__person .reference__info ul li a.phone:before {
-  background-image: url(../img/icons/mobile-android-regular-white.svg);
-}
-.reference--primary .reference__person .reference__info ul li a.mail:before {
-  background-image: url(../img/icons/envelope-open-regular-white.svg);
-}
-.reference--primary .reference__person .reference__info ul li a:hover:before {
-  border: 2px solid var(--cl-secondary);
-}
-.reference--primary .reference__person .reference__info ul li a:hover.phone:before {
-  background-image: url(../img/icons/mobile-android-regular-secondary.svg);
-}
-.reference--primary .reference__person .reference__info ul li a:hover.mail:before {
-  background-image: url(../img/icons/envelope-open-regular-secondary.svg);
-}
-.reference--primary h2,
-.reference--primary h3,
-.reference--primary p,
-.reference--primary li,
-.reference--primary em {
-  color: var(--cl-white);
-}
-.reference--primary .button--filled-primary {
-  background: var(--cl-secondary);
-}
-.reference--primary .button--filled-primary:hover {
-  background: var(--cl-secondary);
+  --bg: var(--cl-primary);
+  --fg: var(--cl-primary-text);
+  --accent: var(--cl-primary-text);
+  --accent2: var(--cl-primary-text);
 }
 .reference--secondary {
-  background: var(--cl-secondary);
-}
-.reference--secondary .reference__slider .owl-nav .owl-prev,
-.reference--secondary .reference__slider .owl-nav .owl-next {
-  background: transparent;
-}
-.reference--secondary .reference__slider .owl-nav .owl-prev:before,
-.reference--secondary .reference__slider .owl-nav .owl-next:before {
-  border: 2px solid var(--cl-white);
-  background-image: url(../img/icons/arrow-left-regular-white.svg);
-}
-.reference--secondary .reference__slider .owl-nav .owl-prev:hover,
-.reference--secondary .reference__slider .owl-nav .owl-next:hover {
-  background: transparent;
-}
-.reference--secondary .reference__slider .owl-nav .owl-prev:hover:before,
-.reference--secondary .reference__slider .owl-nav .owl-next:hover:before {
-  border: 2px solid var(--cl-primary);
-  background-image: url(../img/icons/arrow-left-regular-primary.svg);
-}
-.reference--secondary .reference__slider .owl-nav .owl-next {
-  margin: 0 0 0 8px;
-}
-.reference--secondary .reference__slider .owl-nav .owl-next:before {
-  background-image: url(../img/icons/arrow-right-regular-white.svg);
-}
-.reference--secondary .reference__slider .owl-nav .owl-next:hover:before {
-  background-image: url(../img/icons/arrow-right-regular-primary.svg);
-}
-.reference--secondary .reference__container .reference__text::after {
-  background-color: var(--cl-primary);
-}
-.reference--secondary .reference__rating ul li:before {
-  border: 2px solid var(--cl-white);
-  background-image: url(../img/icons/star-regular-white.svg);
-}
-.reference--secondary .reference__rating--1 ul li:nth-of-type(-n + 1):before {
-  border: 2px solid var(--cl-primary);
-  background-image: url(../img/icons/star-regular-primary.svg);
-}
-.reference--secondary .reference__rating--2 ul li:nth-of-type(-n + 2):before {
-  border: 2px solid var(--cl-primary);
-  background-image: url(../img/icons/star-regular-primary.svg);
-}
-.reference--secondary .reference__rating--3 ul li:nth-of-type(-n + 3):before {
-  border: 2px solid var(--cl-primary);
-  background-image: url(../img/icons/star-regular-primary.svg);
-}
-.reference--secondary .reference__rating--4 ul li:nth-of-type(-n + 4):before {
-  border: 2px solid var(--cl-primary);
-  background-image: url(../img/icons/star-regular-primary.svg);
-}
-.reference--secondary .reference__rating--5 ul li:nth-of-type(-n + 5):before {
-  border: 2px solid var(--cl-primary);
-  background-image: url(../img/icons/star-regular-primary.svg);
-}
-.reference--secondary .reference__person .reference__info h3 {
-  color: var(--cl-primary);
-}
-.reference--secondary .reference__person .reference__info ul li a {
-  color: var(--cl-white);
-}
-.reference--secondary .reference__person .reference__info ul li a:before {
-  border: 2px solid var(--cl-white);
-}
-.reference--secondary .reference__person .reference__info ul li a.phone:before {
-  background-image: url(../img/icons/mobile-android-regular-white.svg);
-}
-.reference--secondary .reference__person .reference__info ul li a.mail:before {
-  background-image: url(../img/icons/envelope-open-regular-white.svg);
-}
-.reference--secondary .reference__person .reference__info ul li a:hover:before {
-  border: 2px solid var(--cl-primary);
-}
-.reference--secondary .reference__person .reference__info ul li a:hover.phone:before {
-  background-image: url(../img/icons/mobile-android-regular-primary.svg);
-}
-.reference--secondary .reference__person .reference__info ul li a:hover.mail:before {
-  background-image: url(../img/icons/envelope-open-regular-primary.svg);
-}
-.reference--secondary h2,
-.reference--secondary h3,
-.reference--secondary p,
-.reference--secondary li,
-.reference--secondary em {
-  color: var(--cl-white);
-}
-.reference--secondary strong {
-  color: var(--cl-primary);
-}
-.reference--secondary p a,
-.reference--secondary li a {
-  color: var(--cl-primary);
-}
-.reference--secondary p a:hover,
-.reference--secondary li a:hover {
-  color: var(--cl-primary);
-}
-.reference--secondary ul li:before {
-  color: var(--cl-primary);
-}
-.reference--secondary blockquote {
-  border-left: 2px solid var(--cl-primary);
-}
-.reference--secondary blockquote:before {
-  background-image: url(../img/icons/quote-right-solid-primary.svg);
-}
-.reference--secondary .button--filled-secondary {
-  background: var(--cl-primary);
-}
-.reference--secondary .button--filled-secondary:hover {
-  background: var(--cl-primary);
-}
-.reference--secondary .reference__file a {
-  background: var(--cl-primary);
-}
-.reference--secondary .reference__file a:hover {
-  background: var(--cl-primary);
+  --bg: var(--cl-secondary);
+  --fg: var(--cl-secondary-text);
+  --accent: var(--cl-secondary-text);
+  --accent2: var(--cl-secondary-text);
 }
 
 section.search {

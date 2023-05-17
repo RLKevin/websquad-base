@@ -31,7 +31,7 @@ $references = get_field('references', 'option');
 					<div class="reference__container">
 
 						<?php if ($rating != '0'): ?>
-							<div class="reference__rating reference__rating--<?php the_sub_field('rating'); ?>">
+							<div class="reference__rating reference__rating--<?= $rating; ?>">
 								<ul>
 									<li></li>
 									<li></li>
