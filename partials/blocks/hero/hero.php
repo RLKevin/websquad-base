@@ -71,7 +71,7 @@ $template = get_template_directory();
 							$image_half = get_sub_field('image');
 							?>
 							<div class="slide">
-								<img class="tns-lazy-img" data-src="<?= $image_half['sizes']['1280-4-3'] ?>">
+								<img loading="lazy" class="tns-lazy-img" data-src="<?= $image_half['sizes']['1280-4-3'] ?>">
 							</div>
 						<?php endwhile; ?>
 					</div>
@@ -129,9 +129,9 @@ $template = get_template_directory();
 						
 						<div class="hero__image">
 							<?php if ($image_bg) { ?>
-								<img class="tns-lazy-img" data-src="<?= $image_bg ?>" alt="bg image">
+								<img loading="lazy" class="tns-lazy-img" data-src="<?= $image_bg ?>" alt="bg image">
 							<?php }else{ ?>
-								<img class="tns-lazy-img" data-src="<?= $image['sizes']['1920-16-9']; ?>" alt="<?= $image['alt']; ?>">
+								<img loading="lazy" class="tns-lazy-img" data-src="<?= $image['sizes']['1920-16-9']; ?>" alt="<?= $image['alt']; ?>">
 							<?php } ?>
 						</div>
 						

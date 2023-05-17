@@ -32,7 +32,7 @@ $youtube = get_field('options_footer_youtube', 'option');
 
 					<?php if ($image): ?>
 
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
+						<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
 
 					<?php endif; ?>
 

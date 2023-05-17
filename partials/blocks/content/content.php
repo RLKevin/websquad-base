@@ -75,7 +75,7 @@ $id = get_field('id');
 			
 								?>
 
-								<img src="<?php echo $image['sizes']['1920-16-9']; ?>" alt="<?php echo $image['title']; ?>">
+								<img loading="lazy" src="<?php echo $image['sizes']['1920-16-9']; ?>" alt="<?php echo $image['title']; ?>">
 			
 							<?php endwhile; ?>
 
@@ -240,7 +240,7 @@ $id = get_field('id');
 								
 						<div class="content__col content__col--image <?php if ($image_size) { ?>image_size<?php } ?>">
 
-							<img src="<?php echo $image['sizes']['1280-16-9']; ?>" alt="<?php echo $image['title']; ?>">
+							<img loading="lazy" src="<?php echo $image['sizes']['1280-16-9']; ?>" alt="<?php echo $image['title']; ?>">
 
 						</div>
 
@@ -306,7 +306,7 @@ $id = get_field('id');
 
 							<div class="content__video-container">
 								
-								<img src="<?php echo $image['sizes']['1280-16-9']; ?>" alt="<?php echo $image['title']; ?>">
+								<img loading="lazy" src="<?php echo $image['sizes']['1280-16-9']; ?>" alt="<?php echo $image['title']; ?>">
 
 								<?php echo $video; ?>
 
@@ -335,7 +335,7 @@ $id = get_field('id');
 
 					<div class="content__video-container">
 							
-						<img src="<?php echo $image['sizes']['1920-16-9']; ?>" alt="<?php echo $image['title']; ?>">
+						<img loading="lazy" src="<?php echo $image['sizes']['1920-16-9']; ?>" alt="<?php echo $image['title']; ?>">
 
 						<?php echo $video; ?>
 

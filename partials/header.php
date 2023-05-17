@@ -81,7 +81,7 @@ $whatsapp = get_field('options_whatsapp_number', 'option');
 
 					<?php if ($image): ?>
 
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
+						<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
 
 					<?php else : ?>
 

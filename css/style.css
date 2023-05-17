@@ -5922,7 +5922,7 @@ section.cards .card__button {
   }
 }
 section.cards .card__load-more {
-  padding: 0 0 48px 0;
+  padding: 48px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7027,6 +7027,8 @@ section.hero .hero__slider .hero__text {
           justify-content: center;
   text-align: center;
   z-index: 2;
+  max-width: calc(100% - 156px);
+  margin-inline: auto;
 }
 section.hero .hero__slider .owl-nav {
   top: auto;
