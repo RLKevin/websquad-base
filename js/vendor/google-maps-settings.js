@@ -273,7 +273,6 @@
 	}
 	$(document).ready(function () {
 		$('.map__map').each(function () {
-			console.log('rendering Google Map');
 			render_map($(this));
 		});
 	});

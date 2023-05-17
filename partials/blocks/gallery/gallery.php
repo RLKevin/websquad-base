@@ -31,6 +31,8 @@ $slider_id = wp_unique_id( 'gallery' );
 				<?php 
 			
 			endwhile; 
+
+			wp_reset_postdata();
 			
 			?>
 			

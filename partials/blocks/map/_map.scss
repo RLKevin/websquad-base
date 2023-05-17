@@ -11,6 +11,7 @@ section.map {
 		left: 0;
 		height: calc(100% + 96px);
 		width: 100%;
+		// BUG: Image is not showing up in editor
 		background-image: url('../img/map-placeholder.png');
 		background-size: cover;
 		background-position: center;

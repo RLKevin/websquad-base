@@ -7,7 +7,7 @@
 	"apiVersion": 2,
 	"keywords": ["reference", "switch"],
 	"acf": {
-		"mode": "edit",
+		"mode": "preview",
 		"postTypes": [],
 		"renderTemplate": "reference.php"
 	},

@@ -7484,7 +7484,7 @@ section.open.open--secondary ul li span {
 .reference .wrapper {
   max-width: 1280px;
 }
-.reference__slider .owl-nav {
+.reference .tns-controls {
   position: relative;
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -7494,32 +7494,37 @@ section.open.open--secondary ul li span {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.reference__slider .owl-nav .owl-prev,
-.reference__slider .owl-nav .owl-next {
+.reference .tns-controls button {
   background: transparent;
-}
-.reference__slider .owl-nav .owl-prev:before,
-.reference__slider .owl-nav .owl-next:before {
   border: 2px solid var(--cl-secondary);
-  background-image: url(../img/icons/arrow-left-regular-primary.svg);
+  border-radius: 50%;
 }
-.reference__slider .owl-nav .owl-prev:hover,
-.reference__slider .owl-nav .owl-next:hover {
+.reference .tns-controls button:before {
+  border: none;
+  background-image: none;
+  -webkit-mask-image: url(../img/icons/arrow-left-regular-primary.svg);
+          mask-image: url(../img/icons/arrow-left-regular-primary.svg);
+  -webkit-mask-size: 16px;
+          mask-size: 16px;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  background-color: var(--cl-secondary);
+}
+.reference .tns-controls button:hover {
   background: transparent;
 }
-.reference__slider .owl-nav .owl-prev:hover:before,
-.reference__slider .owl-nav .owl-next:hover:before {
+.reference .tns-controls button:hover:before {
   border: 2px solid var(--cl-primary);
-  background-image: url(../img/icons/arrow-left-regular-secondary.svg);
 }
-.reference__slider .owl-nav .owl-next {
+.reference .tns-controls [data-controls=next] {
   margin: 0 0 0 8px;
 }
-.reference__slider .owl-nav .owl-next:before {
-  background-image: url(../img/icons/arrow-right-regular-primary.svg);
-}
-.reference__slider .owl-nav .owl-next:hover:before {
-  background-image: url(../img/icons/arrow-right-regular-secondary.svg);
+.reference .tns-controls [data-controls=next]::before {
+  background-image: none !important;
+  -webkit-mask-image: url(../img/icons/arrow-right-regular-primary.svg);
+          mask-image: url(../img/icons/arrow-right-regular-primary.svg);
 }
 .reference .reference__container .reference__text {
   font-style: italic;
@@ -7631,23 +7636,23 @@ section.open.open--secondary ul li span {
 .reference__rating ul li:hover:before {
   cursor: pointer;
 }
-.reference__rating--1 ul li:nth-of-type(-n+1):before {
+.reference__rating--1 ul li:nth-of-type(-n + 1):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
-.reference__rating--2 ul li:nth-of-type(-n+2):before {
+.reference__rating--2 ul li:nth-of-type(-n + 2):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
-.reference__rating--3 ul li:nth-of-type(-n+3):before {
+.reference__rating--3 ul li:nth-of-type(-n + 3):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
-.reference__rating--4 ul li:nth-of-type(-n+4):before {
+.reference__rating--4 ul li:nth-of-type(-n + 4):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
-.reference__rating--5 ul li:nth-of-type(-n+5):before {
+.reference__rating--5 ul li:nth-of-type(-n + 5):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
@@ -7766,7 +7771,7 @@ section.open.open--secondary ul li span {
   background-image: url(../img/icons/envelope-open-regular-secondary.svg);
 }
 @media only screen and (min-width: 1280px) {
-  .reference--left .reference__slider .owl-nav {
+  .reference--left .reference__slider .tns-controls {
     position: absolute;
     top: auto;
     bottom: 120px;
@@ -7782,7 +7787,7 @@ section.open.open--secondary ul li span {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-.reference--center .reference__slider .owl-nav {
+.reference--center .reference__slider .tns-controls {
   position: relative;
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -7793,7 +7798,7 @@ section.open.open--secondary ul li span {
           justify-content: center;
 }
 @media only screen and (min-width: 1280px) {
-  .reference--center .reference__slider .owl-nav {
+  .reference--center .reference__slider .tns-controls {
     position: absolute;
     top: auto;
     bottom: 120px;
@@ -7842,23 +7847,23 @@ section.open.open--secondary ul li span {
   border: 2px solid var(--cl-grey);
   background-image: url(../img/icons/star-regular-grey-dark.svg);
 }
-.reference--grey .reference__rating--1 ul li:nth-of-type(-n+1):before {
+.reference--grey .reference__rating--1 ul li:nth-of-type(-n + 1):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
-.reference--grey .reference__rating--2 ul li:nth-of-type(-n+2):before {
+.reference--grey .reference__rating--2 ul li:nth-of-type(-n + 2):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
-.reference--grey .reference__rating--3 ul li:nth-of-type(-n+3):before {
+.reference--grey .reference__rating--3 ul li:nth-of-type(-n + 3):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
-.reference--grey .reference__rating--4 ul li:nth-of-type(-n+4):before {
+.reference--grey .reference__rating--4 ul li:nth-of-type(-n + 4):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
-.reference--grey .reference__rating--5 ul li:nth-of-type(-n+5):before {
+.reference--grey .reference__rating--5 ul li:nth-of-type(-n + 5):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
@@ -7896,23 +7901,23 @@ section.open.open--secondary ul li span {
   border: 2px solid var(--cl-white);
   background-image: url(../img/icons/star-regular-white.svg);
 }
-.reference--black .reference__rating--1 ul li:nth-of-type(-n+1):before {
+.reference--black .reference__rating--1 ul li:nth-of-type(-n + 1):before {
   border: 2px solid var(--cl-primary);
   background-image: url(../img/icons/star-regular-secondary.svg);
 }
-.reference--black .reference__rating--2 ul li:nth-of-type(-n+2):before {
+.reference--black .reference__rating--2 ul li:nth-of-type(-n + 2):before {
   border: 2px solid var(--cl-primary);
   background-image: url(../img/icons/star-regular-secondary.svg);
 }
-.reference--black .reference__rating--3 ul li:nth-of-type(-n+3):before {
+.reference--black .reference__rating--3 ul li:nth-of-type(-n + 3):before {
   border: 2px solid var(--cl-primary);
   background-image: url(../img/icons/star-regular-secondary.svg);
 }
-.reference--black .reference__rating--4 ul li:nth-of-type(-n+4):before {
+.reference--black .reference__rating--4 ul li:nth-of-type(-n + 4):before {
   border: 2px solid var(--cl-primary);
   background-image: url(../img/icons/star-regular-secondary.svg);
 }
-.reference--black .reference__rating--5 ul li:nth-of-type(-n+5):before {
+.reference--black .reference__rating--5 ul li:nth-of-type(-n + 5):before {
   border: 2px solid var(--cl-primary);
   background-image: url(../img/icons/star-regular-secondary.svg);
 }
@@ -7938,7 +7943,11 @@ section.open.open--secondary ul li span {
 .reference--black .reference__person .reference__info ul li a:hover.mail:before {
   background-image: url(../img/icons/envelope-open-regular-secondary.svg);
 }
-.reference--black h2, .reference--black h3, .reference--black p, .reference--black li, .reference--black em {
+.reference--black h2,
+.reference--black h3,
+.reference--black p,
+.reference--black li,
+.reference--black em {
   color: var(--cl-white);
 }
 .reference--black .button--filled-black {
@@ -7982,23 +7991,23 @@ section.open.open--secondary ul li span {
   border: 2px solid var(--cl-white);
   background-image: url(../img/icons/star-regular-white.svg);
 }
-.reference--primary .reference__rating--1 ul li:nth-of-type(-n+1):before {
+.reference--primary .reference__rating--1 ul li:nth-of-type(-n + 1):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-secondary.svg);
 }
-.reference--primary .reference__rating--2 ul li:nth-of-type(-n+2):before {
+.reference--primary .reference__rating--2 ul li:nth-of-type(-n + 2):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-secondary.svg);
 }
-.reference--primary .reference__rating--3 ul li:nth-of-type(-n+3):before {
+.reference--primary .reference__rating--3 ul li:nth-of-type(-n + 3):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-secondary.svg);
 }
-.reference--primary .reference__rating--4 ul li:nth-of-type(-n+4):before {
+.reference--primary .reference__rating--4 ul li:nth-of-type(-n + 4):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-secondary.svg);
 }
-.reference--primary .reference__rating--5 ul li:nth-of-type(-n+5):before {
+.reference--primary .reference__rating--5 ul li:nth-of-type(-n + 5):before {
   border: 2px solid var(--cl-secondary);
   background-image: url(../img/icons/star-regular-secondary.svg);
 }
@@ -8027,7 +8036,11 @@ section.open.open--secondary ul li span {
 .reference--primary .reference__person .reference__info ul li a:hover.mail:before {
   background-image: url(../img/icons/envelope-open-regular-secondary.svg);
 }
-.reference--primary h2, .reference--primary h3, .reference--primary p, .reference--primary li, .reference--primary em {
+.reference--primary h2,
+.reference--primary h3,
+.reference--primary p,
+.reference--primary li,
+.reference--primary em {
   color: var(--cl-white);
 }
 .reference--primary .button--filled-primary {
@@ -8073,23 +8086,23 @@ section.open.open--secondary ul li span {
   border: 2px solid var(--cl-white);
   background-image: url(../img/icons/star-regular-white.svg);
 }
-.reference--secondary .reference__rating--1 ul li:nth-of-type(-n+1):before {
+.reference--secondary .reference__rating--1 ul li:nth-of-type(-n + 1):before {
   border: 2px solid var(--cl-primary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
-.reference--secondary .reference__rating--2 ul li:nth-of-type(-n+2):before {
+.reference--secondary .reference__rating--2 ul li:nth-of-type(-n + 2):before {
   border: 2px solid var(--cl-primary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
-.reference--secondary .reference__rating--3 ul li:nth-of-type(-n+3):before {
+.reference--secondary .reference__rating--3 ul li:nth-of-type(-n + 3):before {
   border: 2px solid var(--cl-primary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
-.reference--secondary .reference__rating--4 ul li:nth-of-type(-n+4):before {
+.reference--secondary .reference__rating--4 ul li:nth-of-type(-n + 4):before {
   border: 2px solid var(--cl-primary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
-.reference--secondary .reference__rating--5 ul li:nth-of-type(-n+5):before {
+.reference--secondary .reference__rating--5 ul li:nth-of-type(-n + 5):before {
   border: 2px solid var(--cl-primary);
   background-image: url(../img/icons/star-regular-primary.svg);
 }
@@ -8117,16 +8130,22 @@ section.open.open--secondary ul li span {
 .reference--secondary .reference__person .reference__info ul li a:hover.mail:before {
   background-image: url(../img/icons/envelope-open-regular-primary.svg);
 }
-.reference--secondary h2, .reference--secondary h3, .reference--secondary p, .reference--secondary li, .reference--secondary em {
+.reference--secondary h2,
+.reference--secondary h3,
+.reference--secondary p,
+.reference--secondary li,
+.reference--secondary em {
   color: var(--cl-white);
 }
 .reference--secondary strong {
   color: var(--cl-primary);
 }
-.reference--secondary p a, .reference--secondary li a {
+.reference--secondary p a,
+.reference--secondary li a {
   color: var(--cl-primary);
 }
-.reference--secondary p a:hover, .reference--secondary li a:hover {
+.reference--secondary p a:hover,
+.reference--secondary li a:hover {
   color: var(--cl-primary);
 }
 .reference--secondary ul li:before {

@@ -22,6 +22,15 @@ function console_log($output, $with_script_tags = true) {
 	echo $js_code;
 }
 
+// write table to console
+function console_table($output, $with_script_tags = true) {
+	$js_code = 'console.table(' . json_encode($output, JSON_HEX_TAG) . ');';
+	if ($with_script_tags) {
+		$js_code = '<script>' . $js_code . '</script>';
+	}
+	echo $js_code;
+}
+
 // write to console with a yellow background
 function console_warn($output, $with_script_tags = true) {
 	$js_code = 'console.warn(' . json_encode($output, JSON_HEX_TAG) . ');';

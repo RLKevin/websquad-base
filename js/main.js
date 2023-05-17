@@ -140,59 +140,6 @@ jQuery(function ($) {
 			navText: ['', ''],
 		});
 
-		// $('.gallery__slider').owlCarousel({
-		// 	responsive: {
-		// 		0: {
-		// 			items: 1,
-		// 		},
-		// 		1280: {
-		// 			items: 2,
-		// 		},
-		// 		2560: {
-		// 			items: 3,
-		// 		},
-		// 	},
-		// 	smartSpeed: 500,
-		// 	center: true,
-		// 	loop: true,
-		// 	autoplay: true,
-		// 	autoplayTimeout: 5000,
-		// 	autoplayHoverPause: true,
-		// 	nav: true,
-		// 	dots: true,
-		// 	autoHeight: true,
-		// 	mouseDrag: false,
-		// 	touchDrag: false,
-		// 	pullDrag: false,
-		// 	navText: ['', ''],
-		// });
-
-		$('.reference__slider').owlCarousel({
-			smartSpeed: 500,
-			items: 1,
-			loop: true,
-			autoplay: true,
-			autoplayTimeout: 5000,
-			autoplayHoverPause: true,
-			nav: true,
-			dots: false,
-			autoHeight: true,
-			mouseDrag: false,
-			touchDrag: false,
-			pullDrag: false,
-			navText: ['', ''],
-			onInitialize: function (element) {
-				$('.reference__slider')
-					.children()
-					.sort(function () {
-						return Math.round(Math.random()) - 0.5;
-					})
-					.each(function () {
-						$(this).appendTo($('.reference__slider'));
-					});
-			},
-		});
-
 		$('.usp__slider--points').owlCarousel({
 			responsive: {
 				0: {

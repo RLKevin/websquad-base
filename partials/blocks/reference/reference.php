@@ -4,111 +4,98 @@
 
 $background = get_field('background');
 $id = get_field('id');
-
+$slider_id = wp_unique_id( 'reference' );
+$references = get_field('references', 'option');
 ?>
 
-<section id="<?php echo $id; ?>" class="reference reference--<?php echo $background; ?>">
+<section id="<?= $id; ?>" class="reference reference--<?= $background; ?>">
 
 	<div class="wrapper">
 
-	<?php
-
-		if( have_rows('repeater', 'options') ): 
-
+		<?php if( $references ): 
+			shuffle($references);
 			?>
 
-			<div class="reference__slider slider">
+			<div class="reference__slider slider" id="<?= $slider_id; ?>">
 
-				<?php 
-				
-				while ( have_rows('repeater', 'options') ) : the_row();
+				<?php
 
-					// vars
-
-					$reference = get_sub_field('reference');
-					$rating = get_sub_field('rating');
-					$image = get_sub_field('image');
-					$name = get_sub_field('name');
-					$function = get_sub_field('function');
-					// $phone = get_sub_field('phone', 'option');
-					// $phone_stripped = str_replace([' ', '-'], '', $phone);
-					// $email = get_sub_field('email', 'option');
-
+				foreach ($references as $ref) {
+					$reference = $ref['reference'];
+					$rating = $ref['rating'];
+					$image = $ref['image'];
+					$name = $ref['name'];
+					$function = $ref['function'];
 					?>
 							
 					<div class="reference__container">
 
-						<?php
-
-						if ($rating != '0'):
-						
-							?>
-
+						<?php if ($rating != '0'): ?>
 							<div class="reference__rating reference__rating--<?php the_sub_field('rating'); ?>">
-
 								<ul>
-
 									<li></li>
 									<li></li>
 									<li></li>
 									<li></li>
 									<li></li>
-
 								</ul>
-
 							</div>
+						<?php endif; ?>
 
-							<?php 
-						
-						endif; 
-						
-						?>
-
-						<?php
-
-						if ($reference):
-
-							?>
-
+						<?php if ($reference): ?>
 							<div class="reference__text wysiwyg">
-								
-								<?php echo $reference; ?>
-
-								<h3><?php echo $name; ?></h3>
-							
+								<?= $reference; ?>
+								<h3><?= $name; ?></h3>
 							</div>
+						<?php endif; ?>
 
-							<?php
-
-						endif;
-
-						?>
-
-						<div class="reference__person">
-
-							<div class="reference__image">
-
-								<img loading="lazy" src="<?php echo $image['sizes']['640-1-1']; ?>" alt="<?php echo $image['title']; ?>">
-
+						<?php if ($image) { ?>
+							<div class="reference__person">
+								<div class="reference__image">
+									<img loading="lazy" src="<?= $image['sizes']['640-1-1']; ?>" alt="<?= $image['title']; ?>">
+								</div>
 							</div>
-
-						</div>
+						<?php } ?>
 
 					</div>
 
-					<?php 
-			
-				endwhile; 
-				
-				?>
+				<?php } ?>
 
 			</div>
 
-			<?php 
+			<script>
+				if (typeof tns === 'function') {
+					var slider = tns({
+						container: '#<?= $slider_id; ?>',
+						items: 1,
+						slideBy: 1,
+						mouseDrag: true,
+						controls: true,
+						controlsText: '',
+						controlsPosition: 'bottom',
+						center: true,
+						edgePadding: 0,
+						gutter: 0,
+						lazyload: true,
+						nav: false,
+						loop: true,
+						autoplay: false,
+						autoplayButtonOutput: false,
+						autoplayTimeout: 5000,
+						autoplayHoverPause: true,
+						autoHeight: false,
+					});
+				} else {
+					const slides = document.querySelectorAll('#<?= $slider_id; ?> > *');
+					// remove all but first slide
+					slides.forEach((slide, index) => {
+						if (index > 0) {
+							slide.classList.add('display-none');
+						}
+					});
+				}
+			</script>
 
-		endif;
-
-		?>
-
+		<?php endif; ?>
 	</div>
 </section>

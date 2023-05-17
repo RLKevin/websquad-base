@@ -6,53 +6,49 @@
 		@include max-width;
 	}
 
-	&__slider {
+	.tns-controls {
+		position: relative;
+		transform: translateY(0);
+		padding: 0;
+		margin: 96px 0 0 0;
+		justify-content: center;
 
-		.owl-nav {
-			position: relative;
-			transform: translateY(0);
-			padding: 0;
-			margin: 96px 0 0 0;
-			justify-content: center;
+		button {
+			background: transparent;
 
-			.owl-prev,
-			.owl-next {
+			border: 2px solid var(--cl-secondary);
+			border-radius: 50%;
+
+			&:before {
+				border: none;
+				background-image: none;
+				mask-image: url(../img/icons/arrow-left-regular-primary.svg);
+				mask-size: 16px;
+				mask-position: center;
+				mask-repeat: no-repeat;
+				background-color: var(--cl-secondary);
+			}
+
+			&:hover {
 				background: transparent;
 
 				&:before {
-					border: 2px solid var(--cl-secondary);
-					background-image: url(../img/icons/arrow-left-regular-primary.svg);
-				}
-
-				&:hover {
-					background: transparent;
-
-					&:before {
-						border: 2px solid var(--cl-primary);
-						background-image: url(../img/icons/arrow-left-regular-secondary.svg);
-					}
+					border: 2px solid var(--cl-primary);
 				}
 			}
+		}
 
-			.owl-next {
-				margin: 0 0 0 8px;
+		[data-controls='next'] {
+			margin: 0 0 0 8px;
 
-				&:before {
-					background-image: url(../img/icons/arrow-right-regular-primary.svg);
-				}
-
-				&:hover {
-
-					&:before {
-						background-image: url(../img/icons/arrow-right-regular-secondary.svg);
-					}
-				}
+			&::before {
+				background-image: none !important;
+				mask-image: url(../img/icons/arrow-right-regular-primary.svg);
 			}
 		}
 	}
 
 	#{$self}__container {
-
 		#{$self}__text {
 			font-style: italic;
 			text-align: center;
@@ -64,7 +60,6 @@
 					text-align: right;
 				}
 			}
-
 
 			&::after {
 				content: '';
@@ -93,7 +88,7 @@
 					right: 0;
 				}
 			}
-			
+
 			#{$self}__person {
 				order: 0;
 				width: 256px;
@@ -112,7 +107,7 @@
 			}
 		}
 	}
-		
+
 	&__rating {
 		padding: 0 0 48px 0;
 
@@ -146,27 +141,23 @@
 					background-size: 16px 16px;
 					background-repeat: no-repeat;
 					background-position: center;
-					transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
+					transition: 0.25s background-image ease-in-out,
+						0.25s border ease-in-out;
 					@include square;
 				}
 
 				&:hover {
-
 					&:before {
 						cursor: pointer;
 					}
 				}
 			}
 		}
-		
+
 		&--1 {
-
 			ul {
-
 				li {
-
-					&:nth-of-type(-n+1) {
-
+					&:nth-of-type(-n + 1) {
 						&:before {
 							border: 2px solid var(--cl-secondary);
 							background-image: url(../img/icons/star-regular-primary.svg);
@@ -177,13 +168,9 @@
 		}
 
 		&--2 {
-			
 			ul {
-
 				li {
-
-					&:nth-of-type(-n+2) {
-
+					&:nth-of-type(-n + 2) {
 						&:before {
 							border: 2px solid var(--cl-secondary);
 							background-image: url(../img/icons/star-regular-primary.svg);
@@ -194,13 +181,9 @@
 		}
 
 		&--3 {
-
 			ul {
-
 				li {
-
-					&:nth-of-type(-n+3) {
-
+					&:nth-of-type(-n + 3) {
 						&:before {
 							border: 2px solid var(--cl-secondary);
 							background-image: url(../img/icons/star-regular-primary.svg);
@@ -211,13 +194,9 @@
 		}
 
 		&--4 {
-
 			ul {
-
 				li {
-
-					&:nth-of-type(-n+4) {
-
+					&:nth-of-type(-n + 4) {
 						&:before {
 							border: 2px solid var(--cl-secondary);
 							background-image: url(../img/icons/star-regular-primary.svg);
@@ -228,13 +207,9 @@
 		}
 
 		&--5 {
-
 			ul {
-
 				li {
-
-					&:nth-of-type(-n+5) {
-
+					&:nth-of-type(-n + 5) {
 						&:before {
 							border: 2px solid var(--cl-secondary);
 							background-image: url(../img/icons/star-regular-primary.svg);
@@ -243,7 +218,7 @@
 				}
 			}
 		}
-	}	
+	}
 
 	&__person {
 		display: flex;
@@ -265,7 +240,7 @@
 				// display: flex;
 				// justify-content: flex-end;
 			}
-			
+
 			img {
 				width: 240px;
 				aspect-ratio: 1 / 1;
@@ -296,9 +271,8 @@
 					text-align: left;
 
 					&:not(:last-of-type) {
-
 						a {
-							margin: 0 0 8px 0;;
+							margin: 0 0 8px 0;
 						}
 					}
 
@@ -327,40 +301,36 @@
 							background-size: 16px 16px;
 							background-repeat: no-repeat;
 							background-position: center;
-							transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
+							transition: 0.25s background-image ease-in-out,
+								0.25s border ease-in-out;
 							@include square;
 						}
 
 						&.phone {
-
 							&:before {
 								background-image: url(../img/icons/mobile-android-regular-primary.svg);
 							}
 						}
 
 						&.mail {
-
 							&:before {
 								background-image: url(../img/icons/envelope-open-regular-primary.svg);
 							}
 						}
 
 						&:hover {
-
 							&:before {
 								border: 2px solid var(--cl-primary);
 								cursor: pointer;
 							}
 
 							&.phone {
-
 								&:before {
 									background-image: url(../img/icons/mobile-android-regular-secondary.svg);
 								}
 							}
-		
-							&.mail {
 
+							&.mail {
 								&:before {
 									background-image: url(../img/icons/envelope-open-regular-secondary.svg);
 								}
@@ -375,11 +345,8 @@
 	// align
 
 	&--left {
-
 		#{$self}__slider {
-
-			.owl-nav {
-	
+			.tns-controls {
 				@include desktop {
 					position: absolute;
 					top: auto;
@@ -391,7 +358,6 @@
 		}
 
 		#{$self}__rating {
-
 			ul {
 				justify-content: flex-start;
 			}
@@ -399,16 +365,14 @@
 	}
 
 	&--center {
-
 		#{$self}__slider {
-
-			.owl-nav {
+			.tns-controls {
 				position: relative;
 				transform: translateY(0);
 				padding: 0;
 				margin: 96px 0 0 0;
 				justify-content: center;
-	
+
 				@include desktop {
 					position: absolute;
 					top: auto;
@@ -422,11 +386,9 @@
 
 		#{$self}__text {
 			text-align: center;
-	
+
 			ul {
-			
 				li {
-	
 					&:before {
 						position: relative;
 						padding: 0 8px 0 0;
@@ -436,22 +398,19 @@
 		}
 
 		#{$self}__person {
-	
 			@include desktop {
 				justify-content: center;
 			}
-	
+
 			#{$self}__image {
-	
 				@include desktop {
 					width: calc(50% - 48px);
 					display: flex;
 					justify-content: flex-end;
 				}
 			}
-	
+
 			#{$self}__info {
-	
 				@include desktop {
 					width: calc(50% - 48px);
 				}
@@ -460,31 +419,25 @@
 	}
 
 	// background
+	// TODO: clean this mess
 
 	&--grey {
 		background: var(--cl-grey);
 
 		#{$self}__rating {
-	
 			ul {
-	
 				li {
-	
 					&:before {
 						border: 2px solid var(--cl-grey);
 						background-image: url(../img/icons/star-regular-grey-dark.svg);
 					}
 				}
 			}
-			
+
 			&--1 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+1) {
-	
+						&:nth-of-type(-n + 1) {
 							&:before {
 								border: 2px solid var(--cl-secondary);
 								background-image: url(../img/icons/star-regular-primary.svg);
@@ -493,15 +446,11 @@
 					}
 				}
 			}
-	
+
 			&--2 {
-				
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+2) {
-	
+						&:nth-of-type(-n + 2) {
 							&:before {
 								border: 2px solid var(--cl-secondary);
 								background-image: url(../img/icons/star-regular-primary.svg);
@@ -510,15 +459,11 @@
 					}
 				}
 			}
-	
+
 			&--3 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+3) {
-	
+						&:nth-of-type(-n + 3) {
 							&:before {
 								border: 2px solid var(--cl-secondary);
 								background-image: url(../img/icons/star-regular-primary.svg);
@@ -529,13 +474,9 @@
 			}
 
 			&--4 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+4) {
-	
+						&:nth-of-type(-n + 4) {
 							&:before {
 								border: 2px solid var(--cl-secondary);
 								background-image: url(../img/icons/star-regular-primary.svg);
@@ -544,15 +485,11 @@
 					}
 				}
 			}
-	
+
 			&--5 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+5) {
-	
+						&:nth-of-type(-n + 5) {
 							&:before {
 								border: 2px solid var(--cl-secondary);
 								background-image: url(../img/icons/star-regular-primary.svg);
@@ -568,37 +505,34 @@
 		background: var(--cl-black);
 
 		#{$self}__slider {
-
 			.owl-nav {
-	
 				.owl-prev,
 				.owl-next {
 					background: transparent;
-	
+
 					&:before {
 						border: 2px solid var(--cl-white);
 						background-image: url(../img/icons/arrow-left-regular-white.svg);
 					}
-	
+
 					&:hover {
 						background: transparent;
-	
+
 						&:before {
 							border: 2px solid var(--cl-primary);
 							background-image: url(../img/icons/arrow-left-regular-secondary.svg);
 						}
 					}
 				}
-	
+
 				.owl-next {
 					margin: 0 0 0 8px;
-	
+
 					&:before {
 						background-image: url(../img/icons/arrow-right-regular-white.svg);
 					}
-	
+
 					&:hover {
-	
 						&:before {
 							background-image: url(../img/icons/arrow-right-regular-secondary.svg);
 						}
@@ -608,26 +542,19 @@
 		}
 
 		#{$self}__rating {
-	
 			ul {
-	
 				li {
-	
 					&:before {
 						border: 2px solid var(--cl-white);
 						background-image: url(../img/icons/star-regular-white.svg);
 					}
 				}
 			}
-			
+
 			&--1 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+1) {
-	
+						&:nth-of-type(-n + 1) {
 							&:before {
 								border: 2px solid var(--cl-primary);
 								background-image: url(../img/icons/star-regular-secondary.svg);
@@ -636,15 +563,11 @@
 					}
 				}
 			}
-	
+
 			&--2 {
-				
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+2) {
-	
+						&:nth-of-type(-n + 2) {
 							&:before {
 								border: 2px solid var(--cl-primary);
 								background-image: url(../img/icons/star-regular-secondary.svg);
@@ -653,15 +576,11 @@
 					}
 				}
 			}
-	
+
 			&--3 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+3) {
-	
+						&:nth-of-type(-n + 3) {
 							&:before {
 								border: 2px solid var(--cl-primary);
 								background-image: url(../img/icons/star-regular-secondary.svg);
@@ -672,13 +591,9 @@
 			}
 
 			&--4 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+4) {
-	
+						&:nth-of-type(-n + 4) {
 							&:before {
 								border: 2px solid var(--cl-primary);
 								background-image: url(../img/icons/star-regular-secondary.svg);
@@ -687,15 +602,11 @@
 					}
 				}
 			}
-	
+
 			&--5 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+5) {
-	
+						&:nth-of-type(-n + 5) {
 							&:before {
 								border: 2px solid var(--cl-primary);
 								background-image: url(../img/icons/star-regular-secondary.svg);
@@ -707,50 +618,41 @@
 		}
 
 		#{$self}__person {
-	
 			#{$self}__info {
-	
 				ul {
-
 					li {
-	
 						a {
 							color: var(--cl-white);
 							color: var(--cl-white);
-	
+
 							&:before {
 								border: 2px solid var(--cl-white);
 							}
-	
+
 							&.phone {
-	
 								&:before {
 									background-image: url(../img/icons/mobile-android-regular-white.svg);
 								}
 							}
-	
+
 							&.mail {
-	
 								&:before {
 									background-image: url(../img/icons/envelope-open-regular-white.svg);
 								}
 							}
-	
+
 							&:hover {
-	
 								&:before {
 									border: 2px solid var(--cl-primary);
 								}
-	
+
 								&.phone {
-	
 									&:before {
 										background-image: url(../img/icons/mobile-android-regular-secondary.svg);
 									}
 								}
-			
+
 								&.mail {
-	
 									&:before {
 										background-image: url(../img/icons/envelope-open-regular-secondary.svg);
 									}
@@ -762,12 +664,15 @@
 			}
 		}
 
-		h2, h3, p, li, em {
+		h2,
+		h3,
+		p,
+		li,
+		em {
 			color: var(--cl-white);
 		}
 
 		.button {
-
 			&--filled-black {
 				color: var(--cl-black);
 				background: var(--cl-white);
@@ -783,37 +688,34 @@
 		background: var(--cl-primary);
 
 		#{$self}__slider {
-
 			.owl-nav {
-	
 				.owl-prev,
 				.owl-next {
 					background: transparent;
-	
+
 					&:before {
 						border: 2px solid var(--cl-white);
 						background-image: url(../img/icons/arrow-left-regular-white.svg);
 					}
-	
+
 					&:hover {
 						background: transparent;
-	
+
 						&:before {
 							border: 2px solid var(--cl-grey);
 							background-image: url(../img/icons/arrow-left-regular-secondary.svg);
 						}
 					}
 				}
-	
+
 				.owl-next {
 					margin: 0 0 0 8px;
-	
+
 					&:before {
 						background-image: url(../img/icons/arrow-right-regular-white.svg);
 					}
-	
+
 					&:hover {
-	
 						&:before {
 							background-image: url(../img/icons/arrow-right-regular-secondary.svg);
 						}
@@ -823,26 +725,19 @@
 		}
 
 		#{$self}__rating {
-	
 			ul {
-	
 				li {
-	
 					&:before {
 						border: 2px solid var(--cl-white);
 						background-image: url(../img/icons/star-regular-white.svg);
 					}
 				}
 			}
-			
+
 			&--1 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+1) {
-	
+						&:nth-of-type(-n + 1) {
 							&:before {
 								border: 2px solid var(--cl-secondary);
 								background-image: url(../img/icons/star-regular-secondary.svg);
@@ -851,15 +746,11 @@
 					}
 				}
 			}
-	
+
 			&--2 {
-				
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+2) {
-	
+						&:nth-of-type(-n + 2) {
 							&:before {
 								border: 2px solid var(--cl-secondary);
 								background-image: url(../img/icons/star-regular-secondary.svg);
@@ -868,15 +759,11 @@
 					}
 				}
 			}
-	
+
 			&--3 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+3) {
-	
+						&:nth-of-type(-n + 3) {
 							&:before {
 								border: 2px solid var(--cl-secondary);
 								background-image: url(../img/icons/star-regular-secondary.svg);
@@ -887,13 +774,9 @@
 			}
 
 			&--4 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+4) {
-	
+						&:nth-of-type(-n + 4) {
 							&:before {
 								border: 2px solid var(--cl-secondary);
 								background-image: url(../img/icons/star-regular-secondary.svg);
@@ -902,15 +785,11 @@
 					}
 				}
 			}
-	
+
 			&--5 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+5) {
-	
+						&:nth-of-type(-n + 5) {
 							&:before {
 								border: 2px solid var(--cl-secondary);
 								background-image: url(../img/icons/star-regular-secondary.svg);
@@ -922,54 +801,45 @@
 		}
 
 		#{$self}__person {
-	
 			#{$self}__info {
-
 				h3 {
 					color: var(--cl-secondary);
 				}
-	
-				ul {
 
+				ul {
 					li {
-	
 						a {
 							color: var(--cl-white);
 							color: var(--cl-white);
-	
+
 							&:before {
 								border: 2px solid var(--cl-white);
 							}
-	
+
 							&.phone {
-	
 								&:before {
 									background-image: url(../img/icons/mobile-android-regular-white.svg);
 								}
 							}
-	
+
 							&.mail {
-	
 								&:before {
 									background-image: url(../img/icons/envelope-open-regular-white.svg);
 								}
 							}
-	
+
 							&:hover {
-	
 								&:before {
 									border: 2px solid var(--cl-secondary);
 								}
-	
+
 								&.phone {
-	
 									&:before {
 										background-image: url(../img/icons/mobile-android-regular-secondary.svg);
 									}
 								}
-			
+
 								&.mail {
-	
 									&:before {
 										background-image: url(../img/icons/envelope-open-regular-secondary.svg);
 									}
@@ -981,12 +851,15 @@
 			}
 		}
 
-		h2, h3, p, li, em {
+		h2,
+		h3,
+		p,
+		li,
+		em {
 			color: var(--cl-white);
 		}
 
 		.button {
-
 			&--filled-primary {
 				background: var(--cl-secondary);
 
@@ -1001,37 +874,34 @@
 		background: var(--cl-secondary);
 
 		#{$self}__slider {
-
 			.owl-nav {
-	
 				.owl-prev,
 				.owl-next {
 					background: transparent;
-	
+
 					&:before {
 						border: 2px solid var(--cl-white);
 						background-image: url(../img/icons/arrow-left-regular-white.svg);
 					}
-	
+
 					&:hover {
 						background: transparent;
-	
+
 						&:before {
 							border: 2px solid var(--cl-primary);
 							background-image: url(../img/icons/arrow-left-regular-primary.svg);
 						}
 					}
 				}
-	
+
 				.owl-next {
 					margin: 0 0 0 8px;
-	
+
 					&:before {
 						background-image: url(../img/icons/arrow-right-regular-white.svg);
 					}
-	
+
 					&:hover {
-	
 						&:before {
 							background-image: url(../img/icons/arrow-right-regular-primary.svg);
 						}
@@ -1041,9 +911,7 @@
 		}
 
 		#{$self}__container {
-
 			#{$self}__text {
-	
 				&::after {
 					background-color: var(--cl-primary);
 				}
@@ -1051,26 +919,19 @@
 		}
 
 		#{$self}__rating {
-	
 			ul {
-	
 				li {
-	
 					&:before {
 						border: 2px solid var(--cl-white);
 						background-image: url(../img/icons/star-regular-white.svg);
 					}
 				}
 			}
-			
+
 			&--1 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+1) {
-	
+						&:nth-of-type(-n + 1) {
 							&:before {
 								border: 2px solid var(--cl-primary);
 								background-image: url(../img/icons/star-regular-primary.svg);
@@ -1079,15 +940,11 @@
 					}
 				}
 			}
-	
+
 			&--2 {
-				
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+2) {
-	
+						&:nth-of-type(-n + 2) {
 							&:before {
 								border: 2px solid var(--cl-primary);
 								background-image: url(../img/icons/star-regular-primary.svg);
@@ -1096,15 +953,11 @@
 					}
 				}
 			}
-	
+
 			&--3 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+3) {
-	
+						&:nth-of-type(-n + 3) {
 							&:before {
 								border: 2px solid var(--cl-primary);
 								background-image: url(../img/icons/star-regular-primary.svg);
@@ -1115,13 +968,9 @@
 			}
 
 			&--4 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+4) {
-	
+						&:nth-of-type(-n + 4) {
 							&:before {
 								border: 2px solid var(--cl-primary);
 								background-image: url(../img/icons/star-regular-primary.svg);
@@ -1130,15 +979,11 @@
 					}
 				}
 			}
-	
+
 			&--5 {
-	
 				ul {
-	
 					li {
-	
-						&:nth-of-type(-n+5) {
-	
+						&:nth-of-type(-n + 5) {
 							&:before {
 								border: 2px solid var(--cl-primary);
 								background-image: url(../img/icons/star-regular-primary.svg);
@@ -1150,53 +995,44 @@
 		}
 
 		#{$self}__person {
-	
 			#{$self}__info {
-
 				h3 {
 					color: var(--cl-primary);
 				}
-	
-				ul {
 
+				ul {
 					li {
-	
 						a {
 							color: var(--cl-white);
-	
+
 							&:before {
 								border: 2px solid var(--cl-white);
 							}
-	
+
 							&.phone {
-	
 								&:before {
 									background-image: url(../img/icons/mobile-android-regular-white.svg);
 								}
 							}
-	
+
 							&.mail {
-	
 								&:before {
 									background-image: url(../img/icons/envelope-open-regular-white.svg);
 								}
 							}
-	
+
 							&:hover {
-	
 								&:before {
 									border: 2px solid var(--cl-primary);
 								}
-	
+
 								&.phone {
-	
 									&:before {
 										background-image: url(../img/icons/mobile-android-regular-primary.svg);
 									}
 								}
-			
+
 								&.mail {
-	
 									&:before {
 										background-image: url(../img/icons/envelope-open-regular-primary.svg);
 									}
@@ -1208,7 +1044,11 @@
 			}
 		}
 
-		h2, h3, p, li, em {
+		h2,
+		h3,
+		p,
+		li,
+		em {
 			color: var(--cl-white);
 		}
 
@@ -1216,7 +1056,8 @@
 			color: var(--cl-primary);
 		}
 
-		p a, li a {
+		p a,
+		li a {
 			color: var(--cl-primary);
 
 			&:hover {
@@ -1225,9 +1066,7 @@
 		}
 
 		ul {
-			
 			li {
-
 				&:before {
 					color: var(--cl-primary);
 				}
@@ -1243,7 +1082,6 @@
 		}
 
 		.button {
-
 			&--filled-secondary {
 				background: var(--cl-primary);
 
@@ -1254,7 +1092,6 @@
 		}
 
 		#{$self}__file {
-
 			a {
 				background: var(--cl-primary);
 
