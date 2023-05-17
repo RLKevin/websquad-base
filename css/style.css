@@ -5062,6 +5062,12 @@ input:-webkit-autofill:active {
 .header__mainmenu .header__menu ul:not(.sub-menu) li .sub-menu .menu-item:hover a {
   color: var(--cl-primary);
 }
+.header__mainmenu .header__menu ul:not(.children) li .children li,
+.header__mainmenu .header__menu ul:not(.children) li .sub-menu li,
+.header__mainmenu .header__menu ul:not(.sub-menu) li .children li,
+.header__mainmenu .header__menu ul:not(.sub-menu) li .sub-menu li {
+  margin: 0;
+}
 .header__mainmenu .header__menu ul:not(.children) li:hover .children, .header__mainmenu .header__menu ul:not(.children) li:hover .sub-menu,
 .header__mainmenu .header__menu ul:not(.sub-menu) li:hover .children,
 .header__mainmenu .header__menu ul:not(.sub-menu) li:hover .sub-menu {
