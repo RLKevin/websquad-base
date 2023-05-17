@@ -127,7 +127,8 @@
 		#{$self}__menu {
 			display: none;
 
-			ul:not(.children) {
+			ul:not(.children),
+			ul:not(.sub-menu) {
 				display: flex;
 				align-items: center;
 				margin: 0 0 0 48px;
@@ -180,7 +181,7 @@
 						display: flex;
 						flex-direction: column;
 						gap: 1rem;
-						width: 240px;
+						width: fit-content;
 						isolation: isolate;
 
 						&::before {
