@@ -9,7 +9,7 @@ $phone_stripped = str_replace([' ', '-'], '', $phone);
 $email = get_field('options_contact_email', 'option');
 $search = get_field('options_header_search', 'option');
 $whatsapp = get_field('options_whatsapp_number', 'option');
-	
+
 ?>
 
 <header id="header" class="header header--<?php echo $align; ?>">

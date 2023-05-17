@@ -14,6 +14,8 @@ $button_left_half = get_field('hero_button_left');
 $button_right_half = get_field('hero_button_right');
 $repeater_half = get_field('repeater_half');
 
+$slider_id = wp_unique_id( 'hero' );
+
 $template = get_template_directory();
 
 // $first_image_half = $repeater_half[0]['image']['sizes']['1280-4-3'];
@@ -66,7 +68,7 @@ $template = get_template_directory();
 				</div>
 				
 				<?php if ( have_rows('repeater_half') ) : ?>
-					<div class="slider slider__hero--half">
+					<div class="slider slider__hero--half" id="<?= $slider_id; ?>">
 						<?php while( have_rows('repeater_half') ) : the_row(); 
 							$image_half = get_sub_field('image');
 							?>
@@ -78,28 +80,38 @@ $template = get_template_directory();
 				<?php endif; ?>
 				
 				<script>
-					var slider = tns({
-						container: '.slider__hero--half',
-						items: 1,
-						slideBy: 1,
-						mouseDrag: true,
-						controls: false,
-						center: true,
-						edgePadding: 0,
-						gutter: 0,
-						lazyload: true,
-						nav: false,
-						navPosition: 'bottom',
-						loop: true,
-						autoHeight: false,
-					});
+					if (typeof tns === 'function') {
+						var slider = tns({
+							container: '#<?= $slider_id; ?>',
+							items: 1,
+							slideBy: 1,
+							mouseDrag: true,
+							controls: false,
+							center: true,
+							edgePadding: 0,
+							gutter: 0,
+							lazyload: true,
+							nav: false,
+							navPosition: 'bottom',
+							loop: true,
+							autoHeight: false,
+						});
+					} else {
+						const slides = document.querySelectorAll('#<?= $slider_id; ?> .slide');
+						// remove all but first slide
+						slides.forEach((slide, index) => {
+							if (index > 0) {
+								slide.remove();
+							}
+						});
+					}
 				</script>
 			</div>
 		</div>
 		
 	<?php }else{ ?>
 
-		<div class="hero__slider slider">
+		<div class="hero__slider slider" id="<?= $slider_id; ?>">
 
 			<?php
 			
@@ -179,21 +191,31 @@ $template = get_template_directory();
 		</div>
 
 		<script>
-			var slider = tns({
-				container: '.hero__slider',
-				items: 1,
-				slideBy: 1,
-				mouseDrag: true,
-				controls: true,
-				controlsText: '',
-				center: true,
-				edgePadding: 0,
-				gutter: 0,
-				lazyload: true,
-				nav: true,
-				loop: true,
-				autoHeight: false,
-			});
+			if (typeof tns === 'function') {
+				var slider = tns({
+					container: '#<?= $slider_id; ?>',
+					items: 1,
+					slideBy: 1,
+					mouseDrag: true,
+					controls: true,
+					controlsText: '',
+					center: true,
+					edgePadding: 0,
+					gutter: 0,
+					lazyload: true,
+					nav: true,
+					loop: true,
+					autoHeight: false,
+				});
+			} else {
+				const slides = document.querySelectorAll('#<?= $slider_id; ?> .slide');
+				// remove all but first slide
+				slides.forEach((slide, index) => {
+					if (index > 0) {
+						slide.remove();
+					}
+				});
+			}
 		</script>
 	<?php }
 	

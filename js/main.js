@@ -60,6 +60,8 @@ jQuery(function ($) {
 	// menu - scroll menu button
 
 	function scroll_menu_button() {
+		if (!$('.header')) return;
+
 		if ($('.header').hasClass('header--top')) {
 			scrollTop = $(window).scrollTop();
 
@@ -76,7 +78,7 @@ jQuery(function ($) {
 	// menu - scroll scroll button & whatsapp
 
 	function scroll_scroll_button() {
-		if (!$('footer')) return;
+		if ($('footer')) return;
 
 		// vars
 
