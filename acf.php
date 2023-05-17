@@ -3923,6 +3923,50 @@ add_action( 'acf/include_fields', function() {
 				'endpoint' => 0,
 			),
 			array(
+				'key' => 'field_6464b98f2cd21',
+				'label' => 'Favicon',
+				'name' => '',
+				'aria-label' => '',
+				'type' => 'message',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'esc_html' => 0,
+				'new_lines' => 'wpautop',
+			),
+			array(
+				'key' => 'field_6464b99a2cd22',
+				'label' => 'Favicon',
+				'name' => 'options_favicon',
+				'aria-label' => '',
+				'type' => 'image',
+				'instructions' => 'Only .png files.
+	Max size is 512px x 512px',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'return_format' => 'array',
+				'library' => 'all',
+				'min_width' => '',
+				'min_height' => '',
+				'min_size' => '',
+				'max_width' => 512,
+				'max_height' => 512,
+				'max_size' => '',
+				'mime_types' => 'png',
+				'preview_size' => 'thumbnail',
+			),
+			array(
 				'key' => 'field_6124e9ce135be',
 				'label' => 'Color',
 				'name' => '',
@@ -4560,6 +4604,8 @@ add_action( 'acf/include_fields', function() {
 		'description' => '',
 		'show_in_rest' => 0,
 	) );
+
+
 
 	acf_add_local_field_group( array(
 		'key' => 'group_6449126faeee2',
