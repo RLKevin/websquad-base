@@ -2,6 +2,8 @@ section.map {
 	$self: &;
 	position: relative;
 	overflow: hidden;
+	background-color: var(--cl-primary);
+	color: var(--cl-primary-text);
 
 	.map__map {
 		position: absolute;
@@ -9,6 +11,11 @@ section.map {
 		left: 0;
 		height: calc(100% + 96px);
 		width: 100%;
+		background-image: url('../img/map-placeholder.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
 		svg {
 			color: var(--cl-primary);
 		}
@@ -20,14 +27,18 @@ section.map {
 		justify-content: center;
 		position: relative;
 		padding: 96px 16px;
-		background: var(--cl-primary);
-		background: linear-gradient(
-			to right,
-			rgba(var(--cl-primary), 1) 0%,
-			rgba(var(--cl-primary), 0.75) 100%
-		);
 		margin: 96px 0;
 		@include rectangle;
+		isolation: isolate;
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-color: var(--cl-primary);
+			opacity: 0.75;
+			z-index: -1;
+		}
 
 		@include tablet {
 			width: 100%;
@@ -37,17 +48,18 @@ section.map {
 
 		@include desktop {
 			max-width: calc(50% - 48px);
-			background: var(--cl-primary);
+			&::before {
+				opacity: 1;
+			}
 		}
 
 		@include custom(1920px) {
 			max-width: calc(25% - 72px);
-			background: var(--cl-primary);
 		}
 
 		h2 {
 			padding: 0 0 24px 0;
-			color: var(--cl-black);
+			color: inherit;
 		}
 
 		ul {
@@ -79,16 +91,13 @@ section.map {
 					text-overflow: ellipsis;
 
 					&:before {
-						content: "";
+						content: '';
 						position: absolute;
 						top: 0;
 						left: 0;
 						width: 40px;
-						height: 40px;
+						aspect-ratio: 1/1;
 						border: 2px solid var(--cl-white);
-						background-size: 16px 16px;
-						background-repeat: no-repeat;
-						background-position: center;
 						transition: 0.25s background-image ease-in-out,
 							0.25s border ease-in-out;
 						@include square;
@@ -105,26 +114,8 @@ section.map {
 						transition: 0.25s all ease-in-out;
 					}
 
-					&.phone {
-					}
-
-					&.mail {
-					}
-
 					&:hover {
-						svg {
-							color: var(--cl-primary);
-						}
-						&:before {
-							border: 2px solid var(--cl-primary);
-							cursor: pointer;
-						}
-
-						&.phone {
-						}
-
-						&.mail {
-						}
+						text-decoration: underline;
 					}
 				}
 			}
