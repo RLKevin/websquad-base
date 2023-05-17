@@ -1,6 +1,10 @@
 section.cards {
 	$self: &;
-	padding-block: 96px 48px;
+	padding-block: 48px 0;
+
+	@include desktop{
+		padding-block: 96px 48px;
+	}
 
 	> p {
 		@include padding;

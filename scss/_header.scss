@@ -127,7 +127,8 @@
 		#{$self}__menu {
 			display: none;
 
-			ul:not(.children) {
+			ul:not(.children),
+			ul:not(.sub-menu) {
 				display: flex;
 				align-items: center;
 				margin: 0 0 0 48px;
@@ -143,22 +144,28 @@
 						color: rgba(var(--cl-black), 0.5);
 						transition: 0.25s all ease-in-out;
 						white-space: nowrap;
+						@include transition;
+
+						> &:hover {
+							color: var(--cl-secondary);
+						}
 					}
 
 					&.current-menu-item,
 					&.current-menu-parent,
-					&.current-menu-ancestor,
-					&:hover {
+					&.current-menu-ancestor{
 						a {
-							color: var(--cl-black);
+							color: var(--cl-secondary);
 						}
 					}
 
-					&.page_item_has_children {
+					&.page_item_has_children,
+					&.menu-item-has-children {
 						position: relative;
 					}
 
-					.children {
+					.children,
+					.sub-menu {
 						position: absolute;
 						top: calc(100% + 48px);
 						left: 50%;
@@ -174,7 +181,7 @@
 						display: flex;
 						flex-direction: column;
 						gap: 1rem;
-						width: 240px;
+						width: fit-content;
 						isolation: isolate;
 
 						&::before {
@@ -191,9 +198,18 @@
 						pointer-events: none;
 
 						transition: opacity 0.3s ease;
+
+						.menu-item:hover a {
+							color: var(--cl-primary);
+						}
+
+						li{
+							margin: 0;
+						}
 					}
 
-					&:hover .children {
+					&:hover .children,
+					&:hover .sub-menu {
 						opacity: 1;
 						pointer-events: initial;
 					}
@@ -442,7 +458,7 @@
 			padding: 32px 96px 0 96px;
 		}
 
-		#{$self}__submenu {
+		#{$self}__submenu{
 			margin: 0 0 48px 0;
 
 			ul {
@@ -567,19 +583,24 @@
 						@include tablet {
 							font-size: var(--fs-medium);
 						}
+
+						> &:hover {
+							color: var(--cl-primary);
+						}
 					}
 
 					&.current-menu-item,
 					&.current-menu-parent,
-					&.current-menu-ancestor,
-					&:hover {
+					&.current-menu-ancestor{
 						a {
 							color: var(--cl-primary);
 						}
 					}
 
 					.sub-menu {
-						display: none;
+						.menu-item:hover a {
+							color: var(--cl-grey);
+						}
 					}
 				}
 			}

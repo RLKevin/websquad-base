@@ -8,6 +8,7 @@
 
 	&__button-container {
 		width: 100%;
+		margin-bottom: 48px;
 
 		.wrapper {
 			@include max-width;
@@ -98,6 +99,7 @@
 	}
 
 	&__text {
+		margin-bottom: 48px;
 
 		.wrapper {
 			@include max-width;
@@ -105,7 +107,8 @@
 	}
 
 	&__text-code {
-		
+		margin-bottom: 48px;
+
 		.wrapper {
 			display: flex;
 			flex-wrap: wrap;
@@ -145,6 +148,7 @@
 	}
 
 	&__text-image {
+		margin-bottom: 48px;
 		
 		.wrapper {
 			// position: relative;
@@ -205,6 +209,7 @@
 	}
 
 	&__text-video {
+		margin-bottom: 48px;
 		
 		.wrapper {
 			display: flex;
