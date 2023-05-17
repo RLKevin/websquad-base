@@ -8,7 +8,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     
 		<title><?php wp_title('|',1,'right'); ?> <?php bloginfo('name'); ?></title>
-		
+		<?php $favicon = get_field('options_favicon', 'option') ?>
+		<link rel="icon" type="image/x-icon" href="<?= $favicon['url'] ?>">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<meta property="og:title" content="<?php bloginfo('name'); ?>" />
 		<meta property="og:description" content="<?php bloginfo('description'); ?>">

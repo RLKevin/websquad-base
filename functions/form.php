@@ -15,7 +15,7 @@ function teamswitch_form_submit_button( $button, $form ) {
 
 add_filter( 'gform_ajax_spinner_url', 'teamswitch_custom_gforms_spinner' );
 function teamswitch_custom_gforms_spinner( $src ) {
-	return get_stylesheet_directory_uri() . '/img/icons/loading.svg';
+	return get_template_directory_uri() . '/img/icons/loading.svg';
 }
 
 // change next and previous input to button
