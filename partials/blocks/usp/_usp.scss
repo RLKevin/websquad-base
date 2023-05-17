@@ -1,16 +1,16 @@
 section.usp {
 	$self: &;
     padding-block: 48px;
-
     padding-inline: 16px 0;
 
-            @include tablet{
-                padding-inline: 48px 0;
-            }
+        @include tablet{
+            padding-inline: 48px 0;
+        }
 
-            @include desktop{
-                padding-inline: 96px 0;
-            }
+        @include desktop{
+            padding-block: 48px;
+            padding-inline: 96px 0;
+        }
 
     &--steps{
         .tns-outer{
