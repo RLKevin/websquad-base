@@ -143,14 +143,18 @@
 						color: rgba(var(--cl-black), 0.5);
 						transition: 0.25s all ease-in-out;
 						white-space: nowrap;
+						@include transition;
+
+						> &:hover {
+							color: var(--cl-secondary);
+						}
 					}
 
 					&.current-menu-item,
 					&.current-menu-parent,
-					&.current-menu-ancestor,
-					&:hover {
+					&.current-menu-ancestor{
 						a {
-							color: var(--cl-black);
+							color: var(--cl-secondary);
 						}
 					}
 
@@ -236,7 +240,8 @@
 			}
 		}
 
-		#{$self}__submenu {
+		#{$self}__submenu,
+		.sub-menu {
 			display: none;
 
 			@include custom(800px) {
@@ -442,7 +447,8 @@
 			padding: 32px 96px 0 96px;
 		}
 
-		#{$self}__submenu {
+		#{$self}__submenu,
+		.sub-menu {
 			margin: 0 0 48px 0;
 
 			ul {
@@ -567,12 +573,15 @@
 						@include tablet {
 							font-size: var(--fs-medium);
 						}
+
+						> &:hover {
+							color: var(--cl-primary);
+						}
 					}
 
 					&.current-menu-item,
 					&.current-menu-parent,
-					&.current-menu-ancestor,
-					&:hover {
+					&.current-menu-ancestor{
 						a {
 							color: var(--cl-primary);
 						}
