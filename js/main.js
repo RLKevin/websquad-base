@@ -60,6 +60,8 @@ jQuery(function ($) {
 	// menu - scroll menu button
 
 	function scroll_menu_button() {
+		if (!$('.header')) return;
+
 		if ($('.header').hasClass('header--top')) {
 			scrollTop = $(window).scrollTop();
 
