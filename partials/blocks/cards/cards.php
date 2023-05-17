@@ -91,7 +91,7 @@ $style = get_field('style');
 
 						?>
 
-						<div class="card__item animate__animated animate__bounceInUp">
+						<div class="card__item">
 
 							<?php if ($image): ?>
 
@@ -194,7 +194,7 @@ $style = get_field('style');
 
 							?>
 
-							<div class="card__item animate__animated animate__bounceInUp">
+							<div class="card__item">
 
 								<?php if ($image): ?>
 
@@ -246,7 +246,9 @@ $style = get_field('style');
 				wp_reset_postdata();
 				break;
 			case 'custom':
-				if( have_rows('card_repeater') ):
+				if( have_rows('card_repeater') ): 
+				
+					?> <div class="card__container"> <?php
 
 					while ( have_rows('card_repeater') ) : the_row();
 
@@ -258,7 +260,7 @@ $style = get_field('style');
 				
 						?>
 
-						<div class="card__item animate__animated animate__bounceInUp">
+						<div class="card__item">
 
 							<?php if ($image): ?>
 
@@ -299,6 +301,9 @@ $style = get_field('style');
 						<?php 
 
 					endwhile;
+
+					?> </div> <?php
+
 				
 				endif;
 				break;

@@ -506,7 +506,7 @@ jQuery(function( $ ) {
 
 								post_item =	'' +
 
-									'<div class="card__item animate__animated animate__bounceInUp">' +
+									'<div class="card__item ">' +
 
 										// image
 
