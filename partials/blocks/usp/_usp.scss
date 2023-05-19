@@ -1,313 +1,226 @@
 section.usp {
+	width: 100%;
 	$self: &;
-    padding-block: 48px;
-    padding-inline: 16px 0;
+	padding-block: 48px;
 
-        @include tablet{
-            padding-inline: 48px 0;
-        }
+	--bg: var(--cl-white);
+	--fg: var(--cl-black);
+	--bg2: var(--cl-grey);
+	--accent: var(--cl-primary);
+	--accent-text: var(--cl-primary-text);
 
-        @include desktop{
-            padding-block: 48px;
-            padding-inline: 96px 0;
-        }
+	background-color: var(--bg);
+	color: var(--fg);
 
-    &--steps{
-        .tns-outer{
+	@include tablet {
+		// padding-inline: 48px 0;
+	}
 
-            .tns-controls {
-                justify-content: flex-end;
-                gap: 8px;
-                top: auto;
-                bottom: 16px;
+	@include desktop {
+		padding-block: 48px;
+		// padding-inline: 96px 0;
+	}
 
-                @include tablet{
-                    padding-right: 48px;
-                }
-                
-                button{
-                    background-color: var(--cl-primary);
+	&--steps {
+		.tns-ovh {
+			overflow: visible;
+		}
+		.tns-outer {
+			.tns-controls {
+				justify-content: flex-end;
+				gap: 8px;
+				top: auto;
+				bottom: 16px;
+
+				@include tablet {
+					padding-right: 48px;
+				}
+			}
+		}
+	}
+
+	.usp__slider {
+		&--steps {
+			display: flex;
+			margin-inline: auto;
+			counter-reset: section;
+
+			.tns-item {
+				height: auto;
+			}
+			.usp__slide {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				position: relative;
+				width: 100%;
+				background-color: var(--bg2);
+				padding-block: 96px;
+				padding-inline: 16px;
+				height: 100%;
+				@include rectangle;
+
+				@include tablet {
+					padding-inline: 32px;
+					padding-block: 128px;
+				}
+
+				p {
+					color: var(--fg2);
+					font-size: var(--fs-medium);
+					line-height: var(--lh-medium);
+					font-weight: var(--fw-medium);
+					padding: 0 0 48px 0;
+					position: relative;
+					z-index: 1;
+					text-align: center;
+
+					@include tablet {
+						font-size: var(--fs-large);
+					}
+				}
+
+				&--first {
+					background: var(--accent);
                     
-                    &:disabled{
-                        pointer-events: none;
-                        opacity: .24;
-                    }
-                }
-            }
-        }
-    }
+					p {
+                        color: var(--accent-text);
+						font-size: var(--fs-large);
+						font-family: var(--ff-primary);
+						text-transform: uppercase;
 
-    .usp__slider {
+						@include tablet {
+							font-size: var(--fs-huge);
+						}
+					}
+				}
 
-        // .tns-inner{
-        //     display: flex;
-        //     align-items: center;
+				* {
+					&:last-child {
+						padding-bottom: 0;
+					}
+				}
 
-        //     @include desktop {
-        //         // display: inline-block;
-        //     }
-        // }
+				// counter
+				h3 {
+					position: absolute;
+					top: 16px;
+					left: 16px;
+					width: 64px;
+					height: 64px;
+					line-height: 64px;
+					text-align: center;
+					border-radius: 50%;
+					background: var(--cl-primary);
+					color: var(--cl-primary-text);
 
-        &--steps{
-            display: flex;
-            margin-inline: auto;
-            counter-reset: section;
-            
-    
-            // .owl-item {
-            //     display: flex;
-            //     // background: var(--cl-white);
+					@include tablet {
+						top: 32px;
+						left: 32px;
+					}
 
-            //     // &:last-of-type{
-            //     //     opacity: 0;
-            //     //     background-color: none;
-            //     // }
-            // }
-    
-            
-            .tns-item{
-                // min-height: 100%;
-                height: auto;
+					&::before {
+						counter-increment: section; /* Increment the value of section counter by 1 */
+						content: counter(section);
+					}
+				}
+			}
 
-                .usp__slide{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    position: relative;
-                    width: 100%;
-                    background-color: var(--cl-secondary-rgba);
-                    padding-block: 96px;
-                    padding-inline: 16px;
-                    height: 100%;
-                    @include rectangle;
+			&:not(.tns-slider) {
+				width: max-content;
+				gap: 2rem;
+				padding-left: 2rem;
+				> div {
+					width: 400px;
+				}
+			}
+		}
 
-                    @include tablet {
-                        padding-inline: 32px;
-                        padding-block: 128px;
-                    }
-    
-                    p {
-                        color: var(--cl-black);
-                        font-size: var(--fs-medium);
-                        line-height: var(--lh-medium);
-                        font-weight: var(--fw-medium);
-                        padding: 0 0 48px 0;
-                        position: relative;
-                        z-index: 1;
-                        text-align: center;
+		&--points {
+			display: flex;
 
-                        @include tablet {
-                            font-size: var(--fs-large);
-                        }
-                    }
+			.usp__slide {
+				flex-shrink: 0;
+				display: flex;
+				justify-content: center;
+				height: 40px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
 
-                    &--first {
-                        background: var(--cl-primary);
-                        
-                        p {
-                            color: var(--cl-white);
-                            font-size: var(--fs-large);
-                            font-family: var(--ff-primary);
-                            text-transform: uppercase;
+				p {
+					position: relative;
+					width: max-content;
+					padding: 0 0 0 48px;
+					font-weight: var(--fw-medium);
+					color: inherit;
 
-                            @include tablet {
-                                font-size: var(--fs-huge);
-                            }
-                        }
+					&:before,
+					&::after {
+						content: '';
+						position: absolute;
+						top: calc(50% - 20px);
+						left: 0;
+						width: 40px;
+						height: 40px;
+						@include square;
+					}
 
-                        * {
-                            color: var(--cl-white);
-                        }
-                    }
+					&::after {
+						border: 2px solid currentColor;
+					}
 
-                    * {
-                        &:last-child {
-                            padding-bottom: 0;
-                        }
-                    }
+					&::before {
+						mask-size: 16px 16px;
+						mask-repeat: no-repeat;
+						mask-position: center;
+						mask-image: url(../img/icons/check-regular-primary.svg);
+						background-color: currentColor;
+						transition: 0.25s mask-image ease-in-out,
+							0.25s border ease-in-out;
+						@include square;
+					}
+				}
+			}
 
-                    h3 {
-                        position: absolute;
-                        top: 16px;
-                        left: 16px;
-                        width: 64px;
-                        height: 64px;
-                        line-height: 64px;
-                        text-align: center;
-                        border-radius: 50%;
-                        background: var(--cl-primary);
-                        color: var(--cl-white);
+			&:not(.tns-slider) {
+				justify-content: center;
+				width: 100%;
+				gap: 2rem;
+			}
+		}
+	}
 
-                        @include tablet {
-                            top: 32px;
-                            left: 32px;
-                        }
+	// background
 
-                        &::before{
-                            counter-increment: section; /* Increment the value of section counter by 1 */
-                            content: counter(section);
-                        }
-                    }
-                }
-            }
-        }
+	&.usp--grey {
+		--bg: var(--cl-grey);
+		--fg: var(--cl-black);
+		--bg2: var(--cl-white);
+	}
 
-        &--points{
-            .owl-stage-outer{
-                overflow: visible;
-            }
+	&.usp--black {
+		--bg: var(--cl-black);
+		--fg: var(--cl-white);
+		--bg2: var(--cl-grey);
+		--fg2: var(--cl-black);
+		--accent: var(--cl-white);
+	}
 
-            .owl-item {
-                &.center {
+	&.usp--primary {
+		--bg: var(--cl-primary);
+		--fg: var(--cl-primary-text);
+		--bg2: var(--cl-white);
+		--accent: var(--cl-white);
+		--accent-text: var(--cl-black);
+	}
 
-                    p {
-                        
-                        &:before {
-                            animation: pulse 0.5s 1 0.5s;
-                        }
-                    }
-                }
-
-                .usp__slide {
-                    padding: 0 16px;
-                    display: flex;
-                    justify-content: center;
-            
-                    @include tablet {
-                        padding: 0 48px;
-                    }
-            
-                    @include desktop {
-                        padding: 0;
-                    }
-            
-                    p {
-                        position: relative;
-                        padding: 0 0 0 64px;
-                        font-weight: var(--fw-medium);
-                
-                        &:before,
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            top: calc(50% - 20px);
-                            left: 0;
-                            width: 40px;
-                            height: 40px;
-                            @include square;
-                        }
-
-                        &::after{
-                            border: 2px solid var(--cl-secondary);
-                        }
-
-                        &::before{
-                            mask-size: 16px 16px;
-                            mask-repeat: no-repeat;
-                            mask-position: center;
-                            mask-image: url(../img/icons/check-regular-primary.svg);
-                            background-color: var(--cl-secondary);
-                            transition: 0.25s mask-image ease-in-out, 0.25s border ease-in-out;
-                            @include square;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    // background
-
-    &.usp--grey {
-        background: var(--cl-grey);
-    }
-
-    &.usp--black {
-        background: var(--cl-black);
-        color: var(--cl-white);
-
-        .usp__slider--steps{
-            .usp__slide{ 
-                background-color: var(--cl-white);
-
-                &--first{
-                    background: var(--cl-secondary);
-
-                    p{
-                        color: var(--cl-white);
-                    }
-                }
-            }
-        }
-
-        // p {
-    
-        //     &:before {
-        //         border: 2px solid var(--cl-primary);
-        //         background-image: url(../img/icons/check-regular-secondary.svg);
-        //     }
-        // }
-    }
-
-    &.usp--primary {
-        background: var(--cl-primary);
-        color: var(--cl-white);
-
-        .usp__slider--steps{
-            .usp__slide{ 
-                background-color: var(--cl-white);
-
-                &--first{
-                    background: var(--cl-grey);
-
-                    p{
-                        color: var(--cl-primary);
-                    }
-                }
-            }
-        }
-
-        .usp__slider--points{
-            p {
-                &::before{
-                    background-color: var(--cl-white)!important;
-                }
-
-                &::after {
-                    border-color: var(--cl-white)!important;
-                }
-            }
-        }
-    }
-
-    &.usp--secondary {
-        background: var(--cl-secondary);
-        color: var(--cl-white);
-
-        .usp__slider--steps{
-            .usp__slide{ 
-                background-color: var(--cl-white);
-
-                &--first{
-                    background: var(--cl-primary);
-
-                    p{
-                        color: var(--cl-grey);
-                    }
-                }
-            }
-        }
-
-        usp__slider--points{
-            p {
-                &::before{
-                    background-color: var(--cl-white)!important;
-                }
-                
-                &::after {
-                    border-color: var(--cl-white)!important;
-                }
-            }
-        }
-    }
+	&.usp--secondary {
+		--bg: var(--cl-secondary);
+		--fg: var(--cl-white);
+		--bg2: var(--cl-white);
+		--fg2: var(--cl-black);
+		--accent: var(--cl-white);
+		--accent-text: var(--cl-black);
+	}
 }

@@ -6,11 +6,11 @@ $background = get_field('background');
 $type = get_field('usp_type');
 $title = get_field('title');
 $id = get_field('id');
-$unique_id = wp_unique_id('slider-');
+$slider_id = wp_unique_id('usp');
 
 ?>
 
-<section id="<?php echo $id; ?>" class="usp usp--<?php echo $background; ?> usp--<?= $type ?>">
+<section id="<?= $id; ?>" class="usp usp--<?= $background; ?> usp--<?= $type ?>">
 
 	<?php
 
@@ -18,7 +18,7 @@ $unique_id = wp_unique_id('slider-');
 
 		?>
 			
-		<div id="<?= $unique_id ?>" class="usp__slider--<?= $type ?> slider">
+		<div id="<?= $slider_id ?>" class="usp__slider--<?= $type ?> slider">
 
 			<?php if ($type == 'steps') { ?>
 				<div>
@@ -26,7 +26,7 @@ $unique_id = wp_unique_id('slider-');
 						
 						<p>
 
-							<?php echo $title; ?>
+							<?= $title; ?>
 							
 						</p>
 						
@@ -37,22 +37,14 @@ $unique_id = wp_unique_id('slider-');
 			<?php 
 			
 			while ( have_rows('repeater') ) : the_row();
-
-				// vars
-
 				$text = get_sub_field('text');
-
 				?>
 				<div>
 					<div class="usp__slide">
 						<?php if ($type == 'steps') { ?>
 							<h3></h3>
 						<?php } ?>
-						<p>
-
-							<?php echo $text; ?>
-
-						</p>
+						<p><?= $text; ?></p>
 
 					</div>
 				</div>
@@ -66,56 +58,94 @@ $unique_id = wp_unique_id('slider-');
 
 		<?php if ($type == 'steps') { ?>
 			<script>
-				var slider = tns({
-					container: '#<?= $unique_id ?>',
-					// items: 5.5,
-					slideBy: 1,
-					mouseDrag: true,
-					controls: true,
-					center: false,
-					// gutter: 48,
-					lazyload: true,
-					nav: false,
-					loop: false,
-					autoHeight: false,
-					responsive: {
-						0: {
-							items: 1.5,
-							gutter: 24,
+				if (typeof tns === 'function') {
+					var slider = tns({
+						container: '#<?= $slider_id ?>',
+						slideBy: 1,
+						mouseDrag: true,
+						controls: true,
+						center: false,
+						lazyload: true,
+						nav: false,
+						loop: false,
+						autoHeight: false,
+						responsive: {
+							0: {
+								items: 1,
+								gutter: 24,
+								edgePadding: 48,
+							},
+							960: {
+								items: 2,
+								gutter: 24,
+								edgePadding: 48,
+							},
+							1280: {
+								items: 3,
+								gutter: 48,
+								edgePadding: 96,
+							},
+							2650: {
+								items: 5,
+								gutter: 48,
+								edgePadding: 96,
+							},
 						},
-						960: {
-							items: 2.5,
-							gutter: 24,
-						},
-						1280: {
-							items: 3.5,
-							gutter: 48,
-						},
-						2650: {
-							items: 5.5,
-							gutter: 48,
-						},
-					},
-				});
+					});
+				} else {
+					// const slides = document.querySelectorAll('#<?= $slider_id; ?> > *');
+					// // remove all but first slide
+					// slides.forEach((slide, index) => {
+					// 	if (index > 0) {
+					// 		slide.classList.add('display-none');
+					// 	}
+					// });
+				}
 			</script>
 		<?php }else{ ?>
 			<script>
-				var slider = tns({
-					container: '#<?= $unique_id ?>',
-					items: 1,
+				if (typeof tns === 'function') {
+					var slider = tns({
+					container: '#<?= $slider_id ?>',
 					slideBy: 1,
 					mouseDrag: true,
 					controls: false,
+					controlsPosition: 'bottom',
 					center: true,
-					edgePadding: 0,
-					margin: 32,
-					gutter: 0,
-					lazyload: true,
 					nav: false,
-					navPosition: 'bottom',
 					loop: true,
-					autoHeight: false,
+					autoplay: true,
+					autoplayTimeout: 3000,
+					autoplayButtonOutput: false,
+					autoWidth: true,
+					responsive: {
+						0: {
+							gutter: 24,
+							edgePadding: 48,
+						},
+						960: {
+							gutter: 24,
+							edgePadding: 48,
+						},
+						1280: {
+							gutter: 48,
+							edgePadding: 96,
+						},
+						2650: {
+							gutter: 48,
+							edgePadding: 96,
+						},
+					},
 				});
+				} else {
+					// const slides = document.querySelectorAll('#<?= $slider_id; ?> > *');
+					// // remove all but first slide
+					// slides.forEach((slide, index) => {
+					// 	if (index > 0) {
+					// 		slide.classList.add('display-none');
+					// 	}
+					// });
+				}
 			</script>
 		<?php }
 	else: ?> 

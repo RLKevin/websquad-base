@@ -119,87 +119,6 @@ jQuery(function ($) {
 		$('.header__search-button').hide();
 	}
 
-	// slider
-
-	function set_slider() {
-		console.log('set slider');
-
-		$('.usp__slider--points').owlCarousel({
-			responsive: {
-				0: {
-					items: 1,
-					autoWidth: false,
-					autoHeight: false,
-					margin: 0,
-				},
-				640: {
-					items: 2,
-				},
-				1280: {
-					autoWidth: true,
-					autoHeight: true,
-					margin: 96,
-				},
-				1920: {
-					autoWidth: true,
-					autoHeight: true,
-					margin: 192,
-				},
-			},
-			smartSpeed: 500,
-			center: true,
-			loop: true,
-			autoplay: true,
-			autoplayTimeout: 2500,
-			autoplayHoverPause: true,
-			nav: false,
-			dots: false,
-			autoHeight: true,
-			mouseDrag: false,
-			touchDrag: false,
-			pullDrag: false,
-			navText: ['', ''],
-			onInitialize: function (element) {
-				$('.usp__slider--points')
-					.children()
-					.sort(function () {
-						return Math.round(Math.random()) - 0.5;
-					})
-					.each(function () {
-						$(this).appendTo($('.usp__slider--points'));
-					});
-			},
-		});
-
-		// $('.usp__slider--steps').owlCarousel({
-		// 	responsive: {
-		// 		0: {
-		// 			items: 1.5,
-		// 			margin: 32,
-		// 		},
-		// 		640: {
-		// 			items: 2.5,
-		// 			margin: 32,
-		// 		},
-		// 		1280: {
-		// 			items: 3.5,
-		// 			margin: 64,
-		// 		},
-		// 		2650: {
-		// 			items: 5.5,
-		// 			margin: 64,
-		// 		},
-		// 	},
-		// 	smartSpeed: 150,
-		// 	loop: false,
-		// 	merge: true,
-		// 	nav: true,
-		// 	dots: false,
-		// 	autoHeight: true,
-		// 	lazyLoad: true,
-		// });
-	}
-
 	// execute
 
 	$(document).ready(function () {
@@ -479,7 +398,6 @@ jQuery(function ($) {
 
 		show_menu();
 		scroll_scroll_button();
-		set_slider();
 		console.log('this is after loaded');
 	});
 
@@ -496,7 +414,6 @@ jQuery(function ($) {
 		if (windowWith != $(window).width()) {
 			hide_menu();
 			show_menu();
-			set_slider();
 			console.log('this is after resize');
 
 			windowWith = $(window).width();
@@ -505,12 +422,4 @@ jQuery(function ($) {
 		clearTimeout(window.resizedFinished);
 		window.resizedFinished = setTimeout(function () {}, 250);
 	});
-
-	// execute in gutenberg every 5 sec
-
-	// if ($("body").hasClass("wp-admin")) {
-	// 	setInterval(function(){
-	// 		set_slider();
-	// 	  }, 1000);
-	// };
 });

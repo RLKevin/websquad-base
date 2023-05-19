@@ -8079,19 +8079,23 @@ section.table.table--secondary .table__row--note {
 }
 
 section.usp {
+  width: 100%;
   padding-block: 48px;
-  padding-inline: 16px 0;
-}
-@media only screen and (min-width: 640px) {
-  section.usp {
-    padding-inline: 48px 0;
-  }
+  --bg: var(--cl-white);
+  --fg: var(--cl-black);
+  --bg2: var(--cl-grey);
+  --accent: var(--cl-primary);
+  --accent-text: var(--cl-primary-text);
+  background-color: var(--bg);
+  color: var(--fg);
 }
 @media only screen and (min-width: 1280px) {
   section.usp {
     padding-block: 48px;
-    padding-inline: 96px 0;
   }
+}
+section.usp--steps .tns-ovh {
+  overflow: visible;
 }
 section.usp--steps .tns-outer .tns-controls {
   -webkit-box-pack: end;
@@ -8106,13 +8110,6 @@ section.usp--steps .tns-outer .tns-controls {
     padding-right: 48px;
   }
 }
-section.usp--steps .tns-outer .tns-controls button {
-  background-color: var(--cl-primary);
-}
-section.usp--steps .tns-outer .tns-controls button:disabled {
-  pointer-events: none;
-  opacity: 0.24;
-}
 section.usp .usp__slider--steps {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8123,7 +8120,7 @@ section.usp .usp__slider--steps {
 section.usp .usp__slider--steps .tns-item {
   height: auto;
 }
-section.usp .usp__slider--steps .tns-item .usp__slide {
+section.usp .usp__slider--steps .usp__slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8136,20 +8133,20 @@ section.usp .usp__slider--steps .tns-item .usp__slide {
           justify-content: center;
   position: relative;
   width: 100%;
-  background-color: var(--cl-secondary-rgba);
+  background-color: var(--bg2);
   padding-block: 96px;
   padding-inline: 16px;
   height: 100%;
   border-radius: var(--br-rectangle-top-left) var(--br-rectangle-top-right) var(--br-rectangle-bottom-right) var(--br-rectangle-bottom-left);
 }
 @media only screen and (min-width: 640px) {
-  section.usp .usp__slider--steps .tns-item .usp__slide {
+  section.usp .usp__slider--steps .usp__slide {
     padding-inline: 32px;
     padding-block: 128px;
   }
 }
-section.usp .usp__slider--steps .tns-item .usp__slide p {
-  color: var(--cl-black);
+section.usp .usp__slider--steps .usp__slide p {
+  color: var(--fg2);
   font-size: var(--fs-medium);
   line-height: var(--lh-medium);
   font-weight: var(--fw-medium);
@@ -8159,31 +8156,28 @@ section.usp .usp__slider--steps .tns-item .usp__slide p {
   text-align: center;
 }
 @media only screen and (min-width: 640px) {
-  section.usp .usp__slider--steps .tns-item .usp__slide p {
+  section.usp .usp__slider--steps .usp__slide p {
     font-size: var(--fs-large);
   }
 }
-section.usp .usp__slider--steps .tns-item .usp__slide--first {
-  background: var(--cl-primary);
+section.usp .usp__slider--steps .usp__slide--first {
+  background: var(--accent);
 }
-section.usp .usp__slider--steps .tns-item .usp__slide--first p {
-  color: var(--cl-white);
+section.usp .usp__slider--steps .usp__slide--first p {
+  color: var(--accent-text);
   font-size: var(--fs-large);
   font-family: var(--ff-primary);
   text-transform: uppercase;
 }
 @media only screen and (min-width: 640px) {
-  section.usp .usp__slider--steps .tns-item .usp__slide--first p {
+  section.usp .usp__slider--steps .usp__slide--first p {
     font-size: var(--fs-huge);
   }
 }
-section.usp .usp__slider--steps .tns-item .usp__slide--first * {
-  color: var(--cl-white);
-}
-section.usp .usp__slider--steps .tns-item .usp__slide *:last-child {
+section.usp .usp__slider--steps .usp__slide *:last-child {
   padding-bottom: 0;
 }
-section.usp .usp__slider--steps .tns-item .usp__slide h3 {
+section.usp .usp__slider--steps .usp__slide h3 {
   position: absolute;
   top: 16px;
   left: 16px;
@@ -8193,50 +8187,62 @@ section.usp .usp__slider--steps .tns-item .usp__slide h3 {
   text-align: center;
   border-radius: 50%;
   background: var(--cl-primary);
-  color: var(--cl-white);
+  color: var(--cl-primary-text);
 }
 @media only screen and (min-width: 640px) {
-  section.usp .usp__slider--steps .tns-item .usp__slide h3 {
+  section.usp .usp__slider--steps .usp__slide h3 {
     top: 32px;
     left: 32px;
   }
 }
-section.usp .usp__slider--steps .tns-item .usp__slide h3::before {
+section.usp .usp__slider--steps .usp__slide h3::before {
   counter-increment: section; /* Increment the value of section counter by 1 */
   content: counter(section);
 }
-section.usp .usp__slider--points .owl-stage-outer {
-  overflow: visible;
+section.usp .usp__slider--steps:not(.tns-slider) {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  gap: 2rem;
+  padding-left: 2rem;
 }
-section.usp .usp__slider--points .owl-item.center p:before {
-  -webkit-animation: pulse 0.5s 1 0.5s;
-          animation: pulse 0.5s 1 0.5s;
+section.usp .usp__slider--steps:not(.tns-slider) > div {
+  width: 400px;
 }
-section.usp .usp__slider--points .owl-item .usp__slide {
-  padding: 0 16px;
+section.usp .usp__slider--points {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+section.usp .usp__slider--points .usp__slide {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 40px;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-@media only screen and (min-width: 640px) {
-  section.usp .usp__slider--points .owl-item .usp__slide {
-    padding: 0 48px;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  section.usp .usp__slider--points .owl-item .usp__slide {
-    padding: 0;
-  }
-}
-section.usp .usp__slider--points .owl-item .usp__slide p {
+section.usp .usp__slider--points .usp__slide p {
   position: relative;
-  padding: 0 0 0 64px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 0 0 48px;
   font-weight: var(--fw-medium);
+  color: inherit;
 }
-section.usp .usp__slider--points .owl-item .usp__slide p:before, section.usp .usp__slider--points .owl-item .usp__slide p::after {
+section.usp .usp__slider--points .usp__slide p:before, section.usp .usp__slider--points .usp__slide p::after {
   content: "";
   position: absolute;
   top: calc(50% - 20px);
@@ -8245,10 +8251,10 @@ section.usp .usp__slider--points .owl-item .usp__slide p:before, section.usp .us
   height: 40px;
   border-radius: var(--br-square-top-left) var(--br-square-top-right) var(--br-square-bottom-right) var(--br-square-bottom-left);
 }
-section.usp .usp__slider--points .owl-item .usp__slide p::after {
-  border: 2px solid var(--cl-secondary);
+section.usp .usp__slider--points .usp__slide p::after {
+  border: 2px solid currentColor;
 }
-section.usp .usp__slider--points .owl-item .usp__slide p::before {
+section.usp .usp__slider--points .usp__slide p::before {
   -webkit-mask-size: 16px 16px;
           mask-size: 16px 16px;
   -webkit-mask-repeat: no-repeat;
@@ -8257,64 +8263,44 @@ section.usp .usp__slider--points .owl-item .usp__slide p::before {
           mask-position: center;
   -webkit-mask-image: url(../img/icons/check-regular-primary.svg);
           mask-image: url(../img/icons/check-regular-primary.svg);
-  background-color: var(--cl-secondary);
+  background-color: currentColor;
   -webkit-transition: 0.25s border ease-in-out, 0.25s -webkit-mask-image ease-in-out;
   transition: 0.25s border ease-in-out, 0.25s -webkit-mask-image ease-in-out;
   transition: 0.25s mask-image ease-in-out, 0.25s border ease-in-out;
   transition: 0.25s mask-image ease-in-out, 0.25s border ease-in-out, 0.25s -webkit-mask-image ease-in-out;
   border-radius: var(--br-square-top-left) var(--br-square-top-right) var(--br-square-bottom-right) var(--br-square-bottom-left);
 }
+section.usp .usp__slider--points:not(.tns-slider) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  gap: 2rem;
+}
 section.usp.usp--grey {
-  background: var(--cl-grey);
+  --bg: var(--cl-grey);
+  --fg: var(--cl-black);
+  --bg2: var(--cl-white);
 }
 section.usp.usp--black {
-  background: var(--cl-black);
-  color: var(--cl-white);
-}
-section.usp.usp--black .usp__slider--steps .usp__slide {
-  background-color: var(--cl-white);
-}
-section.usp.usp--black .usp__slider--steps .usp__slide--first {
-  background: var(--cl-secondary);
-}
-section.usp.usp--black .usp__slider--steps .usp__slide--first p {
-  color: var(--cl-white);
+  --bg: var(--cl-black);
+  --fg: var(--cl-white);
+  --bg2: var(--cl-grey);
+  --fg2: var(--cl-black);
+  --accent: var(--cl-white);
 }
 section.usp.usp--primary {
-  background: var(--cl-primary);
-  color: var(--cl-white);
-}
-section.usp.usp--primary .usp__slider--steps .usp__slide {
-  background-color: var(--cl-white);
-}
-section.usp.usp--primary .usp__slider--steps .usp__slide--first {
-  background: var(--cl-grey);
-}
-section.usp.usp--primary .usp__slider--steps .usp__slide--first p {
-  color: var(--cl-primary);
-}
-section.usp.usp--primary .usp__slider--points p::before {
-  background-color: var(--cl-white) !important;
-}
-section.usp.usp--primary .usp__slider--points p::after {
-  border-color: var(--cl-white) !important;
+  --bg: var(--cl-primary);
+  --fg: var(--cl-primary-text);
+  --bg2: var(--cl-white);
+  --accent: var(--cl-white);
+  --accent-text: var(--cl-black);
 }
 section.usp.usp--secondary {
-  background: var(--cl-secondary);
-  color: var(--cl-white);
-}
-section.usp.usp--secondary .usp__slider--steps .usp__slide {
-  background-color: var(--cl-white);
-}
-section.usp.usp--secondary .usp__slider--steps .usp__slide--first {
-  background: var(--cl-primary);
-}
-section.usp.usp--secondary .usp__slider--steps .usp__slide--first p {
-  color: var(--cl-grey);
-}
-section.usp.usp--secondary usp__slider--points p::before {
-  background-color: var(--cl-white) !important;
-}
-section.usp.usp--secondary usp__slider--points p::after {
-  border-color: var(--cl-white) !important;
+  --bg: var(--cl-secondary);
+  --fg: var(--cl-white);
+  --bg2: var(--cl-white);
+  --fg2: var(--cl-black);
+  --accent: var(--cl-white);
+  --accent-text: var(--cl-black);
 }
