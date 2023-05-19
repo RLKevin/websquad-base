@@ -1,6 +1,6 @@
 .tns-outer {
 	position: relative;
-	
+
 	.tns-controls {
 		position: absolute;
 		top: 50%;
@@ -29,11 +29,13 @@
 			width: 40px;
 			height: 40px;
 			border: none;
-			background: rgba(var(--cl-black), 0.10);
+			background: rgba(var(--cl-black), 0.1);
 			pointer-events: auto;
 			transition: 0.25s all ease-in-out;
 			position: relative;
 			color: transparent;
+			@include square;
+			border: 2px solid var(--cl-white);
 			@include square;
 
 			&:before {
@@ -43,26 +45,28 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				border: 2px solid var(--cl-white);
-				background-size: 16px 16px;
-				background-repeat: no-repeat;
-				background-position: center;
-				background-image: url(../img/icons/arrow-left-regular-white.svg);
-				transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
-				@include square;
+				mask-size: 16px 16px;
+				mask-repeat: no-repeat;
+				mask-position: center;
+				mask-image: url(../img/icons/arrow-left-regular-white.svg);
+				background-color: var(--cl-white);
+				transition: 0.25s background-image ease-in-out,
+					0.25s border ease-in-out;
 			}
 
 			&:hover {
 				background: var(--cl-primary);
-			}
+				border: 2px solid var(--cl-primary-text);
 
-			&:last-of-type {
 				&:before {
-					background-image: url(../img/icons/arrow-right-regular-white.svg);
+					background-color: var(--cl-primary-text);
 				}
 			}
-		}
 
+			&[data-controls='next'] {
+				rotate: 180deg;
+			}
+		}
 	}
 
 	.tns-nav {
@@ -81,13 +85,13 @@
 		&.disabled {
 			display: none;
 		}
-		
+
 		button {
 			display: block;
 			width: 16px;
 			height: 16px;
 			border: 2px solid var(--cl-white);
-			background: rgba(var(--cl-black), 0.10);
+			background: rgba(var(--cl-black), 0.1);
 			margin: 0 8px 0 0;
 			transition: all 0.25s ease-in-out;
 			@include square;
@@ -107,19 +111,18 @@
 	}
 }
 
-
 .slider {
 	// $self: &;
 	// opacity: 0;
 	// transition: all 0.25s ease-in-out;
 	// position: relative;
 	// width: 100%;
-	
+
 	// &.owl-loaded {
 	// 	opacity: 1;
 	// 	height: auto;
 	// }
-	
+
 	.owl-nav {
 		position: absolute;
 		top: 50%;
@@ -168,7 +171,8 @@
 				background-repeat: no-repeat;
 				background-position: center;
 				background-image: url(../img/icons/arrow-left-regular-white.svg);
-				transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
+				transition: 0.25s background-image ease-in-out,
+					0.25s border ease-in-out;
 				@include square;
 			}
 
@@ -178,7 +182,6 @@
 		}
 
 		.owl-next {
-
 			&:before {
 				background-image: url(../img/icons/arrow-right-regular-white.svg);
 			}
@@ -200,7 +203,7 @@
 		&.disabled {
 			display: none;
 		}
-		
+
 		.owl-dot {
 			display: block;
 			width: 16px;

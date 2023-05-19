@@ -38,7 +38,7 @@ section.content {
 		}
 	}
 
-	// reusables
+	// containers
 
 	.text-container {
 	}
@@ -149,6 +149,33 @@ section.content {
 			&::after {
 				opacity: 0;
 			}
+		}
+	}
+
+	// colors
+
+	&.content--grey {
+		background-color: var(--cl-grey);
+		color: var(--cl-black);
+	}
+
+	&.content--black {
+		background-color: var(--cl-black);
+		color: var(--cl-white);
+	}
+
+	&.content--primary {
+		background-color: var(--cl-primary);
+		color: var(--cl-primary-text);
+	}
+
+	&.content--secondary {
+		background-color: var(--cl-secondary);
+		color: var(--cl-secondary-text);
+
+		.button {
+			--bg: var(--cl-primary);
+			--fg: var(--cl-primary-text);
 		}
 	}
 }
