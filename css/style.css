@@ -7343,6 +7343,10 @@ section.open.open--primary {
 section.open.open--primary ul li {
   background: var(--cl-white);
 }
+section.open.open--primary ul li span {
+  background: var(--cl-grey);
+  color: var(--cl-black);
+}
 section.open.open--secondary {
   background: var(--cl-secondary);
 }
@@ -7350,7 +7354,8 @@ section.open.open--secondary ul li {
   background: var(--cl-white);
 }
 section.open.open--secondary ul li span {
-  background: var(--cl-primary);
+  background: var(--cl-grey);
+  color: var(--cl-black);
 }
 
 .reference {

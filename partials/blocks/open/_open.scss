@@ -73,6 +73,11 @@ section.open {
 		ul {
 			li {
 				background: var(--cl-white);
+
+				span {
+					background: var(--cl-grey);
+					color: var(--cl-black);
+				}
 			}
 		}
 	}
@@ -85,7 +90,8 @@ section.open {
 				background: var(--cl-white);
 
 				span {
-					background: var(--cl-primary);
+					background: var(--cl-grey);
+					color: var(--cl-black);
 				}
 			}
 		}
