@@ -1,15 +1,14 @@
-.footer {
-	$self: &;
-
-	#{$self}__topmenu {
+footer.footer {
+	.footer__topmenu {
 		background: var(--cl-black);
+		color: var(--cl-white);
 
 		.wrapper {
 			display: flex;
 			align-items: center;
 		}
 
-		#{$self}__logo {
+		.footer__logo {
 			height: 128px;
 			position: relative;
 			display: flex;
@@ -17,14 +16,13 @@
 			margin-right: auto;
 
 			a {
-
 				img {
 					height: auto;
 					max-height: 80px;
 					width: auto;
 					max-width: 200px;
 					position: relative;
-		
+
 					@include tablet {
 						max-width: 280px;
 					}
@@ -32,13 +30,13 @@
 			}
 		}
 
-		#{$self}__social {
+		.footer__social {
 			display: none;
 
 			@include desktop {
 				display: block;
 			}
-	
+
 			ul {
 				display: flex;
 				margin: 0 0 0 48px;
@@ -47,14 +45,14 @@
 				@include tablet {
 					padding: 0 112px 0 0;
 				}
-	
+
 				li {
 					margin: 0 8px 0 0;
-	
+
 					@include tablet {
 						margin: 0 24px 0 0;
 					}
-	
+
 					&:last-of-type {
 						margin: 0;
 					}
@@ -65,44 +63,64 @@
 						height: 40px;
 						width: 40px;
 						overflow: hidden;
-						padding: 0 0 0 40px;
 						transition: 0.25s all ease-in-out;
 						line-height: 40px;
-						color: var(--cl-black);
 						white-space: nowrap;
+						color: var(--cl-white);
+						border: 2px solid currentColor;
+						@include square;
 
-						svg {
-							width: 40px;
-							height: 40px;
-							padding: 12px;
-							position: absolute;
-							top: 0;
-							left: 0;
-							color: var(--cl-white);
-							transition: 0.25s all ease-in-out;
-						}
-	
 						&:before {
 							content: '';
 							position: absolute;
-							top: 0;
-							left: 0;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
 							width: 40px;
 							height: 40px;
-							border: 2px solid var(--cl-white);
-							transition: 0.25s all ease-in-out;
-							@include square;
+							background-color: currentColor;
+							mask-size: 16px 16px;
+							mask-repeat: no-repeat;
+							mask-position: center;
+							transition: 0.25s background-color ease-in-out,
+								0.25s border ease-in-out;
+						}
+
+						&.facebook {
+							&:before {
+								mask-image: url(../img/icons/facebook-f-brands-white.svg);
+							}
+						}
+
+						&.twitter {
+							&:before {
+								mask-image: url(../img/icons/twitter-brands-white.svg);
+							}
+						}
+
+						&.linkedin {
+							&:before {
+								mask-image: url(../img/icons/linkedin-in-brands-white.svg);
+							}
+						}
+
+						&.instagram {
+							&:before {
+								mask-image: url(../img/icons/instagram-brands-white.svg);
+							}
+						}
+
+						&.youtube {
+							&:before {
+								mask-image: url(../img/icons/youtube-brands-white.svg);
+							}
 						}
 
 						&:hover {
-							cursor: pointer;
-
-							&::before {
-								border: 2px solid var(--cl-primary);
-							}
-							
-							svg {
-								color: var(--cl-primary);
+							border: 2px solid var(--cl-secondary);
+							&:before {
+								cursor: pointer;
+								background-color: var(--cl-secondary);
 							}
 						}
 					}
@@ -110,7 +128,6 @@
 			}
 
 			&.menu-button {
-
 				ul {
 					padding: 0 96px 0 0;
 
@@ -122,8 +139,9 @@
 		}
 	}
 
-	#{$self}__mainmenu {
+	.footer__mainmenu {
 		background: var(--cl-primary);
+		color: var(--cl-primary-text);
 
 		.wrapper {
 			display: flex;
@@ -131,129 +149,90 @@
 			align-items: center;
 		}
 
-		#{$self}__social {
-
+		.footer__social {
 			@include desktop {
 				display: none;
 			}
-	
+
 			ul {
 				display: flex;
 				margin: 48px 0 48px 0;
-	
+
 				li {
 					margin: 0 8px 0 0;
-	
+
 					@include tablet {
 						margin: 0 24px 0 0;
 					}
-	
+
 					&:last-of-type {
 						margin: 0;
 					}
-	
+
 					a {
 						display: block;
 						position: relative;
 						height: 40px;
 						width: 40px;
 						overflow: hidden;
-						padding: 0 0 0 40px;
 						transition: 0.25s all ease-in-out;
 						line-height: 40px;
 						color: var(--cl-black);
 						white-space: nowrap;
-	
+						border: 2px solid currentColor;
+						@include square;
+
 						&:before {
 							content: '';
 							position: absolute;
-							top: 0;
-							left: 0;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
 							width: 40px;
 							height: 40px;
-							border: 2px solid var(--cl-white);
-							background-size: 16px 16px;
-							background-repeat: no-repeat;
-							background-position: center;
-							transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
-							@include square;
+							background-color: currentColor;
+							mask-size: 16px 16px;
+							mask-repeat: no-repeat;
+							mask-position: center;
+							transition: 0.25s background-color ease-in-out,
+								0.25s border ease-in-out;
 						}
-	
+
 						&.facebook {
-	
 							&:before {
-								background-image: url(../img/icons/facebook-f-brands-white.svg);
+								mask-image: url(../img/icons/facebook-f-brands-white.svg);
 							}
 						}
 
 						&.twitter {
-
 							&:before {
-								background-image: url(../img/icons/twitter-brands-white.svg);
+								mask-image: url(../img/icons/twitter-brands-white.svg);
 							}
 						}
 
 						&.linkedin {
-
 							&:before {
-								background-image: url(../img/icons/linkedin-in-brands-white.svg);
+								mask-image: url(../img/icons/linkedin-in-brands-white.svg);
 							}
 						}
 
 						&.instagram {
-
 							&:before {
-								background-image: url(../img/icons/instagram-brands-white.svg);
+								mask-image: url(../img/icons/instagram-brands-white.svg);
 							}
 						}
 
 						&.youtube {
-
 							&:before {
-								background-image: url(../img/icons/youtube-brands-white.svg);
+								mask-image: url(../img/icons/youtube-brands-white.svg);
 							}
 						}
-	
+
 						&:hover {
-	
+							border: 2px solid var(--cl-secondary);
 							&:before {
-								border: 2px solid var(--cl-secondary);
 								cursor: pointer;
-							}
-	
-							&.facebook {
-	
-								&:before {
-									background-image: url(../img/icons/facebook-f-brands-primary.svg);
-								}
-							}
-
-							&.twitter {
-	
-								&:before {
-									background-image: url(../img/icons/twitter-brands-primary.svg);
-								}
-							}
-
-							&.linkedin {
-	
-								&:before {
-									background-image: url(../img/icons/linkedin-in-brands-primary.svg);
-								}
-							}
-
-							&.instagram {
-	
-								&:before {
-									background-image: url(../img/icons/instagram-brands-primary.svg);
-								}
-							}
-
-							&.youtube {
-	
-								&:before {
-									background-image: url(../img/icons/youtube-brands-primary.svg);
-								}
+								background-color: var(--cl-secondary);
 							}
 						}
 					}
@@ -261,7 +240,6 @@
 			}
 
 			&.menu-button {
-
 				ul {
 					padding: 0 96px 0 0;
 
@@ -272,7 +250,7 @@
 			}
 		}
 
-		#{$self}__disclaimer {
+		.footer__disclaimer {
 			padding: 0 0 48px 0;
 
 			@include desktop {
@@ -280,7 +258,7 @@
 				justify-content: center;
 				padding: 48px 0;
 			}
-			
+
 			ul {
 				position: relative;
 
@@ -294,7 +272,6 @@
 				}
 
 				@include desktop {
-
 					&:not(:last-of-type) {
 						margin: 0 24px 0 0;
 						padding: 0 32px 0 0;
@@ -307,7 +284,7 @@
 							transform: translateY(-50%);
 							width: 8px;
 							height: 8px;
-							border: 2px solid var(--cl-white);
+							border: 2px solid currentColor;
 							@include square;
 						}
 					}
@@ -315,10 +292,8 @@
 
 				li {
 					text-align: center;
-					color: var(--cl-white);
-					
-					@include tablet {
 
+					@include tablet {
 						&:not(:last-of-type) {
 							margin: 0 24px 0 0;
 							padding: 0 32px 0 0;
@@ -339,16 +314,13 @@
 					}
 
 					a {
-						color: var(--cl-white);
+						color: inherit;
 					}
 				}
 
 				&.address {
-					
 					li {
-
 						@include tablet {
-
 							&:not(:last-of-type) {
 								margin: 0;
 								padding: 0;
@@ -373,5 +345,3 @@
 		}
 	}
 }
-
-
