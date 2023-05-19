@@ -6718,7 +6718,7 @@ section.faq .faq__container .faq__answer {
   display: none;
   position: relative;
   padding: 48px 0 0 16px;
-  border-left: 2px solid var(--cl-primary);
+  border-left: 2px solid currentColor;
   margin: 48px 0 48px 0;
 }
 @media only screen and (min-width: 640px) {
@@ -6737,61 +6737,28 @@ section.faq.faq--grey {
 section.faq.faq--black {
   background: var(--cl-black);
 }
-section.faq.faq--black h2,
-section.faq.faq--black h3,
-section.faq.faq--black p,
-section.faq.faq--black li,
-section.faq.faq--black em {
+section.faq.faq--black .faq__answer {
   color: var(--cl-white);
 }
 section.faq.faq--secondary {
   background: var(--cl-secondary);
 }
 section.faq.faq--secondary .faq__question {
-  background: var(--cl-primary);
-}
-section.faq.faq--secondary .faq__question p:hover {
-  background: var(--cl-primary-dark);
+  background-color: var(--cl-secondary-text);
+  color: var(--cl-secondary);
 }
 section.faq.faq--secondary .faq__answer {
-  border-left: 2px solid var(--cl-primary);
-}
-section.faq.faq--secondary h2,
-section.faq.faq--secondary h3,
-section.faq.faq--secondary p,
-section.faq.faq--secondary li,
-section.faq.faq--secondary em {
-  color: var(--cl-white);
-}
-section.faq.faq--secondary strong {
-  color: var(--cl-primary);
-}
-section.faq.faq--secondary p a,
-section.faq.faq--secondary li a {
-  color: var(--cl-primary);
-}
-section.faq.faq--secondary p a:hover,
-section.faq.faq--secondary li a:hover {
-  color: var(--cl-primary-dark);
-}
-section.faq.faq--secondary ul li:before {
-  color: var(--cl-primary);
-}
-section.faq.faq--secondary blockquote {
-  border-left: 2px solid var(--cl-primary);
-}
-section.faq.faq--secondary blockquote:before {
-  background-image: url(../img/icons/quote-right-solid-primary.svg);
+  color: var(--cl-secondary-text);
 }
 section.faq.faq--primary {
   background: var(--cl-primary);
 }
-section.faq.faq--primary h2,
-section.faq.faq--primary h3,
-section.faq.faq--primary p,
-section.faq.faq--primary li,
-section.faq.faq--primary em {
-  color: var(--cl-white);
+section.faq.faq--primary .faq__question {
+  background-color: var(--cl-primary-text);
+  color: var(--cl-primary);
+}
+section.faq.faq--primary .faq__answer {
+  color: var(--cl-primary-text);
 }
 
 .wp-block section.files {
