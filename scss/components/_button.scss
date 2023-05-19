@@ -1,6 +1,7 @@
 header,
 footer,
-section {
+section,
+.content__button-container {
 	.button:not(.acf-button) {
 		--bg: var(--cl-secondary);
 		--fg: var(--cl-secondary-text);
