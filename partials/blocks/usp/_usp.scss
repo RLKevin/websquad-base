@@ -205,12 +205,14 @@ section.usp {
 		--bg2: var(--cl-grey);
 		--fg2: var(--cl-black);
 		--accent: var(--cl-white);
+		--accent-text: var(--cl-black);
 	}
 
 	&.usp--primary {
 		--bg: var(--cl-primary);
 		--fg: var(--cl-primary-text);
 		--bg2: var(--cl-white);
+		--fg2: var(--cl-black);
 		--accent: var(--cl-white);
 		--accent-text: var(--cl-black);
 	}

@@ -7,10 +7,10 @@ add_action( 'acf/include_fields', function() {
 
 	acf_add_local_field_group( array(
 		'key' => 'group_5f182e3de2ce9',
-		'title' => 'Block: Cards',
+		'title' => 'Block: Card',
 		'fields' => array(
 			array(
-				'key' => 'field_64639549d1968',
+				'key' => 'field_6421af3bb5bc6',
 				'label' => 'Card type',
 				'name' => 'card_type',
 				'aria-label' => '',
@@ -24,17 +24,249 @@ add_action( 'acf/include_fields', function() {
 					'id' => '',
 				),
 				'choices' => array(
-					'post' => 'Post types',
+					'post' => 'Posts',
 					'child' => 'Child pages',
-					'custom' => 'Custom cards',
+					'highlight' => 'Custom cards',
 				),
-				'default_value' => 'post',
+				'default_value' => false,
 				'return_format' => 'value',
 				'multiple' => 0,
 				'allow_null' => 0,
 				'ui' => 0,
 				'ajax' => 0,
 				'placeholder' => '',
+			),
+			array(
+				'key' => 'field_5f1acfbeb97d5',
+				'label' => 'Post type',
+				'name' => 'card_post_type',
+				'aria-label' => '',
+				'type' => 'select',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6421af3bb5bc6',
+							'operator' => '==',
+							'value' => 'post',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'choices' => array(
+					'blog' => 'Blog',
+					'facebook' => 'Facebook',
+				),
+				'default_value' => 'news',
+				'return_format' => 'value',
+				'multiple' => 0,
+				'allow_null' => 0,
+				'ui' => 0,
+				'ajax' => 0,
+				'placeholder' => '',
+			),
+			array(
+				'key' => 'field_5f183153e7106',
+				'label' => 'Repeater',
+				'name' => 'card_custom_repeater',
+				'aria-label' => '',
+				'type' => 'repeater',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6421af3bb5bc6',
+							'operator' => '==',
+							'value' => 'highlight',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'layout' => 'block',
+				'min' => 0,
+				'max' => 0,
+				'collapsed' => '',
+				'button_label' => 'Add Row',
+				'rows_per_page' => 20,
+				'sub_fields' => array(
+					array(
+						'key' => 'field_5f18315ee7107',
+						'label' => 'Image',
+						'name' => 'image',
+						'aria-label' => '',
+						'type' => 'image',
+						'instructions' => 'Minimaal 960 x 960 px',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'return_format' => 'array',
+						'preview_size' => 'medium',
+						'library' => 'all',
+						'min_width' => '',
+						'min_height' => '',
+						'min_size' => '',
+						'max_width' => '',
+						'max_height' => '',
+						'max_size' => '',
+						'mime_types' => '',
+						'parent_repeater' => 'field_5f183153e7106',
+					),
+					array(
+						'key' => 'field_5f183165e7108',
+						'label' => 'Text',
+						'name' => 'text',
+						'aria-label' => '',
+						'type' => 'wysiwyg',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'tabs' => 'all',
+						'toolbar' => 'full',
+						'media_upload' => 0,
+						'delay' => 0,
+						'parent_repeater' => 'field_5f183153e7106',
+					),
+					array(
+						'key' => 'field_5f18316ee7109',
+						'label' => 'Button',
+						'name' => 'button',
+						'aria-label' => '',
+						'type' => 'link',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'return_format' => 'array',
+						'parent_repeater' => 'field_5f183153e7106',
+					),
+				),
+			),
+			array(
+				'key' => 'field_5f22b4dc15c95',
+				'label' => 'Parent',
+				'name' => 'card_child_parent',
+				'aria-label' => '',
+				'type' => 'post_object',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6421af3bb5bc6',
+							'operator' => '==',
+							'value' => 'child',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'post_type' => array(
+					0 => 'page',
+				),
+				'taxonomy' => '',
+				'return_format' => 'id',
+				'multiple' => 0,
+				'allow_null' => 0,
+				'ui' => 1,
+			),
+			array(
+				'key' => 'field_63da6713562d0',
+				'label' => 'Amount',
+				'name' => 'card_amount',
+				'aria-label' => '',
+				'type' => 'number',
+				'instructions' => '"-1" for unlimited',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6421af3bb5bc6',
+							'operator' => '==',
+							'value' => 'post',
+						),
+					),
+					array(
+						array(
+							'field' => 'field_6421af3bb5bc6',
+							'operator' => '==',
+							'value' => 'child',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => 12,
+				'min' => '',
+				'max' => '',
+				'placeholder' => '',
+				'step' => '',
+				'prepend' => '',
+				'append' => '',
+			),
+			array(
+				'key' => 'field_5f1ad0fbdeb65',
+				'label' => 'Load more',
+				'name' => 'card_more',
+				'aria-label' => '',
+				'type' => 'true_false',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6421af3bb5bc6',
+							'operator' => '==',
+							'value' => 'post',
+						),
+					),
+					array(
+						array(
+							'field' => 'field_6421af3bb5bc6',
+							'operator' => '==',
+							'value' => 'child',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'message' => '',
+				'default_value' => 1,
+				'ui_on_text' => 'Show',
+				'ui_off_text' => 'Hide',
+				'ui' => 1,
 			),
 			array(
 				'key' => 'field_5f182e91d4ebb',
@@ -108,12 +340,13 @@ add_action( 'acf/include_fields', function() {
 				),
 				'choices' => array(
 					'basic' => 'Basic',
+					'mixed' => 'Mixed',
 				),
 				'default_value' => 'basic',
-				'return_format' => 'value',
-				'multiple' => 0,
 				'allow_null' => 0,
+				'multiple' => 0,
 				'ui' => 0,
+				'return_format' => 'value',
 				'ajax' => 0,
 				'placeholder' => '',
 			),
@@ -4377,8 +4610,6 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 
-
-
 	acf_add_local_field_group( array(
 		'key' => 'group_6449126faeee2',
 		'title' => 'Reference',
@@ -4580,6 +4811,8 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 } );
+
+
 
 
 
