@@ -6403,6 +6403,14 @@ section.content .button-container {
 section.content .button-container .button {
   margin: 0;
 }
+section.content .code-container {
+  width: 100%;
+  height: 100%;
+}
+section.content .code-container iframe {
+  width: 100%;
+  min-height: 320px;
+}
 section.content .video-container {
   position: relative;
   aspect-ratio: 16/9;
