@@ -4042,7 +4042,8 @@ input[type=number]::-webkit-inner-spin-button {
 
 header .button:not(.acf-button),
 footer .button:not(.acf-button),
-section .button:not(.acf-button) {
+section .button:not(.acf-button),
+.content__button-container .button:not(.acf-button) {
   --bg: var(--cl-secondary);
   --fg: var(--cl-secondary-text);
   color: var(--fg);
@@ -4080,37 +4081,44 @@ header .button:not(.acf-button):active, header .button:not(.acf-button):focus,
 footer .button:not(.acf-button):active,
 footer .button:not(.acf-button):focus,
 section .button:not(.acf-button):active,
-section .button:not(.acf-button):focus {
+section .button:not(.acf-button):focus,
+.content__button-container .button:not(.acf-button):active,
+.content__button-container .button:not(.acf-button):focus {
   color: var(--cl-white);
 }
 header .button:not(.acf-button):hover,
 footer .button:not(.acf-button):hover,
-section .button:not(.acf-button):hover {
+section .button:not(.acf-button):hover,
+.content__button-container .button:not(.acf-button):hover {
   cursor: pointer;
   background-color: var(--fg);
   color: var(--bg);
 }
 header .button--disabled,
 footer .button--disabled,
-section .button--disabled {
+section .button--disabled,
+.content__button-container .button--disabled {
   opacity: 0.5;
 }
 header .button--disabled:hover,
 footer .button--disabled:hover,
-section .button--disabled:hover {
+section .button--disabled:hover,
+.content__button-container .button--disabled:hover {
   cursor: not-allowed !important;
   background-color: var(--bg) !important;
   color: var(--fg) !important;
 }
 header .button.button--filled-primary,
 footer .button.button--filled-primary,
-section .button.button--filled-primary {
+section .button.button--filled-primary,
+.content__button-container .button.button--filled-primary {
   --bg: var(--cl-primary);
   --fg: var(--cl-primary-text);
 }
 header .button.button--filled-white,
 footer .button.button--filled-white,
-section .button.button--filled-white {
+section .button.button--filled-white,
+.content__button-container .button.button--filled-white {
   --bg: var(--cl-secondary);
   --fg: var(--cl-secondary-text);
 }
@@ -6688,6 +6696,7 @@ section.cards.card--three.card--mixed .card__text h2 {
 }
 .content--primary .button {
   border: 2px solid var(--cl-white);
+  background-color: var(--cl-primary-text);
 }
 .content--primary .content__file a {
   border: 2px solid var(--cl-white);
@@ -6727,6 +6736,7 @@ section.cards.card--three.card--mixed .card__text h2 {
 }
 .content--secondary .button {
   border: 2px solid var(--cl-white);
+  background-color: var(--cl-secondary-text);
 }
 .content--secondary .content__file a {
   border: 2px solid var(--cl-white);
