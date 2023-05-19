@@ -262,6 +262,23 @@ em {
 
 // content - wysiwyg
 
+//padding
+.wysiwyg {
+	// TODO: test if this new way of adding padding works good, if not, remove
+	> * {
+		padding-bottom: 0 !important;
+		margin-bottom: 0 !important;
+	}
+	> * + * {
+		margin-top: 1em;
+
+		&.button, &.button-container {
+			margin-top: 2em;
+		}
+	}
+}
+
+// colors
 .wysiwyg {
 	--bg: var(--cl-white);
 	--fg: var(--cl-black);

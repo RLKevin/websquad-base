@@ -124,22 +124,6 @@ jQuery(function ($) {
 	function set_slider() {
 		console.log('set slider');
 
-		$('.content__slider').owlCarousel({
-			smartSpeed: 500,
-			items: 1,
-			loop: true,
-			autoplay: true,
-			autoplayTimeout: 5000,
-			autoplayHoverPause: true,
-			nav: true,
-			dots: true,
-			autoHeight: true,
-			mouseDrag: false,
-			touchDrag: false,
-			pullDrag: false,
-			navText: ['', ''],
-		});
-
 		$('.usp__slider--points').owlCarousel({
 			responsive: {
 				0: {
@@ -277,7 +261,7 @@ jQuery(function ($) {
 
 		// video container
 
-		$('.content__video-container').click(function () {
+		$('.video-container').click(function () {
 			$(this).addClass('active');
 			$(this).children('iframe')[0].src += '?rel=0&autoplay=1';
 			$(this).children('iframe').addClass('active');
