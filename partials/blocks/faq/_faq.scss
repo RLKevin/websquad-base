@@ -16,25 +16,21 @@ section.faq {
 		.faq__question {
 			position: relative;
 			background: var(--cl-primary);
-			color: var(--cl-white);
+			color: var(--cl-primary-text);
 			overflow: hidden;
 			@include rectangle;
-	
+
 			p {
 				display: block;
 				position: relative;
 				font-weight: var(--fw-medium);
 				transition: 0.25s all ease-in-out;
 				padding: 16px 88px 16px 16px;
-				// TODO: maybe not use a gradient here?
-				background: linear-gradient( to right, var(--cl-primary) 0%, var(--cl-secondary) 100% );
-				background-size: 100%;
-				background-position: center left;
 
 				@include tablet {
 					padding: 16px 88px 16px 24px;
 				}
-	
+
 				&:after {
 					content: '';
 					position: absolute;
@@ -42,44 +38,41 @@ section.faq {
 					right: 0;
 					width: 64px;
 					height: 64px;
-					background-image: url(../img/icons/arrow-down-regular-white.svg);
-					background-size: 20px 20px;
-					background-repeat: no-repeat;
-					background-position: center;
+					mask-image: url(../img/icons/arrow-down-regular-white.svg);
+					mask-size: 20px 20px;
+					mask-repeat: no-repeat;
+					mask-position: center;
+					background-color: currentColor;
 					pointer-events: none;
 					transition: 0.25s all ease-in-out;
 				}
-	
+
 				&:hover {
 					cursor: pointer;
-					background-size: 150%;
-					background-position: center left;
 				}
 			}
-	
+
 			&.active {
-	
 				p {
-	
 					&:after {
 						transform: rotate(180deg);
 						animation: none;
 					}
-				}			
+				}
 			}
 		}
-	
+
 		.faq__answer {
 			display: none;
 			position: relative;
 			padding: 48px 0 0 16px;
 			border-left: 2px solid var(--cl-primary);
 			margin: 48px 0 48px 0;
-	
+
 			@include tablet {
 				padding: 48px 0 0 48px;
 			}
-	
+
 			@include desktop {
 				padding: 48px 0 0 96px;
 			}
@@ -89,7 +82,6 @@ section.faq {
 	// background
 
 	&.faq--white {
-
 	}
 
 	&.faq--grey {
@@ -99,7 +91,11 @@ section.faq {
 	&.faq--black {
 		background: var(--cl-black);
 
-		h2, h3, p, li, em {
+		h2,
+		h3,
+		p,
+		li,
+		em {
 			color: var(--cl-white);
 		}
 	}
@@ -111,7 +107,6 @@ section.faq {
 			background: var(--cl-primary);
 
 			p {
-
 				&:hover {
 					background: var(--cl-primary-dark);
 				}
@@ -122,7 +117,11 @@ section.faq {
 			border-left: 2px solid var(--cl-primary);
 		}
 
-		h2, h3, p, li, em {
+		h2,
+		h3,
+		p,
+		li,
+		em {
 			color: var(--cl-white);
 		}
 
@@ -130,7 +129,8 @@ section.faq {
 			color: var(--cl-primary);
 		}
 
-		p a, li a {
+		p a,
+		li a {
 			color: var(--cl-primary);
 
 			&:hover {
@@ -139,9 +139,7 @@ section.faq {
 		}
 
 		ul {
-			
 			li {
-
 				&:before {
 					color: var(--cl-primary);
 				}
@@ -160,7 +158,11 @@ section.faq {
 	&.faq--primary {
 		background: var(--cl-primary);
 
-		h2, h3, p, li, em {
+		h2,
+		h3,
+		p,
+		li,
+		em {
 			color: var(--cl-white);
 		}
 	}
