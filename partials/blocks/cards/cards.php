@@ -167,8 +167,9 @@ $style = get_field('style');
 				wp_reset_postdata();
 				break;
 			case 'child':
-				$card_parent = get_field('card_parent');
-				$amount = get_field('card_amount');
+				$card_parent = get_field('card_child_parent');
+				console_log($card_parent);
+				$amount = get_field('card_child_parent');
 
 				// args for child pages of parent page
 				$args = array(
@@ -183,6 +184,7 @@ $style = get_field('style');
 				);
 				
 				$post_query = new WP_Query($args);
+				console_log($post_query);
 				if ($post_query->have_posts()) : 
 					?> <div class="card__container"> <?php
 						while ( $post_query->have_posts() ) :
