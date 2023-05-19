@@ -7,7 +7,7 @@ $id = get_field('id');
 
 ?>
 
-<section id="<?php echo $id; ?>" class="faq faq--<?php echo $background; ?>">
+<section id="<?= $id; ?>" class="faq faq--<?= $background; ?>">
 
 	<div class="wrapper">
 
@@ -27,11 +27,11 @@ $id = get_field('id');
 				<div class="faq__container">
 
 					<div class="faq__question">
-						<p><?php echo $question; ?></p>
+						<p><?= $question; ?></p>
 					</div>
 
-					<div class="faq__answer wysiwyg">
-						<?php echo $answer; ?>
+					<div class="faq__answer wysiwyg wysiwyg--<?= $background; ?>">
+						<?= $answer; ?>
 					</div>
 
 				</div>

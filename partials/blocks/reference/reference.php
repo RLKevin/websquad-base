@@ -43,7 +43,7 @@ $references = get_field('references', 'option');
 						<?php endif; ?>
 
 						<?php if ($reference): ?>
-							<div class="reference__text wysiwyg">
+							<div class="reference__text wysiwyg wysiwyg--<?= $background; ?>">
 								<?= $reference; ?>
 								<h3><?= $name; ?></h3>
 							</div>

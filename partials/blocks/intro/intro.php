@@ -30,7 +30,7 @@ $id = get_field('id');
 
 	<?php if ($text):?>
 		
-		<div class="intro__text wysiwyg">
+		<div class="intro__text wysiwyg wysiwyg--<?= $background; ?>">
 
 			<div class="wrapper">
 

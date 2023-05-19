@@ -110,7 +110,7 @@ $id = get_field('id');
 
 				?>
 								
-				<div class="content__text wysiwyg">
+				<div class="content__text wysiwyg wysiwyg--<?= $background; ?>">
 
 					<div class="wrapper">
 
@@ -128,7 +128,7 @@ $id = get_field('id');
 
 				?>
 								
-				<div class="content__text-code wysiwyg">
+				<div class="content__text-code wysiwyg wysiwyg--<?= $background; ?>">
 
 					<div class="wrapper">
 
@@ -191,7 +191,7 @@ $id = get_field('id');
 
 				?>
 
-				<div class="content__text-image wysiwyg">
+				<div class="content__text-image wysiwyg wysiwyg--<?= $background; ?>">
 
 					<div class="wrapper">
 
@@ -256,7 +256,7 @@ $id = get_field('id');
 
 				?>
 
-				<div class="content__text-video wysiwyg">
+				<div class="content__text-video wysiwyg wysiwyg--<?= $background; ?>">
 
 					<div class="wrapper">
 
