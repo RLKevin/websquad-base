@@ -356,6 +356,7 @@
 			overflow: hidden;
 			@include square;
 			@include shadow;
+			@include transition;
 
 			@include tablet {
 				top: 32px;
@@ -374,7 +375,7 @@
 				left: calc(50% - 10px);
 				width: 20px;
 				height: 20px;
-				color: var(--cl-white);
+				color: var(--cl-primary-text);
 				transition: 0.25s all ease-in-out;
 
 				&:last-of-type {

@@ -3,28 +3,27 @@ section.hero {
 	position: relative;
 	// padding-bottom: 48px;
 	// background-color: var(--cl-white);
-	
-	.hero__half_half{
+
+	.hero__half_half {
 		// display: flex;
 		overflow: hidden;
-		
-		.wrapper{
+
+		.wrapper {
 			display: grid;
 			gap: 48px;
 			min-height: 1080px;
 			max-width: 1920px;
 			margin-inline: auto;
 			padding: 0;
-			
-			@include desktop{
+
+			@include desktop {
 				min-height: initial;
 				max-height: calc(100vh - 128px);
 				grid-template-columns: 1fr 1fr;
 			}
-
 		}
-		
-		.hero__text{
+
+		.hero__text {
 			@include padding;
 			width: 100%;
 			padding-top: 96px;
@@ -33,21 +32,21 @@ section.hero {
 			flex-direction: column;
 			justify-content: center;
 
-			h2{
+			h2 {
 				color: var(--cl-black);
 				font-weight: var(--fw-bold);
 			}
 
-			h3{
+			h3 {
 				color: var(--cl-secondary);
 			}
 
-			.hero__button-container{
+			.hero__button-container {
 				margin: 0;
 			}
 		}
 
-		.slider{
+		.slider {
 			opacity: 1;
 			width: 100%;
 			height: 100%;
@@ -57,17 +56,17 @@ section.hero {
 			background-repeat: no-repeat;
 			background-size: cover;
 
-			&:has(.owl-stage-outer){
-				background-image: none!important;
+			&:has(.owl-stage-outer) {
+				background-image: none !important;
 			}
-			
-			.slide{
+
+			.slide {
 				height: 100%;
 				width: 100%;
 				position: relative;
 				min-height: 800px;
 
-				img{
+				img {
 					position: absolute;
 					top: 50%;
 					left: 50%;
@@ -89,12 +88,12 @@ section.hero {
 			height: calc(100vh - 128px);
 			min-height: 640px;
 			max-height: 960px;
-	
+
 			&--top {
 				height: calc(100vh - 200px);
 			}
 		}
-	
+
 		.hero__image {
 			position: absolute;
 			top: 0;
@@ -103,7 +102,7 @@ section.hero {
 			height: 100%;
 			background-size: cover;
 			background-position: center center;
-	
+
 			&:after {
 				content: '';
 				position: absolute;
@@ -111,16 +110,21 @@ section.hero {
 				right: 0;
 				bottom: 0;
 				left: 0;
-				background: linear-gradient( to bottom, rgba(#000, 0) 0%, rgba(#000, 0.5) 50%, rgba(#000, 0.25) 100% );
+				background: linear-gradient(
+					to bottom,
+					rgba(#000, 0) 0%,
+					rgba(#000, 0.5) 50%,
+					rgba(#000, 0.25) 100%
+				);
 			}
 
-			img{
+			img {
 				height: 100%;
 				width: 100%;
 				object-fit: cover;
 			}
 		}
-	
+
 		.hero__text {
 			position: relative;
 			width: 100%;
@@ -133,7 +137,7 @@ section.hero {
 			text-align: center;
 			z-index: 2;
 			max-width: calc(100% - 156px);
-   			margin-inline: auto;
+			margin-inline: auto;
 		}
 
 		.owl-nav {
@@ -154,19 +158,19 @@ section.hero {
 			@include tablet {
 				bottom: 64px;
 			}
-		}	
+		}
 	}
 
-	.hero__text{
+	.hero__text {
 		h2 {
 			color: var(--cl-white);
 		}
-	
+
 		h3 {
 			color: var(--cl-white);
 			margin-top: -40px;
 		}
-	
+
 		.hero__button-container {
 			display: flex;
 			flex-wrap: wrap;
@@ -212,7 +216,7 @@ section.hero {
 				left: calc(50% - 10px);
 				width: 20px;
 				height: 20px;
-				color: var(--cl-white);
+				color: var(--cl-primary-text);
 				transition: 0.25s all ease-in-out;
 			}
 		}
@@ -220,68 +224,68 @@ section.hero {
 		&:hover {
 			cursor: pointer;
 			background: var(--cl-primary-dark);
-			
+
 			svg {
 				transform: scale(1.1);
 			}
 		}
 	}
 
-	&.hero--grey{
-		background-color: var(--cl-grey);	
+	&.hero--grey {
+		background-color: var(--cl-grey);
 	}
 
-	&.hero--black{
-		background-color: var(--cl-black);	
+	&.hero--black {
+		background-color: var(--cl-black);
 
-		*{
-			h1{
+		* {
+			h1 {
 				color: var(--cl-white);
 			}
 
-			p{
+			p {
 				color: var(--cl-white);
 			}
 		}
 	}
 
-	&.hero--primary{
-		background-color: var(--cl-primary);	
+	&.hero--primary {
+		background-color: var(--cl-primary);
 
-		*{
-			h1{
+		* {
+			h1 {
 				color: var(--cl-white);
 			}
 
-			h3{
-				color: var(--cl-grey)!important;
+			h3 {
+				color: var(--cl-grey) !important;
 			}
 
-			p{
+			p {
 				color: var(--cl-white);
 			}
 
-			.hero__button-container{
-				.button{
+			.hero__button-container {
+				.button {
 					background-color: var(--cl-secondary);
 				}
 			}
 		}
 	}
 
-	&.hero--secondary{
-		background-color: var(--cl-secondary);	
+	&.hero--secondary {
+		background-color: var(--cl-secondary);
 
-		*{
-			h1{
+		* {
+			h1 {
 				color: var(--cl-white);
 			}
 
-			h3{
-				color: var(--cl-grey)!important;
+			h3 {
+				color: var(--cl-grey) !important;
 			}
 
-			p{
+			p {
 				color: var(--cl-white);
 			}
 		}

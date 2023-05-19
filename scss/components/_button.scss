@@ -3,7 +3,7 @@ footer,
 section {
 	.button:not(.acf-button) {
 		--bg: var(--cl-secondary);
-		--fg: var(--cl-white);
+		--fg: var(--cl-secondary-text);
 
 		color: var(--fg);
 		background-color: var(--bg);
