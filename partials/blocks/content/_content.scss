@@ -440,7 +440,7 @@
 		.button {
 			border: 2px solid var(--cl-white);
 			background-color: var(--cl-primary-text)!important;
-			color: var(--cl-primary);
+			color: var(--cl-primary)!important;
 		}
 
 		#{$self}__file {
@@ -498,7 +498,7 @@
 		.button {
 			border: 2px solid var(--cl-white);
 			background-color: var(--cl-secondary-text)!important;
-			color: var(--cl-secondary);
+			color: var(--cl-secondary)!important;
 		}
 
 		#{$self}__file {
