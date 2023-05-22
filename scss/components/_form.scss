@@ -108,7 +108,7 @@
 
 		label {
 			position: relative;
-			padding: 0 0 0 48px;
+			padding: 0 0 0 40px;
 			font-size: var(--fs-small);
 			font-weight: var(--fw-regular);
 
@@ -119,8 +119,8 @@
 				top: 50%;
 				transform: translateY(-50%);
 				left: 0;
-				width: 32px;
-				height: 32px;
+				width: 24px;
+				height: 24px;
 				background-color: var(--bg);
 				border: 2px solid var(--fg);
 				border-radius: 2px;
