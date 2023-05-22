@@ -8,7 +8,7 @@ $id = get_field('id');
 
 ?>
 
-<section id="<?php echo $id; ?>" class="open open--<?php echo $order_by; ?> open--<?php echo $background; ?>">
+<section id="<?= $id; ?>" class="open open--<?= $background; ?>">
 
 	<div class="wrapper">
 
@@ -18,7 +18,7 @@ $id = get_field('id');
 
 			?>
 
-			<ul>
+			<ul class="<?= $order_by; ?>" data-amount="<?= sizeof(get_field('repeater')); ?>">
 
 				<?php
 
@@ -37,12 +37,12 @@ $id = get_field('id');
 						<p>
 						
 							<span>
-								<?php echo $day ?>
+								<?= $day ?>
 							</span>
 						
-							<?php echo $from ? $from : "Gesloten" ?>
+							<?= $from ? $from : "Gesloten" ?>
 							
-							<?php echo $to ? " - " . $to . " uur" : "" ?>
+							<?= $to ? " - " . $to . " uur" : "" ?>
 
 						</p>
 					

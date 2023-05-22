@@ -8,19 +8,54 @@ section.open {
 	}
 
 	ul {
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: 1fr;
+
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&[data-amount='1'],
+		&[data-amount='2'] {
+			grid-template-rows: repeat(1, 1fr);
+		}
+
+		&[data-amount='3'],
+		&[data-amount='4'] {
+			grid-template-rows: repeat(2, 1fr);
+		}
+
+		&[data-amount='5'],
+		&[data-amount='6'] {
+			grid-template-rows: repeat(3, 1fr);
+		}
+
+		&[data-amount='7'],
+		&[data-amount='8'] {
+			grid-template-rows: repeat(4, 1fr);
+		}
+
+		&[data-amount='9'],
+		&[data-amount='10'] {
+			grid-template-rows: repeat(5, 1fr);
+		}
+
+		&[data-amount='11'],
+		&[data-amount='12'] {
+			grid-template-rows: repeat(6, 1fr);
+		}
+
 		gap: 2px 96px;
+
+		&.top_bottom {
+			grid-auto-flow: column;
+		}
 
 		li {
 			position: relative;
 			width: 100%;
 			background: var(--cl-grey);
 			@include rectangle;
-
-			@include desktop {
-				width: calc(50% - 48px);
-			}
 
 			p {
 				padding: 16px 24px 16px 80px;
