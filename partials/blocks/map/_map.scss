@@ -17,7 +17,11 @@ section.map {
 		background-position: center;
 		background-repeat: no-repeat;
 
+		// BUG: marker is not an SVG element, but an img element
 		svg {
+			path {
+				fill: var(--cl-primary);
+			}
 			color: var(--cl-primary);
 		}
 	}

@@ -1,12 +1,13 @@
 // style with https://mapstyle.withgoogle.com/
 
 (function ($) {
+	var sw = Math.max(
+		document.documentElement.clientWidth,
+		window.innerWidth || 0
+	);
+
 	function render_map($el) {
 		var $markers = $el.find('.marker');
-		var sw = Math.max(
-			document.documentElement.clientWidth,
-			window.innerWidth || 0
-		);
 		var isDraggable = sw < 800 ? false : true;
 		var args = {
 			zoom: 12,
@@ -222,15 +223,19 @@
 				},
 			],
 		};
-		var map = new google.maps.Map($el[0], args);
-		var mobilePan = sw < 800 ? -100 : -600;
+		let map = new google.maps.Map($el[0], args);
 		map.markers = [];
 		$markers.each(function () {
 			add_marker($(this), map);
 		});
 		center_map(map);
-		// TODO: set marker to te right on desktop
-		map.panBy(mobilePan, 40);
+
+		// wait 1 second to pan to center
+		setTimeout(function () {
+			// pan view to right on desktop
+			var mobilePan = sw < 800 ? -100 : sw / -4;
+			map.panBy(mobilePan, 40);
+		}, 1000);
 	}
 
 	function add_marker($marker, map) {
@@ -238,12 +243,25 @@
 			$marker.attr('data-lat'),
 			$marker.attr('data-lng')
 		);
+		var primaryColor = getComputedStyle(
+			document.documentElement
+		).getPropertyValue('--cl-primary');
+
+		let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="${primaryColor}" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>`;
+
+		var markerSVG = {
+			url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg),
+			size: new google.maps.Size(64, 64),
+			scaledSize: new google.maps.Size(64, 64),
+			optimized: false,
+		};
+
 		var marker = new google.maps.Marker({
 			position: latlng,
 			map: map,
-			// TODO: style marker with theme colors
-			icon: template + '/img/icons/marker.svg',
+			icon: markerSVG,
 		});
+
 		map.markers.push(marker);
 		if ($marker.html()) {
 			var infowindow = new google.maps.InfoWindow({

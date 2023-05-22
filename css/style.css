@@ -7269,6 +7269,9 @@ section.map .map__map {
 section.map .map__map svg {
   color: var(--cl-primary);
 }
+section.map .map__map svg path {
+  fill: var(--cl-primary);
+}
 section.map .map__content {
   display: -webkit-box;
   display: -ms-flexbox;
