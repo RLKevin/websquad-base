@@ -231,11 +231,11 @@ blockquote {
 		right: 0;
 		width: 128px;
 		height: 128px;
-		// TODO: mask image
-		background-image: url(../img/icons/quote-right-solid-secondary.svg);
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
-		background-position: center;
+		mask-image: url(../img/icons/quote-right-solid-secondary.svg);
+		mask-size: 100% 100%;
+		mask-repeat: no-repeat;
+		mask-position: center;
+		background-color: currentColor;
 		pointer-events: none;
 		opacity: 0.16;
 	}
@@ -343,11 +343,6 @@ em {
 		border-left: 2px solid var(--primary);
 
 		&:before {
-			background-image: none;
-			mask-image: url(../img/icons/quote-right-solid-secondary.svg);
-			mask-size: 100% 100%;
-			mask-repeat: no-repeat;
-			mask-position: center;
 			background-color: var(--primary);
 		}
 	}

@@ -4738,10 +4738,15 @@ blockquote:before {
   right: 0;
   width: 128px;
   height: 128px;
-  background-image: url(../img/icons/quote-right-solid-secondary.svg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
+  -webkit-mask-image: url(../img/icons/quote-right-solid-secondary.svg);
+          mask-image: url(../img/icons/quote-right-solid-secondary.svg);
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  background-color: currentColor;
   pointer-events: none;
   opacity: 0.16;
 }
@@ -4815,15 +4820,6 @@ em {
   border-left: 2px solid var(--primary);
 }
 .wysiwyg blockquote:before {
-  background-image: none;
-  -webkit-mask-image: url(../img/icons/quote-right-solid-secondary.svg);
-          mask-image: url(../img/icons/quote-right-solid-secondary.svg);
-  -webkit-mask-size: 100% 100%;
-          mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-          mask-position: center;
   background-color: var(--primary);
 }
 .wysiwyg strong {
@@ -7696,81 +7692,6 @@ section.open.open--secondary ul li span {
   width: 240px;
   aspect-ratio: 1/1;
   border-radius: var(--br-square-top-left) var(--br-square-top-right) var(--br-square-bottom-right) var(--br-square-bottom-left);
-}
-.reference__person .reference__info {
-  text-align: center;
-}
-@media only screen and (min-width: 1280px) {
-  .reference__person .reference__info {
-    text-align: left;
-  }
-}
-.reference__person .reference__info p {
-  margin-top: -48px;
-  font-weight: var(--fw-medium);
-  padding: 0;
-}
-.reference__person .reference__info ul {
-  margin-top: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.reference__person .reference__info ul li {
-  text-align: left;
-}
-.reference__person .reference__info ul li:not(:last-of-type) a {
-  margin: 0 0 8px 0;
-}
-.reference__person .reference__info ul li a {
-  display: block;
-  position: relative;
-  height: 40px;
-  width: auto;
-  overflow: hidden;
-  padding: 0 0 0 64px;
-  -webkit-transition: 0.25s all ease-in-out;
-  transition: 0.25s all ease-in-out;
-  line-height: 40px;
-  color: var(--cl-black);
-  white-space: nowrap;
-  color: var(--cl-black);
-  text-overflow: ellipsis;
-}
-.reference__person .reference__info ul li a:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  border: 2px solid var(--cl-secondary);
-  background-size: 16px 16px;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
-  transition: 0.25s background-image ease-in-out, 0.25s border ease-in-out;
-  border-radius: var(--br-square-top-left) var(--br-square-top-right) var(--br-square-bottom-right) var(--br-square-bottom-left);
-}
-.reference__person .reference__info ul li a.phone:before {
-  background-image: url(../img/icons/mobile-android-regular-primary.svg);
-}
-.reference__person .reference__info ul li a.mail:before {
-  background-image: url(../img/icons/envelope-open-regular-primary.svg);
-}
-.reference__person .reference__info ul li a:hover:before {
-  border: 2px solid var(--cl-primary);
-  cursor: pointer;
-}
-.reference__person .reference__info ul li a:hover.phone:before {
-  background-image: url(../img/icons/mobile-android-regular-secondary.svg);
-}
-.reference__person .reference__info ul li a:hover.mail:before {
-  background-image: url(../img/icons/envelope-open-regular-secondary.svg);
 }
 @media only screen and (min-width: 1280px) {
   .reference--left .reference__slider .tns-controls {
