@@ -4051,22 +4051,12 @@ section .button:not(.acf-button),
   transition: all 0.24s ease-in-out;
   border-radius: var(--br-rectangle-top-left) var(--br-rectangle-top-right) var(--br-rectangle-bottom-right) var(--br-rectangle-bottom-left);
 }
-header .button:not(.acf-button):active, header .button:not(.acf-button):focus,
-footer .button:not(.acf-button):active,
-footer .button:not(.acf-button):focus,
-section .button:not(.acf-button):active,
-section .button:not(.acf-button):focus,
-.content__button-container .button:not(.acf-button):active,
-.content__button-container .button:not(.acf-button):focus {
-  color: var(--cl-white);
-}
 header .button:not(.acf-button):hover,
 footer .button:not(.acf-button):hover,
 section .button:not(.acf-button):hover,
 .content__button-container .button:not(.acf-button):hover {
   cursor: pointer;
-  background-color: var(--fg);
-  color: var(--bg);
+  opacity: 0.75;
 }
 header .button--disabled,
 footer .button--disabled,
@@ -4216,12 +4206,13 @@ section .button.button--filled-white,
   color: var(--cl-grey-dark);
   opacity: 1;
 }
-.gform_wrapper label {
+.gform_wrapper label,
+.gform_wrapper legend {
   display: block;
   width: 100%;
   font-size: var(--fs-tiny);
   font-weight: var(--fw-medium);
-  color: var(--cl-secondary);
+  color: var(--fg, var(--cl-secondary));
   margin-bottom: 12px;
   padding: 0;
   -webkit-appearance: none;
@@ -4234,6 +4225,108 @@ section .button.button--filled-white,
 }
 .gform_wrapper textarea.textarea.large {
   height: 384px;
+}
+.gform_wrapper .ginput_container_select {
+  position: relative;
+}
+.gform_wrapper .ginput_container_select::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  aspect-ratio: 1;
+  -webkit-mask-image: url("../img/icons/caret-down-solid.svg");
+          mask-image: url("../img/icons/caret-down-solid.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: 16px 16px;
+          mask-size: 16px 16px;
+  background-color: currentColor;
+  z-index: 2;
+  pointer-events: none;
+}
+.gform_wrapper .ginput_container_select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 48px;
+}
+.gform_wrapper .ginput_container_checkbox .gchoice,
+.gform_wrapper .ginput_container_radio .gchoice,
+.gform_wrapper .ginput_container_consent .gchoice {
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.gform_wrapper .ginput_container_checkbox label,
+.gform_wrapper .ginput_container_radio label,
+.gform_wrapper .ginput_container_consent label {
+  position: relative;
+  padding: 0 0 0 48px;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-regular);
+}
+.gform_wrapper .ginput_container_checkbox label::before, .gform_wrapper .ginput_container_checkbox label::after,
+.gform_wrapper .ginput_container_radio label::before,
+.gform_wrapper .ginput_container_radio label::after,
+.gform_wrapper .ginput_container_consent label::before,
+.gform_wrapper .ginput_container_consent label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  width: 32px;
+  height: 32px;
+  background-color: var(--bg);
+  border: 2px solid var(--fg);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: var(--br-rectangle-top-left) var(--br-rectangle-top-right) var(--br-rectangle-bottom-right) var(--br-rectangle-bottom-left);
+}
+.gform_wrapper .ginput_container_checkbox label::after,
+.gform_wrapper .ginput_container_radio label::after,
+.gform_wrapper .ginput_container_consent label::after {
+  content: "";
+  -webkit-mask-image: url("../img/icons/check-regular-primary.svg");
+          mask-image: url("../img/icons/check-regular-primary.svg");
+  -webkit-mask-size: 16px;
+          mask-size: 16px;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+.gform_wrapper .ginput_container_checkbox input,
+.gform_wrapper .ginput_container_radio input,
+.gform_wrapper .ginput_container_consent input {
+  display: none;
+}
+.gform_wrapper .ginput_container_checkbox input:checked + label::before,
+.gform_wrapper .ginput_container_radio input:checked + label::before,
+.gform_wrapper .ginput_container_consent input:checked + label::before {
+  background-color: var(--fg);
+}
+.gform_wrapper .ginput_container_radio .gchoice label::before, .gform_wrapper .ginput_container_radio .gchoice label::after {
+  border-radius: 50%;
+}
+.gform_wrapper .ginput_container_consent {
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .gform_wrapper .gform_required_legend {
   display: none;
@@ -4711,10 +4804,10 @@ em {
 .wysiwyg h3 {
   color: var(--primary);
 }
-.wysiwyg a, .wysiwyg a:visited, .wysiwyg a:active, .wysiwyg a:focus {
+.wysiwyg a:not(.button), .wysiwyg a:not(.button):visited, .wysiwyg a:not(.button):active, .wysiwyg a:not(.button):focus {
   color: var(--secondary);
 }
-.wysiwyg a:hover {
+.wysiwyg a:not(.button):hover {
   color: var(--secondary);
 }
 .wysiwyg blockquote {
@@ -6752,44 +6845,57 @@ section.files .download.file .name::before {
 section.form {
   padding-top: 96px;
   padding-bottom: 96px;
+  --bg: var(--cl-white);
+  --fg: var(--cl-black);
+  --input: var(--cl-grey);
+  --input-text: var(--cl-black);
+  --accent: var(--cl-secondary);
+  --accent-text: var(--cl-secondary-text);
+  background-color: var(--bg);
+  color: var(--fg);
 }
 section.form .wrapper {
   max-width: 1280px;
 }
-section.form.form--white .gform_wrapper .gform-body .gform_fields .gfield input,
-section.form.form--white .gform_wrapper .gform-body .gform_fields .gfield select,
-section.form.form--white .gform_wrapper .gform-body .gform_fields .gfield textarea {
-  background: var(--cl-grey);
+section.form .gform_wrapper .gform-body .gform_fields .gfield input,
+section.form .gform_wrapper .gform-body .gform_fields .gfield select,
+section.form .gform_wrapper .gform-body .gform_fields .gfield textarea {
+  background: var(--input);
+}
+section.form .gform_wrapper .gform-body .gform_fields .gfield .ginput_container_select {
+  color: var(--input-text);
+}
+section.form .gform_wrapper .gform-body .gform_fields .gfield .validation_message {
+  color: var(--cl-fg);
+}
+section.form .gform_wrapper .gform_footer button {
+  --bg: var(--accent);
+  --fg: var(--accent-text);
+}
+section.form .gform_wrapper label {
+  color: var(--fg);
+}
+section.form .gform_wrapper .gform_validation_errors h2 {
+  color: var(--fg);
 }
 section.form.form--grey {
-  background: var(--cl-grey);
+  --bg: var(--cl-grey);
+  --fg: var(--cl-black);
+  --input: var(--cl-white);
 }
 section.form.form--black {
-  background: var(--cl-black);
+  --bg: var(--cl-black);
+  --fg: var(--cl-white);
 }
 section.form.form--primary {
-  background: var(--cl-primary);
-}
-section.form.form--primary .gform_wrapper label {
-  color: var(--cl-primary-text);
-}
-section.form.form--primary .gform_wrapper .gform_validation_errors h2 {
-  color: var(--cl-primary-text);
-}
-section.form.form--primary .gform_wrapper .gform-body .gform_fields .gfield .validation_message {
-  color: var(--cl-primary-text);
+  --bg: var(--cl-primary);
+  --fg: var(--cl-primary-text);
 }
 section.form.form--secondary {
-  background: var(--cl-secondary);
-}
-section.form.form--secondary .gform_wrapper label {
-  color: var(--cl-secondary-text);
-}
-section.form.form--secondary .gform_wrapper .gform_validation_errors h2 {
-  color: var(--cl-secondary-text);
-}
-section.form.form--secondary .gform_wrapper .gform-body .gform_fields .gfield .validation_message {
-  color: var(--cl-secondary-text);
+  --bg: var(--cl-secondary);
+  --fg: var(--cl-secondary-text);
+  --accent: var(--cl-primary);
+  --accent-text: var(--cl-primary-text);
 }
 
 section.hero {

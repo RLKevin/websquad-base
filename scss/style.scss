@@ -272,7 +272,8 @@ em {
 	> * + * {
 		margin-top: 1em;
 
-		&.button, &.button-container {
+		&.button,
+		&.button-container {
 			margin-top: 2em;
 		}
 	}
@@ -321,7 +322,7 @@ em {
 
 	// content - link
 
-	a {
+	a:not(.button) {
 		&,
 		&:visited,
 		&:active,
