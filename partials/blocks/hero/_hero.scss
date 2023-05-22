@@ -10,13 +10,13 @@ section.hero {
 
 		.wrapper {
 			display: grid;
-			gap: 48px;
-			min-height: 1080px;
+			// gap: 48px;
 			max-width: 1920px;
 			margin-inline: auto;
 			padding: 0;
 
 			@include desktop {
+				min-height: 1080px;
 				min-height: initial;
 				max-height: calc(100vh - 128px);
 				grid-template-columns: 1fr 1fr;
@@ -64,7 +64,12 @@ section.hero {
 				height: 100%;
 				width: 100%;
 				position: relative;
-				min-height: 800px;
+				aspect-ratio: 4/3;
+
+				@include desktop {
+					min-height: 800px;
+					aspect-ratio: unset;
+				}
 
 				img {
 					position: absolute;

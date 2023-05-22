@@ -6901,14 +6901,13 @@ section.hero .hero__half_half {
 }
 section.hero .hero__half_half .wrapper {
   display: grid;
-  gap: 48px;
-  min-height: 1080px;
   max-width: 1920px;
   margin-inline: auto;
   padding: 0;
 }
 @media only screen and (min-width: 1280px) {
   section.hero .hero__half_half .wrapper {
+    min-height: 1080px;
     min-height: initial;
     max-height: calc(100vh - 128px);
     grid-template-columns: 1fr 1fr;
@@ -6969,7 +6968,13 @@ section.hero .hero__half_half .slider .slide {
   height: 100%;
   width: 100%;
   position: relative;
-  min-height: 800px;
+  aspect-ratio: 4/3;
+}
+@media only screen and (min-width: 1280px) {
+  section.hero .hero__half_half .slider .slide {
+    min-height: 800px;
+    aspect-ratio: unset;
+  }
 }
 section.hero .hero__half_half .slider .slide img {
   position: absolute;
