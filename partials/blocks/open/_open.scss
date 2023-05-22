@@ -10,45 +10,50 @@ section.open {
 	ul {
 		display: grid;
 		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+
+		gap: 2px 48px;
 
 		@include tablet {
 			grid-template-columns: repeat(2, 1fr);
+
+			&.top_bottom {
+				grid-auto-flow: column;
+			}
+
+			&[data-amount='1'],
+			&[data-amount='2'] {
+				grid-template-rows: repeat(1, 1fr);
+			}
+
+			&[data-amount='3'],
+			&[data-amount='4'] {
+				grid-template-rows: repeat(2, 1fr);
+			}
+
+			&[data-amount='5'],
+			&[data-amount='6'] {
+				grid-template-rows: repeat(3, 1fr);
+			}
+
+			&[data-amount='7'],
+			&[data-amount='8'] {
+				grid-template-rows: repeat(4, 1fr);
+			}
+
+			&[data-amount='9'],
+			&[data-amount='10'] {
+				grid-template-rows: repeat(5, 1fr);
+			}
+
+			&[data-amount='11'],
+			&[data-amount='12'] {
+				grid-template-rows: repeat(6, 1fr);
+			}
 		}
 
-		&[data-amount='1'],
-		&[data-amount='2'] {
-			grid-template-rows: repeat(1, 1fr);
-		}
-
-		&[data-amount='3'],
-		&[data-amount='4'] {
-			grid-template-rows: repeat(2, 1fr);
-		}
-
-		&[data-amount='5'],
-		&[data-amount='6'] {
-			grid-template-rows: repeat(3, 1fr);
-		}
-
-		&[data-amount='7'],
-		&[data-amount='8'] {
-			grid-template-rows: repeat(4, 1fr);
-		}
-
-		&[data-amount='9'],
-		&[data-amount='10'] {
-			grid-template-rows: repeat(5, 1fr);
-		}
-
-		&[data-amount='11'],
-		&[data-amount='12'] {
-			grid-template-rows: repeat(6, 1fr);
-		}
-
-		gap: 2px 96px;
-
-		&.top_bottom {
-			grid-auto-flow: column;
+		@include desktop {
+			gap: 2px 96px;
 		}
 
 		li {

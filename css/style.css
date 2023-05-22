@@ -7394,33 +7394,39 @@ section.open .wrapper {
 section.open ul {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2px 96px;
+  grid-template-rows: auto;
+  gap: 2px 48px;
 }
 @media only screen and (min-width: 640px) {
   section.open ul {
     grid-template-columns: repeat(2, 1fr);
   }
+  section.open ul.top_bottom {
+    grid-auto-flow: column;
+  }
+  section.open ul[data-amount="1"], section.open ul[data-amount="2"] {
+    grid-template-rows: repeat(1, 1fr);
+  }
+  section.open ul[data-amount="3"], section.open ul[data-amount="4"] {
+    grid-template-rows: repeat(2, 1fr);
+  }
+  section.open ul[data-amount="5"], section.open ul[data-amount="6"] {
+    grid-template-rows: repeat(3, 1fr);
+  }
+  section.open ul[data-amount="7"], section.open ul[data-amount="8"] {
+    grid-template-rows: repeat(4, 1fr);
+  }
+  section.open ul[data-amount="9"], section.open ul[data-amount="10"] {
+    grid-template-rows: repeat(5, 1fr);
+  }
+  section.open ul[data-amount="11"], section.open ul[data-amount="12"] {
+    grid-template-rows: repeat(6, 1fr);
+  }
 }
-section.open ul[data-amount="1"], section.open ul[data-amount="2"] {
-  grid-template-rows: repeat(1, 1fr);
-}
-section.open ul[data-amount="3"], section.open ul[data-amount="4"] {
-  grid-template-rows: repeat(2, 1fr);
-}
-section.open ul[data-amount="5"], section.open ul[data-amount="6"] {
-  grid-template-rows: repeat(3, 1fr);
-}
-section.open ul[data-amount="7"], section.open ul[data-amount="8"] {
-  grid-template-rows: repeat(4, 1fr);
-}
-section.open ul[data-amount="9"], section.open ul[data-amount="10"] {
-  grid-template-rows: repeat(5, 1fr);
-}
-section.open ul[data-amount="11"], section.open ul[data-amount="12"] {
-  grid-template-rows: repeat(6, 1fr);
-}
-section.open ul.top_bottom {
-  grid-auto-flow: column;
+@media only screen and (min-width: 1280px) {
+  section.open ul {
+    gap: 2px 96px;
+  }
 }
 section.open ul li {
   position: relative;
