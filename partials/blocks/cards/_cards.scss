@@ -54,6 +54,7 @@ section.cards {
 					background-color: var(--cl-primary);
 					pointer-events: none;
 					transition: 0.25s all ease-in-out;
+					// TODO: mask image
 					background-image: url(../img/icons/play-regular-white.svg);
 					background-size: 20px 20px;
 					background-repeat: no-repeat;
