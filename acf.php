@@ -1424,9 +1424,9 @@ add_action( 'acf/include_fields', function() {
 			array(
 				'key' => 'field_5c4f128b64183',
 				'label' => 'Form',
-				'name' => 'form',
+				'name' => 'form_id',
 				'aria-label' => '',
-				'type' => 'number',
+				'type' => 'select',
 				'instructions' => '',
 				'required' => 0,
 				'conditional_logic' => 0,
@@ -1435,13 +1435,16 @@ add_action( 'acf/include_fields', function() {
 					'class' => '',
 					'id' => '',
 				),
-				'default_value' => '',
-				'placeholder' => 'Enter form ID',
-				'prepend' => '',
-				'append' => '',
-				'min' => '',
-				'max' => '',
-				'step' => '',
+				'choices' => array(
+					1 => 'Contact',
+				),
+				'default_value' => false,
+				'return_format' => 'value',
+				'multiple' => 0,
+				'allow_null' => 0,
+				'ui' => 0,
+				'ajax' => 0,
+				'placeholder' => '',
 			),
 			array(
 				'key' => 'field_5cacc76620333',
@@ -1471,26 +1474,6 @@ add_action( 'acf/include_fields', function() {
 				'return_format' => 'value',
 				'ajax' => 0,
 				'placeholder' => '',
-			),
-			array(
-				'key' => 'field_5d4d31a59a1bc',
-				'label' => 'Id',
-				'name' => 'id',
-				'aria-label' => '',
-				'type' => 'text',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'maxlength' => '',
 			),
 		),
 		'location' => array(
@@ -1611,24 +1594,6 @@ add_action( 'acf/include_fields', function() {
 		'key' => 'group_5c2a106d51bd7',
 		'title' => 'Block: Hero',
 		'fields' => array(
-			array(
-				'key' => 'field_6437d6d661cae',
-				'label' => 'Hero',
-				'name' => '',
-				'aria-label' => '',
-				'type' => 'accordion',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'open' => 0,
-				'multi_expand' => 0,
-				'endpoint' => 0,
-			),
 			array(
 				'key' => 'field_6421b2df00a0a',
 				'label' => 'Select type',
@@ -3060,24 +3025,6 @@ add_action( 'acf/include_fields', function() {
 		'key' => 'group_5d4c234082364',
 		'title' => 'Block: Usp',
 		'fields' => array(
-			array(
-				'key' => 'field_6438011c4fa64',
-				'label' => 'USP',
-				'name' => '',
-				'aria-label' => '',
-				'type' => 'accordion',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'open' => 0,
-				'multi_expand' => 0,
-				'endpoint' => 0,
-			),
 			array(
 				'key' => 'field_6421b7ddb7d6a',
 				'label' => 'USP type',
@@ -4811,9 +4758,6 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 } );
-
-
-
 
 
 ?>

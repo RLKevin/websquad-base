@@ -7937,7 +7937,7 @@ section.spacer.spacer--negative {
 }
 
 section.table {
-  padding: 96px 0 48px 0;
+  padding: 24px 0 48px 0;
 }
 section.table .wrapper {
   max-width: 1280px;
@@ -7981,13 +7981,13 @@ section.table .table__row .table__col--right {
   }
 }
 section.table .table__row--title {
-  margin: 0 0 24px 0;
+  margin: 48px 0 24px 0;
 }
 section.table .table__row--title self__col--left {
   width: 100%;
   background: var(--cl-primary);
   font-weight: var(--fw-medium);
-  color: var(--cl-white);
+  color: var(--cl-primary-text);
 }
 section.table .table__row--title self__col--right {
   display: none;
@@ -8026,7 +8026,7 @@ section.table .table__row--note .table__col--left {
   width: 100%;
   background: var(--cl-secondary) !important;
   font-weight: var(--fw-medium);
-  color: var(--cl-white);
+  color: var(--cl-secondary-text);
 }
 section.table .table__row--note .table__col--right {
   display: none;
@@ -8039,6 +8039,7 @@ section.table.table--grey .table__row .table__col {
 }
 section.table.table--grey .table__row--title .table__col--left {
   background: var(--cl-primary);
+  color: var(--cl-primary-text);
 }
 section.table.table--grey .table__row--normal .table__col {
   background: var(--cl-white);
@@ -8051,36 +8052,45 @@ section.table.table--black .table__row .table__col {
 }
 section.table.table--black .table__row--title .table__col--left {
   background: var(--cl-primary);
+  color: var(--cl-primary-text);
 }
 section.table.table--black .table__row--normal .table__col {
   background: var(--cl-white);
 }
 section.table.table--primary {
   background: var(--cl-primary);
+  color: var(--cl-primary-text);
 }
 section.table.table--primary .table__row .table__col {
   background: var(--cl-white);
 }
 section.table.table--primary .table__row--title .table__col--left {
   background: var(--cl-secondary);
+  color: var(--cl-secondary-text);
 }
 section.table.table--primary .table__row--normal .table__col {
   background: var(--cl-white);
 }
 section.table.table--secondary {
   background: var(--cl-secondary);
+  color: var(--cl-secondary-text);
 }
 section.table.table--secondary .table__row .table__col {
   background: var(--cl-white);
+  color: var(--cl-black);
 }
 section.table.table--secondary .table__row--title .table__col--left {
   background: var(--cl-primary);
+  color: var(--cl-primary-text);
 }
 section.table.table--secondary .table__row--normal .table__col {
   background: var(--cl-white);
 }
 section.table.table--secondary .table__row--note {
   border-left: 2px solid var(--cl-primary);
+}
+section.table.table--secondary .table__row--note .table__col--left {
+  color: var(--cl-secondary-text);
 }
 
 section.usp {

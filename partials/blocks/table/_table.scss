@@ -1,6 +1,5 @@
 section.table {
-	$self: &;
-	padding: 96px 0 48px 0;
+	padding: 24px 0 48px 0;
 
 	.wrapper {
 		@include max-width;
@@ -43,7 +42,7 @@ section.table {
 		}
 		
 		&--title {
-			margin: 0 0 24px 0;
+			margin: 48px 0 24px 0;
 
 			#{self}__col {
 				
@@ -51,7 +50,7 @@ section.table {
 					width: 100%;
 					background: var(--cl-primary);
 					font-weight: var(--fw-medium);
-					color: var(--cl-white);
+					color: var(--cl-primary-text);
 				}
 
 				&--right {
@@ -101,7 +100,7 @@ section.table {
 					width: 100%;
 					background: var(--cl-secondary) !important;
 					font-weight: var(--fw-medium);
-					color: var(--cl-white);
+					color: var(--cl-secondary-text);
 				}
 
 				&--right {
@@ -131,6 +130,7 @@ section.table {
 					
 					&--left {
 						background: var(--cl-primary);
+						color: var(--cl-primary-text);
 					}
 				}
 			}
@@ -159,6 +159,7 @@ section.table {
 					
 					&--left {
 						background: var(--cl-primary);
+						color: var(--cl-primary-text);
 					}
 				}
 			}
@@ -174,6 +175,7 @@ section.table {
 
 	&.table--primary {
 		background: var(--cl-primary);
+		color: var(--cl-primary-text);
 
 		.table__row {
 			
@@ -187,6 +189,7 @@ section.table {
 					
 					&--left {
 						background: var(--cl-secondary);
+						color: var(--cl-secondary-text);
 					}
 				}
 			}
@@ -202,11 +205,13 @@ section.table {
 
 	&.table--secondary {
 		background: var(--cl-secondary);
+		color: var(--cl-secondary-text);
 
 		.table__row {
 			
 			.table__col {
 				background: var(--cl-white);
+				color: var(--cl-black);
 			}
 			
 			&--title {
@@ -215,6 +220,7 @@ section.table {
 					
 					&--left {
 						background: var(--cl-primary);
+						color: var(--cl-primary-text);
 					}
 				}
 			}
@@ -228,6 +234,13 @@ section.table {
 
 			&--note {
 				border-left: 2px solid var(--cl-primary);
+
+				.table__col {
+					
+					&--left {
+						color: var(--cl-secondary-text);
+					}
+				}
 			}
 		}
 	}

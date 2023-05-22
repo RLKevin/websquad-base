@@ -2,9 +2,8 @@
 		
 // vars
 
-$form = get_field('form');
+$form = get_field('form_id');
 $background = get_field('background');
-$id = get_field('id');
 
 ?>
 
