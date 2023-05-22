@@ -1,5 +1,5 @@
 section.table {
-	padding: 24px 0 48px 0;
+	padding: 96px 0 48px 0;
 
 	.wrapper {
 		@include max-width;
@@ -15,13 +15,13 @@ section.table {
 		&:last-of-type {
 			margin: 0 0 48px 0 !important;
 		}
-		
+
 		.table__col {
 			background: var(--cl-grey);
 			padding: 16px;
-			
+
 			@include tablet {
-				padding: 16px 24px;	
+				padding: 16px 24px;
 			}
 
 			&--left {
@@ -29,28 +29,34 @@ section.table {
 
 				@include desktop {
 					width: 50%;
-				}				
+				}
 			}
 
 			&--right {
 				width: 100%;
-				
+
 				@include desktop {
 					width: 50%;
 				}
 			}
 		}
-		
+
 		&--title {
 			margin: 48px 0 24px 0;
 
-			#{self}__col {
-				
+			&:first-child {
+				margin-top: 0;
+			}
+
+			.table__col {
 				&--left {
-					width: 100%;
 					background: var(--cl-primary);
 					font-weight: var(--fw-medium);
 					color: var(--cl-primary-text);
+
+					@include desktop {
+						width: 100% !important;
+					}
 				}
 
 				&--right {
@@ -60,42 +66,38 @@ section.table {
 		}
 
 		&--normal {
-
 			.table__col {
 				background: var(--cl-grey);
-	
+
 				&--left {
 					font-weight: var(--fw-medium);
 					padding: 16px 16px 0 16px;
 
 					@include tablet {
-						padding: 16px 24px 0 24px;	
+						padding: 16px 24px 0 24px;
 					}
 
 					@include desktop {
-						padding: 16px 24px;	
+						padding: 16px 24px;
 					}
 				}
-	
+
 				&--right {
 					padding: 0 16px 16px 16px;
 
 					@include tablet {
-						padding: 0 24px 16px 24px;	
+						padding: 0 24px 16px 24px;
 					}
 
 					@include desktop {
-						padding: 16px 24px;	
+						padding: 16px 24px;
 					}
 				}
 			}
-
 		}
 
 		&--note {
-
 			.table__col {
-				
 				&--left {
 					width: 100%;
 					background: var(--cl-secondary) !important;
@@ -119,24 +121,20 @@ section.table {
 		background: var(--cl-grey);
 
 		.table__row {
-			
 			.table__col {
 				background: var(--cl-white);
 			}
-			
+
 			&--title {
-	
 				.table__col {
-					
 					&--left {
 						background: var(--cl-primary);
 						color: var(--cl-primary-text);
 					}
 				}
 			}
-	
+
 			&--normal {
-	
 				.table__col {
 					background: var(--cl-white);
 				}
@@ -148,24 +146,20 @@ section.table {
 		background: var(--cl-black);
 
 		.table__row {
-			
 			.table__col {
 				background: var(--cl-white);
 			}
-			
+
 			&--title {
-	
 				.table__col {
-					
 					&--left {
 						background: var(--cl-primary);
 						color: var(--cl-primary-text);
 					}
 				}
 			}
-	
+
 			&--normal {
-	
 				.table__col {
 					background: var(--cl-white);
 				}
@@ -178,24 +172,20 @@ section.table {
 		color: var(--cl-primary-text);
 
 		.table__row {
-			
 			.table__col {
 				background: var(--cl-white);
 			}
-			
+
 			&--title {
-	
 				.table__col {
-					
 					&--left {
 						background: var(--cl-secondary);
 						color: var(--cl-secondary-text);
 					}
 				}
 			}
-	
+
 			&--normal {
-	
 				.table__col {
 					background: var(--cl-white);
 				}
@@ -208,25 +198,21 @@ section.table {
 		color: var(--cl-secondary-text);
 
 		.table__row {
-			
 			.table__col {
 				background: var(--cl-white);
 				color: var(--cl-black);
 			}
-			
+
 			&--title {
-	
 				.table__col {
-					
 					&--left {
 						background: var(--cl-primary);
 						color: var(--cl-primary-text);
 					}
 				}
 			}
-	
+
 			&--normal {
-	
 				.table__col {
 					background: var(--cl-white);
 				}
@@ -236,7 +222,6 @@ section.table {
 				border-left: 2px solid var(--cl-primary);
 
 				.table__col {
-					
 					&--left {
 						color: var(--cl-secondary-text);
 					}

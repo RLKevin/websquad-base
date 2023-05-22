@@ -7981,7 +7981,7 @@ section.spacer.spacer--negative {
 }
 
 section.table {
-  padding: 24px 0 48px 0;
+  padding: 96px 0 48px 0;
 }
 section.table .wrapper {
   max-width: 1280px;
@@ -8027,13 +8027,20 @@ section.table .table__row .table__col--right {
 section.table .table__row--title {
   margin: 48px 0 24px 0;
 }
-section.table .table__row--title self__col--left {
-  width: 100%;
+section.table .table__row--title:first-child {
+  margin-top: 0;
+}
+section.table .table__row--title .table__col--left {
   background: var(--cl-primary);
   font-weight: var(--fw-medium);
   color: var(--cl-primary-text);
 }
-section.table .table__row--title self__col--right {
+@media only screen and (min-width: 1280px) {
+  section.table .table__row--title .table__col--left {
+    width: 100% !important;
+  }
+}
+section.table .table__row--title .table__col--right {
   display: none;
 }
 section.table .table__row--normal .table__col {
