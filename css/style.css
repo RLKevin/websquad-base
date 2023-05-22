@@ -6233,6 +6233,9 @@ section.cards .card__load-more {
       -ms-flex-pack: center;
           justify-content: center;
 }
+section.cards .card__load-more button {
+  margin-bottom: 0;
+}
 section.cards.card--center {
   text-align: center;
 }
