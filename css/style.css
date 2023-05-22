@@ -6665,18 +6665,18 @@ section.faq .faq__container .faq__question.active p:after {
 section.faq .faq__container .faq__answer {
   display: none;
   position: relative;
-  padding: 48px 0 0 16px;
+  padding: 0 0 0 16px;
   border-left: 2px solid currentColor;
   margin: 48px 0 48px 0;
 }
 @media only screen and (min-width: 640px) {
   section.faq .faq__container .faq__answer {
-    padding: 48px 0 0 48px;
+    padding: 0 0 0 48px;
   }
 }
 @media only screen and (min-width: 1280px) {
   section.faq .faq__container .faq__answer {
-    padding: 48px 0 0 96px;
+    padding: 0 0 0 96px;
   }
 }
 section.faq.faq--grey {
