@@ -20,6 +20,9 @@ $id = get_field('id');
 				// vars
 
 				$file = get_sub_field('file');
+				if (!$file) {
+					continue;
+				}
 				$filesize = $file['filesize'];
 				$filesize = size_format($filesize, 0);
 				$filetype = $file['subtype'];

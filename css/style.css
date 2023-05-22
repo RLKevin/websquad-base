@@ -6725,8 +6725,8 @@ section.files .wrapper {
   max-width: 1280px;
 }
 section.files .file {
-  background: -webkit-gradient(linear, left top, right top, from(var(--cl-primary)), to(var(--cl-secondary)));
-  background: linear-gradient(to right, var(--cl-primary), var(--cl-secondary));
+  background: var(--cl-primary);
+  color: var(--cl-primary-text);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6737,12 +6737,13 @@ section.files .file {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-block: 24px;
   margin-bottom: 24px;
   border-radius: var(--br-rectangle-top-left) var(--br-rectangle-top-right) var(--br-rectangle-bottom-right) var(--br-rectangle-bottom-left);
   padding-left: 16px;
   padding-right: 16px;
-  padding-left: 0 !important;
   cursor: pointer;
 }
 @media only screen and (min-width: 640px) {
@@ -6763,37 +6764,22 @@ section.files .file:last-of-type {
 section.files .file p {
   padding: 0;
   margin: 0;
-  color: var(--cl-white);
 }
 section.files .file .name {
   position: relative;
   font-weight: var(--fw-bold);
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-left: 96px !important;
-}
-@media only screen and (min-width: 640px) {
-  section.files .file .name {
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  section.files .file .name {
-    padding-left: 96px;
-    padding-right: 96px;
-  }
+  padding-left: 24px !important;
 }
 section.files .file .name::before {
   content: "";
   height: 48px;
   aspect-ratio: 1/1;
   position: absolute;
-  left: 24px;
+  left: -16px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-color: var(--cl-white);
+  background-color: currentColor;
   -webkit-mask-image: url(../img/icons/file.svg);
           mask-image: url(../img/icons/file.svg);
   -webkit-mask-size: 24px;
@@ -6805,6 +6791,16 @@ section.files .file .name::before {
   -webkit-transition: all 0.24s ease-in-out;
   transition: all 0.24s ease-in-out;
 }
+@media only screen and (min-width: 640px) {
+  section.files .file .name::before {
+    left: -32px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  section.files .file .name::before {
+    left: -48px;
+  }
+}
 section.files .file .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6814,8 +6810,8 @@ section.files .file .info {
           justify-content: row;
   gap: 24px;
 }
-section.files .file:hover .name::before {
-  scale: 1.1;
+section.files .file:hover {
+  opacity: 0.75;
 }
 section.files.files--grey {
   background: var(--cl-grey);
@@ -6827,15 +6823,15 @@ section.files.files--secondary {
   background: var(--cl-secondary);
 }
 section.files.files--secondary .file {
-  background: -webkit-gradient(linear, left top, right top, from(var(--cl-primary)), to(var(--cl-primary)));
-  background: linear-gradient(to right, var(--cl-primary), var(--cl-primary));
+  background-color: var(--cl-white);
+  color: var(--cl-black);
 }
 section.files.files--primary {
   background: var(--cl-primary);
 }
 section.files.files--primary .file {
-  background: -webkit-gradient(linear, left top, right top, from(var(--cl-secondary)), to(var(--cl-secondary)));
-  background: linear-gradient(to right, var(--cl-secondary), var(--cl-secondary));
+  background-color: var(--cl-white);
+  color: var(--cl-black);
 }
 section.files .download.file .name::before {
   -webkit-mask-image: url(../img/icons/download.svg) !important;

@@ -1,4 +1,4 @@
-.wp-block section.files{
+.wp-block section.files {
 	pointer-events: none;
 }
 
@@ -6,7 +6,7 @@ section.files {
 	$self: &;
 	padding: 48px 0 48px 0;
 
-	@include desktop{
+	@include desktop {
 		padding: 96px 0 96px 0;
 	}
 
@@ -14,43 +14,50 @@ section.files {
 		@include max-width;
 	}
 
-	.file{
-		background: linear-gradient(to right, var(--cl-primary), var(--cl-secondary));
+	.file {
+		background: var(--cl-primary);
+		color: var(--cl-primary-text);
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		padding-block: 24px;
 		margin-bottom: 24px;
 		@include rectangle;
 		@include padding;
-		padding-left: 0!important;
+		// padding-left: 0 !important;
 		cursor: pointer;
 
-		&:last-of-type{
+		&:last-of-type {
 			margin-bottom: 0;
 		}
 
-		p{
+		p {
 			padding: 0;
 			margin: 0;
-			color: var(--cl-white);
 		}
 
-		.name{
+		.name {
 			position: relative;
 			font-weight: var(--fw-bold);
-			@include padding;
-			padding-left: 96px!important;
+			// @include padding;
+			padding-left: 24px !important;
 
-			&::before{
+			&::before {
 				content: '';
 				height: 48px;
 				aspect-ratio: 1 / 1;
 				position: absolute;
-				left: 24px;
+				left: -16px;
+				@include tablet {
+					left: -32px;
+				}
+				@include desktop {
+					left: -48px;
+				}
 				top: 50%;
 				transform: translateY(-50%);
-				background-color: var(--cl-white);
+				background-color: currentColor;
 				mask-image: url(../img/icons/file.svg);
 				mask-size: 24px;
 				mask-repeat: no-repeat;
@@ -59,25 +66,20 @@ section.files {
 			}
 		}
 
-		.info{
+		.info {
 			display: flex;
 			justify-content: row;
 			gap: 24px;
 		}
 
-		&:hover{
-			.name{
-				&::before{
-					scale: 1.1;
-				}
-			}
+		&:hover {
+			opacity: 0.75;
 		}
 	}
 
 	// background
 
 	&.files--white {
-
 	}
 
 	&.files--grey {
@@ -91,25 +93,27 @@ section.files {
 	&.files--secondary {
 		background: var(--cl-secondary);
 
-		.file{
-			background: linear-gradient(to right, var(--cl-primary), var(--cl-primary));
+		.file {
+			background-color: var(--cl-white);
+			color: var(--cl-black);
 		}
 	}
 
 	&.files--primary {
 		background: var(--cl-primary);
 
-		.file{
-			background: linear-gradient(to right, var(--cl-secondary), var(--cl-secondary));
+		.file {
+			background-color: var(--cl-white);
+			color: var(--cl-black);
 		}
 	}
 
 	// download
 
-	.download.file{
-		.name{
-			&::before{
-				mask-image: url(../img/icons/download.svg)!important;
+	.download.file {
+		.name {
+			&::before {
+				mask-image: url(../img/icons/download.svg) !important;
 			}
 		}
 	}
