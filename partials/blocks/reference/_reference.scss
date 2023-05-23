@@ -15,40 +15,19 @@
 		@include max-width;
 	}
 
-	.tns-controls {
-		position: relative;
-		transform: translateY(0);
-		padding: 0;
-		margin: 96px 0 0 0;
-		justify-content: center;
+	.tns-outer {
+		--slider-bg: var(--bg);
+		--slider-fg: var(--fg);
+		--slider-accent: var(--fg);
+		--slider-accent-text: var(--bg);
 
-		button {
-			background: transparent;
-
-			border: 2px solid var(--accent);
-			border-radius: 50%;
-
-			&:before {
-				border: none;
-				background-image: none;
-				mask-image: url(../img/icons/arrow-left-regular-primary.svg);
-				mask-size: 16px;
-				mask-position: center;
-				mask-repeat: no-repeat;
-				background-color: var(--accent);
-			}
-
-			&:hover {
-				background-color: var(--accent);
-
-				&:before {
-					background-color: var(--bg);
-				}
-			}
-		}
-
-		[data-controls='next'] {
-			margin: 0 0 0 8px;
+		.tns-controls {
+			position: relative;
+			transform: translateY(0);
+			padding: 0;
+			margin: 48px 0 0 0;
+			justify-content: center;
+			gap: 8px;
 		}
 	}
 

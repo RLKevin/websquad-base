@@ -77,7 +77,7 @@ $references = get_field('references', 'option');
 						slideBy: 1,
 						mouseDrag: true,
 						controls: true,
-						controlsText: '',
+						controlsText: ['', ''],
 						controlsPosition: 'bottom',
 						center: true,
 						edgePadding: 0,

@@ -64,6 +64,8 @@ $slider_id = wp_unique_id('usp');
 						slideBy: 1,
 						mouseDrag: true,
 						controls: true,
+						controlsPosition: 'bottom',
+						controlsText: ['', ''],
 						center: false,
 						lazyload: true,
 						nav: false,

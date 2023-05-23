@@ -29,6 +29,10 @@ section.cards {
 		transition: 0.25s all ease-in-out;
 		width: 100%;
 
+		background: var(--cl-white);
+		@include rectangle;
+		overflow: hidden;
+
 		@include desktop {
 			width: calc(50% - 24px);
 		}
@@ -108,11 +112,12 @@ section.cards {
 	}
 
 	.card__load-more {
-		padding: 48px 0 0 0;
 		display: flex;
 		justify-content: center;
+		@include padding;
+		margin-top: 48px;
 
-		button {
+		.button {
 			margin-bottom: 0;
 		}
 	}
@@ -135,6 +140,10 @@ section.cards {
 
 	&.card--white {
 		background: var(--cl-white);
+
+		.card__item {
+			background: var(--cl-grey);
+		}
 	}
 
 	&.card--grey {
@@ -155,38 +164,6 @@ section.cards {
 		.card__load-more button {
 			--bg: var(--cl-primary);
 			--fg: var(--cl-primary-text);
-		}
-	}
-
-	// color
-
-	&.card--basic {
-
-		.card__item {
-			background: var(--cl-white);
-			@include rectangle;
-			overflow: hidden;
-		}
-
-		.card__load-more {
-			padding-left: 16px;
-			padding-right: 16px;
-
-			@include tablet {
-				padding-left: 48px;
-				padding-right: 48px;
-			}
-
-			@include desktop {
-				padding-left: 96px;
-				padding-right: 96px;
-			}
-		}
-
-		&.card--white {
-			.card__item {
-				background: var(--cl-grey);
-			}
 		}
 	}
 
