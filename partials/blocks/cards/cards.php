@@ -2,6 +2,8 @@
 
 // vars
 
+$page_id = get_the_ID();
+
 $card_type = get_field('card_type');
 $align = get_field('align');
 $background = get_field('background');
@@ -31,7 +33,8 @@ $style = get_field('style');
 							'post_date' => 'desc', 
 						),
 						'posts_per_page' => $post_per_page,
-						'paged' => $post_current_page
+						'paged' => $post_current_page,
+						'post__not_in' => array($page_id),
 					)
 				);
 				$post_max_pages = $post_query->max_num_pages;
@@ -181,6 +184,7 @@ $style = get_field('style');
 						'post_date' => 'desc', 
 					),
 					'posts_per_page' => $amount,
+					'post__not_in' => array($page_id),
 				);
 				
 				$post_query = new WP_Query($args);
