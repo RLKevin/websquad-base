@@ -1,7 +1,5 @@
 <?php
 		
-// vars
-
 $map = get_field('map');
 $id = get_field('id');
 

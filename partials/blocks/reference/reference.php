@@ -1,16 +1,22 @@
 <?php
 
-// vars
-
+$introduction = get_field('introduction');
 $background = get_field('background');
 $id = get_field('id');
 $slider_id = wp_unique_id( 'reference' );
 $references = get_field('references', 'option');
+
 ?>
 
 <section id="<?= $id; ?>" class="reference reference--<?= $background; ?>">
 
 	<div class="wrapper">
+
+		<?php if ($introduction) { ?>
+			<div class="introduction wysiwyg wysiwyg--<?= $background; ?>">
+				<?= $introduction; ?>
+			</div>
+		<?php } ?>
 
 		<?php if( $references ): 
 			shuffle($references);

@@ -1,7 +1,6 @@
 <?php
 		
-// vars
-
+$introduction = get_field('introduction');
 $background = get_field('background');
 $id = get_field('id');
 
@@ -10,6 +9,12 @@ $id = get_field('id');
 <section id="<?php echo $id; ?>" class="table table--<?php echo $background; ?>">
 
 	<div class="wrapper">
+
+		<?php if ($introduction) { ?>
+			<div class="introduction wysiwyg wysiwyg--<?= $background; ?>">
+				<?= $introduction; ?>
+			</div>
+		<?php } ?>
 
 		<?php
 

@@ -2,6 +2,7 @@
 		
 // vars
 
+$introduction = get_field('introduction');
 $background = get_field('background');
 $order_by = get_field('order_by');
 $id = get_field('id');
@@ -11,6 +12,12 @@ $id = get_field('id');
 <section id="<?= $id; ?>" class="open open--<?= $background; ?>">
 
 	<div class="wrapper">
+
+		<?php if ($introduction) { ?>
+			<div class="introduction wysiwyg wysiwyg--<?= $background; ?>">
+				<?= $introduction; ?>
+			</div>
+		<?php } ?>
 
 		<?php
 		

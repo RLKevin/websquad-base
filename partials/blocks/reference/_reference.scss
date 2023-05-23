@@ -49,11 +49,6 @@
 
 		[data-controls='next'] {
 			margin: 0 0 0 8px;
-
-			&::before {
-				background-image: none !important;
-				mask-image: url(../img/icons/arrow-right-regular-primary.svg);
-			}
 		}
 	}
 

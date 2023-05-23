@@ -107,44 +107,29 @@ $style = get_field('style');
 							<?php if ($image): ?>
 
 								<div class="card__image <?php if ($type == 'video'): ?>card__image--video<?php endif; ?>">
-
 									<a href="<?= $button; ?>" <?php if ($post_type == 'facebook' || $post_type == 'projects' ): ?>target="_blank"<?php endif; ?>>
-
 										<img loading="lazy" src="<?= $image; ?>" alt="<?= $title; ?>">
-									
 									</a>
-
 								</div>
 
 							<?php endif; ?>
 
-							<?php if ($title): ?>
+							<?php if ($title || $button): ?>
 
-								<div class="card__text">
-
-									<h2><?= $title; ?></h2>
+								<div class="card__text wysiwyg">
+									<?php if ($title) { ?>
+										<h2><?= $title; ?></h2>
+									<?php } ?>
 
 									<?php if ($post_type == 'projects'): ?>
-
 										<h3><?= $date; ?></h3>
-										
 									<?php endif; ?>
-
-									<?php if ($text): ?>
-
-										<p><?= $text; ?></p>
-
+											
+									<?php if ($button): ?>
+										<div class="button-container">
+											<a class="button button--filled-secondary" href="<?= $button; ?>">Bekijk</a>
+										</div>
 									<?php endif; ?>
-								</div>
-
-							<?php endif; ?>
-
-							<?php if ($button): ?>
-
-								<div class="card__button">
-
-									<a class="button button--filled-secondary" href="<?= $button; ?>" <?php if ($post_type == 'facebook' || $post_type == 'projects' ): ?>target="_blank"<?php endif; ?>>Bekijk</a>
-
 								</div>
 
 							<?php endif; ?>
@@ -213,33 +198,25 @@ $style = get_field('style');
 								<?php if ($image): ?>
 
 									<div class="card__image">
-
 										<a href="<?= $button; ?>">
-
 											<img loading="lazy" src="<?= $image; ?>" alt="<?= $text; ?>">
-										
 										</a>
-
 									</div>
-
+									
 								<?php endif; ?>
 
-								<?php if ($text): ?>
+								<?php if ($text || $button): ?>
 
-									<div class="card__text">
-
-										<h2><?= $text; ?></h2>
-
-									</div>
-
-								<?php endif; ?>
-
-								<?php if ($button): ?>
-
-									<div class="card__button">
-
-										<a class="button button--filled-secondary" href="<?= $button; ?>">Bekijk</a>
-
+									<div class="card__text wysiwyg">
+										<?php if ($text) { ?>
+											<h2><?= $text; ?></h2>
+										<?php } ?>
+												
+										<?php if ($button): ?>
+											<div class="button-container">
+												<a class="button button--filled-secondary" href="<?= $button; ?>">Bekijk</a>
+											</div>
+										<?php endif; ?>
 									</div>
 
 								<?php endif; ?>
