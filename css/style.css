@@ -6419,7 +6419,7 @@ section.cards.card--three.card--mixed .card__text h2 {
   }
 }
 section.content {
-  padding: 96px 0 48px 0;
+  padding: 96px 0 96px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6467,6 +6467,10 @@ section.content .wrapper > * {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
+}
+section.content .text-container > * {
+  max-width: 800px;
+  margin-inline: auto;
 }
 section.content .image-container {
   border-radius: var(--br-rectangle-top-left) var(--br-rectangle-top-right) var(--br-rectangle-bottom-right) var(--br-rectangle-bottom-left);
@@ -6602,6 +6606,12 @@ section.content.content--secondary {
 section.content.content--secondary .button {
   --bg: var(--cl-primary);
   --fg: var(--cl-primary-text);
+}
+section.content.content--center .text-container {
+  text-align: center;
+}
+section.content.content--right .text-container {
+  text-align: right;
 }
 
 section.faq {

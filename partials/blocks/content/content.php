@@ -121,7 +121,7 @@ $id = get_field('id');
 										}
 									});
 								}
-		</script>
+							</script>
 					
 							<?php 
 					
