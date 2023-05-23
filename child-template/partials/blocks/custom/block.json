@@ -1,0 +1,21 @@
+{
+	"name": "switch/custom",
+	"title": "Custom",
+	"description": "All custom block",
+	"category": "switch-blocks",
+	"icon": "",
+	"apiVersion": 2,
+	"keywords": ["custom", "switch"],
+	"acf": {
+		"mode": "preview",
+		"postTypes": [],
+		"renderTemplate": "custom.php"
+	},
+	"render_callback": "my_block_render_callback",
+	"supports": {
+		"align": false,
+		"anchor": false,
+		"alignContent": false
+	},
+	"example": {}
+}

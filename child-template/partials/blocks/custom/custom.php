@@ -1,0 +1,1 @@
+<h2 class="custom">Custom block from child theme</h2>
