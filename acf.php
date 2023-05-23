@@ -10,6 +10,26 @@ add_action( 'acf/include_fields', function() {
 		'title' => 'Block: Card',
 		'fields' => array(
 			array(
+				'key' => 'field_646ca11f92bf4',
+				'label' => 'Introduction',
+				'name' => 'introduction',
+				'aria-label' => '',
+				'type' => 'wysiwyg',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'tabs' => 'all',
+				'toolbar' => 'full',
+				'media_upload' => 0,
+				'delay' => 0,
+			),
+			array(
 				'key' => 'field_6421af3bb5bc6',
 				'label' => 'Card type',
 				'name' => 'card_type',
@@ -1437,6 +1457,7 @@ add_action( 'acf/include_fields', function() {
 				),
 				'choices' => array(
 					1 => 'Contact',
+					2 => 'Testformulier',
 				),
 				'default_value' => false,
 				'return_format' => 'value',
@@ -4778,6 +4799,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 } );
+
 
 
 ?>

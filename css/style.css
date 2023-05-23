@@ -4656,6 +4656,12 @@ body {
     padding-right: 96px;
   }
 }
+.wrapper .introduction {
+  margin-bottom: 48px;
+}
+.wrapper .introduction > * {
+  max-width: 800px;
+}
 
 h1,
 h2 {

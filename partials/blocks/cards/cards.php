@@ -4,6 +4,8 @@
 
 $page_id = get_the_ID();
 
+$introduction = get_field('introduction');
+
 $card_type = get_field('card_type');
 $align = get_field('align');
 $background = get_field('background');
@@ -16,6 +18,12 @@ $style = get_field('style');
 
 <section id="<?= $id; ?>" class="cards card--<?= $align; ?> card--<?= $background; ?> card--<?= $color; ?> card--<?= $image; ?> card--<?= $style; ?>">
 	<div class="wrapper">
+
+		<?php if ($introduction) { ?>
+			<div class="introduction wysiwyg wysiwyg--<?= $background; ?>">
+				<?= $introduction; ?>
+			</div>
+		<?php } ?>
 			
 	<?php
 
