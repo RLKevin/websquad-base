@@ -41,7 +41,6 @@ section.content {
 	// containers
 
 	.text-container {
-
 		> * {
 			max-width: 800px;
 			margin-inline: auto;
@@ -55,6 +54,8 @@ section.content {
 
 	.button-container {
 		width: 100%;
+		max-width: 800px;
+		margin-inline: auto;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -197,10 +198,16 @@ section.content {
 		.text-container {
 			text-align: center;
 		}
+		.button-container {
+			justify-content: center;
+		}
 	}
 	&.content--right {
 		.text-container {
 			text-align: right;
+		}
+		.button-container {
+			justify-content: flex-end;
 		}
 	}
 }

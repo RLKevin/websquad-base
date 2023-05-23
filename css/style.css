@@ -6429,6 +6429,8 @@ section.content .image-container {
 }
 section.content .button-container {
   width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6561,8 +6563,18 @@ section.content.content--secondary .button {
 section.content.content--center .text-container {
   text-align: center;
 }
+section.content.content--center .button-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 section.content.content--right .text-container {
   text-align: right;
+}
+section.content.content--right .button-container {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 section.faq {
