@@ -247,12 +247,12 @@ $style = get_field('style');
 				
 				wp_reset_postdata();
 				break;
-			case 'custom':
-				if( have_rows('card_repeater') ): 
+			case 'highlight':
+				if( have_rows('card_custom_repeater') ): 
 				
 					?> <div class="card__container"> <?php
 
-					while ( have_rows('card_repeater') ) : the_row();
+					while ( have_rows('card_custom_repeater') ) : the_row();
 
 						// vars
 
@@ -278,22 +278,18 @@ $style = get_field('style');
 
 							<?php endif; ?>
 
-							<?php if ($text): ?>
+							<?php if ($text || $button): ?>
 
 								<div class="card__text wysiwyg">
-
-									<?= $text; ?>
-
-								</div>
-
-							<?php endif; ?>
-
-							<?php if ($button): ?>
-
-								<div class="card__button">
-
-									<a class="button button--filled-secondary" href="<?= $button['url']; ?>" target="<?= $button['target']; ?>"><?= $button['title']; ?></a>
-
+									<?php if ($text) { ?>
+										<?= $text; ?>
+									<?php } ?>
+											
+									<?php if ($button): ?>
+										<div class="button-container">
+											<a class="button button--filled-secondary" href="<?= $button['url']; ?>" target="<?= $button['target']; ?>"><?= $button['title']; ?></a>
+										</div>
+									<?php endif; ?>
 								</div>
 
 							<?php endif; ?>

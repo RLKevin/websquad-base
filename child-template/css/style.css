@@ -1,14 +1,14 @@
 :root {
-  --cl-black: #030405;
+  --cl-black: #333333;
   --cl-white: #ffffff;
   --cl-grey: #efefef;
   --cl-grey-dark: #c1c1c1;
-  --cl-primary: #eef1b9;
-  --cl-primary-dark: #184c59;
-  --cl-primary-text: var(--cl-white);
-  --cl-secondary: rgb(198, 0, 109);
-  --cl-secondary-rgba: rgba(198, 0, 109, 0.25);
-  --cl-secondary: #db0079;
+  --cl-primary: #ffe0f2;
+  --cl-primary-dark: #bd81a4;
+  --cl-primary-text: var(--cl-black);
+  --cl-secondary: #535568;
+  --cl-secondary-rgba: #53556840;
+  --cl-secondary-dark: #333758;
   --cl-secondary-text: var(--cl-white);
   --cl-error: #db4437;
   --fs-tiny: 12px;
@@ -24,7 +24,7 @@
   --fw-regular: 400;
   --fw-medium: 700;
   --fw-bold: 900;
-  --ff-primary: "lexia", serif;
+  --ff-primary: "Cormorant Infant", serif;
   --ff-secondary: "Lato", sans-serif;
   --br-rectangle-top-left: 4px;
   --br-rectangle-top-right: 4px;
@@ -34,4 +34,10 @@
   --br-square-top-right: 128px;
   --br-square-bottom-right: 128px;
   --br-square-bottom-left: 128px;
+}
+
+h2.custom {
+  background-color: red;
+  color: white;
+  font-size: 48px;
 }
