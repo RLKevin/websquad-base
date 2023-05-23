@@ -306,8 +306,11 @@ $style = get_field('style');
 
 					?> </div> <?php
 
-				
-				endif;
+				else : ?>
+
+					<p>Geen cards toegevoegd.</p>
+
+				<?php endif;
 				break;
 			
 			default:
