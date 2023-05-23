@@ -4786,7 +4786,9 @@ em {
   --bg: var(--cl-white);
   --fg: var(--cl-black);
   --primary: var(--cl-primary);
+  --primary-text: var(--cl-primary-text);
   --secondary: var(--cl-secondary);
+  --secondary-text: var(--cl-secondary-text);
   color: var(--fg, var(--cl-black));
 }
 .wysiwyg.wysiwyg--light {
@@ -4800,13 +4802,17 @@ em {
   --bg: var(--cl-secondary);
   --fg: var(--cl-secondary-text);
   --primary: var(--cl-secondary-text);
+  --primary-text: var(--cl-secondary);
   --secondary: var(--cl-secondary-text);
+  --secondary-text: var(--cl-secondary);
 }
 .wysiwyg.wysiwyg--primary {
   --bg: var(--cl-primary);
   --fg: var(--cl-primary-text);
   --primary: var(--cl-primary-text);
+  --primary-text: var(--cl-primary);
   --secondary: var(--cl-primary-text);
+  --secondary-text: var(--cl-primary);
 }
 .wysiwyg h1,
 .wysiwyg h2,
@@ -4820,10 +4826,27 @@ em {
   font-style: italic;
 }
 .wysiwyg a:not(.button), .wysiwyg a:not(.button):visited, .wysiwyg a:not(.button):active, .wysiwyg a:not(.button):focus {
-  color: var(--secondary);
+  position: relative;
+  isolation: isolate;
+  color: var(--fg);
+}
+.wysiwyg a:not(.button)::after, .wysiwyg a:not(.button):visited::after, .wysiwyg a:not(.button):active::after, .wysiwyg a:not(.button):focus::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: -4px;
+  bottom: -4px;
+  right: -4px;
+  background-color: var(--primary);
+  z-index: -1;
+  -webkit-transition: height 0.15s ease-out;
+  transition: height 0.15s ease-out;
 }
 .wysiwyg a:not(.button):hover {
-  color: var(--secondary);
+  color: var(--primary-text);
+}
+.wysiwyg a:not(.button):hover::after {
+  height: calc(100% + 8px);
 }
 .wysiwyg blockquote {
   color: var(--primary);
@@ -4833,27 +4856,23 @@ em {
   background-color: var(--primary);
 }
 .wysiwyg strong {
-  color: var(--secondary);
+  color: var(--fg);
+  font-weight: var(--fw-bold);
 }
 .wysiwyg em {
-  opacity: 0.8;
-}
-.wysiwyg ul {
-  padding: 0 0 48px 0;
+  color: var(--fg);
+  opacity: 0.5;
 }
 .wysiwyg ul li {
   padding: 0 0 4px 24px;
   position: relative;
-}
-.wysiwyg ul li:last-of-type {
-  padding: 0 0 0 24px;
 }
 .wysiwyg ul li:before {
   content: "◦";
   position: absolute;
   left: 0;
   font-weight: var(--fw-bold);
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .loading {

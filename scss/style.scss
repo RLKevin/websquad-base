@@ -294,7 +294,9 @@ em {
 	--bg: var(--cl-white);
 	--fg: var(--cl-black);
 	--primary: var(--cl-primary);
+	--primary-text: var(--cl-primary-text);
 	--secondary: var(--cl-secondary);
+	--secondary-text: var(--cl-secondary-text);
 
 	&.wysiwyg--light {
 		--bg: var(--cl-grey);
@@ -309,14 +311,18 @@ em {
 		--bg: var(--cl-secondary);
 		--fg: var(--cl-secondary-text);
 		--primary: var(--cl-secondary-text);
+		--primary-text: var(--cl-secondary);
 		--secondary: var(--cl-secondary-text);
+		--secondary-text: var(--cl-secondary);
 	}
 
 	&.wysiwyg--primary {
 		--bg: var(--cl-primary);
 		--fg: var(--cl-primary-text);
 		--primary: var(--cl-primary-text);
+		--primary-text: var(--cl-primary);
 		--secondary: var(--cl-primary-text);
+		--secondary-text: var(--cl-primary);
 	}
 
 	color: var(--fg, var(--cl-black));
@@ -341,11 +347,30 @@ em {
 		&:visited,
 		&:active,
 		&:focus {
-			color: var(--secondary);
+			position: relative;
+			isolation: isolate;
+			color: var(--fg);
+
+			&::after {
+				content: '';
+				position: absolute;
+				height: 4px;
+				left: -4px;
+				bottom: -4px;
+				right: -4px;
+				background-color: var(--primary);
+				z-index: -1;
+				transition: height 0.15s ease-out;
+			}
 		}
 
 		&:hover {
-			color: var(--secondary);
+			// opacity: 0.75;
+			color: var(--primary-text);
+
+			&::after {
+				height: calc(100% + 8px);
+			}
 		}
 	}
 
@@ -363,32 +388,29 @@ em {
 	// content - strong
 
 	strong {
-		color: var(--secondary);
+		color: var(--fg);
+		font-weight: var(--fw-bold);
 	}
 
 	// content - italic
 
 	em {
-		opacity: 0.8;
+		color: var(--fg);
+		opacity: 0.5;
 	}
 
 	ul {
-		padding: 0 0 48px 0;
-
 		li {
 			padding: 0 0 4px 24px;
 			position: relative;
 
-			&:last-of-type {
-				padding: 0 0 0 24px;
-			}
-
+			// list style color
 			&:before {
 				content: '\25E6';
 				position: absolute;
 				left: 0;
 				font-weight: var(--fw-bold);
-				color: var(--accent);
+				color: var(--primary);
 			}
 		}
 	}
