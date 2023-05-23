@@ -220,6 +220,7 @@ blockquote {
 	border-left: 2px solid var(--cl-primary);
 	margin: 0 0 48px 0;
 	padding: 48px 0 0 16px;
+	@include rectangle;
 
 	p {
 		position: relative;
@@ -237,7 +238,14 @@ blockquote {
 		content: '';
 		position: absolute;
 		top: 0;
-		right: 0;
+		right: 16px;
+		@include tablet {
+			right: 48px;
+		}
+		@include desktop {
+			right: 96px;
+		}
+
 		width: 128px;
 		height: 128px;
 		mask-image: url(../img/icons/quote-right-solid-secondary.svg);
@@ -286,6 +294,10 @@ em {
 		&.button-container {
 			margin-top: 2em;
 		}
+	}
+
+	h3 + h2 {
+		margin-top: 0;
 	}
 }
 
@@ -377,11 +389,23 @@ em {
 	// content - quote
 
 	blockquote {
-		color: var(--primary);
-		border-left: 2px solid var(--primary);
+		color: var(--fg);
+		border-left: 2px solid var(--fg);
+		isolation: isolate;
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-color: var(--primary);
+			z-index: -1;
+			opacity: 0.25;
+			border-radius: inherit;
+		}
 
 		&:before {
 			background-color: var(--primary);
+			opacity: 0.5;
 		}
 	}
 

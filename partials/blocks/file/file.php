@@ -6,7 +6,7 @@ $id = get_field('id');
 
 ?>
 
-<section id="<?php echo $id; ?>" class="files files--<?php echo $background; ?>">
+<section id="<?= $id; ?>" class="files files--<?= $background; ?>">
 
 	<div class="wrapper">
 
