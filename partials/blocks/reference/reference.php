@@ -33,37 +33,40 @@ $references = get_field('references', 'option');
 					$name = $ref['name'];
 					$function = $ref['function'];
 					?>
-							
-					<div class="reference__container">
 
-						<?php if ($rating != '0'): ?>
-							<div class="reference__rating reference__rating--<?= $rating; ?>">
-								<ul>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-								</ul>
-							</div>
-						<?php endif; ?>
-
-						<?php if ($reference): ?>
-							<div class="reference__text wysiwyg wysiwyg--<?= $background; ?>">
-								<?= $reference; ?>
-								<h3><?= $name; ?></h3>
-							</div>
-						<?php endif; ?>
-
-						<?php if ($image) { ?>
-							<div class="reference__person">
-								<div class="reference__image">
-									<img loading="lazy" src="<?= $image['sizes']['640-1-1']; ?>" alt="<?= $image['title']; ?>">
+					<div class="slide">
+						<div class="reference__container">
+	
+							<?php if ($rating != '0'): ?>
+								<div class="reference__rating reference__rating--<?= $rating; ?>">
+									<ul>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
 								</div>
-							</div>
-						<?php } ?>
-
+							<?php endif; ?>
+	
+							<?php if ($reference): ?>
+								<div class="reference__text wysiwyg wysiwyg--<?= $background; ?>">
+									<?= $reference; ?>
+									<h3><?= $name; ?></h3>
+								</div>
+							<?php endif; ?>
+	
+							<?php if ($image) { ?>
+								<div class="reference__person">
+									<div class="reference__image">
+										<img loading="lazy" src="<?= $image['sizes']['640-1-1']; ?>" alt="<?= $image['title']; ?>">
+									</div>
+								</div>
+							<?php } ?>
+	
+						</div>
 					</div>
+							
 
 				<?php } ?>
 
@@ -81,7 +84,7 @@ $references = get_field('references', 'option');
 						controlsPosition: 'bottom',
 						center: true,
 						edgePadding: 0,
-						gutter: 0,
+						gutter: 32,
 						lazyload: true,
 						nav: false,
 						loop: true,
