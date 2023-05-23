@@ -6259,6 +6259,9 @@ section.cards .card__item .card__text .button-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 section.cards .card__item .card__text .button-container .button {
   margin-top: auto !important;

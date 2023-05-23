@@ -644,7 +644,7 @@ add_action( 'acf/include_fields', function() {
 								'default_value' => '',
 								'tabs' => 'all',
 								'toolbar' => 'full',
-								'media_upload' => 0,
+								'media_upload' => 1,
 								'delay' => 0,
 							),
 						),
