@@ -42,13 +42,6 @@
 
 		</script>
 
-		<!-- Preload fonts -->
-		<script>
-
-			(f
-
-		</script>
-
     
     	<?php wp_head(); ?>
     
