@@ -18,7 +18,7 @@ section.cards {
 	.card__container {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: flex-start;
 		gap: 48px;
 	}
 
@@ -133,8 +133,12 @@ section.cards {
 			}
 		}
 
-		.card-item {
+		.card__item {
 			text-align: center;
+		}
+
+		.button-container {
+			align-items: center;
 		}
 
 		.card__container {
@@ -151,8 +155,12 @@ section.cards {
 			}
 		}
 
-		.card-item {
+		.card__item {
 			text-align: right;
+		}
+
+		.button-container {
+			align-items: flex-end;
 		}
 
 		.card__container {

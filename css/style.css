@@ -6105,9 +6105,9 @@ section.cards .card__container {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 48px;
 }
 section.cards .card__item {
@@ -6238,8 +6238,13 @@ section.cards.card--center .introduction {
 section.cards.card--center .introduction * {
   margin-inline: auto;
 }
-section.cards.card--center .card-item {
+section.cards.card--center .card__item {
   text-align: center;
+}
+section.cards.card--center .button-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 section.cards.card--center .card__container {
   -webkit-box-pack: center;
@@ -6252,8 +6257,13 @@ section.cards.card--right .introduction {
 section.cards.card--right .introduction * {
   margin-left: auto;
 }
-section.cards.card--right .card-item {
+section.cards.card--right .card__item {
   text-align: right;
+}
+section.cards.card--right .button-container {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 section.cards.card--right .card__container {
   -webkit-box-pack: right;
