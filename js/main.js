@@ -22,38 +22,37 @@ jQuery(function ($) {
 		// console.log(menu_width);
 		// console.log(inner_width);
 
+		if (inner_width < 640) {
+			hideMenu();
+			return;
+		}
+
 		if ($('.header').hasClass('header--top')) {
 			if (inner_width > logo_width + menu_width) {
-				// show menu
-
-				$('.header__mainmenu .header__menu').show();
-				$('.header__mainmenu .header__menu-button').hide();
-				$('.header__mainmenu .header__submenu').removeClass(
-					'menu-button'
-				);
+				showMenu();
 			} else {
-				// hide menu
-
-				$('.header__mainmenu .header__menu').hide();
-				$('.header__mainmenu .header__menu-button').show();
-				$('.header__mainmenu .header__submenu').addClass('menu-button');
+				hideMenu();
 			}
 		} else {
 			if (inner_width > logo_width + menu_width + submenu_width) {
-				// show menu
-
-				$('.header__mainmenu .header__menu').show();
-				$('.header__mainmenu .header__menu-button').hide();
-				$('.header__mainmenu .header__submenu').removeClass(
-					'menu-button'
-				);
+				showMenu();
 			} else {
-				// hide menu
-
-				$('.header__mainmenu .header__menu').hide();
-				$('.header__mainmenu .header__menu-button').show();
-				$('.header__mainmenu .header__submenu').addClass('menu-button');
+				hideMenu();
 			}
+		}
+
+		function showMenu() {
+			$('.header__mainmenu .header__menu').show();
+			$('.header__mainmenu .header__menu-button').hide();
+			$('.header__mainmenu .header__submenu').removeClass(
+				'menu-button'
+			);
+		}
+
+		function hideMenu() {
+			$('.header__mainmenu .header__menu').hide();
+			$('.header__mainmenu .header__menu-button').show();
+			$('.header__mainmenu .header__submenu').addClass('menu-button');
 		}
 	}
 
