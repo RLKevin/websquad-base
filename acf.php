@@ -2874,7 +2874,6 @@ add_action( 'acf/include_fields', function() {
 				'choices' => array(
 					'positive' => 'Positive',
 					'border' => 'Border',
-					'negative' => 'Negative',
 				),
 				'default_value' => 'positive',
 				'return_format' => 'value',

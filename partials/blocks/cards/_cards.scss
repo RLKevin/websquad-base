@@ -46,11 +46,11 @@ section.cards {
 			flex-direction: column;
 
 			flex-grow: 1;
+
 			.button-container {
 				flex-grow: 1;
 				display: flex;
 				flex-direction: column;
-				align-items: center;
 
 				.button {
 					margin-top: auto !important;
@@ -125,7 +125,17 @@ section.cards {
 	// align
 
 	&.card--center {
-		text-align: center;
+		.introduction {
+			text-align: center;
+
+			* {
+				margin-inline: auto;
+			}
+		}
+
+		.card-item {
+			text-align: center;
+		}
 
 		.card__container {
 			justify-content: center;
@@ -133,7 +143,21 @@ section.cards {
 	}
 
 	&.card--right {
-		text-align: right;
+		.introduction {
+			text-align: right;
+
+			* {
+				margin-left: auto;
+			}
+		}
+
+		.card-item {
+			text-align: right;
+		}
+
+		.card__container {
+			justify-content: right;
+		}
 	}
 
 	// background
@@ -180,8 +204,8 @@ section.cards {
 				align-items: center;
 				justify-content: center;
 				position: relative;
-				width: 160px;
-				height: 160px;
+				width: 96px;
+				height: 96px;
 
 				img {
 					max-width: 100%;

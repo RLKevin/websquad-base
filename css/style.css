@@ -6159,9 +6159,6 @@ section.cards .card__item .card__text .button-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 section.cards .card__item .card__text .button-container .button {
   margin-top: auto !important;
@@ -6235,7 +6232,13 @@ section.cards .card__load-more {
 section.cards .card__load-more .button {
   margin-bottom: 0;
 }
-section.cards.card--center {
+section.cards.card--center .introduction {
+  text-align: center;
+}
+section.cards.card--center .introduction * {
+  margin-inline: auto;
+}
+section.cards.card--center .card-item {
   text-align: center;
 }
 section.cards.card--center .card__container {
@@ -6243,8 +6246,19 @@ section.cards.card--center .card__container {
       -ms-flex-pack: center;
           justify-content: center;
 }
-section.cards.card--right {
+section.cards.card--right .introduction {
   text-align: right;
+}
+section.cards.card--right .introduction * {
+  margin-left: auto;
+}
+section.cards.card--right .card-item {
+  text-align: right;
+}
+section.cards.card--right .card__container {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
 }
 section.cards.card--white {
   background: var(--cl-white);
@@ -6288,8 +6302,8 @@ section.cards.card--icon .card__image a {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  width: 160px;
-  height: 160px;
+  width: 96px;
+  height: 96px;
 }
 section.cards.card--icon .card__image a img {
   max-width: 100%;
