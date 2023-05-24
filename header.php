@@ -16,6 +16,39 @@
 		<meta property="og:url" content="<?php echo get_site_url(); ?>" />
 		<meta property="og:image" content="<?php echo get_site_icon_url(); ?>" />
 		<meta property="og:image:secure_url" content="<?php echo get_site_icon_url(); ?>" />
+
+		<!-- Theme color from --cl-primary -->
+		<script>
+
+			(function() {
+
+				var color = window.getComputedStyle(document.documentElement).getPropertyValue('--cl-primary');
+				var meta = document.querySelector('meta[name="theme-color"]');
+
+				if (meta) {
+
+					meta.setAttribute('content', color);
+
+				} else {
+
+					meta = document.createElement('meta');
+					meta.setAttribute('name', 'theme-color');
+					meta.setAttribute('content', color);
+					document.head.appendChild(meta);
+
+				}
+
+			})();
+
+		</script>
+
+		<!-- Preload fonts -->
+		<script>
+
+			(f
+
+		</script>
+
     
     	<?php wp_head(); ?>
     
