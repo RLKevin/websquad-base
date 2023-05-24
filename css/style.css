@@ -6371,7 +6371,7 @@ section.cards.card--round .card__image a img {
   height: 100%;
 }
 @media only screen and (min-width: 1280px) {
-  section.cards.card--three.card--basic .card__item {
+  section.cards.card--three .card__item {
     width: calc(33.3333333333% - 32px);
   }
 }

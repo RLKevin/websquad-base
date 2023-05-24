@@ -288,19 +288,17 @@ section.cards {
 	// style
 
 	&.card--three {
-		&.card--basic {
-			.card__item {
-				@include desktop {
-					width: calc(33.333333333333333% - 32px);
-				}
+		.card__item {
+			@include desktop {
+				width: calc(33.333333333333333% - 32px);
+			}
 
-				@include custom(1920px) {
-					// margin: 0 0 96px 96px;
-					// width: calc(33.333333333333333% - 64px);
+			@include custom(1920px) {
+				// margin: 0 0 96px 96px;
+				// width: calc(33.333333333333333% - 64px);
 
-					&:nth-of-type(3n + 1) {
-						// margin: 0 0 96px 0px;
-					}
+				&:nth-of-type(3n + 1) {
+					// margin: 0 0 96px 0px;
 				}
 			}
 		}
