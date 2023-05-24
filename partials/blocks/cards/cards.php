@@ -1,7 +1,5 @@
 <?php 
 
-// vars
-
 $page_id = get_the_ID();
 
 $introduction = get_field('introduction');
@@ -46,9 +44,9 @@ $style = get_field('style');
 					)
 				);
 				$post_max_pages = $post_query->max_num_pages;
-				$post_text_more = 'Laad meer';
-				$post_text_loading = 'Aan het laden ...';
-				$post_text_done = 'Uitgeladen';
+				$post_text_more = get_field('string_load_more', 'option') ?: 'Meer laden';
+				$post_text_loading = get_field('string_loading', 'option') ?: 'Laden...';
+				$post_text_done = get_field('string_done_loading', 'option') ?: 'Geen berichten meer';
 
 				?>
 
@@ -70,6 +68,7 @@ $style = get_field('style');
 						// vars
 
 						$id = get_the_ID();
+						$button_text = get_field('string_card_button', 'option') ?: 'Bekijk';
 
 						if ($post_type == 'facebook'):
 
@@ -127,7 +126,7 @@ $style = get_field('style');
 											
 									<?php if ($button): ?>
 										<div class="button-container">
-											<a class="button button--filled-secondary" href="<?= $button; ?>">Bekijk</a>
+											<a class="button button--filled-secondary" href="<?= $button; ?>"><?= $button_text; ?></a>
 										</div>
 									<?php endif; ?>
 								</div>
