@@ -9,46 +9,21 @@
     
 		<title><?php wp_title('|',1,'right'); ?> <?php bloginfo('name'); ?></title>
 		<?php $favicon = get_field('options_favicon', 'option') ?>
-		<link rel="icon" type="image/x-icon" href="<?= $favicon['url'] ?>">
+		<link rel="icon" type="image/x-icon" href="<?= $favicon ? $favicon['url'] : '' ?>">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<meta property="og:title" content="<?php bloginfo('name'); ?>" />
 		<meta property="og:description" content="<?php bloginfo('description'); ?>">
-		<meta property="og:url" content="<?php echo get_site_url(); ?>" />
-		<meta property="og:image" content="<?php echo get_site_icon_url(); ?>" />
-		<meta property="og:image:secure_url" content="<?php echo get_site_icon_url(); ?>" />
-
-		<!-- Theme color from --cl-primary -->
-		<script>
-
-			(function() {
-
-				var color = window.getComputedStyle(document.documentElement).getPropertyValue('--cl-primary');
-				var meta = document.querySelector('meta[name="theme-color"]');
-
-				if (meta) {
-
-					meta.setAttribute('content', color);
-
-				} else {
-
-					meta = document.createElement('meta');
-					meta.setAttribute('name', 'theme-color');
-					meta.setAttribute('content', color);
-					document.head.appendChild(meta);
-
-				}
-
-			})();
-
-		</script>
+		<meta property="og:url" content="<?= get_site_url(); ?>" />
+		<meta property="og:image" content="<?= get_site_icon_url(); ?>" />
+		<meta property="og:image:secure_url" content="<?= get_site_icon_url(); ?>" />
 
     
     	<?php wp_head(); ?>
     
 		<script type="text/javascript">
 
-			var site_url = "<?php echo get_site_url(); ?>";
-			var page_id = "<?php echo get_the_ID(); ?>";
+			var site_url = "<?= get_site_url(); ?>";
+			var page_id = "<?= get_the_ID(); ?>";
 			var template = '<?= get_template_directory_uri(); ?>';
 
 		</script>

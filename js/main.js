@@ -422,4 +422,24 @@ jQuery(function ($) {
 		clearTimeout(window.resizedFinished);
 		window.resizedFinished = setTimeout(function () {}, 250);
 	});
+
+	// set theme color
+
+	setThemeColor();
+	function setThemeColor() {
+		var color = getComputedStyle(
+			document.documentElement
+		).getPropertyValue('--cl-primary');
+		var meta = document.querySelector('meta[name="theme-color"]');
+	
+		if (meta) {
+			meta.setAttribute('content', color);
+		} else {
+			meta = document.createElement('meta');
+			meta.setAttribute('name', 'theme-color');
+			meta.setAttribute('content', color);
+			document.head.appendChild(meta);
+		}
+	}
+
 });
