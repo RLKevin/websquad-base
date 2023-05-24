@@ -4,6 +4,8 @@
 
 $align = get_field('options_header_style', 'option');
 $image = get_field('options_header_logo', 'option');
+$logo_text = get_field('options_text_logo', 'option') ?: get_bloginfo('name');
+$logo_subtext = get_field('options_subtext_logo', 'option');
 $phone = get_field('options_contact_phone', 'option');
 $phone_stripped = str_replace([' ', '-'], '', $phone);
 $email = get_field('options_contact_email', 'option');
@@ -85,8 +87,10 @@ $whatsapp = get_field('options_whatsapp_number', 'option');
 
 					<?php else : ?>
 
-						<h1><?php bloginfo('name'); ?></h1>
-						<span class="subtitle"><?= get_bloginfo('description', 'display') ?></span>
+						<h1><?= $logo_text; ?></h1>
+						<?php if ($logo_subtext) { ?>
+							<span class="subtitle"><?= $logo_subtext; ?></span>
+						<?php } ?>
 
 					<?php endif; ?>
 

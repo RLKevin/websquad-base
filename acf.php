@@ -3620,6 +3620,60 @@ add_action( 'acf/include_fields', function() {
 				'mime_types' => '',
 			),
 			array(
+				'key' => 'field_646de2bb81903',
+				'label' => 'Text logo',
+				'name' => 'options_text_logo',
+				'aria-label' => '',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6124e6dee793f',
+							'operator' => '==empty',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'maxlength' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+			),
+			array(
+				'key' => 'field_646de2cd81904',
+				'label' => 'Subtext logo',
+				'name' => 'options_subtext_logo',
+				'aria-label' => '',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_6124e6dee793f',
+							'operator' => '==empty',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'maxlength' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+			),
+			array(
 				'key' => 'field_6124fa7053846',
 				'label' => 'Style',
 				'name' => 'options_header_style',
@@ -4372,6 +4426,7 @@ add_action( 'acf/include_fields', function() {
 		'show_in_rest' => 0,
 	) );
 } );
+
 
 
 ?>

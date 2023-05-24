@@ -5050,6 +5050,10 @@ input:-webkit-autofill:active {
 }
 .header__mainmenu .header__logo a h1 {
   padding-bottom: 0 !important;
+  max-width: 200px;
+}
+.header__mainmenu .header__logo a span.subtitle {
+  max-width: 200px;
 }
 .header__mainmenu .header__menu {
   display: none;
