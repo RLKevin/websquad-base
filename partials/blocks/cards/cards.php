@@ -165,6 +165,7 @@ $style = get_field('style');
 				$card_parent = get_field('card_child_parent');
 				console_log($card_parent);
 				$amount = get_field('card_child_parent');
+				$button_text = get_field('string_card_button', 'option') ?: 'Bekijk';
 
 				// args for child pages of parent page
 				$args = array(
@@ -213,7 +214,7 @@ $style = get_field('style');
 												
 										<?php if ($button): ?>
 											<div class="button-container">
-												<a class="button button--filled-secondary" href="<?= $button; ?>">Bekijk</a>
+												<a class="button button--filled-secondary" href="<?= $button; ?>"><?= $button_text ?></a>
 											</div>
 										<?php endif; ?>
 									</div>
