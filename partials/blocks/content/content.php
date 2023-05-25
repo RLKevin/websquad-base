@@ -228,6 +228,34 @@ $id = get_field('id');
 
 			endif;
 
+			if( get_row_layout() == 'code' ):
+
+				?>
+								
+				<div class="content__code">
+
+					<?php
+
+					// vars
+
+					$code = get_sub_field('code');
+
+					?>
+
+					<div class="wrapper">
+								
+						<div class="code-container">
+							<?= $code; ?>
+						</div>
+
+					</div>
+
+				</div>
+				
+				<?php
+
+			endif;
+
 			if( get_row_layout() == 'text_image' ):
 
 				?>
@@ -379,8 +407,11 @@ $id = get_field('id');
 
 		else:
 
-        ?> <p>No content added.</p> <?php
-
+        ?> 
+		<div class="wrapper">
+			<p>No content added.</p> 
+		</div>
+		<?php
         endif; 
 
         ?>
