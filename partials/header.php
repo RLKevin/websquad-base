@@ -1,6 +1,7 @@
 <?php 
 
 // vars
+global $lang_switcher;
 
 $align = get_field('options_header_style', 'option');
 $image = get_field('options_header_logo', 'option');
@@ -181,6 +182,26 @@ $whatsapp = get_field('options_whatsapp_number', 'option');
 			<div class="header__scroll-button">
 				<svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-up" class="svg-inline--fa fa-arrow-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M6.101 261.899L25.9 281.698c4.686 4.686 12.284 4.686 16.971 0L198 126.568V468c0 6.627 5.373 12 12 12h28c6.627 0 12-5.373 12-12V126.568l155.13 155.13c4.686 4.686 12.284 4.686 16.971 0l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L232.485 35.515c-4.686-4.686-12.284-4.686-16.971 0L6.101 244.929c-4.687 4.686-4.687 12.284 0 16.97z"></path></svg>
 			</div>
+			
+			<?php if ($lang_switcher) { ?>				
+				<div class="language-switcher">
+					<?php 
+						echo do_shortcode('
+							[wpml_language_switcher]
+								<ul class="{{ css_classes }}">
+									{% for code, language in languages %}
+									<li class="{{ language.css_classes }}">
+										<a href="{{ language.url }}">
+											{{ language.code }}
+										</a>
+									</li>
+									{% endfor %}
+								</ul>
+							[/wpml_language_switcher]
+						');
+					?>
+				</div>
+			<?php } ?>
 
 			<?php if ($whatsapp) { ?>
 				<div class="whatsapp-container">
@@ -196,6 +217,8 @@ $whatsapp = get_field('options_whatsapp_number', 'option');
 	<div class="header__sidemenu">
 
 		<div class="header__submenu">
+
+			
 
 			<ul>
 						
@@ -239,6 +262,26 @@ $whatsapp = get_field('options_whatsapp_number', 'option');
 			</ul>
 			
 		</div>
+
+		<?php if ($lang_switcher) { ?>				
+			<div class="language-switcher">
+				<?php 
+					echo do_shortcode('
+						[wpml_language_switcher]
+							<ul class="{{ css_classes }}">
+								{% for code, language in languages %}
+								<li class="{{ language.css_classes }}">
+									<a href="{{ language.url }}">
+										{{ language.code }}
+									</a>
+								</li>
+								{% endfor %}
+							</ul>
+						[/wpml_language_switcher]
+					');
+				?>
+			</div>
+		<?php } ?>
 
 		<div class="header__menu">
 

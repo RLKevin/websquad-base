@@ -25,4 +25,8 @@ function switch_change_footer_admin () {
 	echo 'Created by <a href="http://www.teamswitch.nl" target="_blank">Team Switch</a></p>';
 }
 
+// Websquad child theme settings
+
+$lang_switcher = false
+
 ?>
