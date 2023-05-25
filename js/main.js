@@ -43,6 +43,7 @@ jQuery(function ($) {
 
 		function showMenu() {
 			$('.header__mainmenu .header__menu').show();
+			$('.header__mainmenu .language-switcher').show();
 			$('.header__mainmenu .header__menu-button').hide();
 			$('.header__mainmenu .header__submenu').removeClass(
 				'menu-button'
@@ -51,8 +52,10 @@ jQuery(function ($) {
 
 		function hideMenu() {
 			$('.header__mainmenu .header__menu').hide();
+			$('.header__mainmenu .language-switcher').hide();
 			$('.header__mainmenu .header__menu-button').show();
 			$('.header__mainmenu .header__submenu').addClass('menu-button');
+			$('.header__mainmenu .header__submenu .language-switcher').show();
 		}
 	}
 

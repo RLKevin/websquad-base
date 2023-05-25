@@ -424,6 +424,8 @@
 			}
 		}
 
+		
+
 		#{$self}__scroll-button {
 			top: auto;
 			bottom: 0;
@@ -432,6 +434,40 @@
 
 			@include tablet {
 				margin: 32px 0;
+			}
+		}
+	}
+
+	.language-switcher{
+		display: none;
+		
+		ul{
+			display: flex;
+			flex-direction: row;
+			gap: 24px;
+
+			li{
+				text-transform: uppercase;
+				position: relative;
+
+				&::after{
+					content: '';
+					width: 2px;
+					height: 12px;
+					position: absolute;
+					inset: 0 auto;
+					margin-block: auto;
+					right: -11px;
+					background-color: var(--cl-primary);
+					z-index: 99;
+					@include rectangle
+				}
+
+				&:last-of-type{
+					&::after{
+						content: none;
+					}
+				}
 			}
 		}
 	}
@@ -454,6 +490,10 @@
 
 		&.active {
 			right: 0;
+
+			.language-switcher{
+				display: block!important;
+			}
 		}
 
 		@include tablet {
@@ -551,6 +591,23 @@
 					@include tablet {
 						padding: 0 112px 0 0;
 					}
+				}
+			}
+		}
+
+		.language-switcher{
+			display: none;
+
+			ul{
+				li{
+					&::after{
+						background-color: var(--cl-grey);
+					}
+
+					a{
+						color: var(--cl-white);
+					}
+					
 				}
 			}
 		}
