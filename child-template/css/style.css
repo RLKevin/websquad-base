@@ -35,9 +35,3 @@
   --br-square-bottom-right: 128px;
   --br-square-bottom-left: 128px;
 }
-
-h2.custom {
-  background-color: red;
-  color: white;
-  font-size: 48px;
-}
