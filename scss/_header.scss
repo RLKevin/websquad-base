@@ -93,7 +93,11 @@
 	}
 
 	&__mainmenu {
+		height: 128px;
+		max-height: 128px;
+
 		.wrapper {
+			max-height: 128px;
 			display: flex;
 			align-items: center;
 		}
@@ -109,7 +113,7 @@
 				img {
 					height: auto;
 					max-height: 80px;
-					width: auto;
+					width: 100%;
 					max-width: 200px;
 					position: relative;
 
@@ -440,7 +444,7 @@
 		display: none;
 		margin-left: 24px;
 
-		
+
 
 		ul{
 			display: flex;
