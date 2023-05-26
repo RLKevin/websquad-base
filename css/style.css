@@ -5057,7 +5057,12 @@ input:-webkit-autofill:active {
     padding: 0 112px 0 0;
   }
 }
+.header__mainmenu {
+  height: 128px;
+  max-height: 128px;
+}
 .header__mainmenu .wrapper {
+  max-height: 128px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5079,7 +5084,7 @@ input:-webkit-autofill:active {
 .header__mainmenu .header__logo a img {
   height: auto;
   max-height: 80px;
-  width: auto;
+  width: 100%;
   max-width: 200px;
   position: relative;
 }
@@ -6211,6 +6216,10 @@ footer.footer .footer__mainmenu .footer__disclaimer ul li a {
     border: 0px;
     border-radius: var(--br-square-top-left) var(--br-square-top-right) var(--br-square-bottom-right) var(--br-square-bottom-left);
   }
+}
+
+.wpml-ls-statics-footer {
+  display: none;
 }
 
 section.cards {
