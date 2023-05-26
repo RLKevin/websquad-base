@@ -472,7 +472,8 @@
 					right: -11px;
 					background-color: var(--cl-primary);
 					z-index: 99;
-					@include rectangle
+					@include rectangle;
+					border: none;
 				}
 
 				&:last-of-type{
@@ -534,7 +535,6 @@
 						}
 					}
 				}
-
 			}
 		}
 

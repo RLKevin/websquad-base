@@ -5492,6 +5492,7 @@ input:-webkit-autofill:active {
   background-color: var(--cl-primary);
   z-index: 99;
   border-radius: var(--br-rectangle-top-left) var(--br-rectangle-top-right) var(--br-rectangle-bottom-right) var(--br-rectangle-bottom-left);
+  border: none;
 }
 .header .language-switcher ul li:last-of-type::after {
   content: none;
