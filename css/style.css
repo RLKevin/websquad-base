@@ -4180,6 +4180,41 @@ section .button.button--filled-white,
   pointer-events: none;
 }
 
+input,
+input[type=text],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=number],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color],
+label,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-large);
+  color: var(--cl-black);
+  letter-spacing: var(--ls-medium);
+  position: relative;
+  z-index: 1;
+  border: none;
+  -webkit-appearance: none;
+  -webkit-appearance: button;
+  border-radius: var(--br-rectangle-top-left) var(--br-rectangle-top-right) var(--br-rectangle-bottom-right) var(--br-rectangle-bottom-left);
+}
+
 .gform_wrapper input,
 .gform_wrapper input[type=text],
 .gform_wrapper input[type=password],
