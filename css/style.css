@@ -5531,18 +5531,6 @@ input:-webkit-autofill:active {
 .header__sidemenu.active .language-switcher ul li:not(.wpml-ls-current-language) a {
   color: var(--cl-grey) !important;
 }
-.header__sidemenu.active .language-switcher ul li::after {
-  content: "";
-  width: 2px;
-  height: 12px;
-  position: absolute;
-  inset: 0 auto;
-  margin-block: auto;
-  right: -11px;
-  background-color: var(--cl-grey);
-  z-index: 99;
-  border-radius: var(--br-rectangle-top-left) var(--br-rectangle-top-right) var(--br-rectangle-bottom-right) var(--br-rectangle-bottom-left);
-}
 .header__sidemenu.active .language-switcher ul li a:visited, .header__sidemenu.active .language-switcher ul li a:focus {
   color: var(--cl-white);
 }

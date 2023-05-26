@@ -526,19 +526,6 @@
 							}
 						}
 		
-						&::after{
-							content: '';
-							width: 2px;
-							height: 12px;
-							position: absolute;
-							inset: 0 auto;
-							margin-block: auto;
-							right: -11px;
-							background-color: var(--cl-grey);
-							z-index: 99;
-							@include rectangle
-						}
-		
 						a{
 							&:visited,
 							&:focus{
