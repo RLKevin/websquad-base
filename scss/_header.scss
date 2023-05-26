@@ -440,7 +440,8 @@
 
 	.language-switcher{
 		display: none;
-		
+		margin-left: 24px;
+
 		ul{
 			display: flex;
 			flex-direction: row;
@@ -449,6 +450,19 @@
 			li{
 				text-transform: uppercase;
 				position: relative;
+				min-width: fit-content;
+
+				a{
+					color: var(--cl-black);
+					font-weight: var(--fw-bold);
+				}
+
+				&:not(.wpml-ls-current-language){
+					a{
+						color: var(--cl-dark)!important;
+						font-weight: var(--fw-light);
+					}
+				}
 
 				&::after{
 					content: '';
@@ -466,6 +480,13 @@
 				&:last-of-type{
 					&::after{
 						content: none;
+					}
+				}
+
+				a{
+					&:visited,
+					&:focus{
+						color: var(--cl-dark);
 					}
 				}
 			}
@@ -493,6 +514,42 @@
 
 			.language-switcher{
 				display: block!important;
+				margin-left: 0;
+
+				ul{
+					li{
+						a{
+							color: var(--cl-white);
+						}
+
+						&:not(.wpml-ls-current-language){
+							a{
+								color: var(--cl-grey)!important;
+							}
+						}
+		
+						&::after{
+							content: '';
+							width: 2px;
+							height: 12px;
+							position: absolute;
+							inset: 0 auto;
+							margin-block: auto;
+							right: -11px;
+							background-color: var(--cl-grey);
+							z-index: 99;
+							@include rectangle
+						}
+		
+						a{
+							&:visited,
+							&:focus{
+								color: var(--cl-white);
+							}
+						}
+					}
+				}
+
 			}
 		}
 
