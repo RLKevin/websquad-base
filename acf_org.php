@@ -1,5 +1,4 @@
 <?php
-
 add_action( 'acf/include_fields', function() {
 	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
 		return;
@@ -79,7 +78,6 @@ add_action( 'acf/include_fields', function() {
 					'id' => '',
 				),
 				'choices' => array(
-					'rooms' => 'Rooms',
 					'blog' => 'Blog',
 					'facebook' => 'Facebook',
 				),
@@ -437,7 +435,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -1162,7 +1159,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -1322,7 +1318,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -1483,7 +1478,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -1525,6 +1519,9 @@ add_action( 'acf/include_fields', function() {
 					'id' => '',
 				),
 				'choices' => array(
+					1 => 'Contact',
+					2 => 'Testformulier',
+					3 => 'Nieuwsbrief',
 				),
 				'default_value' => false,
 				'return_format' => 'value',
@@ -1602,7 +1599,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -1697,7 +1693,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -2150,7 +2145,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -2331,7 +2325,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -2396,7 +2389,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -2645,7 +2637,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -2740,7 +2731,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -2861,7 +2851,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -2999,7 +2988,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -3195,7 +3183,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -3369,7 +3356,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -3477,7 +3463,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => false,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -3711,7 +3696,6 @@ add_action( 'acf/include_fields', function() {
 					'class' => '',
 					'id' => '',
 				),
-				'wpml_cf_preferences' => 3,
 				'default_value' => '',
 				'maxlength' => '',
 				'placeholder' => '',
@@ -3821,7 +3805,6 @@ add_action( 'acf/include_fields', function() {
 					'class' => '',
 					'id' => '',
 				),
-				'wpml_cf_preferences' => 3,
 				'return_format' => 'array',
 			),
 			array(
@@ -3838,7 +3821,6 @@ add_action( 'acf/include_fields', function() {
 					'class' => '',
 					'id' => '',
 				),
-				'wpml_cf_preferences' => 3,
 				'return_format' => 'array',
 			),
 			array(
@@ -3855,7 +3837,6 @@ add_action( 'acf/include_fields', function() {
 					'class' => '',
 					'id' => '',
 				),
-				'wpml_cf_preferences' => 3,
 				'return_format' => 'array',
 			),
 			array(
@@ -4186,7 +4167,6 @@ add_action( 'acf/include_fields', function() {
 					'class' => '',
 					'id' => '',
 				),
-				'wpml_cf_preferences' => 3,
 				'default_value' => '',
 				'maxlength' => '',
 				'placeholder' => '',
@@ -4207,7 +4187,6 @@ add_action( 'acf/include_fields', function() {
 					'class' => '',
 					'id' => '',
 				),
-				'wpml_cf_preferences' => 3,
 				'default_value' => '',
 				'maxlength' => '',
 				'placeholder' => '',
@@ -4228,7 +4207,6 @@ add_action( 'acf/include_fields', function() {
 					'class' => '',
 					'id' => '',
 				),
-				'wpml_cf_preferences' => 3,
 				'default_value' => '',
 				'maxlength' => '',
 				'placeholder' => '',
@@ -4249,7 +4227,6 @@ add_action( 'acf/include_fields', function() {
 					'class' => '',
 					'id' => '',
 				),
-				'wpml_cf_preferences' => 3,
 				'default_value' => '',
 				'maxlength' => '',
 				'placeholder' => '',
@@ -4275,7 +4252,6 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 
 	acf_add_local_field_group( array(
@@ -4477,8 +4453,9 @@ add_action( 'acf/include_fields', function() {
 		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
-		'acfml_field_group_mode' => 'advanced',
 	) );
 } );
+
+
 
 ?>
