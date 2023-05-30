@@ -86,12 +86,15 @@ $template = get_template_directory();
 							mouseDrag: true,
 							controls: false,
 							center: true,
+							autoplay: true,
+							autoplayTimeout: 3000,
 							edgePadding: 0,
 							gutter: 0,
 							lazyload: true,
-							nav: false,
+							nav: true,
 							navPosition: 'bottom',
 							loop: true,
+							autoplayButton: false,
 							autoHeight: false,
 						});
 					} else {

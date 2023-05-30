@@ -26,6 +26,20 @@ section.hero {
 			flex-direction: column;
 			justify-content: center;
 		}
+
+		.tns-outer{
+			& > button{
+				display: none;
+			}
+		}
+
+		.slider{
+			display: flex;
+		}
+
+		.slide{
+			height: auto!important;
+		}
 	}
 
 	.hero__slider {
