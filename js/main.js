@@ -165,20 +165,20 @@ jQuery(function ($) {
 
 		// smooth scroll
 
-		$('a[href^="#"]').on('click', function (e) {
-			e.preventDefault();
+		// $('a[href^="#"]').on('click', function (e) {
+		// 	e.preventDefault();
 
-			hashOffset = $(this.hash).offset();
+		// 	hashOffset = $(this.hash).offset();
 
-			if (hashOffset) {
-				$('html, body').animate(
-					{
-						scrollTop: $(this.hash).offset().top - 0,
-					},
-					500
-				);
-			}
-		});
+		// 	if (hashOffset) {
+		// 		$('html, body').animate(
+		// 			{
+		// 				scrollTop: $(this.hash).offset().top - 0,
+		// 			},
+		// 			500
+		// 		);
+		// 	}
+		// });
 
 		// video container
 

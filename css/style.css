@@ -4581,6 +4581,7 @@ textarea {
 
 html.websquad-html {
   background: var(--cl-secondary);
+  scroll-behavior: smooth;
 }
 
 iframe html {
@@ -4591,6 +4592,7 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
