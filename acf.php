@@ -4514,7 +4514,7 @@ add_action( 'acf/include_fields', function() {
 			11 => 'tags',
 			12 => 'send-trackbacks',
 		),
-		'active' => false,
+		'active' => true,
 		'description' => '',
 		'show_in_rest' => 0,
 		'acfml_field_group_mode' => 'translation',
