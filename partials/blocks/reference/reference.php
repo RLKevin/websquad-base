@@ -37,18 +37,6 @@ $references = get_field('references', 'option');
 					<div class="slide">
 						<div class="reference__container">
 	
-							<?php if ($rating != '0'): ?>
-								<div class="reference__rating reference__rating--<?= $rating; ?>">
-									<ul>
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-								</div>
-							<?php endif; ?>
-	
 							<?php if ($reference): ?>
 								<div class="reference__text wysiwyg wysiwyg--<?= $background; ?>">
 									<?= $reference; ?>
@@ -63,7 +51,18 @@ $references = get_field('references', 'option');
 									</div>
 								</div>
 							<?php } ?>
-	
+
+							<?php if ($rating != '0'): ?>
+								<div class="reference__rating reference__rating--<?= $rating; ?>">
+									<ul>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+								</div>
+							<?php endif; ?>
 						</div>
 					</div>
 							

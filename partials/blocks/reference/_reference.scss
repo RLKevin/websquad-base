@@ -23,49 +23,38 @@ section.reference {
 			position: relative;
 			transform: translateY(0);
 			padding: 0;
-			margin: 48px 0 0 0;
+			margin: 24px 0 0 0;
 			justify-content: center;
 			gap: 8px;
 		}
 	}
 
 	.reference__container {
-		display: grid;
-		grid-template-columns: 1fr;
-
-		@include tablet {
-			grid-template-columns: 1fr 240px;
-			grid-template-rows: auto;
-			grid-template-areas: 'rating person' 'text person';
-			gap: 48px;
-		}
-		.reference__person {
-			grid-area: person;
-		}
-	}
-
-	.reference__text {
-		grid-area: text;
-		font-style: italic;
-		text-align: center;
-		padding-top: 96px;
+		// display: grid;
+		// grid-template-columns: 1fr;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 48px;
 		position: relative;
 
-		h3 {
-			color: var(--fg);
+		@include tablet {
+			// grid-template-columns: 1fr 240px;
+			// grid-template-rows: auto;
+			// grid-template-areas: 'rating person' 'text person';
+			// gap: 24px;
 		}
-
-		@include custom(960px) {
-			h3 {
-				text-align: right;
-			}
+		.reference__person {
+			// grid-area: person;
 		}
 
 		&::after {
 			content: '';
 			position: absolute;
 			top: 0;
-			left: calc(50% - 32px);
+			// left: calc(50% - 32px);
+			left: 48px;
+			// left: 0;
 			width: 64px;
 			height: 64px;
 			background-color: var(--fg);
@@ -73,14 +62,51 @@ section.reference {
 			mask-size: 100% 100%;
 			mask-repeat: no-repeat;
 		}
+	}
+
+
+	.reference__text {
+		max-width: 800px;
+		margin-inline: auto;
+		margin-top: auto;
+		grid-area: text;
+		font-style: italic;
+		text-align: center;
+		padding-top: 96px;
+		// position: relative;
+		flex: 1 100%;
+
+		@include desktop{
+			flex: 2;
+		}
+
+		h3 {
+			color: var(--fg);
+			line-height: var(--lh-small);
+		}
+
+		@include custom(960px) {
+			h3 {
+				text-align: right;
+			}
+		}
 	}	
 
 	.reference__rating {
-		padding: 0 0 48px 0;
+		width: 100%;
+		flex: 1 100%;
+		
+		@include desktop{
+			padding: 0 0 0 48px;
+		}
 
 		ul {
 			display: flex;
 			justify-content: center;
+
+			@include desktop{
+				justify-content: flex-start;
+			}
 
 			li {
 				display: block;
@@ -166,6 +192,7 @@ section.reference {
 	}
 
 	.reference__person {
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -177,11 +204,11 @@ section.reference {
 		}
 
 		.reference__image {
-			margin: 0 0 48px 0;
+			// margin: 0 0 48px 0;
 
 			@include desktop {
 				// width: calc(50% - 48px);
-				margin: 0 96px 0 0;
+				// margin: 0 96px 0 0;
 				// display: flex;
 				// justify-content: flex-end;
 			}

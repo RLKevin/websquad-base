@@ -7703,47 +7703,30 @@ section.reference .tns-outer .tns-controls {
       -ms-transform: translateY(0);
           transform: translateY(0);
   padding: 0;
-  margin: 48px 0 0 0;
+  margin: 24px 0 0 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   gap: 8px;
 }
 section.reference .reference__container {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-@media only screen and (min-width: 640px) {
-  section.reference .reference__container {
-    grid-template-columns: 1fr 240px;
-    grid-template-rows: auto;
-    grid-template-areas: "rating person" "text person";
-    gap: 48px;
-  }
-}
-section.reference .reference__container .reference__person {
-  grid-area: person;
-}
-section.reference .reference__text {
-  grid-area: text;
-  font-style: italic;
-  text-align: center;
-  padding-top: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 48px;
   position: relative;
 }
-section.reference .reference__text h3 {
-  color: var(--fg);
-}
-@media only screen and (min-width: 960px) {
-  section.reference .reference__text h3 {
-    text-align: right;
-  }
-}
-section.reference .reference__text::after {
+section.reference .reference__container::after {
   content: "";
   position: absolute;
   top: 0;
-  left: calc(50% - 32px);
+  left: 48px;
   width: 64px;
   height: 64px;
   background-color: var(--fg);
@@ -7754,8 +7737,44 @@ section.reference .reference__text::after {
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
 }
+section.reference .reference__text {
+  max-width: 800px;
+  margin-inline: auto;
+  margin-top: auto;
+  grid-area: text;
+  font-style: italic;
+  text-align: center;
+  padding-top: 96px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+}
+@media only screen and (min-width: 1280px) {
+  section.reference .reference__text {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+}
+section.reference .reference__text h3 {
+  color: var(--fg);
+  line-height: var(--lh-small);
+}
+@media only screen and (min-width: 960px) {
+  section.reference .reference__text h3 {
+    text-align: right;
+  }
+}
 section.reference .reference__rating {
-  padding: 0 0 48px 0;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+}
+@media only screen and (min-width: 1280px) {
+  section.reference .reference__rating {
+    padding: 0 0 0 48px;
+  }
 }
 section.reference .reference__rating ul {
   display: -webkit-box;
@@ -7764,6 +7783,13 @@ section.reference .reference__rating ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media only screen and (min-width: 1280px) {
+  section.reference .reference__rating ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 section.reference .reference__rating ul li {
   display: block;
@@ -7819,6 +7845,9 @@ section.reference .reference__rating--5 ul li:nth-of-type(-n + 5) {
   opacity: 1;
 }
 section.reference .reference__person {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7842,14 +7871,6 @@ section.reference .reference__person {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-  }
-}
-section.reference .reference__person .reference__image {
-  margin: 0 0 48px 0;
-}
-@media only screen and (min-width: 1280px) {
-  section.reference .reference__person .reference__image {
-    margin: 0 96px 0 0;
   }
 }
 section.reference .reference__person .reference__image img {
