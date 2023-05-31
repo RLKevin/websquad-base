@@ -135,6 +135,10 @@ section.cards {
 
 		.card__item {
 			text-align: center;
+
+			li{
+				margin-inline: auto;
+			}
 		}
 
 		.button-container {
@@ -157,6 +161,10 @@ section.cards {
 
 		.card__item {
 			text-align: right;
+
+			li{
+				margin-left: auto;
+			}
 		}
 
 		.button-container {

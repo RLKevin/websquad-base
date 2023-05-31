@@ -4861,6 +4861,9 @@ em {
 .wysiwyg ul li {
   padding: 0 0 4px 24px;
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .wysiwyg ul li:before {
   content: "◦";
@@ -6439,6 +6442,9 @@ section.cards.card--center .introduction * {
 section.cards.card--center .card__item {
   text-align: center;
 }
+section.cards.card--center .card__item li {
+  margin-inline: auto;
+}
 section.cards.card--center .button-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -6457,6 +6463,9 @@ section.cards.card--right .introduction * {
 }
 section.cards.card--right .card__item {
   text-align: right;
+}
+section.cards.card--right .card__item li {
+  margin-left: auto;
 }
 section.cards.card--right .button-container {
   -webkit-box-align: end;
@@ -6791,6 +6800,9 @@ section.content.content--secondary .button {
 section.content.content--center .text-container {
   text-align: center;
 }
+section.content.content--center .text-container li {
+  margin-inline: auto;
+}
 section.content.content--center .button-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -6798,6 +6810,9 @@ section.content.content--center .button-container {
 }
 section.content.content--right .text-container {
   text-align: right;
+}
+section.content.content--right .text-container li {
+  margin-left: auto;
 }
 section.content.content--right .button-container {
   -webkit-box-pack: end;

@@ -197,6 +197,10 @@ section.content {
 	&.content--center {
 		.text-container {
 			text-align: center;
+
+			li{
+				margin-inline: auto;
+			}
 		}
 		.button-container {
 			justify-content: center;
@@ -205,6 +209,11 @@ section.content {
 	&.content--right {
 		.text-container {
 			text-align: right;
+
+
+			li{
+				margin-left: auto;
+			}
 		}
 		.button-container {
 			justify-content: flex-end;

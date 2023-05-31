@@ -429,6 +429,7 @@ em {
 		li {
 			padding: 0 0 4px 24px;
 			position: relative;
+			width: fit-content;
 
 			// list style color
 			&:before {
