@@ -709,6 +709,13 @@
 					}
 
 					.sub-menu {
+						padding-left: 24px;
+
+						li,
+						li:last-of-type{
+							margin-bottom: 0;
+						}
+						
 						.menu-item:hover a {
 							color: var(--cl-grey);
 						}

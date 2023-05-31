@@ -5727,6 +5727,13 @@ input:-webkit-autofill:active {
 .header__sidemenu .header__menu ul li.current-menu-item a, .header__sidemenu .header__menu ul li.current-menu-parent a, .header__sidemenu .header__menu ul li.current-menu-ancestor a {
   color: var(--cl-primary);
 }
+.header__sidemenu .header__menu ul li .sub-menu {
+  padding-left: 24px;
+}
+.header__sidemenu .header__menu ul li .sub-menu li,
+.header__sidemenu .header__menu ul li .sub-menu li:last-of-type {
+  margin-bottom: 0;
+}
 .header__sidemenu .header__menu ul li .sub-menu .menu-item:hover a {
   color: var(--cl-grey);
 }
