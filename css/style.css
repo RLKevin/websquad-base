@@ -6106,7 +6106,7 @@ footer.footer .footer__mainmenu .footer__social ul li a {
   -o-transition: 0.25s all ease-in-out;
   transition: 0.25s all ease-in-out;
   line-height: 40px;
-  color: var(--cl-black);
+  color: var(--cl-primary-text);
   white-space: nowrap;
   border: 2px solid currentColor;
   border-radius: var(--br-square-top-left) var(--br-square-top-right) var(--br-square-bottom-right) var(--br-square-bottom-left);
