@@ -4861,9 +4861,6 @@ em {
 .wysiwyg ul li {
   padding: 0 0 4px 24px;
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 .wysiwyg ul li:before {
   content: "◦";
