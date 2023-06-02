@@ -7437,6 +7437,7 @@ section.intro .intro__title--image h1 {
 section.intro .intro__text {
   text-align: center;
   font-weight: var(--fw-medium);
+  color: var(--cl-black);
 }
 @media only screen and (min-width: 1280px) {
   section.intro .intro__text {
