@@ -21,7 +21,7 @@
     	<?php wp_head(); ?>
     
 		<script type="text/javascript">
-
+			var lang_code = "<?= apply_filters( 'wpml_current_language', NULL ) ?>";
 			var site_url = "<?= get_site_url(); ?>";
 			var page_id = "<?= get_the_ID(); ?>";
 			var template = '<?= get_template_directory_uri(); ?>';

@@ -91,7 +91,7 @@ $references = get_field('references', 'option');
 						autoplayButtonOutput: false,
 						autoplayTimeout: 5000,
 						autoplayHoverPause: true,
-						autoHeight: false,
+						autoHeight: true,
 					});
 				} else {
 					const slides = document.querySelectorAll('#<?= $slider_id; ?> > *');

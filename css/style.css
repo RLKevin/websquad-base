@@ -7732,28 +7732,23 @@ section.reference .reference__container {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 48px;
+  gap: 24px;
   position: relative;
 }
-section.reference .reference__container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 48px;
-  width: 64px;
-  height: 64px;
-  background-color: var(--fg);
-  -webkit-mask-image: url("../img/icons/quote-right-solid-primary.svg");
-          mask-image: url("../img/icons/quote-right-solid-primary.svg");
-  -webkit-mask-size: 100% 100%;
-          mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+@media only screen and (min-width: 640px) {
+  section.reference .reference__container {
+    gap: 24px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  section.reference .reference__container {
+    gap: 0 48px;
+  }
 }
 section.reference .reference__text {
+  position: relative;
   max-width: 800px;
   margin-inline: auto;
-  margin-top: auto;
   grid-area: text;
   font-style: italic;
   text-align: center;
@@ -7767,6 +7762,26 @@ section.reference .reference__text {
     -webkit-box-flex: 2;
         -ms-flex: 2;
             flex: 2;
+  }
+}
+section.reference .reference__text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 24px;
+  width: 64px;
+  height: 64px;
+  background-color: var(--fg);
+  -webkit-mask-image: url("../img/icons/quote-right-solid-primary.svg");
+          mask-image: url("../img/icons/quote-right-solid-primary.svg");
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+@media only screen and (min-width: 1280px) {
+  section.reference .reference__text::after {
+    right: 0;
   }
 }
 section.reference .reference__text h3 {
@@ -7786,7 +7801,9 @@ section.reference .reference__rating {
 }
 @media only screen and (min-width: 1280px) {
   section.reference .reference__rating {
-    padding: 0 0 0 48px;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 section.reference .reference__rating ul {
@@ -7890,6 +7907,9 @@ section.reference .reference__person .reference__image img {
   width: 240px;
   aspect-ratio: 1/1;
   border-radius: var(--br-square-top-left) var(--br-square-top-right) var(--br-square-bottom-right) var(--br-square-bottom-left);
+}
+section.reference .tns-outer .tns-controls {
+  margin-top: 48px;
 }
 section.reference--grey {
   --bg: var(--cl-grey);
