@@ -271,4 +271,272 @@ textarea {
 			z-index: 1;
 		}
 	}
+
+	.gfield--type-date{
+
+		.ginput_container_date{
+			position: relative;
+			cursor: pointer;
+			
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+				aspect-ratio: 1;
+				mask-image: url('../img/icons/caret-down-solid.svg');
+				mask-repeat: no-repeat;
+				mask-position: center;
+				mask-size: 16px 16px;
+				background-color: currentColor;
+				z-index: 2;
+				pointer-events: none;
+			}
+
+			input{
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				padding-right: 48px;
+				cursor: pointer;
+			}
+		}
+
+		.screen-reader-text{
+			display: none;
+		}
+	}
+}
+
+.ui-datepicker {
+	background: var(--cl-white);
+	border: 1px solid var(--cl-grey);
+	@include rectangle;
+	color: var(--cl-black);
+	margin-top: 8px;
+	padding: 16px;
+	width: auto;
+
+	*{
+		font-family: var(--ff-primary)!important;
+	}
+	
+	table,
+	thead,
+	tr,
+	td,
+	th {
+		background: none;
+		border: 0;
+		margin: 0;
+		padding: 0px;
+		text-shadow: none;
+		text-transform: none;
+	}
+
+	.ui-datepicker-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin: 0 0 8px;
+		padding: 0;
+		position: relative;
+		width: 100%;
+		border: 0;
+
+		.ui-datepicker-prev,
+		.ui-datepicker-next {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			background: none;
+			background: var(--cl-secondary);
+			border: 1px solid var(--cl-secondary);
+			font-size: 0;
+			left: 0;
+			cursor: pointer;
+			@include transition;
+			@include rectangle;
+			
+			&:focus {
+
+				&:before {
+					background-color: var(--cl-white);
+				}
+			}
+
+			&:hover {
+
+				&:before {
+					background-color: var(--cl-white);
+				}
+			}
+
+			.ui-icon {
+				display: none;
+			}
+			
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 38px;
+				height: 38px;
+				background-color: var(--cl-secondary-text);
+				mask-image: url(../img/icons/arrow-left-regular-white.svg);
+				mask-repeat: no-repeat;
+				mask-size: 24px 24px;
+				mask-position: center;
+				@include transition;
+			}
+
+			&.ui-state-disabled {
+				background: var(--cl-grey);
+				opacity: .8;
+				border-color: var(--cl-grey);
+
+				&::before {
+					background-color: var(--cl-grey);
+				}
+			}
+		}
+
+		.ui-datepicker-next {
+			left: auto;
+			right: 0;
+
+			&::before {
+				mask-image: url(../img/icons/arrow-right-regular-white.svg);
+			}
+		}
+
+		.ui-datepicker-title {
+			display: flex;
+			justify-content: space-between;
+			width: calc(100% - 96px);
+			height: 40px;
+
+			.ui-datepicker-month,
+			.ui-datepicker-year {
+				height: 40px;
+				line-height: 40px;
+				width: calc(50% - 4px);
+				padding: 0 8px;
+				-webkit-appearance: none;
+				font-size: var(--fs-tiny);
+				line-height: 1;
+				color: var(--cl-black);
+				background-color: var(--cl-grey);
+				cursor: pointer;
+				background-position: calc(100% - 8px) 50%;
+			}			
+		}
+	}
+
+	.ui-datepicker-calendar {
+
+		th {
+
+			span {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: var(--cl-black);
+				font-size: var(--fs-tiny);
+				text-transform: uppercase;
+				height: 48px;
+				width: 48px;
+			}
+		}
+
+		td {
+			height: 48px;
+			width: 48px;
+			padding: 4px;
+			
+			a,
+			span {
+				
+				&.ui-state-default {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: none;
+					box-shadow: none;
+					color: var(--cl-black);
+					height: 40px;
+					width: 40px;
+					border: 1px solid transparent;
+					text-decoration: none;
+					@include rectangle;
+					@include transition;
+		
+					&:hover {
+						background: none;
+						border-color: var(--cl-grey);
+						outline: none;
+					}
+		
+					&:focus {
+						background: none;
+						border-color: var(--cl-grey);
+						outline: none;
+					}
+		
+					&:active {
+						background: none;
+						border-color: var(--cl-grey);
+						outline: none;
+					}
+				}
+			}
+
+			&.ui-datepicker-current-day {
+
+				a,
+				span {
+
+					&.ui-state-default {
+						background: var(--cl-secondary);
+						border-color: var(--cl-secondary);
+						color: var(--cl-secondary-text);
+
+						&:hover {
+							border-color: var(--cl-secondary);
+						}
+
+						&:focus {
+							border-color: var(--cl-secondary);
+						}
+					}
+				}
+			}
+
+			&.ui-state-disabled {
+				background: none;
+
+				a,
+				span {
+	
+					&.ui-state-default {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 40px;
+						height: 40px;
+						background: var(--cl-grey);
+						border-color: var(--cl-grey);
+						color: var(--cl-grey-dark);
+						text-decoration: none;
+						cursor: text;
+					}
+				}
+			}
+		}
+	}
 }
