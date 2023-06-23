@@ -10,7 +10,7 @@
 		var $markers = $el.find('.marker');
 		var isDraggable = sw < 800 ? false : true;
 		var args = {
-			zoom: 12,
+			zoom: 10,
 			center: new google.maps.LatLng(0, 0),
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
 			scrollwheel: false,

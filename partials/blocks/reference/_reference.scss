@@ -35,40 +35,41 @@ section.reference {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		gap: 48px;
+		gap: 24px;
 		position: relative;
 
 		@include tablet {
-			// grid-template-columns: 1fr 240px;
-			// grid-template-rows: auto;
-			// grid-template-areas: 'rating person' 'text person';
-			// gap: 24px;
-		}
-		.reference__person {
-			// grid-area: person;
+			gap: 24px;
 		}
 
-		&::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			// left: calc(50% - 32px);
-			left: 48px;
-			// left: 0;
-			width: 64px;
-			height: 64px;
-			background-color: var(--fg);
-			mask-image: url('../img/icons/quote-right-solid-primary.svg');
-			mask-size: 100% 100%;
-			mask-repeat: no-repeat;
+		@include desktop{
+			gap: 0 48px;
 		}
+		.reference__person {
+		}
+
+		// &::after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: 0;
+		// 	// left: calc(50% - 32px);
+		// 	left: 48px;
+		// 	// left: 0;
+		// 	width: 64px;
+		// 	height: 64px;
+		// 	background-color: var(--fg);
+		// 	mask-image: url('../img/icons/quote-right-solid-primary.svg');
+		// 	mask-size: 100% 100%;
+		// 	mask-repeat: no-repeat;
+		// }
 	}
 
 
 	.reference__text {
+		position: relative;
 		max-width: 800px;
 		margin-inline: auto;
-		margin-top: auto;
+		// margin-top: auto;
 		grid-area: text;
 		font-style: italic;
 		text-align: center;
@@ -78,6 +79,23 @@ section.reference {
 
 		@include desktop{
 			flex: 2;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 24px;
+			width: 64px;
+			height: 64px;
+			background-color: var(--fg);
+			mask-image: url('../img/icons/quote-right-solid-primary.svg');
+			mask-size: 100% 100%;
+			mask-repeat: no-repeat;
+
+			@include  desktop{
+				right: 0;
+			}
 		}
 
 		h3 {
@@ -97,7 +115,10 @@ section.reference {
 		flex: 1 100%;
 		
 		@include desktop{
-			padding: 0 0 0 48px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			// padding: 0 0 0 48px;
 		}
 
 		ul {
@@ -218,6 +239,14 @@ section.reference {
 				aspect-ratio: 1 / 1;
 				@include square;
 			}
+		}
+	}
+
+	.tns-outer .tns-controls{
+		margin-top: 48px;
+
+		@include desktop{
+			// margin-top: 24px;
 		}
 	}
 
