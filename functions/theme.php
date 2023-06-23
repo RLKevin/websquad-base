@@ -25,6 +25,35 @@ function switch_change_footer_admin () {
 	echo 'Created by <a href="http://www.teamswitch.nl" target="_blank">Team Switch</a></p>';
 }
 
+// show team switch news in dashboard
+function teamswitch_dashboard_news() {
+	wp_add_dashboard_widget('teamswitch_dashboard_news', 'Team Switch nieuws', 'teamswitch_dashboard_news_content');
+}
+function teamswitch_dashboard_news_content() {
+	$maxitems = 0;
+	$rss_items = null;
+	$rss = fetch_feed('https://teamswitch.nl/feed/?post_type=blog');
+	
+	if (!is_wp_error($rss)) {
+		$maxitems = $rss->get_item_quantity(10);
+		$rss_items = $rss->get_items(0, $maxitems);
+	}
+	if ($maxitems == 0) {
+		echo '<p>Geen nieuws gevonden.</p>';
+	} else {
+		echo '<ul>';
+		foreach ($rss_items as $item) {
+			$title = $item->get_title();
+			$link = $item->get_permalink();
+			$date = $item->get_date('j F Y');
+			echo '<li style="margin-bottom: 1rem" ><a style="font-size: 16px" href="'.$link.'" target="_blank">'.$title.'</a><br/><span class="rss-date">'.$date.'</span></li>';
+		}
+		echo '</ul>';
+	}
+
+}
+add_action('wp_dashboard_setup', 'teamswitch_dashboard_news');
+
 // Websquad child theme settings
 
 $lang_switcher = false
