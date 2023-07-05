@@ -31,10 +31,19 @@ section.hero {
 			& > button{
 				display: none;
 			}
+
+			.tns-ovh{
+				height: 100%;
+			}
+
+			.tns-inner{
+				height: 100%;
+			}
 		}
 
 		.slider{
 			display: flex;
+			height: 100%;
 		}
 
 		.slide{

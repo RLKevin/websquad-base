@@ -7440,10 +7440,17 @@ section.hero .hero__half_half .hero__text {
 section.hero .hero__half_half .tns-outer > button {
   display: none;
 }
+section.hero .hero__half_half .tns-outer .tns-ovh {
+  height: 100%;
+}
+section.hero .hero__half_half .tns-outer .tns-inner {
+  height: 100%;
+}
 section.hero .hero__half_half .slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
 }
 section.hero .hero__half_half .slide {
   height: auto !important;
