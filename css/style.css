@@ -4856,6 +4856,7 @@ textarea {
 html.websquad-html {
   background: var(--cl-secondary);
   scroll-behavior: smooth;
+  scroll-padding-top: 64px;
 }
 
 iframe html {
